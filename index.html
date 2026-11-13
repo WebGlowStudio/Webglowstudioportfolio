@@ -102,7 +102,12 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 .ph.lokna b{font-family:Georgia,serif;font-style:italic;font-weight:500;font-size:26px}
 .ph.lokna small{color:#B8925A}
 @keyframes snip{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
-@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg{animation:none}}
+/* pulsfit placeholder */
+.ph.pulsfit{background:radial-gradient(circle at 50% 30%, #1c3d1a, #070807 74%);color:#F3FFE8}
+.ph.pulsfit svg{width:78px;height:40px;filter:drop-shadow(0 0 12px rgba(57,255,20,.5));animation:pulsebeat 1.8s ease-in-out infinite}
+.ph.pulsfit small{color:#7DFF6A}
+@keyframes pulsebeat{0%,100%{transform:scale(1);filter:drop-shadow(0 0 8px rgba(57,255,20,.35))}50%{transform:scale(1.05);filter:drop-shadow(0 0 16px rgba(57,255,20,.75))}}
+@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg{animation:none}}
 
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
@@ -252,6 +257,15 @@ footer b{color:var(--text);font-weight:600}
           <h3>Studio Lokna</h3>
           <p>Elegantan sajt za frizerski salon: usluge sa cenama, galerija sa slajderom pre i posle, tim i zakazivanje preko forme, WhatsApp-a i Vibera.</p>
           <a class="btn small" href="https://webglowstudio.github.io/Studiolokna/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+      <article class="card">
+        <a class="shot" href="https://webglowstudio.github.io/Pulsfit/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph pulsfit" aria-hidden="true"><svg viewBox="0 0 64 32" fill="none" stroke="#39FF14" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 9v14M16 5v22M48 5v22M54 9v14M16 16h32"/></svg><b>PulsFit</b><small>Teretana · Fitnes</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Teretana / fitnes</span></div>
+          <h3>PulsFit</h3>
+          <p>Energičan sajt za teretanu: članarine, raspored treninga, treneri i prijava za probni trening.</p>
+          <a class="btn small" href="https://webglowstudio.github.io/Pulsfit/" target="_blank" rel="noopener">Otvori sajt →</a>
         </div>
       </article>
     </div>
