@@ -107,7 +107,13 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 .ph.pulsfit svg{width:78px;height:40px;filter:drop-shadow(0 0 12px rgba(57,255,20,.5));animation:pulsebeat 1.8s ease-in-out infinite}
 .ph.pulsfit small{color:#7DFF6A}
 @keyframes pulsebeat{0%,100%{transform:scale(1);filter:drop-shadow(0 0 8px rgba(57,255,20,.35))}50%{transform:scale(1.05);filter:drop-shadow(0 0 16px rgba(57,255,20,.75))}}
-@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg{animation:none}}
+/* ostrica placeholder */
+.ph.ostrica{background:radial-gradient(circle at 50% 28%, #3a3228, #0c0b0a 72%);color:#F4E8D4}
+.ph.ostrica svg{width:96px;height:64px}
+.ph.ostrica .stripes{animation:poleslide 1.2s linear infinite}
+.ph.ostrica small{color:#C4B49A}
+@keyframes poleslide{to{transform:translateY(-16px)}}
+@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes{animation:none}}
 
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
@@ -266,6 +272,15 @@ footer b{color:var(--text);font-weight:600}
           <h3>PulsFit</h3>
           <p>Energičan sajt za teretanu: članarine, raspored treninga, treneri i prijava za probni trening.</p>
           <a class="btn small" href="https://webglowstudio.github.io/Pulsfit/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+      <article class="card">
+        <a class="shot" href="https://webglowstudio.github.io/Berbernica/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph ostrica" aria-hidden="true"><svg viewBox="0 0 96 64"><defs><clipPath id="ostricaPole"><rect x="18" y="10" width="16" height="42" rx="8"/></clipPath><linearGradient id="ostricaSheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".42" stop-color="#fff" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient></defs><g clip-path="url(#ostricaPole)"><rect x="18" y="10" width="16" height="42" fill="#141210"/><g class="stripes"><polygon points="8,-20 46,-4 46,1 8,-15" fill="#F4E8D4"/><polygon points="8,-12 46,4 46,9 8,-7" fill="#A89880"/><polygon points="8,-4 46,12 46,17 8,1" fill="#F4E8D4"/><polygon points="8,4 46,20 46,25 8,9" fill="#A89880"/><polygon points="8,12 46,28 46,33 8,17" fill="#F4E8D4"/><polygon points="8,20 46,36 46,41 8,25" fill="#A89880"/><polygon points="8,28 46,44 46,49 8,33" fill="#F4E8D4"/><polygon points="8,36 46,52 46,57 8,41" fill="#A89880"/><polygon points="8,44 46,60 46,65 8,49" fill="#F4E8D4"/><polygon points="8,52 46,68 46,73 8,57" fill="#A89880"/><polygon points="8,60 46,76 46,81 8,65" fill="#F4E8D4"/></g><rect x="18" y="10" width="16" height="42" fill="url(#ostricaSheen)"/></g><ellipse cx="26" cy="12" rx="9" ry="3.2" fill="#E8D9C4"/><ellipse cx="26" cy="11.1" rx="6" ry="1.9" fill="#F7F0E6"/><rect x="23.5" y="5" width="5" height="6.4" rx="1.3" fill="#CDBBA3"/><ellipse cx="26" cy="52" rx="9" ry="3.2" fill="#2C261F"/><ellipse cx="26" cy="51.2" rx="6" ry="1.7" fill="#3C342C"/><rect x="24.3" y="51.6" width="3.4" height="7.6" rx="1" fill="#161310"/><g fill="none" stroke="#F3E6D0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="60" cy="24" r="5"/><circle cx="76" cy="24" r="5"/><path d="M64.2 27.2 86 50"/><path d="M71.8 27.2 50 50"/><circle cx="68" cy="30.2" r="1.35" fill="#F3E6D0" stroke="none"/></g></svg><b>Berbernica Oštrica</b><small>Berbernica</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Berbernica</span></div>
+          <h3>Berbernica Oštrica</h3>
+          <p>Elegantan crno-krem sajt za berbernicu: animirani berberski stub, usluge i cene, berberi i online zakazivanje termina.</p>
+          <a class="btn small" href="https://webglowstudio.github.io/Berbernica/" target="_blank" rel="noopener">Otvori sajt →</a>
         </div>
       </article>
     </div>
