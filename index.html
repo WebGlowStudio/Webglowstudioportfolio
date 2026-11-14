@@ -113,7 +113,15 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 .ph.ostrica .stripes{animation:poleslide 1.2s linear infinite}
 .ph.ostrica small{color:#C4B49A}
 @keyframes poleslide{to{transform:translateY(-16px)}}
-@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes{animation:none}}
+/* nabor placeholder */
+.ph.nabor{background:radial-gradient(circle at 50% 28%, #fff6e6, #f3c98a 56%, #e08a55);color:#4A2C1A;container-type:inline-size}
+.ph.nabor svg{width:96px;height:64px;flex-shrink:0}
+.ph.nabor .drip{animation:nabordrip 2.2s ease-in-out infinite}
+.ph.nabor small{color:#C4374A}
+.ph.nabor b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px}
+@container (max-width:336px){.ph.nabor b{font-size:17px}}
+@keyframes nabordrip{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip{animation:none}}
 
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
@@ -281,6 +289,15 @@ footer b{color:var(--text);font-weight:600}
           <h3>Berbernica Oštrica</h3>
           <p>Elegantan crno-krem sajt za berbernicu: animirani berberski stub, usluge i cene, berberi i online zakazivanje termina.</p>
           <a class="btn small" href="https://webglowstudio.github.io/Berbernica/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+      <article class="card">
+        <a class="shot" href="https://webglowstudio.github.io/Palacinkarnica/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph nabor" aria-hidden="true"><svg viewBox="0 0 96 64"><ellipse cx="48" cy="57.2" rx="31" ry="4.6" fill="#E4C196"/><ellipse cx="48" cy="55.4" rx="29" ry="4" fill="#FFF9F1"/><ellipse cx="48" cy="54.6" rx="22" ry="2.1" fill="#F4E0C6"/><ellipse cx="48" cy="50.2" rx="25" ry="3.5" fill="#C47A32"/><ellipse cx="48" cy="48.8" rx="25" ry="2.5" fill="#F6D19A"/><ellipse cx="48" cy="46.2" rx="23.5" ry="3.3" fill="#D4924A"/><ellipse cx="48" cy="44.9" rx="23.5" ry="2.4" fill="#FBE0B4"/><ellipse cx="48" cy="42.4" rx="22" ry="3.1" fill="#C47A32"/><ellipse cx="48" cy="41.2" rx="22" ry="2.3" fill="#F8D7A4"/><ellipse cx="48" cy="38.8" rx="20" ry="2.9" fill="#A85C22"/><ellipse cx="48" cy="37.7" rx="20" ry="2.2" fill="#FFE3BC"/><ellipse cx="48" cy="36.6" rx="12" ry="2.1" fill="#4A2C1A"/><ellipse cx="46.2" cy="36.2" rx="7" ry="1.05" fill="#6B3E24"/><g class="drip"><path d="M36.5 37c.7 3.4 1.5 6.2.1 9.6-.9 2.2.5 3.6 1.7 3.6 1.4 0 2.1-1.8 1.3-4.2-1-2.8-.5-6 .3-9z" fill="#3D2416"/><path d="M37.6 39.2c.15 1.8.2 3.2 0 4.8" stroke="#8A5A34" stroke-width=".6" fill="none" stroke-linecap="round" opacity=".85"/><path d="M60.5 37.2c.4 2.2.6 3.8-.1 5.8-.5 1.4.2 2.3.9 2.3.8 0 1.15-1 .75-2.4-.5-1.6-.3-3.2.15-5.7z" fill="#4A2C1A"/></g><g><path d="M43.2 24.2c1.5-2.5 3.4-2.8 4.5-.6-1.7.15-2.9 1.2-3.5 2.3-.5-1.1-1.5-1.9-1-1.7z" fill="#2E8A40"/><path d="M48.4 22.6c1.3-1.7 3-1.3 3.4.3-1.5.4-2.4 1.4-2.8 2.5.05-.95-.8-2.1-.6-2.8z" fill="#46B85C"/><path d="M45.4 22.4c.3-1.5 1.5-2 2.2-1-.6.8-1.15 1.6-1.15 2.3-.55-.25-1.05-.7-1.05-1.3z" fill="#2E8A40"/><ellipse cx="48.2" cy="29.4" rx="4.8" ry="5.4" fill="#E23B48"/><ellipse cx="47.1" cy="28" rx="2.4" ry="3.2" fill="#FF7380" opacity=".45"/><g fill="#FFE7A8"><ellipse cx="46.2" cy="28.4" rx=".48" ry=".72" transform="rotate(-28 46.2 28.4)"/><ellipse cx="48.3" cy="30.4" rx=".45" ry=".66"/><ellipse cx="50.1" cy="27.8" rx=".42" ry=".64" transform="rotate(20 50.1 27.8)"/><ellipse cx="47.2" cy="31.6" rx=".4" ry=".58" transform="rotate(-12 47.2 31.6)"/><ellipse cx="49.6" cy="31.5" rx=".38" ry=".55" transform="rotate(16 49.6 31.5)"/></g></g></svg><b>Palačinkarnica Slatki&nbsp;Nabor</b><small>Palačinkarnica</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Palačinkarnica</span></div>
+          <h3>Palačinkarnica Slatki&nbsp;Nabor</h3>
+          <p>Topao i svetao sajt za palačinkarnicu: animirane palačinke, meni sa cenama i alat za pravljenje svoje palačinke.</p>
+          <a class="btn small" href="https://webglowstudio.github.io/Palacinkarnica/" target="_blank" rel="noopener">Otvori sajt →</a>
         </div>
       </article>
     </div>
