@@ -121,7 +121,15 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 .ph.nabor b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px}
 @container (max-width:336px){.ph.nabor b{font-size:17px}}
 @keyframes nabordrip{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
-@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip{animation:none}}
+/* klas placeholder */
+.ph.klas{background:radial-gradient(circle at 50% 28%, #fff8ee, #f6e0b8 54%, #e4a85c);color:#5C3416;container-type:inline-size}
+.ph.klas svg{width:96px;height:64px;flex-shrink:0}
+.ph.klas .sway{animation:klassway 3.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+.ph.klas small{color:#A56828}
+.ph.klas b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px}
+@container (max-width:336px){.ph.klas b{font-size:17px}}
+@keyframes klassway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(6deg)}}
+@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip,.ph.klas .sway{animation:none}}
 
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
@@ -298,6 +306,15 @@ footer b{color:var(--text);font-weight:600}
           <h3>Palačinkarnica Slatki&nbsp;Nabor</h3>
           <p>Topao i svetao sajt za palačinkarnicu: animirane palačinke, meni sa cenama i alat za pravljenje svoje palačinke.</p>
           <a class="btn small" href="https://webglowstudio.github.io/Palacinkarnica/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+      <article class="card">
+        <a class="shot" href="https://webglowstudio.github.io/Pekara/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph klas" aria-hidden="true"><svg viewBox="0 0 96 64"><ellipse cx="48" cy="57.6" rx="33" ry="4" fill="#E4C196"/><ellipse cx="48" cy="56" rx="31" ry="3.4" fill="#FFF9F1"/><ellipse cx="48" cy="55.5" rx="21" ry="1.6" fill="#F4E0C6"/><g class="sway"><path d="M76 52C76.4 40 75.8 28 76.2 18" fill="none" stroke="#A67C2D" stroke-width="1.7" stroke-linecap="round"/><g fill="#E6C15A"><ellipse cx="76.2" cy="14.6" rx="2.05" ry="3.15"/><ellipse cx="73.3" cy="17.6" rx="1.9" ry="2.85" transform="rotate(-38 73.3 17.6)"/><ellipse cx="79.2" cy="17.8" rx="1.9" ry="2.85" transform="rotate(38 79.2 17.8)"/><ellipse cx="72.9" cy="21.2" rx="1.85" ry="2.75" transform="rotate(-34 72.9 21.2)"/><ellipse cx="79.6" cy="21.4" rx="1.85" ry="2.75" transform="rotate(34 79.6 21.4)"/><ellipse cx="73.1" cy="24.6" rx="1.75" ry="2.6" transform="rotate(-28 73.1 24.6)"/><ellipse cx="79.4" cy="24.8" rx="1.75" ry="2.6" transform="rotate(28 79.4 24.8)"/><ellipse cx="73.5" cy="27.8" rx="1.6" ry="2.35" transform="rotate(-22 73.5 27.8)"/><ellipse cx="79" cy="28" rx="1.6" ry="2.35" transform="rotate(22 79 28)"/><ellipse cx="74" cy="30.6" rx="1.4" ry="2.05" transform="rotate(-14 74 30.6)"/><ellipse cx="78.5" cy="30.7" rx="1.4" ry="2.05" transform="rotate(14 78.5 30.7)"/></g><ellipse cx="75.5" cy="13.6" rx=".9" ry="1.45" fill="#F8E7A8"/><g fill="none" stroke="#F0D48A" stroke-width=".7" stroke-linecap="round"><path d="M75 12.2 71.6 8.2"/><path d="M77.4 12.2 81 8"/><path d="M72.4 16.4 68.6 12.8"/><path d="M80 16.6 84 12.8"/></g></g><path d="M16 47c0-11 10.4-19 26-19s26 8 26 19c0 5.2-8.6 8.8-26 8.8S16 52.2 16 47z" fill="#C47A32"/><path d="M16 47.6c0 4.4 8.6 8 26 8s26-3.6 26-8c0 2.2-8.2 5.8-26 5.8S16 49.8 16 47.6z" fill="#8C4E1C"/><path d="M21 44.6c1.6-8 10-13.2 21-13.2s19.6 5.4 21.2 13.4c-5.2-3.8-12.6-6-21.2-6s-16 2-21 5.8z" fill="#E2A85A"/><ellipse cx="35.5" cy="37.2" rx="7.2" ry="2.2" fill="#FFF9F1" opacity=".5"/><path d="M28.5 44c7-5.6 16.8-5.8 24-.4" fill="none" stroke="#F6E3C4" stroke-width="2.5" stroke-linecap="round"/><path d="M28.5 43c7-5.6 16.8-5.8 24-.4" fill="none" stroke="#5C3014" stroke-width="1.35" stroke-linecap="round"/><g fill="#6B3A16" opacity=".28"><circle cx="23" cy="44.5" r=".55"/><circle cx="57.5" cy="43.6" r=".45"/><circle cx="49" cy="48.2" r=".4"/></g></svg><b>Pekara Zlatni&nbsp;Klas</b><small>Pekara</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Pekara</span></div>
+          <h3>Pekara Zlatni&nbsp;Klas</h3>
+          <p>Topao zanatski sajt za pekaru: ponuda hleba, peciva i bureka, jutarnje pečenje i porudžbine za proslave.</p>
+          <a class="btn small" href="https://webglowstudio.github.io/Pekara/" target="_blank" rel="noopener">Otvori sajt →</a>
         </div>
       </article>
     </div>
