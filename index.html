@@ -164,6 +164,20 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 footer{padding:40px 0 50px;text-align:center;color:var(--muted);font-size:13px;font-weight:300}
 footer b{color:var(--text);font-weight:600}
 
+/* testimonials (section stays hidden until a real quote is published) */
+#utisci[hidden]{display:none}
+.t-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.t-mark{color:var(--lime);font-size:28px;line-height:1;font-weight:600}
+.t-stars{display:flex;gap:3px;color:var(--lime)}
+.t-stars svg{width:16px;height:16px;display:block}
+.card .t-quote{flex:1}
+.card .t-quote p{color:var(--text);font-size:16px;line-height:1.55}
+.t-who{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.t-who b{font-size:15px;font-weight:600}
+.t-who span{color:var(--muted);font-size:13.5px;font-weight:300}
+.card .t-link{align-self:flex-start;font-size:14px;font-weight:600;text-decoration:none}
+.card .t-link:hover{text-decoration:underline}
+
 @media (max-width:640px){
   .navlinks a:not(.btn){display:none}
   .hero{padding:80px 0 60px}
@@ -421,6 +435,50 @@ footer b{color:var(--text);font-weight:600}
         <h3>Direktan dogovor</h3>
         <p>Pišeš direktno meni, bez posrednika, i zajedno dogovaramo svaki detalj.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="utisci" hidden>
+  <div class="container">
+    <div class="sec-head">
+      <div><div class="eyebrow">Klijenti</div><h2>Utisci klijenata</h2></div>
+      <p>Kratke reči ljudi kojima je sajt već online.</p>
+    </div>
+    <div class="grid">
+<!--
+  Ovaj odeljak je sakriven jer još nema pravih utisaka. Ništa odavde se ne vidi na sajtu.
+  Da objaviš prvi utisak:
+  1. Iskopiraj šablon kartice ispod (ceo article, od <article do </article>).
+  2. Nalepi ga ovde, unutar div class="grid", van ovog komentara.
+  3. Upiši pravi citat, ime klijenta i naziv firme ili delatnost.
+  4. Link ka sajtu i zvezdice su opciono. Ako nema sajta, obriši oznaku a. Ako nema ocene, obriši div class="t-stars". Za manju ocenu obriši višak zvezdica i uskladi aria-label (npr. Ocena 4 od 5).
+  5. Ukloni atribut hidden sa <section id="utisci"> da se ceo odeljak prikaže.
+  Ne ostavljaj izmišljen citat kao vidljiv sadržaj.
+
+  <article class="card">
+    <div class="card-body">
+      <div class="t-top">
+        <span class="t-mark" aria-hidden="true">„</span>
+        <div class="t-stars" role="img" aria-label="Ocena 5 od 5">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.7 5.6 6.2.8-4.5 4.3 1.1 6.1L12 16.6 6.5 19.4l1.1-6.1L3.1 9l6.2-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.7 5.6 6.2.8-4.5 4.3 1.1 6.1L12 16.6 6.5 19.4l1.1-6.1L3.1 9l6.2-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.7 5.6 6.2.8-4.5 4.3 1.1 6.1L12 16.6 6.5 19.4l1.1-6.1L3.1 9l6.2-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.7 5.6 6.2.8-4.5 4.3 1.1 6.1L12 16.6 6.5 19.4l1.1-6.1L3.1 9l6.2-.8z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.7 5.6 6.2.8-4.5 4.3 1.1 6.1L12 16.6 6.5 19.4l1.1-6.1L3.1 9l6.2-.8z"/></svg>
+        </div>
+      </div>
+      <blockquote class="t-quote">
+        <p>Ovde ide pravi citat klijenta, njihovim rečima.</p>
+      </blockquote>
+      <div class="t-who">
+        <b>Ime Prezime</b>
+        <span>Naziv firme · delatnost</span>
+        <a class="t-link" href="https://www.sajt-klijenta.rs" target="_blank" rel="noopener">Poseti sajt →</a>
+      </div>
+    </div>
+  </article>
+-->
     </div>
   </div>
 </section>
