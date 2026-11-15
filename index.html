@@ -164,8 +164,7 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 footer{padding:40px 0 50px;text-align:center;color:var(--muted);font-size:13px;font-weight:300}
 footer b{color:var(--text);font-weight:600}
 
-/* testimonials (section stays hidden until a real quote is published) */
-#utisci[hidden]{display:none}
+/* testimonials */
 .t-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .t-mark{color:var(--lime);font-size:28px;line-height:1;font-weight:600}
 .t-stars{display:flex;gap:3px;color:var(--lime)}
@@ -177,11 +176,37 @@ footer b{color:var(--text);font-weight:600}
 .t-who span{color:var(--muted);font-size:13.5px;font-weight:300}
 .card .t-link{align-self:flex-start;font-size:14px;font-weight:600;text-decoration:none}
 .card .t-link:hover{text-decoration:underline}
+#utisci .grid:empty{display:none}
+.review{background:linear-gradient(180deg,rgba(34,197,94,.10),rgba(34,197,94,0) 80%), var(--panel);border:1px solid var(--line);border-radius:24px;padding:32px 28px}
+.review h3{font-size:22px;margin-bottom:18px}
+.review form{display:flex;flex-direction:column;gap:14px}
+.review-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px}
+.review .field{display:flex;flex-direction:column;align-items:stretch;gap:6px;font-size:13px;font-weight:600}
+.review .opt{font-weight:300;color:var(--muted)}
+.review input,.review textarea{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;font-weight:300;font-size:15px}
+.review textarea{min-height:120px;resize:vertical}
+.review input::placeholder,.review textarea::placeholder{color:var(--muted)}
+.review input:focus,.review textarea:focus{outline:none;border-color:var(--green);box-shadow:var(--glow)}
+.review input:-webkit-autofill,.review textarea:-webkit-autofill{-webkit-text-fill-color:var(--text);box-shadow:0 0 0 1000px var(--bg) inset}
+.review .hp{display:none}
+.review fieldset{border:0;padding:0;margin:0}
+.review legend{font-size:13px;font-weight:600;padding:0}
+.rate-stars{position:relative;display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:2px;margin-top:6px}
+.rate-stars input{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.rate-stars label{color:var(--muted);cursor:pointer;display:flex;padding:6px}
+.rate-stars svg{width:22px;height:22px;display:block}
+.rate-stars label:hover,.rate-stars label:hover ~ label,.rate-stars input:checked ~ label{color:var(--lime)}
+.rate-stars input:focus-visible + label{outline:2px solid var(--lime);outline-offset:2px;border-radius:6px}
+button.btn{font-family:inherit;cursor:pointer}
+.review .btn{align-self:flex-start}
+.review-note{color:var(--muted);font-size:13px;font-weight:300;margin-top:14px}
 
 @media (max-width:640px){
   .navlinks a:not(.btn){display:none}
   .hero{padding:80px 0 60px}
   section{padding:54px 0}
+  .review{padding:24px 16px}
+  .review .btn{width:100%}
 }
 </style>
 </head>
@@ -439,21 +464,20 @@ footer b{color:var(--text);font-weight:600}
   </div>
 </section>
 
-<section id="utisci" hidden>
+<section id="utisci">
   <div class="container">
     <div class="sec-head">
       <div><div class="eyebrow">Klijenti</div><h2>Utisci klijenata</h2></div>
-      <p>Kratke reči ljudi kojima je sajt već online.</p>
+      <p>Radili smo zajedno? Ostavite svoj utisak.</p>
     </div>
     <div class="grid">
 <!--
-  Ovaj odeljak je sakriven jer još nema pravih utisaka. Ništa odavde se ne vidi na sajtu.
-  Da objaviš prvi utisak:
+  Ovde ide mreža odobrenih utisaka. Dok nema nijedne kartice, div.grid je prazan i ne zauzima mesto.
+  Da objaviš odobren utisak:
   1. Iskopiraj šablon kartice ispod (ceo article, od <article do </article>).
   2. Nalepi ga ovde, unutar div class="grid", van ovog komentara.
   3. Upiši pravi citat, ime klijenta i naziv firme ili delatnost.
   4. Link ka sajtu i zvezdice su opciono. Ako nema sajta, obriši oznaku a. Ako nema ocene, obriši div class="t-stars". Za manju ocenu obriši višak zvezdica i uskladi aria-label (npr. Ocena 4 od 5).
-  5. Ukloni atribut hidden sa <section id="utisci"> da se ceo odeljak prikaže.
   Ne ostavljaj izmišljen citat kao vidljiv sadržaj.
 
   <article class="card">
@@ -479,6 +503,47 @@ footer b{color:var(--text);font-weight:600}
     </div>
   </article>
 -->
+    </div>
+    <div class="review">
+      <h3>Ostavite utisak</h3>
+      <form action="https://formsubmit.co/anna-90@live.com" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="Novi utisak sa WebGlow portfolija">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://webglowstudio.github.io/Webglowstudioportfolio/#utisci">
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="review-row">
+          <label class="field">Ime i prezime
+            <input type="text" name="Ime i prezime" required autocomplete="name">
+          </label>
+          <label class="field">Naziv firme
+            <input type="text" name="Naziv firme" required autocomplete="organization">
+          </label>
+        </div>
+        <label class="field"><span>Link do sajta <span class="opt">opciono</span></span>
+          <input type="url" name="Link do sajta" inputmode="url" autocomplete="url" placeholder="https://">
+        </label>
+        <fieldset class="rate">
+          <legend>Ocena <span class="opt">opciono</span></legend>
+          <div class="rate-stars">
+            <input type="radio" name="Ocena" id="ocena5" value="5">
+            <label for="ocena5" aria-label="Ocena 5 od 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.7 5.6 6.2.8-4.5 4.3 1.1 6.1L12 16.6 6.5 19.4l1.1-6.1L3.1 9l6.2-.8z"/></svg></label>
+            <input type="radio" name="Ocena" id="ocena4" value="4">
+            <label for="ocena4" aria-label="Ocena 4 od 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.7 5.6 6.2.8-4.5 4.3 1.1 6.1L12 16.6 6.5 19.4l1.1-6.1L3.1 9l6.2-.8z"/></svg></label>
+            <input type="radio" name="Ocena" id="ocena3" value="3">
+            <label for="ocena3" aria-label="Ocena 3 od 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.7 5.6 6.2.8-4.5 4.3 1.1 6.1L12 16.6 6.5 19.4l1.1-6.1L3.1 9l6.2-.8z"/></svg></label>
+            <input type="radio" name="Ocena" id="ocena2" value="2">
+            <label for="ocena2" aria-label="Ocena 2 od 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.7 5.6 6.2.8-4.5 4.3 1.1 6.1L12 16.6 6.5 19.4l1.1-6.1L3.1 9l6.2-.8z"/></svg></label>
+            <input type="radio" name="Ocena" id="ocena1" value="1">
+            <label for="ocena1" aria-label="Ocena 1 od 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.7 5.6 6.2.8-4.5 4.3 1.1 6.1L12 16.6 6.5 19.4l1.1-6.1L3.1 9l6.2-.8z"/></svg></label>
+          </div>
+        </fieldset>
+        <label class="field">Vaš utisak
+          <textarea name="Vaš utisak" required rows="5"></textarea>
+        </label>
+        <button class="btn primary" type="submit">Pošalji utisak</button>
+      </form>
+      <p class="review-note">Utisci se objavljuju nakon provere.</p>
     </div>
   </div>
 </section>
