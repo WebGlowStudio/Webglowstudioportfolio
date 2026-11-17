@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WebGlow Studio · Sajtovi koji sijaju</title>
-<meta name="description" content="WebGlow Studio – moderni sajtovi za male firme, salone, kafane, ordinacije, veterinare i bendove. Javi se za ponudu.">
+<title>WebGlow Studio · Sajtovi koji sijaju | Beograd</title>
+<meta name="description" content="WebGlow Studio iz Beograda pravi moderne, SEO optimizovane sajtove za male firme, salone, kafane, ordinacije i bendove. Javi se za ponudu.">
+<meta property="og:title" content="WebGlow Studio · Sajtovi koji sijaju | Beograd">
+<meta property="og:description" content="WebGlow Studio iz Beograda pravi moderne, SEO optimizovane sajtove za male firme, salone, kafane, ordinacije i bendove. Javi se za ponudu.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/">
+<meta property="og:locale" content="sr_RS">
+<link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -45,6 +51,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between;gap
 .hero-mark{width:120px;height:88px;margin:0 auto 26px;display:block}
 .hero h1{font-size:clamp(38px,8vw,72px);line-height:1.05;letter-spacing:-1.5px;font-weight:700}
 .hero p{max-width:600px;margin:22px auto 0;color:var(--muted);font-size:clamp(16px,2.4vw,19px);font-weight:300}
+.hero .seo-line{max-width:640px;margin:16px auto 0;color:var(--lime);font-size:15px;font-weight:400}
 .hero .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
 
 /* sections */
@@ -147,7 +154,16 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 .ph.bozur b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px}
 @container (max-width:336px){.ph.bozur b{font-size:17px}}
 @keyframes bozursway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3.5deg)}}
-@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip,.ph.klas .sway,.ph.lila .tilt,.ph.lila .gleam,.ph.bozur .bloom{animation:none}}
+
+/* zare placeholder */
+.ph.zare{background:radial-gradient(circle at 50% 28%, #5C3A21, #1C1410 72%);color:#FAF4EA;container-type:inline-size}
+.ph.zare svg{width:96px;height:64px;flex-shrink:0}
+.ph.zare .ember{animation:zareglow 2.4s ease-in-out infinite}
+.ph.zare small{color:#E0A15A}
+.ph.zare b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px}
+@container (max-width:336px){.ph.zare b{font-size:17px}}
+@keyframes zareglow{0%,100%{opacity:.7}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip,.ph.klas .sway,.ph.lila .tilt,.ph.lila .gleam,.ph.bozur .bloom,.ph.zare .ember{animation:none}}
 
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
@@ -209,6 +225,34 @@ button.btn{font-family:inherit;cursor:pointer}
   .review .btn{width:100%}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@type": "ProfessionalService",
+  "name": "WebGlow Studio",
+  "alternateName": "WebGlow Studio · Ana Todorović",
+  "description": "Izrada modernih, SEO optimizovanih sajtova za male firme u Beogradu i Srbiji.",
+  "url": "https://webglowstudio.github.io/Webglowstudioportfolio/",
+  "email": "anna-90@live.com",
+  "areaServed": {
+    "@type": "City",
+    "name": "Beograd"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Beograd",
+    "addressCountry": "RS"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Ana Todorović"
+  },
+  "sameAs": [
+    "https://www.instagram.com/elizabetdarcy",
+    "https://github.com/WebGlowStudio"
+  ],
+  "@context": "https://schema.org"
+}
+</script>
 </head>
 <body>
 
@@ -242,6 +286,7 @@ button.btn{font-family:inherit;cursor:pointer}
     <svg class="hero-mark" viewBox="0 0 300 220" aria-hidden="true"><use href="#wmark"/></svg>
     <h1>Sajtovi koji<br><span class="grad">sijaju.</span></h1>
     <p>Pravim moderne sajtove za male firme, salone, kafane i ordinacije, kao i zabavne web igrice. Lepo izgledaju i na telefonu i na računaru.</p>
+    <p class="seo-line">Svi sajtovi su SEO optimizovani — brzi, prilagođeni mobilnim telefonima i spremni za Google.</p>
     <div class="btns">
       <a href="#kontakt" class="btn primary">Javi se za ponudu</a>
       <a href="#radovi" class="btn">Pogledaj radove</a>
@@ -392,6 +437,15 @@ button.btn{font-family:inherit;cursor:pointer}
           <a class="btn small" href="https://webglowstudio.github.io/Cvecara/" target="_blank" rel="noopener">Otvori sajt →</a>
         </div>
       </article>
+      <article class="card">
+        <a class="shot" href="https://webglowstudio.github.io/Pecenjara/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph zare" aria-hidden="true"><svg viewBox="0 0 96 64" fill="none"><rect width="96" height="64" fill="none"/><g class="ember"><ellipse cx="48" cy="52" rx="28" ry="5" fill="#3A2216" opacity=".9"/><ellipse cx="32" cy="50.5" rx="5" ry="2.2" fill="#E85D04" opacity=".85"/><ellipse cx="48" cy="51.2" rx="6" ry="2.4" fill="#FF6B2C" opacity=".9"/><ellipse cx="63" cy="50.4" rx="5" ry="2.1" fill="#E0A15A" opacity=".8"/><path d="M28 50c3-7 6-11 7-16" stroke="#E85D04" stroke-width="1.2" stroke-linecap="round" opacity=".7"/><path d="M48 51c1-8 0-14 2-19" stroke="#FF6B2C" stroke-width="1.3" stroke-linecap="round" opacity=".75"/><path d="M66 50c-2-7-1-12 1-16" stroke="#E0A15A" stroke-width="1.2" stroke-linecap="round" opacity=".65"/></g><g><path d="M10 28h76" stroke="#C4A574" stroke-width="2.2" stroke-linecap="round"/><path d="M10 28h76" stroke="#8B5A2B" stroke-width=".8" stroke-linecap="round"/><ellipse cx="22" cy="28" rx="7.5" ry="9" fill="#C4A574"/><ellipse cx="38" cy="27" rx="8" ry="10" fill="#E0A15A"/><ellipse cx="55" cy="27.5" rx="8.2" ry="10.2" fill="#C4A574"/><ellipse cx="71" cy="28" rx="7.2" ry="8.6" fill="#E0A15A"/><ellipse cx="22" cy="24" rx="3.2" ry="2" fill="#F3D19A" opacity=".45"/><ellipse cx="38" cy="22.5" rx="3.4" ry="2.1" fill="#FFF6E6" opacity=".35"/><circle cx="8.5" cy="28" r="2.1" fill="#5C3A21"/><circle cx="87.5" cy="28" r="2.1" fill="#5C3A21"/></g></svg><b>Pečenjara Kod&nbsp;Žare</b><small>Pečenjara</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Pečenjara</span></div>
+          <h3>Pečenjara Kod&nbsp;Žare</h3>
+          <p>Topao sajt za pečenjaru: prase i jagnjetina sa ražnja, porudžbine za slave i proslave, radno vreme i kontakt.</p>
+          <a class="btn small" href="https://webglowstudio.github.io/Pecenjara/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -459,6 +513,11 @@ button.btn{font-family:inherit;cursor:pointer}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>
         <h3>Direktan dogovor</h3>
         <p>Pišeš direktno meni, bez posrednika, i zajedno dogovaramo svaki detalj.</p>
+      </div>
+      <div class="ben">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M8 11h6M11 8v6"/></svg>
+        <h3>SEO optimizacija</h3>
+        <p>Svi sajtovi su SEO optimizovani — brzi, prilagođeni mobilnim telefonima i spremni za Google.</p>
       </div>
     </div>
   </div>
