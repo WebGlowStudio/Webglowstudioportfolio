@@ -163,7 +163,27 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 .ph.zare b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px}
 @container (max-width:336px){.ph.zare b{font-size:17px}}
 @keyframes zareglow{0%,100%{opacity:.7}50%{opacity:1}}
-@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip,.ph.klas .sway,.ph.lila .tilt,.ph.lila .gleam,.ph.bozur .bloom,.ph.zare .ember{animation:none}}
+/* volan placeholder */
+.ph.volan{background:radial-gradient(circle at 50% 28%, #163A66, #0B1F3A 72%);color:#F6F4EF;container-type:inline-size}
+.ph.volan svg{width:96px;height:64px;flex-shrink:0}
+.ph.volan .car{animation:volanbob 2.4s ease-in-out infinite}
+.ph.volan .wheel{animation:volanroll 1.2s linear infinite;transform-box:fill-box;transform-origin:center}
+.ph.volan small{color:#F5C518}
+.ph.volan b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px}
+@container (max-width:336px){.ph.volan b{font-size:17px}}
+@keyframes volanbob{0%,100%{transform:translate(0,0)}40%{transform:translate(4px,-2px)}70%{transform:translate(-3px,-1px)}}
+@keyframes volanroll{to{transform:rotate(360deg)}}
+/* borovi placeholder */
+.ph.borovi{background:radial-gradient(circle at 50% 28%, #3E6B54, #1B3A2F 72%);color:#F6F0E6;container-type:inline-size}
+.ph.borovi svg{width:96px;height:64px;flex-shrink:0}
+.ph.borovi .pine{animation:borovisway 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+.ph.borovi .glow{animation:boroviglow 2.8s ease-in-out infinite}
+.ph.borovi small{color:#C4A484}
+.ph.borovi b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px}
+@container (max-width:336px){.ph.borovi b{font-size:17px}}
+@keyframes borovisway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes boroviglow{0%,100%{opacity:.7}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip,.ph.klas .sway,.ph.lila .tilt,.ph.lila .gleam,.ph.bozur .bloom,.ph.zare .ember,.ph.volan .car,.ph.volan .wheel,.ph.borovi .pine,.ph.borovi .glow{animation:none}}
 
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
@@ -446,6 +466,25 @@ button.btn{font-family:inherit;cursor:pointer}
           <a class="btn small" href="https://webglowstudio.github.io/Pecenjara/" target="_blank" rel="noopener">Otvori sajt →</a>
         </div>
       </article>
+      <article class="card">
+        <a class="shot" href="https://webglowstudio.github.io/Autoskola/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph volan" aria-hidden="true"><svg viewBox="0 0 96 64" fill="none"><line x1="6" y1="54" x2="90" y2="54" stroke="#F5C518" stroke-width="1.4" stroke-dasharray="5 4" stroke-linecap="round" opacity=".55"/><g class="car"><ellipse cx="48" cy="53.4" rx="24" ry="3.2" fill="#061018" opacity=".5"/><path d="M20 40c0-3.2 2.2-5.6 5.4-5.6h7.2L39.4 20.2c.7-1.3 2-2 3.5-2h18.4c1.6 0 3 .8 3.7 2.2L70 34.4h6.2c3.2 0 5.8 2.4 5.8 5.6v5.4c0 1.3-1.1 2.4-2.4 2.4H22.2c-1.2 0-2.2-1-2.2-2.2V40Z" fill="#F5C518"/><path d="M36.6 22.6h12.2v11.2H31.2l5.4-11.2Z" fill="#102A4C"/><path d="M50.6 22.6h12l5 11.2H50.6V22.6Z" fill="#163A66"/><path d="M37.2 23.2h11v4.2H34.6l2.6-4.2Z" fill="#D6E4F5" opacity=".35"/><ellipse cx="79.2" cy="39.2" rx="2.1" ry="2.4" fill="#FFF6D4"/><rect x="19.2" y="37.2" width="2.2" height="3.6" rx=".6" fill="#FF8A00"/><rect x="22.4" y="39.2" width="8.6" height="7.2" rx="1" fill="#F6F4EF" stroke="#0B1F3A" stroke-width=".7"/><path d="M25 40.8h1.7v3.6h2.8v1.6H25z" fill="#0B1F3A"/><g class="wheel"><circle cx="34" cy="48.6" r="6.2" fill="#0B1F3A"/><circle cx="34" cy="48.6" r="2.3" fill="#F5C518"/><path d="M34 43.8v3.2M34 50.2v3.2M28.8 48.6h3.2M36 48.6h3.2" stroke="#F6F4EF" stroke-width=".7" opacity=".4"/></g><g class="wheel"><circle cx="66.4" cy="48.6" r="6.2" fill="#0B1F3A"/><circle cx="66.4" cy="48.6" r="2.3" fill="#F5C518"/><path d="M66.4 43.8v3.2M66.4 50.2v3.2M61.2 48.6h3.2M68.4 48.6h3.2" stroke="#F6F4EF" stroke-width=".7" opacity=".4"/></g></g></svg><b>Auto-škola Volan</b><small>Auto-škola</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Auto-škola</span></div>
+          <h3>Auto-škola Volan</h3>
+          <p>Moderan sajt za auto-školu: kategorije B, A i C, paketi, raspored teorije i prijava kandidata, uz animaciju autića na početku.</p>
+          <a class="btn small" href="https://webglowstudio.github.io/Autoskola/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+      <article class="card">
+        <a class="shot" href="https://webglowstudio.github.io/Apartmani/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph borovi" aria-hidden="true"><svg viewBox="0 0 96 64" fill="none"><ellipse cx="48" cy="58" rx="40" ry="5.2" fill="#163028" opacity=".9"/><path d="M0 54c14-6 26-4 38 0 12 4 22 2 30-3 10 5 20 8 28 5v12H0V54Z" fill="#1B3A2F"/><g class="pine" transform="translate(16 10)"><rect x="-1.6" y="38" width="3.2" height="12" fill="#5C3A21"/><path d="M0 2l11 18H-11L0 2Z" fill="#2F5540"/><path d="M0 10l13 20H-13L0 10Z" fill="#3E6B54"/><path d="M0 20l14.5 22H-14.5L0 20Z" fill="#2C4F3C"/></g><g class="pine" transform="translate(36 16)"><rect x="-1.3" y="30" width="2.6" height="10" fill="#5C3A21"/><path d="M0 2l9 15H-9L0 2Z" fill="#3E6B54"/><path d="M0 10l11 18H-11L0 10Z" fill="#2F5540"/><path d="M0 18l12 18H-12L0 18Z" fill="#264A38"/></g><g class="cabin"><rect x="44" y="34" width="30" height="20" rx="1.2" fill="#8B5E3C"/><path d="M45 40.5h28M45 46.5h28" stroke="#C4A484" stroke-width=".6" opacity=".45"/><path d="M41 35.5L59 18.5 77 35.5Z" fill="#5C3A21"/><rect x="67.5" y="22" width="5" height="10" fill="#6B4A32"/><rect x="48" y="40" width="7" height="14" rx=".5" fill="#5C3A21"/><circle cx="53.2" cy="47.2" r=".7" fill="#C4A484"/><rect class="glow" x="60" y="40" width="9.2" height="7.2" rx=".7" fill="#F6E0A8"/><path d="M64.6 40v7.2M60 43.6h9.2" stroke="#8B5E3C" stroke-width=".55" opacity=".55"/></g><g class="pine" transform="translate(82 14)"><rect x="-1.5" y="34" width="3" height="12" fill="#5C3A21"/><path d="M0 1l10 16H-10L0 1Z" fill="#3E6B54"/><path d="M0 9l12 18H-12L0 9Z" fill="#2F5540"/><path d="M0 18l13 20H-13L0 18Z" fill="#2C4F3C"/></g></svg><b>Apartmani Borovi</b><small>Apartmani</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Smeštaj</span></div>
+          <h3>Apartmani Borovi</h3>
+          <p>Topao sajt za apartmane na Zlatiboru: smeštajne jedinice, galerija, okolina i upit za rezervaciju.</p>
+          <a class="btn small" href="https://webglowstudio.github.io/Apartmani/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
