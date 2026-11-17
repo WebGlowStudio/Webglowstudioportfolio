@@ -11,6 +11,14 @@
 <meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/">
 <meta property="og:locale" content="sr_RS">
 <link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<meta property="og:image" content="https://webglowstudio.github.io/Webglowstudioportfolio/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="WebGlow Studio">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -32,7 +40,7 @@ nav{position:sticky;top:0;z-index:10;background:rgba(11,15,13,.82);backdrop-filt
 nav .container{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700;font-size:18px}
 .brand:hover{color:var(--text)}
-.brand svg{width:40px;height:30px}
+.brand img{width:36px;height:36px;flex-shrink:0;display:block}
 .brand span{font-weight:300;color:var(--lime);letter-spacing:3px;font-size:12px;margin-left:2px}
 .navlinks{display:flex;align-items:center;gap:22px}
 .navlinks a{color:var(--muted);text-decoration:none;font-size:14px}
@@ -48,7 +56,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between;gap
 .hero{position:relative;padding:110px 0 90px;text-align:center;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:-200px -100px auto;height:640px;background:radial-gradient(closest-side, rgba(34,197,94,.22), transparent);pointer-events:none}
 .hero .container{position:relative}
-.hero-mark{width:120px;height:88px;margin:0 auto 26px;display:block}
+.hero-mark{width:112px;height:112px;margin:0 auto 26px;display:block}
 .hero h1{font-size:clamp(38px,8vw,72px);line-height:1.05;letter-spacing:-1.5px;font-weight:700}
 .hero p{max-width:600px;margin:22px auto 0;color:var(--muted);font-size:clamp(16px,2.4vw,19px);font-weight:300}
 .hero .seo-line{max-width:640px;margin:16px auto 0;color:var(--lime);font-size:15px;font-weight:400}
@@ -198,6 +206,8 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 .contact .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
 
 footer{padding:40px 0 50px;text-align:center;color:var(--muted);font-size:13px;font-weight:300}
+footer .container{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+footer img{width:28px;height:28px;flex-shrink:0;display:block}
 footer b{color:var(--text);font-weight:600}
 
 /* testimonials */
@@ -279,7 +289,7 @@ button.btn{font-family:inherit;cursor:pointer}
 <nav>
   <div class="container">
     <a href="#" class="brand" aria-label="WebGlow Studio, početak">
-      <svg viewBox="0 0 300 220" aria-hidden="true"><use href="#wmark"/></svg>
+      <img src="logo-icon.svg" alt="" width="36" height="36">
       WebGlow<span>STUDIO</span>
     </a>
     <div class="navlinks">
@@ -290,20 +300,9 @@ button.btn{font-family:inherit;cursor:pointer}
   </div>
 </nav>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="wg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22C55E"/><stop offset="1" stop-color="#A3E635"/></linearGradient>
-    <filter id="wb" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12"/></filter>
-    <g id="wmark">
-      <path d="M30 40 L85 180 L150 75 L215 180 L270 40" fill="none" stroke="url(#wg)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" filter="url(#wb)" opacity=".9"/>
-      <path d="M30 40 L85 180 L150 75 L215 180 L270 40" fill="none" stroke="url(#wg)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-  </defs>
-</svg>
-
 <header class="hero">
   <div class="container">
-    <svg class="hero-mark" viewBox="0 0 300 220" aria-hidden="true"><use href="#wmark"/></svg>
+    <img class="hero-mark" src="logo-icon.svg" alt="" width="112" height="112">
     <h1>Sajtovi koji<br><span class="grad">sijaju.</span></h1>
     <p>Pravim moderne sajtove za male firme, salone, kafane i ordinacije, kao i zabavne web igrice. Lepo izgledaju i na telefonu i na računaru.</p>
     <p class="seo-line">Svi sajtovi su SEO optimizovani — brzi, prilagođeni mobilnim telefonima i spremni za Google.</p>
@@ -669,7 +668,10 @@ button.btn{font-family:inherit;cursor:pointer}
 </main>
 
 <footer>
-  <div class="container">© 2026 <b>WebGlow Studio</b> · Ana Todorović</div>
+  <div class="container">
+    <img src="logo-icon.svg" alt="" width="28" height="28">
+    <span>© 2026 <b>WebGlow Studio</b> · Ana Todorović</span>
+  </div>
 </footer>
 
 </body>

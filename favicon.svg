@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" role="img" aria-label="WebGlow Studio — W Monogram — icon">
+<title>WebGlow Studio — W Monogram — icon</title>
+<defs>
+  <linearGradient id="wg" x1="34" y1="52" x2="166" y2="52" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#22C55E"/>
+    <stop offset="1" stop-color="#A3E635"/>
+  </linearGradient>
+</defs>
+<path d="M34 50 L70 158 L100 102 L130 158 L166 50" fill="none" stroke="url(#wg)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M107.792 70.208L102.28 78L107.792 85.792L100 80.28L92.208 85.792L97.72 78L92.208 70.208L100 75.72Z" fill="#E8C54A"/>
+<path d="M100 59L102.418 75.582L119 78L102.418 80.418L100 97L97.582 80.418L81 78L97.582 75.582Z" fill="#A3E635"/>
+<circle cx="100" cy="78" r="1.9" fill="#E8C54A"/>
+</svg>
