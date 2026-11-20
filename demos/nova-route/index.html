@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova Route Dispatch — Truck Dispatch Services from Kragujevac</title>
+<meta name="description" content="Nova Route Dispatch is a truck dispatch company in Kragujevac, Serbia. We plan loads, handle paperwork and keep drivers moving 24/7. Demo by WebGlow Studio.">
+<meta property="og:title" content="Nova Route Dispatch — Truck Dispatch Services from Kragujevac">
+<meta property="og:description" content="Nova Route Dispatch is a truck dispatch company in Kragujevac, Serbia. We plan loads, handle paperwork and keep drivers moving 24/7. Demo by WebGlow Studio.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/nova-route/">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/nova-route/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10151B;
+    --panel:#182029;
+    --panel-2:#1E2830;
+    --accent:#FFC145;
+    --accent-dim:#8a6a2c;
+    --accent-2:#3E8F63;
+    --text:#EDEEF2;
+    --muted:#8A97A3;
+    --line:rgba(255,255,255,0.09);
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    line-height:1.5;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:1.05;
+  }
+  .mono{ font-family:'JetBrains Mono', monospace; }
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 28px; }
+  section{ padding:110px 0; }
+  @media (max-width:768px){ section{ padding:72px 0; } }
+
+  /* ---------- reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; }
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(16,21,27,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:18px 28px; max-width:1180px; margin:0 auto; }
+  .logo{ display:flex; align-items:center; gap:10px; }
+  .logo-mark{ width:30px; height:30px; flex-shrink:0; }
+  .logo-text{ font-family:'Oswald'; font-weight:700; font-size:20px; letter-spacing:0.03em; }
+  .logo-text span{ color:var(--accent); }
+  .logo-sub{ font-family:'JetBrains Mono'; font-size:9px; letter-spacing:0.22em; color:var(--muted); display:block; margin-top:-2px;}
+  nav ul{ display:flex; gap:34px; list-style:none; }
+  nav ul a{ font-size:14px; color:var(--muted); transition:color .2s ease; position:relative; }
+  nav ul a:hover{ color:var(--text); }
+  .nav-cta{
+    display:flex; align-items:center; gap:20px;
+  }
+  .phone{ font-family:'JetBrains Mono'; font-size:14px; color:var(--text); }
+  .phone span{ color:var(--muted); font-size:11px; display:block; letter-spacing:0.1em;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--accent); color:#10151B; font-weight:700;
+    font-family:'Oswald'; text-transform:uppercase; letter-spacing:0.04em; font-size:13px;
+    padding:12px 22px; border-radius:var(--radius); border:none; cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 8px 24px -8px rgba(255,193,69,0.5); }
+  .btn:focus-visible, a:focus-visible, button:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+  .nav-cta .btn{ padding:7px 15px; font-size:11px; border-radius:6px; }
+  .btn-ghost{
+    background:transparent; color:var(--text); border:1px solid var(--line);
+  }
+  .btn-ghost:hover{ border-color:var(--accent); box-shadow:none; }
+  .menu-toggle{ display:none; background:none; border:none; color:var(--text); font-size:24px; cursor:pointer; }
+  @media (max-width:900px){
+    nav ul, .phone{ display:none; }
+    .menu-toggle{ display:block; }
+  }
+
+  /* ---------- lang toggle ---------- */
+  .lang-toggle{ display:flex; border:1px solid var(--line); border-radius:20px; overflow:hidden; flex-shrink:0; }
+  .lang-toggle button{
+    background:transparent; border:none; color:var(--muted); cursor:pointer;
+    font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.05em; padding:7px 13px;
+    transition:background .18s ease, color .18s ease;
+  }
+  .lang-toggle button.active{ background:var(--accent); color:#10151B; font-weight:700; }
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:190px 0 100px;
+    position:relative;
+  }
+  .hero::before{
+    content:'';
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(90deg, transparent, transparent 78px, rgba(255,255,255,0.025) 78px, rgba(255,255,255,0.025) 80px);
+    pointer-events:none;
+  }
+  .hero-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:60px; align-items:center; position:relative; }
+  @media (max-width:980px){ .hero-grid{ grid-template-columns:1fr; } }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'JetBrains Mono'; font-size:12px; letter-spacing:0.18em; color:var(--accent);
+    margin-bottom:22px;
+  }
+  .eyebrow::before{ content:''; width:7px; height:7px; background:var(--accent); border-radius:50%; box-shadow:0 0 0 4px rgba(255,193,69,0.15); }
+  .hero h1{ font-size:clamp(38px,5.4vw,64px); font-weight:700; margin-bottom:22px; }
+  .hero h1 em{ font-style:normal; color:var(--accent); }
+  .hero p.lead{ font-size:18px; color:var(--muted); max-width:480px; margin-bottom:36px; }
+  .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; }
+
+  /* dispatch board — signature element */
+  .board{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.5);
+  }
+  .board-head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 18px; border-bottom:1px solid var(--line);
+    background:var(--panel-2);
+  }
+  .board-title{ font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.14em; color:var(--muted); }
+  .live-dot{ display:flex; align-items:center; gap:7px; font-family:'JetBrains Mono'; font-size:11px; color:var(--accent-2); letter-spacing:0.1em;}
+  .live-dot i{ width:7px; height:7px; border-radius:50%; background:var(--accent-2); display:inline-block; animation:pulse 1.6s infinite; }
+  @keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:.3;} }
+  .board-ticker{ height:280px; overflow:hidden; position:relative; }
+  .board-ticker::after{
+    content:''; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(180deg, var(--panel) 0%, transparent 12%, transparent 88%, var(--panel) 100%);
+  }
+  .ticker-track{ animation:scrollUp 16s linear infinite; }
+  @keyframes scrollUp{ 0%{ transform:translateY(0);} 100%{ transform:translateY(-50%);} }
+  .load-row{
+    display:grid; grid-template-columns:1fr auto auto; gap:14px; align-items:center;
+    padding:14px 18px; border-bottom:1px solid var(--line); font-family:'JetBrains Mono'; font-size:12.5px;
+  }
+  .load-route{ color:var(--text); }
+  .load-route .arrow{ color:var(--accent); margin:0 6px; }
+  .load-miles{ color:var(--muted); text-align:right; }
+  .load-status{
+    font-size:10px; letter-spacing:0.08em; padding:3px 8px; border-radius:20px; text-align:center;
+    background:rgba(62,143,99,0.15); color:var(--accent-2); border:1px solid rgba(62,143,99,0.35);
+  }
+  .load-status.pending{ background:rgba(255,193,69,0.12); color:var(--accent); border-color:rgba(255,193,69,0.35); }
+
+  /* ---------- stats ---------- */
+  .stats{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--panel); }
+  .stats-grid{ display:grid; grid-template-columns:repeat(4,1fr); }
+  @media (max-width:768px){ .stats-grid{ grid-template-columns:repeat(2,1fr); } }
+  .stat{ padding:40px 28px; border-right:1px solid var(--line); }
+  .stat:last-child{ border-right:none; }
+  @media (max-width:768px){ .stat:nth-child(2n){ border-right:none; } .stat{ border-bottom:1px solid var(--line);} }
+  .stat b{ font-family:'Oswald'; font-size:36px; color:var(--accent); display:block; }
+  .stat span{ font-size:13px; color:var(--muted); }
+
+  /* ---------- truck band ---------- */
+  .truck-band{ position:relative; height:60vh; min-height:420px; max-height:620px; padding:0; overflow:hidden; }
+  .truck-band img{ width:100%; height:100%; object-fit:cover; object-position:center 60%; }
+  .truck-band svg{ width:100%; height:100%; display:block; }
+  .truck-band::after{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(0deg, var(--bg) 0%, rgba(16,21,27,0.35) 45%, rgba(16,21,27,0.15) 100%);
+  }
+  .truck-caption{
+    position:absolute; left:0; right:0; bottom:0; z-index:2;
+    padding:36px 0;
+  }
+  .truck-caption .wrap{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; }
+  .truck-caption h3{ font-size:clamp(22px,3vw,32px); font-weight:600; max-width:520px; }
+  .truck-caption p{ font-family:'JetBrains Mono'; font-size:12px; color:var(--muted); letter-spacing:0.08em; }
+
+  /* ---------- section heads ---------- */
+  .section-head{ max-width:600px; margin-bottom:56px; }
+  .kicker{ font-family:'JetBrains Mono'; font-size:12px; letter-spacing:0.18em; color:var(--accent-2); margin-bottom:14px; display:block;}
+  .section-head h2{ font-size:clamp(28px,3.4vw,42px); font-weight:600; margin-bottom:16px; }
+  .section-head p{ color:var(--muted); font-size:16px; }
+
+  /* ---------- services ---------- */
+  .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  @media (max-width:900px){ .services-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:600px){ .services-grid{ grid-template-columns:1fr; } }
+  .service-card{ background:var(--bg); padding:36px 30px; transition:background .25s ease; }
+  .service-card:hover{ background:var(--panel); }
+  .service-num{ font-family:'JetBrains Mono'; font-size:12px; color:var(--accent-dim); margin-bottom:22px; }
+  .service-card h3{ font-size:19px; font-weight:600; margin-bottom:12px; }
+  .service-card p{ color:var(--muted); font-size:14.5px; }
+
+  /* ---------- process ---------- */
+  .process{ background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .steps{ display:grid; grid-template-columns:repeat(4,1fr); gap:32px; counter-reset:step; }
+  @media (max-width:900px){ .steps{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .steps{ grid-template-columns:1fr; } }
+  .step{ position:relative; padding-top:26px; border-top:2px solid var(--accent); }
+  .step-index{ font-family:'JetBrains Mono'; font-size:13px; color:var(--accent); margin-bottom:14px; }
+  .step h3{ font-size:17px; font-weight:600; margin-bottom:10px; }
+  .step p{ color:var(--muted); font-size:14px; }
+
+  /* ---------- why / cb quote ---------- */
+  .why-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+  @media (max-width:900px){ .why-grid{ grid-template-columns:1fr; gap:40px; } }
+  .why-list{ list-style:none; }
+  .why-list li{ display:flex; gap:16px; padding:20px 0; border-bottom:1px solid var(--line); }
+  .why-list li:first-child{ padding-top:0; }
+  .why-mark{ font-family:'JetBrains Mono'; color:var(--accent); font-size:13px; flex-shrink:0; padding-top:2px;}
+  .why-list h4{ font-size:16px; font-weight:600; margin-bottom:6px; }
+  .why-list p{ color:var(--muted); font-size:14px; }
+
+  .cb-panel{
+    background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:36px;
+  }
+  .cb-head{ font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.14em; color:var(--accent-2); margin-bottom:18px; }
+  .cb-quote{ font-family:'Oswald'; font-size:24px; font-weight:500; text-transform:none; margin-bottom:20px; }
+  .cb-author{ color:var(--muted); font-size:14px; }
+  .cb-author b{ color:var(--text); }
+
+  /* ---------- contact ---------- */
+  .contact{ background:var(--panel); border-top:1px solid var(--line); }
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; }
+  @media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+  .info-row{ display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--line); }
+  .info-row:first-child{ padding-top:0; }
+  .info-row span.label{ font-family:'JetBrains Mono'; font-size:11px; color:var(--muted); letter-spacing:0.1em; display:block; margin-bottom:4px;}
+  .info-row div b{ font-weight:600; font-size:15.5px; }
+  form{ display:flex; flex-direction:column; gap:16px; }
+  .field{ display:flex; flex-direction:column; gap:8px; }
+  label{ font-family:'JetBrains Mono'; font-size:11px; color:var(--muted); letter-spacing:0.08em; }
+  input, textarea{
+    background:var(--bg); border:1px solid var(--line); border-radius:var(--radius);
+    padding:13px 14px; color:var(--text); font-family:'Inter'; font-size:14.5px;
+  }
+  input:focus, textarea:focus{ outline:none; border-color:var(--accent); }
+  textarea{ resize:vertical; min-height:100px; }
+  form .btn{ align-self:flex-start; margin-top:6px; }
+
+  /* ---------- footer ---------- */
+  footer{ padding:44px 0; }
+  .footer-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  .footer-row .logo-text{ font-size:16px; }
+  .footer-note{ color:var(--muted); font-size:13px; }
+</style>
+<script type="application/ld+json">
+{
+  "@type": "ProfessionalService",
+  "name": "Nova Route Dispatch",
+  "description": "Truck dispatch services from Kragujevac, Serbia. Load planning, paperwork and 24/7 dispatcher support.",
+  "url": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/nova-route/",
+  "telephone": "+38134000000",
+  "email": "dispatch@novaroute-demo.rs",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kragujevac",
+    "addressCountry": "RS"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Serbia"
+  },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "@context": "https://schema.org"
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M2 24 L14 6 L18 6 L8 24 Z" fill="#FFC145"/>
+        <path d="M15 24 L24 10 L27 10 L20 24 Z" fill="#3E8F63"/>
+      </svg>
+      <div>
+        <span class="logo-text">NOVA<span>.</span></span>
+        <span class="logo-sub">ROUTE · DISPATCH</span>
+      </div>
+    </a>
+    <nav><ul>
+      <li><a href="#usluge" data-i18n="nav.services">Services</a></li>
+      <li><a href="#proces" data-i18n="nav.how">How We Work</a></li>
+      <li><a href="#zasto" data-i18n="nav.why">Why Us</a></li>
+      <li><a href="#kontakt" data-i18n="nav.contact">Contact</a></li>
+    </ul></nav>
+    <div class="nav-cta">
+      <div class="lang-toggle">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="sr">SR</button>
+      </div>
+      <div class="phone">+381 34 000 000<span data-i18n="nav.callDispatcher">Call a dispatcher</span></div>
+      <a href="#kontakt" class="btn" data-i18n="nav.becomePartner">Become a partner</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow" data-i18n="hero.eyebrow">DISPATCH BASE · KRAGUJEVAC, SERBIA</span>
+        <h1 data-i18n-html="hero.h1">You drive.<br>We <em>dispatch</em>.</h1>
+        <p class="lead" data-i18n="hero.lead">Nova Route Dispatch is a dispatch team for owner-operators and small fleets. We find loads, negotiate rates, and handle the paperwork — you just drive the miles that pay off.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn" data-i18n="hero.ctaCall">Schedule a call</a>
+          <a href="#usluge" class="btn btn-ghost" data-i18n="hero.ctaServices">View services</a>
+        </div>
+      </div>
+
+      <div class="board reveal">
+        <div class="board-head">
+          <span class="board-title" data-i18n="board.title">LOAD BOARD — LIVE</span>
+          <span class="live-dot"><i></i><span data-i18n="board.active">ACTIVE</span></span>
+        </div>
+        <div class="board-ticker">
+          <div class="ticker-track">
+            <div class="load-row"><span class="load-route">Chicago, IL<span class="arrow">→</span>Dallas, TX</span><span class="load-miles">925 mi</span><span class="load-status" data-i18n="board.booked">booked</span></div>
+            <div class="load-row"><span class="load-route">Atlanta, GA<span class="arrow">→</span>Nashville, TN</span><span class="load-miles">248 mi</span><span class="load-status pending" data-i18n="board.pending">negotiating</span></div>
+            <div class="load-row"><span class="load-route">Dallas, TX<span class="arrow">→</span>Phoenix, AZ</span><span class="load-miles">887 mi</span><span class="load-status" data-i18n="board.booked">booked</span></div>
+            <div class="load-row"><span class="load-route">Denver, CO<span class="arrow">→</span>Kansas City, MO</span><span class="load-miles">600 mi</span><span class="load-status" data-i18n="board.booked">booked</span></div>
+            <div class="load-row"><span class="load-route">Phoenix, AZ<span class="arrow">→</span>Austin, TX</span><span class="load-miles">1015 mi</span><span class="load-status pending" data-i18n="board.pending">negotiating</span></div>
+            <div class="load-row"><span class="load-route">Columbus, OH<span class="arrow">→</span>Detroit, MI</span><span class="load-miles">198 mi</span><span class="load-status" data-i18n="board.booked">booked</span></div>
+            <div class="load-row"><span class="load-route">Austin, TX<span class="arrow">→</span>Memphis, TN</span><span class="load-miles">575 mi</span><span class="load-status" data-i18n="board.booked">booked</span></div>
+            <!-- duplicate set for seamless loop -->
+            <div class="load-row"><span class="load-route">Chicago, IL<span class="arrow">→</span>Dallas, TX</span><span class="load-miles">925 mi</span><span class="load-status" data-i18n="board.booked">booked</span></div>
+            <div class="load-row"><span class="load-route">Atlanta, GA<span class="arrow">→</span>Nashville, TN</span><span class="load-miles">248 mi</span><span class="load-status pending" data-i18n="board.pending">negotiating</span></div>
+            <div class="load-row"><span class="load-route">Dallas, TX<span class="arrow">→</span>Phoenix, AZ</span><span class="load-miles">887 mi</span><span class="load-status" data-i18n="board.booked">booked</span></div>
+            <div class="load-row"><span class="load-route">Denver, CO<span class="arrow">→</span>Kansas City, MO</span><span class="load-miles">600 mi</span><span class="load-status" data-i18n="board.booked">booked</span></div>
+            <div class="load-row"><span class="load-route">Phoenix, AZ<span class="arrow">→</span>Austin, TX</span><span class="load-miles">1015 mi</span><span class="load-status pending" data-i18n="board.pending">negotiating</span></div>
+            <div class="load-row"><span class="load-route">Columbus, OH<span class="arrow">→</span>Detroit, MI</span><span class="load-miles">198 mi</span><span class="load-status" data-i18n="board.booked">booked</span></div>
+            <div class="load-row"><span class="load-route">Austin, TX<span class="arrow">→</span>Memphis, TN</span><span class="load-miles">575 mi</span><span class="load-status" data-i18n="board.booked">booked</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" style="padding:0;">
+    <div class="wrap stats-grid">
+      <div class="stat reveal"><b>120+</b><span data-i18n="stats.trucks">Active trucks under dispatch</span></div>
+      <div class="stat reveal"><b>2.15$</b><span data-i18n="stats.earnings">Average earnings per mile</span></div>
+      <div class="stat reveal"><b>24/7</b><span data-i18n="stats.support">Support, holidays and nights</span></div>
+      <div class="stat reveal"><b>&lt; 15 min</b><span data-i18n="stats.response">Average response time</span></div>
+    </div>
+  </section>
+
+  <!-- TRUCK BAND -->
+  <section class="truck-band reveal">
+    <svg viewBox="0 0 1600 640" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of a semi-truck on the highway" data-i18n-aria="truck.aria">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1E2830"/>
+          <stop offset="100%" stop-color="#10151B"/>
+        </linearGradient>
+        <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFC145" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#FFC145" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#3E8F63" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#3E8F63" stop-opacity="0.1"/>
+        </linearGradient>
+      </defs>
+
+      <rect x="0" y="0" width="1600" height="640" fill="url(#skyGrad)"/>
+      <circle cx="1180" cy="300" r="260" fill="url(#sunGlow)"/>
+
+      <!-- asphalt -->
+      <rect x="0" y="520" width="1600" height="120" fill="#0A0E13"/>
+      <rect x="0" y="520" width="1600" height="3" fill="#2A343E"/>
+      <g fill="#FFC145" opacity="0.45">
+        <rect x="40" y="575" width="70" height="6" rx="3"/>
+        <rect x="200" y="575" width="70" height="6" rx="3"/>
+        <rect x="360" y="575" width="70" height="6" rx="3"/>
+        <rect x="520" y="575" width="70" height="6" rx="3"/>
+        <rect x="680" y="575" width="70" height="6" rx="3"/>
+        <rect x="840" y="575" width="70" height="6" rx="3"/>
+        <rect x="1000" y="575" width="70" height="6" rx="3"/>
+        <rect x="1160" y="575" width="70" height="6" rx="3"/>
+        <rect x="1320" y="575" width="70" height="6" rx="3"/>
+        <rect x="1480" y="575" width="70" height="6" rx="3"/>
+      </g>
+
+      <!-- route line under trailer -->
+      <rect x="180" y="500" width="960" height="3" fill="#3E8F63" opacity="0.4"/>
+
+      <!-- trailer -->
+      <rect x="180" y="300" width="750" height="200" rx="8" fill="#0B0F14" stroke="rgba(255,255,255,0.07)"/>
+      <rect x="205" y="325" width="700" height="3" fill="rgba(255,255,255,0.06)"/>
+      <rect x="205" y="345" width="700" height="3" fill="rgba(255,255,255,0.06)"/>
+      <rect x="182" y="335" width="9" height="34" fill="#FFC145"/>
+
+      <!-- cab -->
+      <polygon points="930,500 930,340 985,300 1075,300 1120,335 1145,430 1145,500" fill="#0B0F14" stroke="rgba(255,255,255,0.07)"/>
+      <polygon points="965,335 1000,312 1060,312 1060,335" fill="url(#glassGrad)"/>
+      <rect x="905" y="290" width="14" height="60" rx="4" fill="#0B0F14" stroke="rgba(255,255,255,0.07)"/>
+      <circle cx="1136" cy="452" r="11" fill="#FFC145"/>
+      <circle cx="1136" cy="452" r="20" fill="#FFC145" opacity="0.25"/>
+
+      <!-- wheels -->
+      <g>
+        <circle cx="260" cy="512" r="40" fill="#05070A" stroke="rgba(255,255,255,0.08)"/>
+        <circle cx="260" cy="512" r="14" fill="#1E2830"/>
+        <circle cx="420" cy="512" r="40" fill="#05070A" stroke="rgba(255,255,255,0.08)"/>
+        <circle cx="420" cy="512" r="14" fill="#1E2830"/>
+        <circle cx="760" cy="512" r="40" fill="#05070A" stroke="rgba(255,255,255,0.08)"/>
+        <circle cx="760" cy="512" r="14" fill="#1E2830"/>
+        <circle cx="880" cy="512" r="40" fill="#05070A" stroke="rgba(255,255,255,0.08)"/>
+        <circle cx="880" cy="512" r="14" fill="#1E2830"/>
+        <circle cx="1060" cy="512" r="40" fill="#05070A" stroke="rgba(255,255,255,0.08)"/>
+        <circle cx="1060" cy="512" r="14" fill="#1E2830"/>
+      </g>
+    </svg>
+    <div class="truck-caption">
+      <div class="wrap">
+        <h3 data-i18n="truck.caption">Your truck, our route to the next load.</h3>
+        <p data-i18n="truck.route">ROUTE · I-80</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="usluge">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="services.kicker">SERVICES</span>
+        <h2 data-i18n="services.h2">Everything a truck needs to run, not wait</h2>
+        <p data-i18n="services.lead">Our team sits on the load board so you don't have to, handling every detail from finding loads to getting paid.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-num">/ 01</div>
+          <h3 data-i18n="services.card1.h3">Load finding</h3>
+          <p data-i18n="services.card1.p">We search DAT, Truckstop, and direct brokers to secure a route that fits your schedule and location.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-num">/ 02</div>
+          <h3 data-i18n="services.card2.h3">Rate negotiation</h3>
+          <p data-i18n="services.card2.p">We negotiate with brokers on every load — our goal is the best rate per mile, not the first number offered.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-num">/ 03</div>
+          <h3 data-i18n="services.card3.h3">Paperwork & invoicing</h3>
+          <p data-i18n="services.card3.p">Rate confirmation, BOL, invoice to the broker — we prepare and send it all, you just sign.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-num">/ 04</div>
+          <h3 data-i18n="services.card4.h3">Route planning</h3>
+          <p data-i18n="services.card4.p">We stack loads to minimize empty miles and get you home on time.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-num">/ 05</div>
+          <h3 data-i18n="services.card5.h3">On-the-road support</h3>
+          <p data-i18n="services.card5.p">Breakdown, delay, an issue at pickup — your dispatcher is reachable by phone at any moment.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-num">/ 06</div>
+          <h3 data-i18n="services.card6.h3">Payment tracking</h3>
+          <p data-i18n="services.card6.p">We track broker payment deadlines and chase down late invoices for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="proces" class="process">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker" data-i18n="process.kicker">HOW WE WORK</span>
+        <h2 data-i18n="process.h2">From the first call to your first load in one day</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-index">01</div>
+          <h3 data-i18n="process.step1.h3">Sign up</h3>
+          <p data-i18n="process.step1.p">A short call — your truck, equipment, MC/DOT number, and where you want to drive.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-index">02</div>
+          <h3 data-i18n="process.step2.h3">Profile setup</h3>
+          <p data-i18n="process.step2.p">We set you up in our systems and broker networks, ready for the first offers.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-index">03</div>
+          <h3 data-i18n="process.step3.h3">First load</h3>
+          <p data-i18n="process.step3.p">We send you offers, you choose, we close the deal and the paperwork.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-index">04</div>
+          <h3 data-i18n="process.step4.h3">Round-the-clock dispatcher</h3>
+          <p data-i18n="process.step4.p">From that point on, you always have someone on the line while you're on the road.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="zasto">
+    <div class="wrap why-grid">
+      <div>
+        <div class="section-head reveal" style="margin-bottom:36px;">
+          <span class="kicker" data-i18n="why.kicker">WHY NOVA</span>
+          <h2 data-i18n="why.h2">A dispatcher who works for you, not for the broker</h2>
+        </div>
+        <ul class="why-list">
+          <li class="reveal">
+            <span class="why-mark">→</span>
+            <div><h4 data-i18n="why.item1.h4">Fixed, transparent commission</h4><p data-i18n="why.item1.p">No hidden fees — you know exactly what you're paying before you roll out.</p></div>
+          </li>
+          <li class="reveal">
+            <span class="why-mark">→</span>
+            <div><h4 data-i18n="why.item2.h4">A team that speaks your language</h4><p data-i18n="why.item2.p">Direct communication, no waiting on translation or a middleman.</p></div>
+          </li>
+          <li class="reveal">
+            <span class="why-mark">→</span>
+            <div><h4 data-i18n="why.item3.h4">No forced contracts</h4><p data-i18n="why.item3.p">You stay because it's good, not because you're locked into paper.</p></div>
+          </li>
+          <li class="reveal">
+            <span class="why-mark">→</span>
+            <div><h4 data-i18n="why.item4.h4">Small base per dispatcher</h4><p data-i18n="why.item4.p">Each dispatcher tracks a limited number of trucks, so they actually know your route.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="cb-panel reveal">
+        <div class="cb-head" data-i18n="why.cbHead">// MESSAGE FROM THE RADIO CHANNEL</div>
+        <p class="cb-quote" data-i18n="why.cbQuote">"10-4, Nova — first month with no empty return. Let's keep it up."</p>
+        <p class="cb-author" data-i18n-html="why.cbAuthor"><b>M. Nikolić</b> — owner-operator, Dry Van, Midwest–Texas route</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="kontakt" class="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="section-head reveal" style="margin-bottom:36px;">
+          <span class="kicker" data-i18n="contact.kicker">CONTACT</span>
+          <h2 data-i18n="contact.h2">Fill your truck, not your inbox</h2>
+          <p data-i18n="contact.lead">Reach out and schedule a short call — we reply the same day.</p>
+        </div>
+        <div class="info-row reveal">
+          <span class="why-mark">→</span>
+          <div><span class="label" data-i18n="contact.hqLabel">HEADQUARTERS</span><b data-i18n="contact.hqValue">Kragujevac, Serbia</b></div>
+        </div>
+        <div class="info-row reveal">
+          <span class="why-mark">→</span>
+          <div><span class="label" data-i18n="contact.phoneLabel">PHONE</span><b>+381 34 000 000</b></div>
+        </div>
+        <div class="info-row reveal">
+          <span class="why-mark">→</span>
+          <div><span class="label" data-i18n="contact.emailLabel">EMAIL</span><b>dispatch@novaroute-demo.rs</b></div>
+        </div>
+        <div class="info-row reveal">
+          <span class="why-mark">→</span>
+          <div><span class="label" data-i18n="contact.hoursLabel">DISPATCHER HOURS</span><b data-i18n="contact.hoursValue">24 hours, 7 days</b></div>
+        </div>
+      </div>
+      <form class="reveal" id="contactForm">
+        <div class="field">
+          <label for="name" data-i18n="form.nameLabel">FULL NAME</label>
+          <input id="name" type="text" placeholder="John Smith" data-i18n-placeholder="form.namePlaceholder" required>
+        </div>
+        <div class="field">
+          <label for="truck" data-i18n="form.truckLabel">TRUCK TYPE / EQUIPMENT</label>
+          <input id="truck" type="text" placeholder="Dry Van, Reefer, Flatbed…">
+        </div>
+        <div class="field">
+          <label for="phone" data-i18n="form.phoneLabel">PHONE</label>
+          <input id="phone" type="tel" placeholder="+1 or +381 number" data-i18n-placeholder="form.phonePlaceholder" required>
+        </div>
+        <div class="field">
+          <label for="msg" data-i18n="form.msgLabel">MESSAGE</label>
+          <textarea id="msg" placeholder="Tell us about your route and availability" data-i18n-placeholder="form.msgPlaceholder"></textarea>
+        </div>
+        <button class="btn" type="submit" data-i18n="form.submit">Send inquiry</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M2 24 L14 6 L18 6 L8 24 Z" fill="#FFC145"/>
+        <path d="M15 24 L24 10 L27 10 L20 24 Z" fill="#3E8F63"/>
+      </svg>
+      <span class="logo-text">NOVA ROUTE</span>
+    </div>
+    <span class="footer-note">© 2026 Nova Route Dispatch · <span data-i18n="footer.country">Kragujevac, Serbia</span></span>
+  </div>
+</footer>
+
+<script>
+  // ---------- reveal on scroll ----------
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:0.15 });
+  items.forEach(i=>io.observe(i));
+
+  // ---------- language toggle ----------
+  var translations = {
+    en: {
+      "nav.services":"Services","nav.how":"How We Work","nav.why":"Why Us","nav.contact":"Contact",
+      "nav.callDispatcher":"Call a dispatcher","nav.becomePartner":"Become a partner",
+      "hero.eyebrow":"DISPATCH BASE · KRAGUJEVAC, SERBIA",
+      "hero.h1":"You drive.<br>We <em>dispatch</em>.",
+      "hero.lead":"Nova Route Dispatch is a dispatch team for owner-operators and small fleets. We find loads, negotiate rates, and handle the paperwork — you just drive the miles that pay off.",
+      "hero.ctaCall":"Schedule a call","hero.ctaServices":"View services",
+      "board.title":"LOAD BOARD — LIVE","board.active":"ACTIVE","board.booked":"booked","board.pending":"negotiating",
+      "stats.trucks":"Active trucks under dispatch","stats.earnings":"Average earnings per mile",
+      "stats.support":"Support, holidays and nights","stats.response":"Average response time",
+      "truck.aria":"Illustration of a semi-truck on the highway",
+      "truck.caption":"Your truck, our route to the next load.","truck.route":"ROUTE · I-80",
+      "services.kicker":"SERVICES","services.h2":"Everything a truck needs to run, not wait",
+      "services.lead":"Our team sits on the load board so you don't have to, handling every detail from finding loads to getting paid.",
+      "services.card1.h3":"Load finding","services.card1.p":"We search DAT, Truckstop, and direct brokers to secure a route that fits your schedule and location.",
+      "services.card2.h3":"Rate negotiation","services.card2.p":"We negotiate with brokers on every load — our goal is the best rate per mile, not the first number offered.",
+      "services.card3.h3":"Paperwork & invoicing","services.card3.p":"Rate confirmation, BOL, invoice to the broker — we prepare and send it all, you just sign.",
+      "services.card4.h3":"Route planning","services.card4.p":"We stack loads to minimize empty miles and get you home on time.",
+      "services.card5.h3":"On-the-road support","services.card5.p":"Breakdown, delay, an issue at pickup — your dispatcher is reachable by phone at any moment.",
+      "services.card6.h3":"Payment tracking","services.card6.p":"We track broker payment deadlines and chase down late invoices for you.",
+      "process.kicker":"HOW WE WORK","process.h2":"From the first call to your first load in one day",
+      "process.step1.h3":"Sign up","process.step1.p":"A short call — your truck, equipment, MC/DOT number, and where you want to drive.",
+      "process.step2.h3":"Profile setup","process.step2.p":"We set you up in our systems and broker networks, ready for the first offers.",
+      "process.step3.h3":"First load","process.step3.p":"We send you offers, you choose, we close the deal and the paperwork.",
+      "process.step4.h3":"Round-the-clock dispatcher","process.step4.p":"From that point on, you always have someone on the line while you're on the road.",
+      "why.kicker":"WHY NOVA","why.h2":"A dispatcher who works for you, not for the broker",
+      "why.item1.h4":"Fixed, transparent commission","why.item1.p":"No hidden fees — you know exactly what you're paying before you roll out.",
+      "why.item2.h4":"A team that speaks your language","why.item2.p":"Direct communication, no waiting on translation or a middleman.",
+      "why.item3.h4":"No forced contracts","why.item3.p":"You stay because it's good, not because you're locked into paper.",
+      "why.item4.h4":"Small base per dispatcher","why.item4.p":"Each dispatcher tracks a limited number of trucks, so they actually know your route.",
+      "why.cbHead":"// MESSAGE FROM THE RADIO CHANNEL","why.cbQuote":"\"10-4, Nova — first month with no empty return. Let's keep it up.\"",
+      "why.cbAuthor":"<b>M. Nikolić</b> — owner-operator, Dry Van, Midwest–Texas route",
+      "contact.kicker":"CONTACT","contact.h2":"Fill your truck, not your inbox",
+      "contact.lead":"Reach out and schedule a short call — we reply the same day.",
+      "contact.hqLabel":"HEADQUARTERS","contact.hqValue":"Kragujevac, Serbia",
+      "contact.phoneLabel":"PHONE","contact.emailLabel":"EMAIL",
+      "contact.hoursLabel":"DISPATCHER HOURS","contact.hoursValue":"24 hours, 7 days",
+      "form.nameLabel":"FULL NAME","form.namePlaceholder":"John Smith",
+      "form.truckLabel":"TRUCK TYPE / EQUIPMENT","form.phoneLabel":"PHONE","form.phonePlaceholder":"+1 or +381 number",
+      "form.msgLabel":"MESSAGE","form.msgPlaceholder":"Tell us about your route and availability",
+      "form.submit":"Send inquiry","form.sent":"Sent ✓",
+      "footer.country":"Kragujevac, Serbia"
+    },
+    sr: {
+      "nav.services":"Usluge","nav.how":"Kako radimo","nav.why":"Zašto mi","nav.contact":"Kontakt",
+      "nav.callDispatcher":"Pozovi dispečera","nav.becomePartner":"Postani partner",
+      "hero.eyebrow":"DISPATCH BAZA · KRAGUJEVAC, SRBIJA",
+      "hero.h1":"Vi vozite.<br>Mi <em>dispečujemo</em>.",
+      "hero.lead":"Nova Route Dispatch je dispečerski tim za owner-operatore i male flote. Nalazimo tovare, pregovaramo cenu i vodimo papirologiju — vi samo vozite kilometre koji se isplate.",
+      "hero.ctaCall":"Zakaži poziv","hero.ctaServices":"Pogledaj usluge",
+      "board.title":"LOAD BOARD — UŽIVO","board.active":"AKTIVNO","board.booked":"rezervisano","board.pending":"u pregovoru",
+      "stats.trucks":"Aktivnih kamiona pod dispečom","stats.earnings":"Prosečna zarada po milji",
+      "stats.support":"Podrška, praznikom i noću","stats.response":"Prosečno vreme odgovora",
+      "truck.aria":"Ilustracija kamiona sa prikolicom na auto-putu",
+      "truck.caption":"Vaš kamion, naša ruta do sledećeg tovara.","truck.route":"TRASA · I-80",
+      "services.kicker":"USLUGE","services.h2":"Sve što treba jednom kamionu da radi, ne da čeka",
+      "services.lead":"Naš tim sedi na load board-u umesto vas i brine o svakom detalju od pronalaska tovara do naplate.",
+      "services.card1.h3":"Pronalaženje tovara","services.card1.p":"Pretražujemo DAT, Truckstop i direktne brokere da vam obezbedimo rutu koja se uklapa u vaš raspored i lokaciju.",
+      "services.card2.h3":"Cenkanje","services.card2.p":"Cenkamo se sa brokerima za svaki tovar — cilj nam je najbolja cena po milji, ne prvi broj koji stigne.",
+      "services.card3.h3":"Papirologija i fakture","services.card3.p":"Rate confirmation, BOL, faktura brokeru — sve pripremimo i pošaljemo, vi samo potpisujete.",
+      "services.card4.h3":"Planiranje rute","services.card4.p":"Slažemo tovare tako da minimizujemo prazne kilometre i vraćamo vas kući na vreme.",
+      "services.card5.h3":"Podrška na putu","services.card5.p":"Kvar, kašnjenje, problem na utovaru — dispečer je dostupan telefonom u svakom trenutku.",
+      "services.card6.h3":"Praćenje naplate","services.card6.p":"Pratimo rokove plaćanja brokera i gonimo zakasnele fakture umesto vas.",
+      "process.kicker":"KAKO RADIMO","process.h2":"Od poziva do prvog tovara za jedan dan",
+      "process.step1.h3":"Prijava","process.step1.p":"Kratak poziv — kamion, oprema, MC/DOT broj i gde želite da vozite.",
+      "process.step2.h3":"Podešavanje profila","process.step2.p":"Unosimo vas u naše sisteme i brokerske mreže, spremni za prve ponude.",
+      "process.step3.h3":"Prvi tovar","process.step3.p":"Šaljemo vam ponude, vi birate, mi zatvaramo dogovor i papire.",
+      "process.step4.h3":"Non-stop dispečer","process.step4.p":"Od tog trenutka, uvek imate nekog na liniji dok ste na putu.",
+      "why.kicker":"ZAŠTO NOVA","why.h2":"Dispečer koji radi za vas, ne za brokera",
+      "why.item1.h4":"Fiksna, transparentna provizija","why.item1.p":"Bez skrivenih taksi — znate tačno šta plaćate pre nego što krenete.",
+      "why.item2.h4":"Tim koji govori vaš jezik","why.item2.p":"Direktna komunikacija, bez čekanja na prevod ili proslednika.",
+      "why.item3.h4":"Bez ugovora na silu","why.item3.p":"Ostajete jer je dobro, ne zato što ste vezani papirom.",
+      "why.item4.h4":"Mala baza po dispečeru","why.item4.p":"Svaki dispečer prati ograničen broj kamiona, tako da zaista poznaje vašu rutu.",
+      "why.cbHead":"// PORUKA SA RADIO KANALA","why.cbQuote":"\"10-4, Nova — prvi mesec bez praznog povratka. Nastavljamo ovako.\"",
+      "why.cbAuthor":"<b>M. Nikolić</b> — owner-operator, Dry Van, ruta Midwest–Texas",
+      "contact.kicker":"KONTAKT","contact.h2":"Popunite kamion, ne inbox",
+      "contact.lead":"Javite se i zakažite kratak poziv — odgovaramo isti dan.",
+      "contact.hqLabel":"SEDIŠTE","contact.hqValue":"Kragujevac, Srbija",
+      "contact.phoneLabel":"TELEFON","contact.emailLabel":"EMAIL",
+      "contact.hoursLabel":"RADNO VREME DISPEČERA","contact.hoursValue":"24 sata, 7 dana",
+      "form.nameLabel":"IME I PREZIME","form.namePlaceholder":"Milan Petrović",
+      "form.truckLabel":"TIP KAMIONA / OPREME","form.phoneLabel":"TELEFON","form.phonePlaceholder":"+1 ili +381 broj",
+      "form.msgLabel":"PORUKA","form.msgPlaceholder":"Recite nam nešto o svojoj ruti i raspoloživosti",
+      "form.submit":"Pošalji upit","form.sent":"Poslato ✓",
+      "footer.country":"Kragujevac, Srbija"
+    }
+  };
+
+  var currentLang = 'en';
+
+  function setLang(lang){
+    if(!translations[lang]) return;
+    currentLang = lang;
+    document.documentElement.setAttribute('lang', lang);
+
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if(translations[lang][key] !== undefined) el.textContent = translations[lang][key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-html');
+      if(translations[lang][key] !== undefined) el.innerHTML = translations[lang][key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-placeholder');
+      if(translations[lang][key] !== undefined) el.setAttribute('placeholder', translations[lang][key]);
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-aria');
+      if(translations[lang][key] !== undefined) el.setAttribute('aria-label', translations[lang][key]);
+    });
+    document.querySelectorAll('.lang-toggle button').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+
+    try{ localStorage.setItem('nova-lang', lang); }catch(e){}
+  }
+
+  document.querySelectorAll('.lang-toggle button').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); });
+  });
+
+  var contactForm = document.getElementById('contactForm');
+  if(contactForm){
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var btn = contactForm.querySelector('.btn');
+      btn.textContent = translations[currentLang]['form.sent'];
+    });
+  }
+
+  (function initLang(){
+    var saved = null;
+    try{ saved = localStorage.getItem('nova-lang'); }catch(e){}
+    setLang(saved || 'en');
+  })();
+</script>
+
+</body>
+</html>

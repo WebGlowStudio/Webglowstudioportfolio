@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Salon Aura · salon lepote u Novom Sadu</title>
+<meta name="description" content="Salon Aura je salon za negu lica i tela u Novom Sadu. Tretmani lica i tela, trajna epilacija i masaže, jedan na jedan, na adresi Primer adrese 12.">
+<meta property="og:title" content="Salon Aura · salon lepote u Novom Sadu">
+<meta property="og:description" content="Salon Aura je salon za negu lica i tela u Novom Sadu. Tretmani lica i tela, trajna epilacija i masaže, jedan na jedan, na adresi Primer adrese 12.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/salon-aura/">
+<meta property="og:locale" content="sr_RS">
+<link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/salon-aura/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12261F;
+  --bottle:#1D4237;
+  --bottle-2:#2A5A4B;
+  --sage:#DFE7DF;
+  --pearl:#F6F7F3;
+  --blush:#EAC6BD;
+  --rose:#9A5560;
+  --line:rgba(18,38,31,.14);
+  --serif:"Newsreader", Georgia, serif;
+  --sans:"Hanken Grotesk", system-ui, sans-serif;
+  --gutter:clamp(16px,5vw,64px);
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--pearl);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img,svg,canvas{display:block}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.serif{font-family:var(--serif)}
+
+/* ---------- header ---------- */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,box-shadow .4s}
+.top.solid{background:rgba(246,247,243,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{text-decoration:none;display:flex;align-items:baseline;gap:.4rem}
+.logo b{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.9rem;letter-spacing:-.01em;line-height:1}
+.logo span{font-size:.8rem;letter-spacing:.08em;opacity:.7}
+.nav{display:flex;gap:2rem;list-style:none}
+.nav a{text-decoration:none;font-size:.95rem;position:relative;padding:.25rem 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:currentColor;transition:right .35s}
+.nav a:hover::after{right:0}
+.book-top{display:inline-flex;align-items:center;gap:.5rem;background:var(--bottle);color:var(--pearl);text-decoration:none;padding:.65rem 1.15rem;border-radius:999px;font-size:.92rem;font-weight:500;transition:background .3s}
+.book-top:hover{background:var(--bottle-2)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger i{position:absolute;left:10px;right:10px;height:1.5px;background:var(--ink);transition:transform .35s,opacity .2s}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:22px}.burger i:nth-child(3){top:28px}
+.menu-open .burger i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-open .burger i:nth-child(2){opacity:0}
+.menu-open .burger i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:40;background:var(--bottle);color:var(--pearl);display:flex;flex-direction:column;justify-content:center;padding:0 var(--gutter);clip-path:circle(0 at calc(100% - 38px) 36px);transition:clip-path .7s cubic-bezier(.7,0,.2,1)}
+.menu-open .drawer{clip-path:circle(150% at calc(100% - 38px) 36px)}
+.drawer a{font-family:var(--serif);font-size:2.6rem;line-height:1.25;text-decoration:none;display:block}
+.drawer a em{font-size:1rem;font-family:var(--sans);font-style:normal;opacity:.6;margin-left:.6rem;vertical-align:middle}
+.drawer p{margin-top:2.5rem;opacity:.75;font-size:.95rem}
+.menu-open .top{background:transparent;box-shadow:none;backdrop-filter:none}
+.menu-open .top .logo,.menu-open .burger i{color:var(--pearl)}
+.menu-open .burger i{background:var(--pearl)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 clamp(48px,9vh,96px);overflow:hidden;background:linear-gradient(180deg,var(--pearl) 0%,var(--sage) 100%)}
+#silk{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
+.hero .wrap{position:relative;width:100%;pointer-events:none}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,11vw,9.5rem);line-height:.92;letter-spacing:-.035em;max-width:11ch}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .l span{display:inline-block;transform:translateY(105%);animation:rise 1.2s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 .l:nth-child(2) span{animation-delay:.12s;font-style:italic}
+.hero h1 .l:nth-child(3) span{animation-delay:.24s}
+@keyframes rise{to{transform:none}}
+.hero-foot{display:flex;flex-wrap:wrap;gap:1.5rem 3rem;align-items:flex-end;justify-content:space-between;margin-top:2.2rem;opacity:0;animation:fade 1s .8s forwards}
+@keyframes fade{to{opacity:1}}
+.hero-foot p{max-width:34ch;font-size:1.05rem}
+.hero-foot .actions{pointer-events:auto;display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;border:1px solid var(--bottle);cursor:pointer;transition:background .3s,color .3s,transform .3s;min-height:48px}
+.btn.fill{background:var(--bottle);color:var(--pearl)}
+.btn.fill:hover{background:var(--bottle-2)}
+.btn.ghost{background:transparent;color:var(--bottle)}
+.btn.ghost:hover{background:var(--bottle);color:var(--pearl)}
+.touch-hint{position:absolute;right:var(--gutter);top:110px;font-size:.82rem;opacity:.6;display:flex;align-items:center;gap:.5rem;animation:fade 1s 1.6s both}
+.touch-hint i{width:26px;height:1px;background:currentColor}
+
+/* ---------- soul quote ---------- */
+.soul{padding:clamp(90px,16vw,200px) 0;background:var(--pearl)}
+.soul blockquote{font-family:var(--serif);font-size:clamp(1.9rem,4.8vw,4rem);line-height:1.12;letter-spacing:-.02em;max-width:20ch}
+.soul blockquote .w{opacity:.14;transition:opacity .25s linear}
+.soul figcaption{margin-top:2rem;display:flex;align-items:center;gap:1rem;font-size:.95rem}
+.soul figcaption .mono{width:52px;height:52px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:1.4rem}
+
+/* ---------- device ---------- */
+.device{background:var(--ink);color:var(--pearl);padding:clamp(80px,12vw,140px) 0;overflow:hidden}
+.dv-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,90px);align-items:center}
+.dv-art{position:relative;aspect-ratio:420/480;max-width:440px;width:100%;margin:0 auto}
+.dv-art::before{content:"";position:absolute;inset:8% 0 10%;border-radius:50%;background:radial-gradient(circle,rgba(234,198,189,.22),transparent 65%)}
+.dv-svg{position:relative;width:100%;height:100%}
+.dv-text p{margin-top:1.2rem;max-width:42ch;opacity:.8}
+.dv-uses{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.6rem 0 2rem}
+.dv-uses span{font-size:.9rem;border:1px solid rgba(246,247,243,.3);padding:.35rem .9rem;border-radius:999px}
+.btn.light{background:var(--blush);color:var(--ink);border-color:var(--blush)}
+.btn.light:hover{background:var(--pearl);border-color:var(--pearl)}
+.dv-ring{transform-origin:290px 88px;animation:ring 2.8s ease-out infinite}
+.dv-ring.r2{animation-delay:1.4s}
+@keyframes ring{0%{transform:scale(1);opacity:.9}100%{transform:scale(3.2);opacity:0}}
+.dv-pulse{transform-origin:290px 88px;animation:pulse 2.8s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.3)}}
+.dv-wave{stroke-dasharray:140;stroke-dashoffset:140;animation:draw 3s ease-in-out infinite}
+@keyframes draw{50%{stroke-dashoffset:0}100%{stroke-dashoffset:-140}}
+.dv-bar{animation:bar 3s ease-in-out infinite alternate}
+@keyframes bar{from{width:20px}to{width:80px}}
+
+/* ---------- treatments explorer ---------- */
+.explore{background:var(--bottle);color:var(--pearl);padding:clamp(80px,12vw,140px) 0;position:relative;overflow:hidden}
+.explore h2,.section-h{font-family:var(--serif);font-weight:400;font-size:clamp(2.3rem,6vw,4.6rem);line-height:1;letter-spacing:-.03em;max-width:14ch}
+.explore .lead{margin-top:1.2rem;max-width:44ch;opacity:.8}
+.concerns{display:flex;gap:.6rem;flex-wrap:wrap;margin:2.6rem 0 2.2rem}
+.chip{border:1px solid rgba(246,247,243,.35);background:transparent;padding:.7rem 1.15rem;border-radius:999px;cursor:pointer;font-size:.98rem;transition:background .3s,color .3s,border-color .3s;min-height:44px}
+.chip:hover{border-color:var(--pearl)}
+.chip[aria-selected="true"]{background:var(--blush);color:var(--ink);border-color:var(--blush)}
+.panel{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,72px);align-items:start}
+.panel-intro h3{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2rem,4vw,3rem);line-height:1.05}
+.panel-intro p{margin-top:1rem;opacity:.8;max-width:36ch}
+.orb{width:min(260px,60vw);aspect-ratio:1;margin-top:2rem}
+.tlist{list-style:none;border-top:1px solid rgba(246,247,243,.18)}
+.tlist li{border-bottom:1px solid rgba(246,247,243,.18);opacity:0;transform:translateY(10px);animation:tin .55s forwards}
+@keyframes tin{to{opacity:1;transform:none}}
+.tlist button{width:100%;text-align:left;background:none;border:0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.15rem 0;font-size:1.15rem}
+.tlist button .plus{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid rgba(246,247,243,.4);position:relative;transition:transform .4s,background .3s}
+.tlist button .plus::before,.tlist button .plus::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1px;background:currentColor;transform:translate(-50%,-50%)}
+.tlist button .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.tlist button[aria-expanded="true"] .plus{transform:rotate(45deg);background:var(--blush);color:var(--ink);border-color:var(--blush)}
+.tlist .more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s}
+.tlist .more>div{overflow:hidden}
+.tlist .more p{padding:0 2.5rem 1.2rem 0;opacity:.78;font-size:.98rem;max-width:52ch}
+.tlist button[aria-expanded="true"]+.more{grid-template-rows:1fr}
+
+/* ---------- visit ritual ---------- */
+.ritual{padding:clamp(80px,12vw,150px) 0;background:var(--sage)}
+.ritual .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1.5rem;margin-bottom:3rem}
+.ritual .head p{max-width:36ch}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;left:0;right:0;top:27px;height:1px;background:var(--ink);opacity:.25}
+.step{padding-right:1.5rem;position:relative}
+.step .dot{width:55px;height:55px;border-radius:50%;background:var(--pearl);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--serif);font-size:1.35rem;position:relative;z-index:1;transition:background .4s,color .4s}
+.step:hover .dot{background:var(--bottle);color:var(--pearl)}
+.step h3{font-family:var(--serif);font-weight:500;font-size:1.45rem;margin:1.3rem 0 .5rem;line-height:1.15}
+.step p{font-size:.98rem;opacity:.82;max-width:28ch}
+
+/* ---------- principles ---------- */
+.why{padding:clamp(80px,12vw,150px) 0}
+.why-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px);margin-top:3rem}
+.why-item svg{width:64px;height:64px;margin-bottom:1.2rem}
+.why-item h3{font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.15;margin-bottom:.6rem}
+.why-item p{opacity:.82;font-size:.99rem}
+.why-item .tag{display:inline-block;margin-top:1rem;font-size:.85rem;padding:.3rem .8rem;border-radius:999px;background:var(--blush)}
+
+/* ---------- referrals + reviews ---------- */
+.trust{background:var(--blush);padding:clamp(80px,12vw,140px) 0;overflow:hidden}
+.ref{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.people{display:grid;grid-template-columns:repeat(5,44px);gap:12px}
+.people svg{width:44px;height:58px}
+.ref .big{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3.6rem);line-height:1.05;letter-spacing:-.02em;max-width:18ch}
+.ref .small{margin-top:1rem;max-width:46ch}
+.reviews{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:3.5rem var(--gutter) 1rem;margin:0 calc(var(--gutter)*-1);scrollbar-width:none}
+.reviews::-webkit-scrollbar{display:none}
+.review{flex:0 0 min(340px,82vw);scroll-snap-align:start;background:var(--pearl);border-radius:28px 28px 28px 4px;padding:1.8rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.4rem}
+.review p{font-family:var(--serif);font-size:1.18rem;line-height:1.4}
+.review footer{font-size:.9rem;display:flex;justify-content:space-between;align-items:center}
+.stars{color:var(--rose);letter-spacing:2px}
+.rev-nav{display:flex;gap:.6rem;margin-top:1rem}
+.rev-nav button{width:48px;height:48px;border-radius:50%;border:1px solid var(--ink);background:none;cursor:pointer;font-size:1.1rem;transition:background .3s,color .3s}
+.rev-nav button:hover{background:var(--ink);color:var(--blush)}
+
+/* ---------- team ---------- */
+.team{padding:clamp(80px,12vw,150px) 0}
+.team-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,6vw,90px);margin-top:3rem;align-items:start}
+.person .portrait{aspect-ratio:4/5;border-radius:999px 999px 24px 24px;background:var(--bottle);position:relative;overflow:hidden;display:grid;place-items:center}
+.person .portrait span{font-family:var(--serif);font-style:italic;color:var(--blush);font-size:clamp(5rem,14vw,10rem);line-height:1}
+.person .portrait svg{position:absolute;inset:0;width:100%;height:100%;opacity:.35}
+.person.small .portrait{background:var(--sage)}
+.person.small .portrait span{color:var(--bottle)}
+.person h3{font-family:var(--serif);font-weight:500;font-size:1.8rem;margin-top:1.4rem;line-height:1.1}
+.person .role{font-size:.95rem;color:var(--rose);margin:.3rem 0 .8rem}
+.person p{max-width:48ch;opacity:.85}
+.creds{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.creds span{font-size:.88rem;border:1px solid var(--line);padding:.35rem .8rem;border-radius:999px}
+
+/* ---------- learn ---------- */
+.learn{background:var(--ink);color:var(--pearl);padding:clamp(80px,12vw,140px) 0}
+.learn-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,48px);margin-top:3rem}
+.card-dark{border:1px solid rgba(246,247,243,.18);border-radius:24px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:1rem;text-decoration:none;transition:border-color .3s,background .3s}
+a.card-dark:hover{border-color:var(--blush);background:rgba(234,198,189,.05)}
+.card-dark h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.08}
+.card-dark p{opacity:.75;font-size:.98rem;max-width:44ch}
+.card-dark .go{margin-top:auto;color:var(--blush);font-weight:500}
+.wave-mini{height:48px;display:flex;align-items:center;gap:4px}
+.wave-mini i{width:3px;border-radius:2px;background:var(--blush);animation:eq 1.2s ease-in-out infinite}
+@keyframes eq{0%,100%{height:8px}50%{height:40px}}
+
+/* ---------- booking ---------- */
+.book{padding:clamp(80px,12vw,150px) 0;background:var(--sage)}
+.book-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,90px);align-items:start}
+.book aside p{margin-top:1.2rem;max-width:38ch}
+.contact-list{list-style:none;margin-top:2rem;display:grid;gap:1rem}
+.contact-list li{display:flex;gap:.9rem;align-items:flex-start}
+.contact-list svg{width:22px;height:22px;flex:none;margin-top:3px;stroke:var(--bottle)}
+.contact-list a{text-decoration:none;border-bottom:1px solid var(--line)}
+form.bk{background:var(--pearl);border-radius:32px;padding:clamp(24px,4vw,44px);display:grid;gap:1.2rem}
+.field{display:grid;gap:.4rem}
+.field label,.field legend{font-size:.9rem;font-weight:500}
+.field input,.field select{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:.9rem 1rem;min-height:52px;appearance:none;-webkit-appearance:none}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2312261F' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.6rem}
+.field input:focus,.field select:focus{outline:none;border-color:var(--bottle);box-shadow:0 0 0 3px rgba(29,66,55,.15)}
+fieldset.field{border:0}
+.seg{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.2rem}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg span{display:inline-flex;align-items:center;justify-content:center;min-width:52px;min-height:44px;padding:0 .9rem;border-radius:12px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.95rem;transition:background .25s,color .25s,border-color .25s}
+.seg input:checked+span{background:var(--bottle);color:var(--pearl);border-color:var(--bottle)}
+.seg input:focus-visible+span{outline:2px solid var(--rose);outline-offset:2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-note{font-size:.88rem;opacity:.7}
+.err{color:#9b2c2c;font-size:.9rem;min-height:1.2em}
+.sent{display:none;text-align:center;padding:2rem 0}
+.sent h3{font-family:var(--serif);font-size:2rem;font-weight:400}
+.sent p{margin:.6rem auto 1.4rem;max-width:34ch}
+form.bk.done>*:not(.sent){display:none}
+form.bk.done .sent{display:block}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--bottle);color:var(--pearl);padding:clamp(60px,9vw,100px) 0 calc(40px + env(safe-area-inset-bottom))}
+.foot-big{font-family:var(--serif);font-style:italic;font-size:clamp(4rem,18vw,15rem);line-height:.85;letter-spacing:-.04em;color:var(--blush)}
+.foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(246,247,243,.2);font-size:.95rem}
+.foot-row ul{list-style:none;display:grid;gap:.4rem}
+.foot-row a{text-decoration:none;opacity:.85}
+.foot-row a:hover{opacity:1;text-decoration:underline}
+.foot-row small{opacity:.6;align-self:flex-end}
+
+/* ---------- mobile sticky ---------- */
+.sticky-book{display:none}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .nav,.book-top{display:none}
+  .burger{display:block}
+  .panel,.team-grid,.book-grid,.dv-grid{grid-template-columns:1fr}
+  .dv-art{max-width:300px}
+  .orb{display:none}
+  .steps{grid-template-columns:1fr;gap:2rem}
+  .steps::before{left:27px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .step{display:grid;grid-template-columns:55px 1fr;column-gap:1.2rem}
+  .step h3{margin:0 0 .3rem;align-self:center}
+  .step p{grid-column:2}
+  .why-grid,.learn-grid{grid-template-columns:1fr}
+  .ref{grid-template-columns:1fr}
+  .touch-hint{display:none}
+  .sticky-book{display:flex;position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:30;gap:.5rem;transform:translateY(140%);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+  .sticky-book.show{transform:none}
+  .sticky-book a{flex:1;box-shadow:0 10px 30px rgba(18,38,31,.25);border-color:rgba(246,247,243,.55)}
+  .sticky-book a:not(.call){background:var(--blush);color:var(--ink);border-color:var(--blush)}
+  .sticky-book a.call{flex:0 0 56px;padding:0;background:var(--pearl);color:var(--bottle)}
+  footer.site{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+}
+@media (max-width:480px){
+  .two{grid-template-columns:1fr}
+  .hero-foot .actions{flex-direction:column;width:100%}
+  .hero-foot .actions .btn{width:100%}
+  .concerns{flex-wrap:nowrap;overflow-x:auto;margin-left:calc(var(--gutter)*-1);margin-right:calc(var(--gutter)*-1);padding:0 var(--gutter);scrollbar-width:none;scroll-snap-type:x proximity}
+  .concerns::-webkit-scrollbar{display:none}
+  .chip{flex:none;scroll-snap-align:start}
+  .people{grid-template-columns:repeat(5,36px);gap:8px}
+  .people svg{width:36px;height:48px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .hero h1 .l span{transform:none}
+  .rv{opacity:1;transform:none}
+  .soul blockquote .w{opacity:1}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@type": "BeautySalon",
+  "name": "Salon Aura",
+  "description": "Salon za negu lica i tela u Novom Sadu. Tretmani lica, tela, trajna epilacija i masaže.",
+  "url": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/salon-aura/",
+  "telephone": "+381600000000",
+  "email": "kontakt@salon-aura.rs",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Primer adrese 12",
+    "addressLocality": "Novi Sad",
+    "addressCountry": "RS"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    }
+  ],
+  "@context": "https://schema.org"
+}
+</script>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Salon Aura, početak"><b>Aura</b><span>beauty</span></a>
+    <ul class="nav">
+      <li><a href="#tretmani">Tretmani</a></li>
+      <li><a href="#poseta">Vaša poseta</a></li>
+      <li><a href="#tim">Tim</a></li>
+      <li><a href="#edukacija">Edukacija</a></li>
+      <li><a href="#termin">Kontakt</a></li>
+    </ul>
+    <a class="book-top" href="#termin">Zakažite termin</a>
+    <button class="burger" id="burger" aria-label="Otvori meni" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" aria-label="Glavni meni">
+  <a href="#tretmani">Tretmani <em>lice, telo, epilacija</em></a>
+  <a href="#poseta">Vaša poseta</a>
+  <a href="#tim">Tim</a>
+  <a href="#edukacija">Edukacija</a>
+  <a href="#termin">Zakažite termin</a>
+  <p>Primer adrese 12, Novi Sad<br>Pon – Pet, 10 – 20h</p>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-label="Uvod">
+  <canvas id="silk" aria-hidden="true"></canvas>
+  <div class="touch-hint" aria-hidden="true"><i></i>Pređite prstom preko svile</div>
+  <div class="wrap">
+    <h1><span class="l"><span>Nega lica,</span></span><span class="l"><span>tela</span></span><span class="l"><span>i duše.</span></span></h1>
+    <div class="hero-foot">
+      <p>Studio za negu lepote u Novom Sadu. Svaka klijentkinja dobija ceo tretman i punu pažnju, jedan na jedan, od 2014. godine.</p>
+      <div class="actions">
+        <a class="btn fill" href="#" target="_blank" rel="noopener">Zakažite online dijagnostiku</a>
+        <a class="btn ghost" href="#tretmani">Pronađite tretman</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="soul" aria-label="Reč osnivača">
+  <div class="wrap">
+    <figure>
+      <blockquote id="soulq">Kao kozmetičar negujem vašu kožu, a kao diplomirani psiholog i vašu dušu.</blockquote>
+      <figcaption><span class="mono" aria-hidden="true">M</span><span><strong>Milica Kovačević</strong><br>osnivač, dipl. psiholog</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- DEVICE -->
+<section class="device" aria-labelledby="dv-h">
+  <div class="wrap dv-grid">
+    <div class="dv-art" aria-hidden="true">
+      <svg viewBox="0 0 420 480" class="dv-svg">
+        <defs>
+          <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#FFFFFF"/>
+            <stop offset="1" stop-color="#DCE3DC"/>
+          </linearGradient>
+          <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2A5A4B"/>
+            <stop offset="1" stop-color="#12261F"/>
+          </linearGradient>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#EAC6BD" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#EAC6BD" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- floor shadow -->
+        <ellipse cx="200" cy="452" rx="150" ry="14" fill="#000" opacity=".25"/>
+        <!-- console -->
+        <rect x="110" y="70" width="180" height="370" rx="44" fill="url(#body)"/>
+        <rect x="110" y="70" width="180" height="370" rx="44" fill="none" stroke="#FFFFFF" stroke-opacity=".6"/>
+        <!-- screen -->
+        <rect x="134" y="100" width="132" height="170" rx="18" fill="url(#screen)"/>
+        <path class="dv-wave" d="M146 200 C166 170 182 230 202 200 S238 170 254 200" fill="none" stroke="#EAC6BD" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="200" cy="140" r="14" fill="none" stroke="#EAC6BD" stroke-opacity=".6"/>
+        <rect x="160" y="236" width="80" height="6" rx="3" fill="#EAC6BD" opacity=".35"/>
+        <rect x="160" y="236" width="52" height="6" rx="3" fill="#EAC6BD" class="dv-bar"/>
+        <!-- dial -->
+        <circle cx="200" cy="330" r="30" fill="#F6F7F3" stroke="#C9D3CA"/>
+        <circle cx="200" cy="330" r="18" fill="none" stroke="#1D4237" stroke-opacity=".35"/>
+        <line x1="200" y1="330" x2="212" y2="318" stroke="#1D4237" stroke-width="2" stroke-linecap="round"/>
+        <!-- handpiece holder -->
+        <rect x="282" y="190" width="26" height="60" rx="10" fill="#E6ECE6"/>
+        <!-- cable -->
+        <path d="M296 250 C330 300 300 330 336 360 S350 410 330 430" fill="none" stroke="#C9D3CA" stroke-width="4" stroke-linecap="round"/>
+        <!-- handpiece -->
+        <g transform="rotate(-24 330 160)">
+          <rect x="312" y="110" width="36" height="110" rx="18" fill="url(#body)" stroke="#FFFFFF" stroke-opacity=".7"/>
+          <rect x="316" y="90" width="28" height="26" rx="10" fill="#1D4237"/>
+          <circle cx="330" cy="150" r="5" fill="#EAC6BD"/>
+        </g>
+        <!-- pulse from tip -->
+        <circle class="dv-pulse" cx="290" cy="88" r="22" fill="url(#glow)"/>
+        <circle class="dv-ring" cx="290" cy="88" r="20" fill="none" stroke="#EAC6BD" stroke-width="1.5"/>
+        <circle class="dv-ring r2" cx="290" cy="88" r="20" fill="none" stroke="#EAC6BD" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="dv-text">
+      <h2 class="section-h" id="dv-h">Godinama smo ga tražili. Stigao je.</h2>
+      <p>Bloomea Neocare Advanced je aparat koji odgovara na sve što su naše klijentkinje tražile, i za lice i za telo. Jedan uređaj, više tehnologija, tretman prilagođen baš vašoj koži.</p>
+      <div class="dv-uses"><span>Neocare lice</span><span>Neocare telo</span><span>La Fontaine</span></div>
+      <a class="btn light" href="#">Pogledajte rezultate</a>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section class="explore" id="tretmani" aria-labelledby="t-h">
+  <div class="wrap">
+    <h2 id="t-h">Šta biste želeli da promenite?</h2>
+    <p class="lead">Izaberite ono što vas muči, a mi ćemo vam pokazati tretmane koji tome služe. Ako niste sigurni, počnite od dijagnostike kože.</p>
+
+    <div class="concerns" role="tablist" aria-label="Kategorije tretmana" id="chips"></div>
+
+    <div class="panel" role="tabpanel" id="panel" aria-live="polite">
+      <div class="panel-intro">
+        <h3 id="p-title"></h3>
+        <p id="p-text"></p>
+        <svg class="orb" viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <radialGradient id="og" cx="35%" cy="30%" r="75%">
+              <stop offset="0" stop-color="#F6F7F3"/>
+              <stop offset=".55" stop-color="#EAC6BD"/>
+              <stop offset="1" stop-color="#2A5A4B"/>
+            </radialGradient>
+          </defs>
+          <path id="blob" fill="url(#og)"/>
+        </svg>
+      </div>
+      <ul class="tlist" id="tlist"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="ritual" id="poseta" aria-labelledby="v-h">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="section-h" id="v-h">Kako izgleda vaša poseta</h2>
+      <p>Salon lepote nije još jedna obaveza u danu. Ovo je vaš ritual, i zato ga vodimo polako.</p>
+    </div>
+    <ol class="steps">
+      <li class="step rv"><span class="dot">1</span><h3>Dobrodošlica</h3><p>Dočekujemo vas sa papučama i vremenom da se opustite i spremite.</p></li>
+      <li class="step rv"><span class="dot">2</span><h3>Dijagnostika kože</h3><p>Pre bilo kakvog tretmana detaljno pregledamo kožu, jer ni mi ne znamo šta joj treba dok je ne vidimo.</p></li>
+      <li class="step rv"><span class="dot">3</span><h3>Tretman</h3><p>Radimo jedan na jedan, isključivo sa francuskom profesionalnom kozmetikom Ericson Laboratoire.</p></li>
+      <li class="step rv"><span class="dot">4</span><h3>Nega kod kuće</h3><p>Odlazite sa jasnim planom nege, a svakog ponedeljka u 12h newsletter vam olakšava rutinu.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" aria-labelledby="w-h">
+  <div class="wrap">
+    <h2 class="section-h" id="w-h">Radimo samo ono što najbolje znamo</h2>
+    <div class="why-grid">
+      <div class="why-item rv">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#1D4237" stroke-width="1.4" aria-hidden="true"><circle cx="32" cy="22" r="10"/><path d="M14 54c2-11 9-17 18-17s16 6 18 17"/><path d="M44 12l4-4M48 20h5M20 12l-4-4"/></svg>
+        <h3>Stručnost</h3>
+        <p>Svoje lice i telo poveravate obučenim terapeutima. Svaka žena već na prvom tretmanu oseti razliku između amatera i profesionalca.</p>
+      </div>
+      <div class="why-item rv">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#1D4237" stroke-width="1.4" aria-hidden="true"><path d="M24 8h16v8H24z"/><path d="M22 16h20l4 10v26a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4V26z"/><path d="M18 34h28"/><path d="M28 44c2 2 6 2 8 0"/></svg>
+        <h3>Kvalitet i bezbednost</h3>
+        <p>Koristimo isključivo profesionalnu medicinsku kozmetiku iz Francuske. Zato možemo da predvidimo rezultate i stanemo iza svakog tretmana.</p>
+        <span class="tag">Ericson Laboratoire</span>
+      </div>
+      <div class="why-item rv">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#1D4237" stroke-width="1.4" aria-hidden="true"><path d="M8 40c8-10 16-10 24 0s16 10 24 0"/><path d="M8 28c8-10 16-10 24 0s16 10 24 0" opacity=".5"/><path d="M8 52c8-10 16-10 24 0s16 10 24 0" opacity=".5"/></svg>
+        <h3>Atmosfera</h3>
+        <p>Tretmani znaju da potraju. Bez hladnog ambijenta i usiljenih osmeha, samo mesto gde se osećate prirodno svaki put.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust" aria-labelledby="r-h">
+  <div class="wrap">
+    <div class="ref rv">
+      <div class="people" id="people" aria-hidden="true"></div>
+      <div>
+        <h2 class="big" id="r-h">Osam od deset novih klijentkinja dolazi na preporuku.</h2>
+        <p class="small">Znamo, jer uvek pitamo kako ste čuli za nas. Ako još niste dobili preporuku, evo šta kažu dame koje već dolaze.</p>
+      </div>
+    </div>
+    <div class="reviews" id="reviews" tabindex="0" aria-label="Utisci klijentkinja">
+      <article class="review"><p>Pet godina posećujem salon i mislim da nema tretmana lica i tela koji nisam radila. Profesionalnost, ambijent i ljubaznost nemaju konkurenciju.</p><footer><span>Ana M.</span><span class="stars" aria-label="5 zvezdica">★★★★★</span></footer></article>
+      <article class="review"><p>Savršena oaza nege i hedonizma na jednom mestu.</p><footer><span>Ivana P.</span><span class="stars" aria-label="5 zvezdica">★★★★★</span></footer></article>
+      <article class="review"><p>Osećam se kao kod kuće, a pristup je potpuno profesionalan. Kome god sam preporučila, svi se vraćaju.</p><footer><span>Mina R.</span><span class="stars" aria-label="5 zvezdica">★★★★★</span></footer></article>
+      <article class="review"><p>Dočeka vas ljubazno osoblje, dobijete papuče i vreme da se spremite. Vidi se da vode računa o svakoj klijentkinji.</p><footer><span>Teodora S.</span><span class="stars" aria-label="5 zvezdica">★★★★★</span></footer></article>
+      <article class="review"><p>Sve ide po rasporedu i tačno kako je napisano. Sigurno dolazim ponovo.</p><footer><span>Lara N.</span><span class="stars" aria-label="5 zvezdica">★★★★★</span></footer></article>
+      <article class="review"><p>Jako temeljni i predani svom poslu. Prosto sam uživala.</p><footer><span>Petra V.</span><span class="stars" aria-label="5 zvezdica">★★★★★</span></footer></article>
+    </div>
+    <div class="rev-nav"><button type="button" id="prev" aria-label="Prethodni utisak">←</button><button type="button" id="next" aria-label="Sledeći utisak">→</button></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="tim" aria-labelledby="tm-h">
+  <div class="wrap">
+    <h2 class="section-h" id="tm-h">Upoznavanje pre upoznavanja</h2>
+    <div class="team-grid">
+      <article class="person rv">
+        <div class="portrait">
+          <svg viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 360C80 300 160 420 260 340S380 260 440 300" stroke="#EAC6BD" fill="none" stroke-width="1"/><path d="M-20 390C80 330 160 450 260 370S380 290 440 330" stroke="#EAC6BD" fill="none" stroke-width="1"/><path d="M-20 420C80 360 160 480 260 400S380 320 440 360" stroke="#EAC6BD" fill="none" stroke-width="1"/></svg>
+          <span aria-hidden="true">M</span>
+        </div>
+        <h3>Milica Kovačević</h3>
+        <div class="role">osnivač</div>
+        <p>Nega lica i tela je moja ljubav još od srednje škole, kada sam prvi put radila masaže i kozmetičke tretmane. Kao studentkinja psihologije shvatila sam koliko su spoljašnja nega i unutrašnji mir povezani. Tako je nastao Salon Aura, vaše mesto za ljubav prema sebi.</p>
+        <div class="creds"><span>kozmetičar</span><span>fizioterapeut</span><span>dipl. psiholog</span></div>
+      </article>
+      <article class="person small rv">
+        <div class="portrait"><span aria-hidden="true">J</span></div>
+        <h3>Jovana Ilić</h3>
+        <div class="role">kozmetičar</div>
+        <p>Farmaceutski tehničar koji je ljubav prema nezi kože razvila još u školskim danima. U Salonu Aura nastavlja da usavršava veštine na mestu koje, kako kaže, budi samo najbolje u čoveku.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LEARN -->
+<section class="learn" id="edukacija" aria-labelledby="e-h">
+  <div class="wrap">
+    <h2 class="section-h" id="e-h">Znanje delimo dalje</h2>
+    <div class="learn-grid">
+      <div class="card-dark rv">
+        <h3>Obuke sa javno priznatim uverenjem</h3>
+        <p>Od 2024. godine Salon Aura ima status javno priznatog organizatora aktivnosti obrazovanja odraslih (JPOA). Polaznici dobijaju potvrdu ili uverenje i jedinstveni obrazovni broj.</p>
+        <a class="go" href="#">Pogledajte obuke</a>
+      </div>
+      <a class="card-dark rv" href="#" target="_blank" rel="noopener">
+        <div class="wave-mini" aria-hidden="true" id="eq"></div>
+        <h3>Podkast „Pre svega“</h3>
+        <p>Razgovori sa stručnjacima o koži, zdravlju i nezi, bez uvijanja i sa mnogo jasnih odgovora.</p>
+        <span class="go">Slušajte na YouTube-u</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="book" id="termin" aria-labelledby="b-h">
+  <div class="wrap book-grid">
+    <aside>
+      <h2 class="section-h" id="b-h">Zakažite svoj termin</h2>
+      <p>Popunite upit i poslaćemo ga direktno na WhatsApp salona. Javljamo se sa slobodnim terminom.</p>
+      <ul class="contact-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Primer adrese 12, Novi Sad</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><a href="tel:+381600000000">+381 60 000 0000</a></li><li><a href="mailto:kontakt@salon-aura.rs">kontakt@salon-aura.rs</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Ponedeljak – petak, 10 – 20h</span></li>
+      </ul>
+    </aside>
+
+    <form class="bk" id="bk" novalidate>
+      <div class="field">
+        <label for="f-tr">Tretman</label>
+        <select id="f-tr" required></select>
+      </div>
+      <div class="two">
+        <div class="field"><label for="f-name">Ime</label><input id="f-name" autocomplete="given-name" required></div>
+        <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      </div>
+      <fieldset class="field">
+        <legend>Koji dan vam odgovara?</legend>
+        <div class="seg">
+          <label><input type="radio" name="dan" value="ponedeljak"><span>Pon</span></label>
+          <label><input type="radio" name="dan" value="utorak"><span>Uto</span></label>
+          <label><input type="radio" name="dan" value="sreda"><span>Sre</span></label>
+          <label><input type="radio" name="dan" value="četvrtak"><span>Čet</span></label>
+          <label><input type="radio" name="dan" value="petak"><span>Pet</span></label>
+          <label><input type="radio" name="dan" value="bilo koji dan" checked><span>Svejedno</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend>Deo dana</legend>
+        <div class="seg">
+          <label><input type="radio" name="deo" value="pre podne" checked><span>10 – 14h</span></label>
+          <label><input type="radio" name="deo" value="posle podne"><span>14 – 17h</span></label>
+          <label><input type="radio" name="deo" value="uveče"><span>17 – 20h</span></label>
+        </div>
+      </fieldset>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn fill" type="submit">Pošaljite upit na WhatsApp</button>
+      <p class="form-note">Više volite razgovor? <a href="#" target="_blank" rel="noopener">Zakažite besplatnu online dijagnostiku</a> od 30 minuta.</p>
+
+      <div class="sent" aria-live="polite">
+        <h3>Upit je spreman</h3>
+        <p>Otvorili smo WhatsApp sa vašom porukom. Samo je pošaljite i javljamo se sa terminom.</p>
+        <button class="btn ghost" type="button" id="again">Pošaljite novi upit</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-big" aria-hidden="true">Aura</div>
+    <div class="foot-row">
+      <ul><li>Primer adrese 12, Novi Sad</li><li><a href="tel:+381600000000">+381 60 000 0000</a></li><li><a href="mailto:kontakt@salon-aura.rs">kontakt@salon-aura.rs</a></li><li>Pon – Pet, 10 – 20h</li></ul>
+      <ul><li><a href="#" target="_blank" rel="noopener">Instagram</a></li><li><a href="#" target="_blank" rel="noopener">Facebook</a></li><li><a href="#" target="_blank" rel="noopener">YouTube</a></li></ul>
+      <small>© 2014 – 2026 Salon Aura d.o.o. Novi Sad</small>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-book" id="sticky">
+  <a class="btn fill call" href="tel:+381600000000" aria-label="Pozovite salon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></a>
+  <a class="btn fill" href="#termin">Zakažite termin</a>
+</div>
+
+<script>
+(function(){
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- header + menu ---------- */
+const top = document.getElementById('top'), burger = document.getElementById('burger'), sticky = document.getElementById('sticky');
+function onScroll(){
+  const y = scrollY;
+  top.classList.toggle('solid', y > 40);
+  sticky.classList.toggle('show', y > innerHeight*0.8 && !nearBooking());
+}
+function nearBooking(){
+  const r = document.getElementById('termin').getBoundingClientRect();
+  return r.top < innerHeight && r.bottom > 0;
+}
+addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+burger.addEventListener('click', () => {
+  const open = document.body.classList.toggle('menu-open');
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
+});
+document.querySelectorAll('#drawer a').forEach(a => a.addEventListener('click', () => {
+  document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', false);
+}));
+
+/* ---------- silk canvas ---------- */
+const cv = document.getElementById('silk'), ctx = cv.getContext('2d');
+let W=0,H=0,dpr=1, t=0, px=-9999, py=-9999, pe=0, running=true;
+function size(){
+  dpr = Math.min(devicePixelRatio||1, 2);
+  W = cv.clientWidth; H = cv.clientHeight;
+  cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+size(); addEventListener('resize', size);
+function pointer(e){
+  const r = cv.getBoundingClientRect();
+  const p = e.touches ? e.touches[0] : e;
+  px = p.clientX - r.left; py = p.clientY - r.top; pe = 1;
+}
+cv.addEventListener('pointermove', pointer);
+cv.addEventListener('touchmove', pointer, {passive:true});
+const LINES = innerWidth < 600 ? 46 : 70;
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  const mid = H * (W < 700 ? 0.36 : 0.42);
+  const amp = H * 0.11;
+  const spread = Math.min(H*0.32, 240);
+  const step = W < 600 ? 10 : 8;
+  for(let i=0;i<LINES;i++){
+    const k = i/(LINES-1);
+    ctx.beginPath();
+    for(let x=-20;x<=W+20;x+=step){
+      const nx = x / W;
+      const twist = Math.cos(nx*3.2 + t*0.35) * spread;
+      let y = mid
+        + Math.sin(nx*4.1 + t*0.6 + k*0.6) * amp
+        + Math.sin(nx*9.0 - t*0.4 + k*1.4) * amp*0.22
+        + (k-0.5) * twist;
+      if(pe>0.01){
+        const dx = x - px, dy = y - py;
+        const d2 = dx*dx + dy*dy;
+        const f = Math.exp(-d2/9000) * 60 * pe;
+        y += Math.sin(dx*0.04 - t*4) * f * 0.6 + (dy>0? f*0.25 : -f*0.25);
+      }
+      x===-20 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+    }
+    // colour: bottle green -> blush across the ribbon
+    const r = Math.round(29 + (234-29)*k), g = Math.round(66 + (198-66)*k), b = Math.round(55 + (189-55)*k);
+    const edge = Math.sin(k*Math.PI);
+    ctx.strokeStyle = `rgba(${r},${g},${b},${0.08 + edge*0.42})`;
+    ctx.lineWidth = 0.6 + edge*0.9;
+    ctx.stroke();
+  }
+  pe *= 0.96;
+}
+function loop(){
+  if(running){ t += 0.012; draw(); }
+  requestAnimationFrame(loop);
+}
+if(reduce){ t = 2; draw(); } else { loop(); }
+new IntersectionObserver(([e]) => { running = e.isIntersecting; }).observe(cv);
+
+/* ---------- quote scrub ---------- */
+const q = document.getElementById('soulq');
+q.innerHTML = q.textContent.split(' ').map(w => `<span class="w">${w}</span>`).join(' ');
+const words = [...q.querySelectorAll('.w')];
+function scrub(){
+  const r = q.getBoundingClientRect();
+  const p = Math.min(1, Math.max(0, (innerHeight*0.85 - r.top) / (r.height + innerHeight*0.35)));
+  const lit = p * words.length * 1.15;
+  words.forEach((w,i) => w.style.opacity = Math.min(1, Math.max(0.14, lit - i)));
+}
+if(!reduce){ addEventListener('scroll', scrub, {passive:true}); scrub(); }
+
+/* ---------- treatments ---------- */
+const DATA = [
+  {id:'ciscenje', chip:'Nečistoće i pore', title:'Čišćenje lica', text:'Za kožu kojoj trebaju čiste pore i svež početak. Osnova svake dobre nege.', items:[
+    ['Higijenski tretman lica','Temeljno čišćenje kože, raširenje i pražnjenje pora, uz umirujuću završnu negu.'],
+    ['Mikrodermoabrazija','Dijamantski nastavak nežno skida površinski sloj kože i ujednačava ten.'],
+    ['Ultrazvučna špatula','Ultrazvučne vibracije čiste pore bez pritiska i pripremaju kožu za aktivne preparate.'],
+    ['Medicinski tretman lica','Ciljani tretman za problematičnu kožu, uz profesionalnu medicinsku kozmetiku.']
+  ]},
+  {id:'hidratacija', chip:'Suva ili umorna koža', title:'Hidratacija', text:'Za kožu koja je zategnuta, bez sjaja ili reaguje na sve. Vraćamo joj mekoću.', items:[
+    ['Dermo Oxy tretman','Tretman kiseonikom koji unosi aktivne sastojke duboko u kožu.'],
+    ['Hidratacija lica','Intenzivna nega za suvu i dehidriranu kožu.'],
+    ['Polutretman lica','Kraća varijanta nege kada vam treba brzo osveženje.'],
+    ['Tretman za osetljivu kožu','Blag pristup za kožu sklonu crvenilu i iritacijama.']
+  ]},
+  {id:'lifting', chip:'Opuštena koža', title:'Lifting lica', text:'Za čvršće konture i odmoran pogled, bez skalpela i bez igle.', items:[
+    ['Mezoterapija bez igle','Aktivni sastojci se unose u kožu bez uboda.'],
+    ['Radiotalasni lifting lica','Toplota radiotalasa podstiče zatezanje kože.'],
+    ['Miolift','Elektrostimulacija mišića lica za čvršće konture.'],
+    ['Uklanjanje podočnjaka','Ciljani tretman za područje oko očiju.'],
+    ['Elektrostimulativne rukavice','Masaža lica uz blagu mikrostimulaciju.']
+  ]},
+  {id:'fleke', chip:'Ožiljci, fleke i bore', title:'Obnova kože', text:'Za ujednačen ten i glađu teksturu. Kiseline i svetlo rade ono što krema ne može.', items:[
+    ['Voćne kiseline','Blag piling koji osvežava ten i ujednačava teksturu.'],
+    ['Hemijski piling','Dublja obnova kože za fleke i tragove akni.'],
+    ['Salicilna kiselina','Za masnu kožu sklonu bubuljicama i proširenim porama.'],
+    ['Mandelična kiselina','Nežna kiselina pogodna i za osetljiviju kožu.'],
+    ['LED terapija Dermalux Flex','Svetlosna terapija koja smiruje i obnavlja kožu.']
+  ]},
+  {id:'epilacija', chip:'Neželjene dlačice', title:'Trajna epilacija', text:'Rešenje koje traje, uz pristup prilagođen vašoj koži i dlaci.', items:[
+    ['Laserska epilacija','Trajno uklanjanje dlačica kroz seriju tretmana.'],
+    ['Epilacija iglicom','Precizna metoda za pojedinačne i svetlije dlačice.']
+  ]},
+  {id:'telo', chip:'Celulit i oblikovanje', title:'Tretmani tela', text:'Protiv „narandžine kore“ borimo se svim znanjem, i to prilično uspešno.', items:[
+    ['Gipsane bermude','Obloga koja pomaže kod celulita i zadržavanja tečnosti.'],
+    ['Presoterapija','Limfna drenaža aparatom, za lake noge i bolju cirkulaciju.'],
+    ['Ultra Contour Touch','Tretman za oblikovanje i zatezanje kože tela.'],
+    ['Anticelulit masaža','Ručna masaža koja cilja celulit na bedrima, bokovima i zadnjici.'],
+    ['Cryo Light Legs','Osvežavajući tretman za umorne i teške noge.'],
+    ['Termo Capsicum','Tretman sa efektom toplote za oblikovanje.'],
+    ['Osmo Slim','Tretman za izbacivanje viška tečnosti.']
+  ]},
+  {id:'masaze', chip:'Napetost i stres', title:'Masaže', text:'Ponekad je najbolji tretman sat vremena samo za vas.', items:[
+    ['Relax masaža','30 ili 60 minuta potpunog opuštanja.'],
+    ['Antistres masaža','60 minuta za opuštanje napetog tela i misli.'],
+    ['Terapeutska masaža','30 minuta ciljanog rada na napetim mišićima.'],
+    ['Sportska masaža','60 minuta za aktivne i umorne mišiće.'],
+    ['Limfna drenaža','60 minuta ručne drenaže za lakoću celog tela.']
+  ]}
+];
+const chips = document.getElementById('chips'), list = document.getElementById('tlist');
+const pt = document.getElementById('p-title'), pp = document.getElementById('p-text');
+DATA.forEach((d,i) => {
+  const b = document.createElement('button');
+  b.className='chip'; b.type='button'; b.role='tab'; b.textContent=d.chip; b.id='tab-'+d.id;
+  b.setAttribute('aria-selected', i===0); b.setAttribute('aria-controls','panel');
+  b.addEventListener('click', () => select(i));
+  chips.appendChild(b);
+});
+function select(i){
+  const d = DATA[i];
+  chips.querySelectorAll('.chip').forEach((c,j) => c.setAttribute('aria-selected', i===j));
+  pt.textContent = d.title; pp.textContent = d.text;
+  list.innerHTML = d.items.map(([n,txt],j) => `
+    <li style="animation-delay:${j*60}ms">
+      <button type="button" aria-expanded="false"><span>${n}</span><span class="plus" aria-hidden="true"></span></button>
+      <div class="more"><div><p>${txt}</p></div></div>
+    </li>`).join('');
+  list.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+    b.setAttribute('aria-expanded', b.getAttribute('aria-expanded') !== 'true');
+  }));
+  seed = i*1.7;
+}
+let seed = 0; select(0);
+
+// morphing blob
+const blob = document.getElementById('blob'); let bt = 0;
+function blobPath(){
+  const pts = 8, pts2 = [];
+  for(let i=0;i<pts;i++){
+    const a = i/pts*Math.PI*2;
+    const r = 78 + Math.sin(a*3 + bt + seed)*9 + Math.cos(a*2 - bt*0.8 + seed)*7;
+    pts2.push([100+Math.cos(a)*r, 100+Math.sin(a)*r]);
+  }
+  let d = '';
+  for(let i=0;i<pts;i++){
+    const p0 = pts2[(i-1+pts)%pts], p1 = pts2[i], p2 = pts2[(i+1)%pts], p3 = pts2[(i+2)%pts];
+    if(i===0) d += `M${p1[0].toFixed(1)},${p1[1].toFixed(1)}`;
+    const c1 = [p1[0]+(p2[0]-p0[0])/6, p1[1]+(p2[1]-p0[1])/6];
+    const c2 = [p2[0]-(p3[0]-p1[0])/6, p2[1]-(p3[1]-p1[1])/6];
+    d += `C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+  }
+  blob.setAttribute('d', d+'Z');
+}
+(function bl(){ if(!reduce) bt += 0.01; blobPath(); if(!reduce) requestAnimationFrame(bl); })();
+
+/* ---------- people (8/10) ---------- */
+const people = document.getElementById('people');
+for(let i=0;i<10;i++){
+  const on = i<8;
+  people.insertAdjacentHTML('beforeend',
+    `<svg viewBox="0 0 44 58"><circle cx="22" cy="14" r="10" fill="${on?'#1D4237':'none'}" stroke="#1D4237" stroke-width="1.3"/><path d="M3 56c1-14 9-22 19-22s18 8 19 22z" fill="${on?'#1D4237':'none'}" stroke="#1D4237" stroke-width="1.3"/></svg>`);
+}
+
+/* ---------- reviews nav ---------- */
+const rv = document.getElementById('reviews');
+const by = dir => rv.scrollBy({left: dir * (rv.querySelector('.review').offsetWidth + 16), behavior: reduce?'auto':'smooth'});
+document.getElementById('prev').onclick = () => by(-1);
+document.getElementById('next').onclick = () => by(1);
+
+/* ---------- podcast bars ---------- */
+const eq = document.getElementById('eq');
+for(let i=0;i<22;i++) eq.insertAdjacentHTML('beforeend', `<i style="animation-delay:${(i*0.09)%1.2}s;animation-duration:${0.9+((i*37)%7)/10}s"></i>`);
+
+/* ---------- reveal ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:.15});
+document.querySelectorAll('.rv').forEach((el,i) => { el.style.transitionDelay = (i%4)*80+'ms'; io.observe(el); });
+
+/* ---------- booking form ---------- */
+const sel = document.getElementById('f-tr');
+sel.innerHTML = '<option value="">Izaberite tretman</option><option>Dijagnostika kože (nisam sigurna)</option>' +
+  DATA.map(d => `<optgroup label="${d.title}">${d.items.map(([n]) => `<option>${n}</option>`).join('')}</optgroup>`).join('');
+const form = document.getElementById('bk'), err = document.getElementById('err');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const tr = sel.value, name = document.getElementById('f-name').value.trim(), tel = document.getElementById('f-tel').value.trim();
+  if(!tr){ err.textContent = 'Izaberite tretman, ili „Dijagnostika kože“ ako niste sigurni.'; sel.focus(); return; }
+  if(!name){ err.textContent = 'Upišite ime da znamo kome se javljamo.'; document.getElementById('f-name').focus(); return; }
+  if(tel.replace(/\D/g,'').length < 8){ err.textContent = 'Upišite broj telefona sa najmanje 8 cifara.'; document.getElementById('f-tel').focus(); return; }
+  err.textContent = '';
+  const dan = form.querySelector('[name=dan]:checked').value, deo = form.querySelector('[name=deo]:checked').value;
+  const msg = `Zdravo, ja sam ${name}. Želela bih da zakažem: ${tr}. Odgovara mi ${dan}, ${deo}. Moj broj: ${tel}`;
+  window.open('https://wa.me/381600000000?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  form.classList.add('done');
+});
+document.getElementById('again').onclick = () => { form.reset(); form.classList.remove('done'); };
+})();
+</script>
+</body>
+</html>

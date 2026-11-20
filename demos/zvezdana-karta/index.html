@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="sr" data-theme="tarot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zvezdana Karta · tarot, astrologija i Reiki | Beograd</title>
+<meta name="description" content="Zvezdana Karta — tarot čitanja, astrologija i Reiki u Beogradu. Usluge, karta dana i zakazivanje seanse. Demo sajt: WebGlow Studio.">
+<meta property="og:title" content="Zvezdana Karta · tarot, astrologija i Reiki | Beograd">
+<meta property="og:description" content="Zvezdana Karta — tarot čitanja, astrologija i Reiki u Beogradu. Usluge, karta dana i zakazivanje seanse. Demo sajt: WebGlow Studio.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/zvezdana-karta/">
+<meta property="og:locale" content="sr_RS">
+<link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/zvezdana-karta/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--max:1140px;--gutter:clamp(18px,5vw,56px);--body:"Lato",system-ui,sans-serif;--title:"Cinzel",Georgia,serif;--serif:"Cormorant Garamond",Georgia,serif}
+[data-theme="tarot"]{--bg:#1a1028;--bg2:#24163a;--card:#2a1b44;--fg:#f3ecdf;--muted:#bfb2cf;--accent:#d4af37;--accent-2:#f1d27a;--on-accent:#1a1028;--line:rgba(212,175,55,.22);--star:#f6e7b8;--moon:#f4e6c0;--glow:rgba(212,175,55,.35)}
+[data-theme="astro"]{--bg:#0b1430;--bg2:#111d42;--card:#16244f;--fg:#e9eef8;--muted:#a7b3cf;--accent:#c9d3e3;--accent-2:#ffffff;--on-accent:#0b1430;--line:rgba(201,211,227,.22);--star:#ffffff;--moon:#dfe6f3;--glow:rgba(201,211,227,.32)}
+[data-theme="reiki"]{--bg:#f6f1e7;--bg2:#ece4d4;--card:#fffdf8;--fg:#2f3a2f;--muted:#66705f;--accent:#5f8b6a;--accent-2:#88b08f;--on-accent:#fff;--line:rgba(95,139,106,.25);--star:#9cc1a3;--moon:#fff6dc;--glow:rgba(95,139,106,.28)}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.65;overflow-x:hidden;transition:background .6s,color .6s}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter);position:relative}
+h1,h2,h3{font-family:var(--title);font-weight:600;letter-spacing:.02em;line-height:1.15}
+.eyebrow{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.lead{color:var(--muted);max-width:46ch}
+
+/* zvezde */
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main,header.top,footer,.switcher{position:relative;z-index:1}
+
+/* prekidač */
+.switcher{background:var(--accent);color:var(--on-accent);font-size:.85rem;transition:background .6s,color .6s}
+.switcher .wrap{display:flex;align-items:center;gap:.5rem 1rem;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.switcher span{font-weight:700;opacity:.85}
+.sw-list{display:flex;gap:.4rem;flex-wrap:wrap}
+.sw{border:1px solid currentColor;background:transparent;border-radius:999px;padding:.3rem .9rem;min-height:36px;cursor:pointer;font-weight:700;opacity:.75}
+.sw:hover{opacity:1}
+.sw[aria-pressed="true"]{background:var(--on-accent);color:var(--accent);border-color:var(--on-accent);opacity:1}
+
+/* header */
+header.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:background .6s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:66px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--title);font-size:1.15rem;letter-spacing:.06em}
+.brand svg{width:26px;height:26px;color:var(--accent)}
+.nav{display:flex;gap:1.6rem;list-style:none}
+.nav a{text-decoration:none;font-size:.92rem;color:var(--muted)}
+.nav a:hover{color:var(--accent)}
+.burger{display:none;width:44px;height:44px;border:0;background:none;cursor:pointer;position:relative}
+.burger i{position:absolute;left:10px;right:10px;height:2px;background:var(--fg);transition:transform .3s,opacity .2s}
+.burger i:nth-child(1){top:15px}.burger i:nth-child(2){top:21px}.burger i:nth-child(3){top:27px}
+.menu-open .burger i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-open .burger i:nth-child(2){opacity:0}
+.menu-open .burger i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;border:1px solid var(--accent);background:var(--accent);color:var(--on-accent);font-weight:700;letter-spacing:.03em;text-decoration:none;cursor:pointer;transition:transform .25s,box-shadow .4s,background .3s,color .3s}
+.btn.gold{animation:shine 4s ease-in-out infinite}
+@keyframes shine{0%,100%{box-shadow:0 0 0 rgba(0,0,0,0)}50%{box-shadow:0 0 22px var(--glow)}}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 26px var(--glow)}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line);animation:none}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn.small{min-height:44px;padding:.55rem 1.1rem;font-size:.9rem}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{min-height:calc(100svh - 120px);display:flex;align-items:center;padding:80px 0 90px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,6vw,80px);align-items:center;width:100%}
+.hero h1{font-size:clamp(2.8rem,8vw,5.6rem);margin:1rem 0 1.1rem;background:linear-gradient(180deg,var(--fg) 30%,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .tag{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,3vw,2rem);line-height:1.3;color:var(--fg);max-width:24ch}
+.hero .actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.moon-wrap{position:relative;aspect-ratio:1;max-width:400px;width:100%;margin:0 auto}
+.moon-halo{position:absolute;inset:-10%;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 62%);animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.55;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
+.moon{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0%,var(--moon) 40%,color-mix(in srgb,var(--moon) 70%,#000) 100%);box-shadow:0 0 60px var(--glow),inset -24px -18px 40px rgba(0,0,0,.18)}
+.moon i{position:absolute;border-radius:50%;background:rgba(0,0,0,.08)}
+[data-theme="reiki"] .moon{background:radial-gradient(circle at 40% 35%,#fff,#fdf0c8 45%,#f2d98c 100%);box-shadow:0 0 80px rgba(242,217,140,.6)}
+[data-theme="reiki"] .moon i{display:none}
+.orbit{position:absolute;inset:2%;border:1px dashed var(--line);border-radius:50%;animation:spin 60s linear infinite}
+.orbit::after{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* sekcije */
+section.sec{padding:clamp(70px,11vw,120px) 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 3rem}
+.sec-head h2{font-size:clamp(2rem,5vw,3.2rem);margin-top:.6rem}
+.sec-head p{color:var(--muted);margin-top:.8rem}
+.divider{display:flex;align-items:center;justify-content:center;gap:.8rem;color:var(--accent);margin-top:1rem}
+.divider i{width:60px;height:1px;background:currentColor;opacity:.5}
+.divider svg{width:14px;height:14px}
+
+/* kartice usluga */
+.services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.flip{perspective:1200px;background:none;border:0;padding:0;cursor:pointer;text-align:center;min-height:360px}
+.flip-in{position:relative;width:100%;height:100%;min-height:360px;transition:transform .8s cubic-bezier(.3,.7,.2,1);transform-style:preserve-3d}
+@media (hover:hover){.flip:hover .flip-in{transform:rotateY(180deg)}}
+.flip.open .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;border:1px solid var(--line);background:var(--card);padding:1.6rem 1.3rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;transition:background .6s}
+.face::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);border-radius:11px;pointer-events:none}
+.face.back{transform:rotateY(180deg);justify-content:space-between}
+.face .num{font-family:var(--title);font-size:.85rem;letter-spacing:.2em;color:var(--accent)}
+.face .sym{width:84px;height:84px;color:var(--accent)}
+.face h3{font-size:1.25rem}
+.face .hint{font-size:.8rem;color:var(--muted);letter-spacing:.06em}
+.face.back p{color:var(--muted);font-size:.96rem}
+.meta{display:flex;justify-content:center;gap:1rem;font-size:.9rem;width:100%;border-top:1px solid var(--line);padding-top:.8rem}
+.meta b{color:var(--accent);font-family:var(--title)}
+.price-note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:1.4rem}
+
+/* karta dana */
+.daily{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .6s}
+.daily-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,80px);align-items:center}
+.deck{position:relative;width:min(260px,70vw);aspect-ratio:2/3.2;margin:0 auto;perspective:1400px}
+.deck .stack{position:absolute;inset:0;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.deck .stack:nth-child(1){transform:translate(10px,10px) rotate(4deg);opacity:.5}
+.deck .stack:nth-child(2){transform:translate(5px,5px) rotate(2deg);opacity:.75}
+.dcard{position:absolute;inset:0;background:none;border:0;padding:0;cursor:pointer;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.3,.7,.2,1)}
+.dcard.flipped{transform:rotateY(180deg)}
+.dcard .face{padding:1.4rem}
+.cback{background:
+  radial-gradient(circle at 50% 50%,transparent 26%,var(--line) 27%,transparent 28%),
+  repeating-conic-gradient(from 0deg,var(--card) 0 10deg,color-mix(in srgb,var(--card) 80%,var(--accent)) 10deg 20deg)}
+.cback svg{width:70px;height:70px;color:var(--accent);filter:drop-shadow(0 0 10px var(--glow))}
+.cback .tap{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fg);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.35rem .8rem;border-radius:999px}
+.cfront .glyph{font-family:var(--title);font-size:3.2rem;color:var(--accent);line-height:1}
+.cfront h3{font-size:1.3rem}
+.cfront small{color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-size:.72rem}
+.reading h2{font-size:clamp(2rem,5vw,3rem);margin:.6rem 0 1rem}
+.reading .result{margin-top:1.6rem;padding:1.4rem 1.6rem;border:1px solid var(--line);border-radius:16px;background:color-mix(in srgb,var(--card) 70%,transparent);min-height:120px}
+.reading .result h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.7rem;letter-spacing:0;color:var(--accent)}
+.reading .result p{margin-top:.4rem}
+.reading .again{margin-top:1rem;background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;min-height:44px}
+
+/* o meni */
+.about-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px);align-items:center}
+.portrait{aspect-ratio:3/4;max-width:340px;width:100%;margin:0 auto;border-radius:200px 200px 20px 20px;border:1px solid var(--line);background:radial-gradient(circle at 50% 30%,var(--glow),transparent 60%),var(--card);display:grid;place-items:center;text-align:center;color:var(--muted);font-size:.9rem;padding:1.5rem;position:relative}
+.portrait svg{width:90px;height:90px;color:var(--accent);opacity:.8;margin-bottom:.8rem}
+.about-text h2{font-size:clamp(2rem,5vw,3rem);margin:.6rem 0 1.2rem}
+.about-text p{color:var(--muted);margin-bottom:1rem;max-width:56ch}
+.facts{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.facts b{display:block;font-family:var(--title);font-size:1.9rem;color:var(--accent);line-height:1.1}
+.facts span{font-size:.88rem;color:var(--muted)}
+
+/* koraci */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;counter-reset:s}
+.step{border:1px solid var(--line);border-radius:16px;padding:2rem 1.6rem;background:color-mix(in srgb,var(--card) 60%,transparent);text-align:center}
+.step .n{width:56px;height:56px;margin:0 auto 1rem;border-radius:50%;border:1px solid var(--accent);display:grid;place-items:center;font-family:var(--title);font-size:1.3rem;color:var(--accent)}
+.step h3{font-size:1.15rem;margin-bottom:.5rem}
+.step p{color:var(--muted);font-size:.96rem}
+
+/* utisci */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.quote{border:1px solid var(--line);border-radius:16px;padding:1.8rem;background:color-mix(in srgb,var(--card) 60%,transparent);display:flex;flex-direction:column;gap:1rem}
+.quote .demo{align-self:flex-start;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;border:1px dashed var(--accent);color:var(--accent);border-radius:999px;padding:.2rem .7rem}
+.quote blockquote{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.35}
+.quote cite{margin-top:auto;font-style:normal;color:var(--muted);font-size:.9rem}
+
+/* zakazivanje */
+.book-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,80px);align-items:start}
+.book-grid aside h2{font-size:clamp(2rem,5vw,3rem);margin:.6rem 0 1rem}
+.book-grid aside p{color:var(--muted);max-width:40ch}
+.chat-btns{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.6rem}
+form.bk{border:1px solid var(--line);border-radius:22px;padding:clamp(22px,4vw,38px);background:color-mix(in srgb,var(--card) 70%,transparent);display:grid;gap:1.1rem}
+.field{display:grid;gap:.4rem}
+.field label{font-size:.9rem;font-weight:700}
+.field input,.field select{width:100%;min-height:50px;padding:.8rem 1rem;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--fg)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--glow)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.err{color:var(--accent);font-size:.9rem;min-height:1.2em}
+.sent{display:none;text-align:center;padding:2rem 0}
+.sent h3{font-size:1.8rem}
+.sent p{color:var(--muted);margin:.6rem auto 1.3rem;max-width:34ch}
+form.bk.done>*:not(.sent){display:none}
+form.bk.done .sent{display:block}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:clamp(50px,8vw,80px) 0 40px;background:var(--bg2);transition:background .6s}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem}
+footer h4{font-family:var(--title);font-size:.95rem;letter-spacing:.12em;color:var(--accent);margin-bottom:.8rem}
+footer p,footer a{color:var(--muted);font-size:.94rem;text-decoration:none;display:block;margin-bottom:.35rem}
+footer a:hover{color:var(--accent)}
+.disclaimer{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.disclaimer a{display:inline;color:var(--accent)}
+
+.rv{opacity:0;transform:translateY(20px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .services{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:820px){
+  .nav,.top .btn{display:none}
+  .burger{display:block}
+  .nav{position:fixed;left:0;right:0;top:calc(66px + var(--sw-h,52px));flex-direction:column;gap:0;background:var(--bg);padding:.5rem var(--gutter) 1.5rem;border-bottom:1px solid var(--line);box-shadow:0 20px 40px rgba(0,0,0,.25)}
+  .menu-open .nav{display:flex}
+  .nav a{display:block;padding:.9rem 0;font-size:1.15rem;color:var(--fg);border-bottom:1px solid var(--line)}
+  .hero-grid,.daily-grid,.about-grid,.book-grid{grid-template-columns:1fr}
+  .hero{text-align:center;min-height:auto;padding-top:48px}
+  .hero .tag{margin:0 auto}
+  .hero .actions{justify-content:center}
+  .moon-wrap{max-width:240px;order:-1}
+  .steps,.quotes{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .reading{text-align:center}
+}
+@media (max-width:520px){
+  .services{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .switcher span{width:100%}
+  .hero .actions .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@type": "LocalBusiness",
+  "name": "Zvezdana Karta",
+  "description": "Tarot, astrologija i Reiki, uživo i online.",
+  "url": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/zvezdana-karta/",
+  "telephone": "+381600000000",
+  "email": "kontakt@zvezdanakarta.rs",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Beograd",
+    "addressCountry": "RS"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    }
+  ],
+  "@context": "https://schema.org"
+}
+</script>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<div class="switcher">
+  <div class="wrap">
+    <span>Demo · izaberi stil:</span>
+    <div class="sw-list" role="group" aria-label="Stil sajta">
+      <button class="sw" type="button" data-t="tarot" aria-pressed="true">Tarot</button>
+      <button class="sw" type="button" data-t="astro" aria-pressed="false">Astrologija</button>
+      <button class="sw" type="button" data-t="reiki" aria-pressed="false">Reiki</button>
+    </div>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 2l1.8 7.2L21 12l-7.2 1.8L12 21l-1.8-7.2L3 12l7.2-2.8z"/></svg><span data-k="name">Zvezdana Karta</span></a>
+    <ul class="nav" id="nav">
+      <li><a href="#usluge">Usluge</a></li>
+      <li><a href="#karta" data-k="navDaily">Karta dana</a></li>
+      <li><a href="#o-meni">O meni</a></li>
+      <li><a href="#zakazi">Zakazivanje</a></li>
+    </ul>
+    <a class="btn small gold" href="#zakazi" data-k="cta">Zakaži seansu</a>
+    <button class="burger" id="burger" type="button" aria-label="Otvori meni" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow" data-k="kicker">Tarot · Astrologija · Reiki</p>
+      <h1 data-k="name">Zvezdana Karta</h1>
+      <p class="tag" data-k="tagline">Otkrij šta ti zvezde i karte poručuju.</p>
+      <div class="actions">
+        <a class="btn gold" href="#zakazi" data-k="cta">Zakaži seansu</a>
+        <a class="btn ghost" href="#karta" data-k="dailyBtn">Izvuci kartu dana</a>
+      </div>
+    </div>
+    <div class="moon-wrap" aria-hidden="true">
+      <div class="moon-halo"></div>
+      <div class="orbit"></div>
+      <div class="moon"><i style="width:18%;height:18%;left:22%;top:30%"></i><i style="width:11%;height:11%;left:56%;top:22%"></i><i style="width:14%;height:14%;left:48%;top:58%"></i><i style="width:7%;height:7%;left:30%;top:66%"></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="usluge">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Usluge</p>
+      <h2 data-k="servTitle">Izaberi svoju kartu</h2>
+      <p data-k="servText">Pređi mišem preko karte ili je dodirni da vidiš opis, trajanje i cenu.</p>
+      <div class="divider" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.8 7.2L21 12l-7.2 1.8L12 21l-1.8-7.2L3 12l7.2-2.8z"/></svg><i></i></div>
+    </div>
+    <div class="services" id="services"></div>
+    <p class="price-note">Cene i trajanja su primer u demou.</p>
+  </div>
+</section>
+
+<section class="sec daily" id="karta">
+  <div class="wrap daily-grid">
+    <div class="deck">
+      <div class="stack" aria-hidden="true"></div>
+      <div class="stack" aria-hidden="true"></div>
+      <button class="dcard" id="dcard" type="button" aria-label="Okreni kartu dana">
+        <div class="face cback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3l1.8 7.2L21 12l-7.2 1.8L12 21l-1.8-7.2L3 12l7.2-1.8z"/></svg><span class="tap" data-k="tap">Dodirni špil</span></div>
+        <div class="face back cfront" id="cfront"><small id="c-kind">Velika arkana</small><div class="glyph" id="c-glyph">XVII</div><h3 id="c-name">Zvezda</h3><small data-k="name">Zvezdana Karta</small></div>
+      </button>
+    </div>
+    <div class="reading">
+      <p class="eyebrow" data-k="dailyKicker">Interaktivno</p>
+      <h2 data-k="dailyTitle">Karta dana</h2>
+      <p class="lead" data-k="dailyText">Zastani na trenutak, postavi sebi pitanje i dodirni špil. Karta koju izvučeš je tvoja poruka za danas.</p>
+      <div class="result" aria-live="polite" id="result">
+        <h3 id="r-title" data-k="waitTitle">Špil čeka…</h3>
+        <p id="r-text" data-k="waitText">Dodirni špil i okreni svoju kartu.</p>
+      </div>
+      <button class="again" type="button" id="again" hidden>Promešaj i izvuci ponovo</button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="o-meni">
+  <div class="wrap about-grid">
+    <div class="portrait rv" aria-hidden="true"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></div></div>
+    <div class="about-text rv">
+      <p class="eyebrow">O meni</p>
+      <h2 data-k="aboutTitle">Zdravo, ja sam Jelena</h2>
+      <p data-k="about1">Tekst.</p>
+      <p data-k="about2">Tekst.</p>
+      <div class="facts">
+        <div><b data-k="f1">12</b><span data-k="f1l">godina iskustva</span></div>
+        <div><b data-k="f2">3000+</b><span data-k="f2l">seansi</span></div>
+        <div><b>Uživo</b><span>i online</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Kako izgleda seansa</p>
+      <h2>Tri jednostavna koraka</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">I</div><h3>Zakažeš</h3><p>Popuniš formu ili pišeš na Viber ili WhatsApp, a ja ti potvrđujem termin.</p></div>
+      <div class="step rv"><div class="n">II</div><h3>Biraš uživo ili online</h3><p>Dođeš u moj mirni kutak ili se vidimo preko video poziva, gde god da si.</p></div>
+      <div class="step rv"><div class="n">III</div><h3 data-k="step3">Dobiješ tumačenje</h3><p data-k="step3t">Posle seanse dobijaš kratak pisani rezime da se podsetiš poruke.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec daily">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Utisci</p>
+      <h2>Šta kažu klijenti</h2>
+    </div>
+    <div class="quotes" id="quotes"></div>
+  </div>
+</section>
+
+<section class="sec" id="zakazi">
+  <div class="wrap book-grid">
+    <aside>
+      <p class="eyebrow">Zakazivanje</p>
+      <h2 data-k="bookTitle">Zakaži svoju seansu</h2>
+      <p>Popuni formu i javljam ti se istog dana. Ako ti je lakše, piši mi direktno.</p>
+      <div class="chat-btns">
+        <a class="btn ghost small" href="viber://chat?number=%2B381600000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3c5 0 8.5 2.6 8.5 7.5S17 18 12 18c-.8 0-1.6-.1-2.3-.2L6 21v-3.8C4.2 15.8 3.5 13.5 3.5 10.5 3.5 5.6 7 3 12 3z"/><path d="M9.5 8.5c.5 2.5 2.5 4.5 5 5"/></svg>Viber</a>
+        <a class="btn ghost small" href="https://wa.me/381600000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20l1.3-3.9A8.5 8.5 0 1 1 8 18.8z"/><path d="M9 9c.3 2.6 2.4 4.7 5 5"/></svg>WhatsApp</a>
+      </div>
+      <p style="margin-top:1rem;font-size:.85rem">Broj u demou: +381 60 000 0000</p>
+    </aside>
+    <form class="bk" id="bk" novalidate>
+      <div class="two">
+        <div class="field"><label for="f-name">Ime</label><input id="f-name" autocomplete="given-name" required></div>
+        <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" type="tel" inputmode="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="f-serv">Usluga</label><select id="f-serv"></select></div>
+        <div class="field"><label for="f-date">Željeni datum</label><input id="f-date" type="date"></div>
+      </div>
+      <div class="field"><label for="f-how">Kako ti odgovara?</label><select id="f-how"><option>Uživo</option><option>Online (video poziv)</option></select></div>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn gold" type="submit">Pošalji zahtev</button>
+      <div class="sent" aria-live="polite">
+        <h3>Hvala ti ✦</h3>
+        <p>Ovo je demo, pa zahtev nije poslat. Na pravom sajtu stiže na telefon ili mejl.</p>
+        <button class="btn ghost" type="button" id="new">Novi zahtev</button>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4 data-k="name">Zvezdana Karta</h4><p data-k="footLine">Tarot, astrologija i Reiki, uživo i online.</p></div>
+      <div><h4>Kontakt</h4><p>+381 60 000 0000</p><p>kontakt@zvezdanakarta.rs</p><p>Pon – Sub, 10 – 20h</p></div>
+      <div><h4>Mreže</h4><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Facebook</a></div>
+    </div>
+    <div class="disclaimer">
+      <span>Usluge služe za zabavu i lični uvid i ne zamenjuju stručni medicinski, pravni ili finansijski savet.</span>
+      <span>Demo sajt: <a href="#">WebGlow Studio</a> · © 2026</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const icons = {
+  cards:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="10" y="8" width="20" height="32" rx="2" transform="rotate(-10 20 24)"/><rect x="18" y="8" width="20" height="32" rx="2" transform="rotate(8 28 24)"/><path d="M28 18l1.4 4 4 1.4-4 1.4-1.4 4-1.4-4-4-1.4 4-1.4z"/></svg>',
+  wheel:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="11"/><path d="M24 6v36M6 24h36M11.3 11.3l25.4 25.4M36.7 11.3L11.3 36.7"/></svg>',
+  num:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M24 5l17 30H7z"/><circle cx="24" cy="25" r="7"/><path d="M22 23h3v6"/></svg>',
+  hand:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 26V12a2.5 2.5 0 0 1 5 0v10M21 22V9a2.5 2.5 0 0 1 5 0v13M26 22V11a2.5 2.5 0 0 1 5 0v14M31 25v-6a2.5 2.5 0 0 1 5 0v9c0 7-5 12-12 12s-10-4-12-8l-3-6a2.4 2.4 0 0 1 4-2.6l3 3.6"/></svg>',
+  moon:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M38 29A15 15 0 1 1 19 10a12 12 0 0 0 19 19z"/></svg>',
+  heart:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="17" cy="24" r="10"/><circle cx="31" cy="24" r="10"/></svg>',
+  sun:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="24" cy="24" r="8"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M37 11l-4 4M15 33l-4 4"/></svg>',
+  leaf:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 38C10 20 22 9 40 8c-1 18-12 30-30 30z"/><path d="M10 38L28 20"/></svg>',
+  lotus:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M24 12c4 5 4 14 0 22-4-8-4-17 0-22z"/><path d="M24 34c-6-1-12-6-13-14 6 0 11 4 13 14zM24 34c6-1 12-6 13-14-6 0-11 4-13 14z"/><path d="M8 36h32"/></svg>',
+  chakra:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="24" cy="8" r="3"/><circle cx="24" cy="15.5" r="3"/><circle cx="24" cy="23" r="3"/><circle cx="24" cy="30.5" r="3"/><circle cx="24" cy="38" r="3"/><path d="M14 23h-4M38 23h-4"/></svg>',
+  wave:'<svg class="sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 20c6-6 12 6 18 0s12 6 18 0M6 28c6-6 12 6 18 0s12 6 18 0"/><circle cx="24" cy="24" r="18"/></svg>'
+};
+
+const TAROT = [
+  ['0','Luda','Novi početak je bliže nego što misliš. Napravi prvi korak, bez straha od nepoznatog.'],
+  ['I','Mag','Imaš sve što ti treba. Danas je dan da svoju ideju pretvoriš u delo.'],
+  ['II','Prvosveštenica','Slušaj svoj unutrašnji glas. Odgovor koji tražiš već znaš.'],
+  ['III','Carica','Vreme je za brigu o sebi, lepotu i rast. Neguj ono što voliš.'],
+  ['IV','Car','Red i jasna pravila danas ti donose mir. Preuzmi kontrolu nad svojim planom.'],
+  ['VI','Ljubavnici','Važan izbor iz srca. Biraj ono što je u skladu sa tobom.'],
+  ['VII','Kočija','Pokret i pobeda. Odlučnost te danas vodi napred.'],
+  ['VIII','Snaga','Nežnost je jača od sile. Strpljenje danas otvara vrata.'],
+  ['IX','Pustinjak','Malo tišine i samoće donosi jasnoću. Okreni se sebi.'],
+  ['X','Točak sreće','Stvari se okreću. Prihvati promenu, ona radi za tebe.'],
+  ['XIV','Umerenost','Ravnoteža je ključ dana. Ne žuri, sve dolazi u pravo vreme.'],
+  ['XVII','Zvezda','Nada i isceljenje. Veruj da je pred tobom svetliji period.'],
+  ['XVIII','Mesec','Ne veruj svemu što vidiš. Prati intuiciju i sačekaj da se magla raziđe.'],
+  ['XIX','Sunce','Radost, uspeh i toplina. Danas sijaš, pusti druge da to vide.'],
+  ['XXI','Svet','Jedan krug se zatvara uspešno. Proslavi ono što si postigao.']
+];
+const ASTRO = [
+  ['☉︎','Sunce','Tvoja energija je jaka. Pokaži se i preuzmi inicijativu.'],
+  ['☽︎','Mesec','Osećanja su danas glasna. Uspori i pazi na sebe.'],
+  ['☿︎','Merkur','Dan za razgovore i dogovore. Reci ono što misliš, jasno i blago.'],
+  ['♀︎','Venera','Ljubav i lepota u fokusu. Učini nešto lepo za sebe ili nekog dragog.'],
+  ['♂︎','Mars','Hrabrost i akcija. Pokreni ono što odlažeš, ali bez svađe.'],
+  ['♃︎','Jupiter','Prilike rastu. Reci „da” nečemu novom.'],
+  ['♄︎','Saturn','Strpljenje i rad se isplate. Postavi temelje za nešto trajno.'],
+  ['♅︎','Uran','Iznenađenja su moguća. Budi otvoren za neočekivano rešenje.'],
+  ['♆︎','Neptun','Snovi i inspiracija. Zapiši ideju koja ti dođe danas.'],
+  ['♇︎','Pluton','Duboka promena. Pusti ono što ti više ne služi.']
+];
+const REIKI = [
+  ['✦','Mir','Dišem polako. Moje telo i um su u miru.'],
+  ['✦','Zahvalnost','Male lepe stvari danas primećujem i čuvam.'],
+  ['✦','Ljubav','Dajem sebi istu ljubav koju dajem drugima.'],
+  ['✦','Snaga','U meni je dovoljno snage za sve što me danas čeka.'],
+  ['✦','Puštanje','Puštam ono što ne mogu da promenim i čuvam svoju energiju.'],
+  ['✦','Ravnoteža','Pronalazim ravnotežu između rada i odmora.'],
+  ['✦','Svetlost','Moja energija je čista i svetla.'],
+  ['✦','Poverenje','Verujem da se stvari odvijaju za moje najveće dobro.']
+];
+
+const T = {
+  tarot:{
+    name:'Zvezdana Karta', kicker:'Tarot · Astrologija · Reiki', tagline:'Otkrij šta ti zvezde i karte poručuju.', cta:'Zakaži seansu',
+    navDaily:'Karta dana', dailyBtn:'Izvuci kartu dana', servTitle:'Izaberi svoju kartu', servText:'Pređi mišem preko karte ili je dodirni da vidiš opis, trajanje i cenu.',
+    tap:'Dodirni špil', dailyKicker:'Interaktivno', dailyTitle:'Karta dana', dailyText:'Zastani na trenutak, postavi sebi pitanje i dodirni špil. Karta koju izvučeš je tvoja poruka za danas.',
+    waitTitle:'Špil čeka…', waitText:'Dodirni špil i okreni svoju kartu.', kind:'Velika arkana', deck:TAROT,
+    aboutTitle:'Zdravo, ja sam Jelena',
+    about1:'Tarot me prati od dvadesete godine, kada sam od bake dobila svoj prvi špil. Od tada sam završila kurseve tarota, astrologije i Reiki tretmana.',
+    about2:'Ne predviđam sudbinu. Karte i zvezde koristim kao ogledalo, da zajedno pogledamo tvoju situaciju iz novog ugla i nađemo sledeći korak.',
+    f1:'12', f1l:'godina iskustva', f2:'3000+', f2l:'seansi',
+    step3:'Dobiješ tumačenje', step3t:'Posle seanse dobijaš kratak pisani rezime da se podsetiš poruke.',
+    bookTitle:'Zakaži svoju seansu', footLine:'Tarot, astrologija i Reiki, uživo i online.',
+    services:[
+      ['I','Tarot čitanje','cards','Odgovori na pitanja o ljubavi, poslu i odlukama koje te muče, kroz klasični Rajder-Vejt špil.','45 min','2.500 din'],
+      ['II','Natalna karta','wheel','Tumačenje tvoje karte rođenja: talenti, izazovi i teme koje te prate kroz život.','60 min','3.500 din'],
+      ['III','Numerologija','num','Šta kažu brojevi tvog imena i datuma rođenja, i koje godine su za tebe prekretnice.','40 min','2.000 din'],
+      ['IV','Reiki','hand','Nežan energetski tretman za opuštanje, smanjenje napetosti i osećaj unutrašnjeg mira.','50 min','2.800 din']
+    ],
+    quotes:[['Izvukla sam karte pred veliku odluku o poslu. Nisam dobila gotov odgovor, ali sam prvi put jasno videla šta zapravo želim.','Marija, 34'],['Natalna karta mi je objasnila zašto se uvek vrtim u istim situacijama. Mnogo mi je pomoglo da razumem sebe.','Stefan, 29'],['Posle Reiki tretmana sam spavala kao beba. Ambijent je divan, a Jelena je toplo i mirno biće.','Ivana, 41']]
+  },
+  astro:{
+    name:'Zvezdana Mapa', kicker:'Astrologija · Natalne karte', tagline:'Tvoje zvezde su ispisale priču. Hajde da je pročitamo.', cta:'Zakaži konsultaciju',
+    navDaily:'Planeta dana', dailyBtn:'Pogledaj planetu dana', servTitle:'Astrološke konsultacije', servText:'Pređi mišem preko kartice ili je dodirni da vidiš opis, trajanje i cenu.',
+    tap:'Dodirni nebo', dailyKicker:'Interaktivno', dailyTitle:'Planeta dana', dailyText:'Svaka planeta nosi svoju energiju. Dodirni karticu i otkrij koja ti danas daje poruku.',
+    waitTitle:'Nebo čeka…', waitText:'Dodirni karticu i otkrij planetu dana.', kind:'Planeta dana', deck:ASTRO,
+    aboutTitle:'Zdravo, ja sam Jelena',
+    about1:'Astrologijom se bavim više od decenije. Svaku kartu računam precizno, prema tačnom vremenu i mestu rođenja.',
+    about2:'Za mene astrologija nije sudbina već mapa: pokazuje gde su tvoje snage i kada je pravo vreme za velike korake.',
+    f1:'10', f1l:'godina astrologije', f2:'2000+', f2l:'natalnih karata',
+    step3:'Dobiješ svoju mapu', step3t:'Posle konsultacije dobijaš PDF sa tvojom kartom i ključnim tačkama.',
+    bookTitle:'Zakaži konsultaciju', footLine:'Natalne karte, sinastrije i godišnje prognoze.',
+    services:[
+      ['I','Natalna karta','wheel','Detaljno tumačenje tvoje karte rođenja, uz PDF sa crtežom karte.','75 min','3.800 din'],
+      ['II','Sinastrija','heart','Odnos dve karte: kako se slažete, gde varnice lete i šta vas povezuje.','60 min','4.200 din'],
+      ['III','Solarni povratak','sun','Prognoza za tvoju narednu godinu, od rođendana do rođendana.','60 min','3.500 din'],
+      ['IV','Tranziti','moon','Šta ti donose naredni meseci i kada je dobro vreme za odluke.','45 min','2.800 din']
+    ],
+    quotes:[['Sinastrija sa partnerom nam je otvorila oči i mnogo nasmejala. Sada bolje razumemo jedno drugo.','Ana i Luka'],['Solarni povratak je pogodio teme moje godine bolje nego što sam očekivala.','Milica, 37'],['Detaljno, strpljivo i bez straha. Napokon razumem svoju natalnu kartu.','Nikola, 31']]
+  },
+  reiki:{
+    name:'Topli Dlan', kicker:'Reiki · Energetski tretmani', tagline:'Vrati se sebi. Polako, toplo i u miru.', cta:'Zakaži tretman',
+    navDaily:'Afirmacija dana', dailyBtn:'Izvuci afirmaciju', servTitle:'Tretmani', servText:'Pređi mišem preko kartice ili je dodirni da vidiš opis, trajanje i cenu.',
+    tap:'Dodirni karticu', dailyKicker:'Za tebe', dailyTitle:'Afirmacija dana', dailyText:'Udahni duboko i dodirni karticu. Rečenicu koju dobiješ ponovi nekoliko puta tokom dana.',
+    waitTitle:'Udahni…', waitText:'Dodirni karticu i izvuci afirmaciju dana.', kind:'Afirmacija dana', deck:REIKI,
+    aboutTitle:'Zdravo, ja sam Jelena',
+    about1:'Reiki praktikujem više od osam godina i imam Reiki master stepen. Moj prostor je miran kutak sa prirodnim svetlom i tihom muzikom.',
+    about2:'Tretman je nežan i opuštajući: ležiš obučen, a ja radim laganim dodirom ili bez dodira. Cilj je da se opustiš i napuniš baterije.',
+    f1:'8', f1l:'godina prakse', f2:'1500+', f2l:'tretmana',
+    step3:'Opustiš se i napuniš', step3t:'Posle tretmana dobijaš savete za opuštanje i kratku vežbu disanja za kod kuće.',
+    bookTitle:'Zakaži tretman', footLine:'Reiki, meditacija i balans čakri.',
+    services:[
+      ['I','Reiki tretman','hand','Klasičan tretman celog tela za duboko opuštanje i oslobađanje napetosti.','60 min','2.800 din'],
+      ['II','Daljinski Reiki','wave','Tretman na daljinu, dok se ti odmaraš kod kuće, uz poruku pre i posle.','40 min','2.000 din'],
+      ['III','Balans čakri','chakra','Rad na sedam čakri za osećaj ravnoteže i lakoće.','50 min','2.500 din'],
+      ['IV','Vođena meditacija','lotus','Individualna ili grupna meditacija za smirenje uma i bolji san.','45 min','1.500 din']
+    ],
+    quotes:[['Došla sam umorna i napeta, a otišla lagana. Prvi put posle dugo vremena sam se stvarno opustila.','Jovana, 33'],['Prema daljinskom Reikiju sam bio skeptičan, ali sam te večeri zaspao bez problema.','Dragan, 45'],['Prostor je predivan i miran. Meditacija mi je postala nedeljni ritual.','Sanja, 28']]
+  }
+};
+
+const root = document.documentElement;
+let cur = 'tarot';
+
+function setTheme(k){
+  const d = T[k]; if(!d) return; cur = k;
+  root.setAttribute('data-theme', k);
+  document.querySelectorAll('.sw').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === k));
+  document.querySelectorAll('[data-k]').forEach(el => { const v = d[el.dataset.k]; if(typeof v === 'string') el.textContent = v; });
+  document.title = d.name + ' · demo WebGlow Studio';
+  document.getElementById('services').innerHTML = d.services.map(([n,name,ic,desc,dur,price]) => `
+    <button class="flip" type="button" aria-label="${name}: ${dur}, ${price}">
+      <div class="flip-in">
+        <div class="face"><span class="num">${n}</span>${icons[ic]}<h3>${name}</h3><span class="hint">okreni kartu</span></div>
+        <div class="face back"><h3>${name}</h3><p>${desc}</p><div class="meta"><span>${dur}</span><b>${price}</b></div></div>
+      </div>
+    </button>`).join('');
+  document.querySelectorAll('.flip').forEach(f => f.addEventListener('click', () => f.classList.toggle('open')));
+  document.getElementById('quotes').innerHTML = d.quotes.map(([q,who]) => `
+    <figure class="quote rv in"><span class="demo">Primer utiska · demo</span><blockquote>„${q}”</blockquote><cite>${who}</cite></figure>`).join('');
+  document.getElementById('f-serv').innerHTML = d.services.map(s => `<option>${s[1]}</option>`).join('') + '<option>Ne znam još, posavetuj me</option>';
+  resetCard(); restoreDaily();
+  drawStatic();
+  try{ localStorage.setItem('zvezdana-tema', k); }catch(e){}
+}
+
+/* ---------- karta dana ---------- */
+const dcard = document.getElementById('dcard'), again = document.getElementById('again');
+const rT = document.getElementById('r-title'), rX = document.getElementById('r-text');
+function today(){ const d = new Date(); return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(); }
+function resetCard(){ dcard.classList.remove('flipped'); again.hidden = true; rT.textContent = T[cur].waitTitle; rX.textContent = T[cur].waitText; }
+function show(i, animate){
+  const d = T[cur], c = d.deck[i];
+  document.getElementById('c-kind').textContent = d.kind;
+  document.getElementById('c-glyph').textContent = c[0];
+  document.getElementById('c-name').textContent = c[1];
+  const reveal = () => { rT.textContent = c[1]; rX.textContent = c[2]; again.hidden = false; };
+  dcard.classList.add('flipped');
+  if(animate && !reduce) setTimeout(reveal, 600); else reveal();
+}
+function draw(){
+  if(dcard.classList.contains('flipped')) return;
+  const i = Math.floor(Math.random() * T[cur].deck.length);
+  try{ localStorage.setItem('zvezdana-'+cur, JSON.stringify({day:today(), i})); }catch(e){}
+  show(i, true);
+}
+function restoreDaily(){
+  try{
+    const s = JSON.parse(localStorage.getItem('zvezdana-'+cur) || 'null');
+    if(s && s.day === today() && T[cur].deck[s.i]) show(s.i, false);
+  }catch(e){}
+}
+dcard.addEventListener('click', draw);
+again.addEventListener('click', () => {
+  try{ localStorage.removeItem('zvezdana-'+cur); }catch(e){}
+  resetCard(); setTimeout(draw, reduce ? 0 : 450);
+});
+
+/* ---------- forma ---------- */
+const form = document.getElementById('bk'), err = document.getElementById('err');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const n = document.getElementById('f-name').value.trim(), t = document.getElementById('f-tel').value.trim();
+  if(!n){ err.textContent = 'Upiši ime da znam kome se javljam.'; document.getElementById('f-name').focus(); return; }
+  if(t.replace(/\D/g,'').length < 8){ err.textContent = 'Upiši broj telefona sa najmanje 8 cifara.'; document.getElementById('f-tel').focus(); return; }
+  err.textContent = ''; form.classList.add('done');
+});
+document.getElementById('new').addEventListener('click', () => { form.reset(); form.classList.remove('done'); });
+
+/* ---------- zvezde ---------- */
+const cv = document.getElementById('sky'), ctx = cv.getContext('2d');
+let W, H, stars = [], dpr = 1;
+function size(){
+  dpr = Math.min(devicePixelRatio || 1, 2);
+  W = innerWidth; H = innerHeight; cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+  const n = Math.round(W*H/9000);
+  stars = Array.from({length:n}, () => ({x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.3+.3, p:Math.random()*6.28, s:.4+Math.random()*1.2}));
+}
+function color(){ return getComputedStyle(root).getPropertyValue('--star').trim() || '#fff'; }
+let col = '#fff', t = 0;
+function frame(){
+  ctx.clearRect(0,0,W,H); ctx.fillStyle = col;
+  const soft = cur === 'reiki';
+  for(const s of stars){
+    const a = soft ? .25 + .25*Math.sin(t*s.s*.5 + s.p) : .25 + .75*Math.abs(Math.sin(t*s.s + s.p));
+    ctx.globalAlpha = a;
+    ctx.beginPath(); ctx.arc(s.x, soft ? (((s.y - t*6*s.s) % H) + H) % H : s.y, soft ? s.r*1.8 : s.r, 0, 6.29); ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+}
+function drawStatic(){ col = color(); frame(); }
+function loop(){ t += .012; frame(); requestAnimationFrame(loop); }
+size(); addEventListener('resize', () => { size(); frame(); });
+
+/* ---------- mobilni meni ---------- */
+const burger = document.getElementById('burger');
+function setSwH(){ root.style.setProperty('--sw-h', document.querySelector('.switcher').offsetHeight + 'px'); }
+setSwH(); addEventListener('resize', setSwH);
+function closeMenu(){ document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', false); burger.setAttribute('aria-label','Otvori meni'); }
+burger.addEventListener('click', () => {
+  const open = document.body.classList.toggle('menu-open');
+  burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
+});
+document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', closeMenu));
+
+/* ---------- start ---------- */
+document.querySelectorAll('.sw').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.t)));
+let saved = 'tarot'; try{ saved = localStorage.getItem('zvezdana-tema') || 'tarot'; }catch(e){}
+setTheme(T[saved] ? saved : 'tarot');
+if(!reduce) loop();
+
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
