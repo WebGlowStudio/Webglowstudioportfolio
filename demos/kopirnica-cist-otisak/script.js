@@ -6,7 +6,6 @@
   var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".nav-toggle");
   var panel = document.querySelector(".nav-panel");
-  var snip = document.querySelector(".snip");
   var sliders = document.querySelectorAll("[data-slide]");
   var counters = document.querySelectorAll("[data-count]");
   var reveals = document.querySelectorAll(".reveal");
@@ -63,12 +62,6 @@
     document.documentElement.classList.toggle("is-shrunk", y > 18);
     if (!header) return;
     if (!motionOn()) return;
-    if (snip) {
-      var p = progress(snip, 0.92, 0.28);
-      var open = 0.12 + 0.88 * Math.abs(Math.sin(p * Math.PI * 5));
-      snip.style.setProperty("--p", p.toFixed(4));
-      snip.style.setProperty("--open", open.toFixed(4));
-    }
     for (var i = 0; i < sliders.length; i++) {
       var slideP = progress(sliders[i], 0.95, 0.5);
       sliders[i].style.setProperty("--p", slideP.toFixed(4));
