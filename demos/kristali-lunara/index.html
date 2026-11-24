@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kristali Lunara · kristali, minerali i nakit od kamenja | Beograd</title>
+<meta name="description" content="Kristali Lunara je prodavnica kristala, minerala, narukvica i ogrlica od kamenja u Beogradu. Pogledaj katalog, saznaj koji kristal je za tebe i poruči dostavu širom Srbije.">
+<meta name="keywords" content="kristali, minerali, narukvice od kamenja, ogrlice, poklon setovi, značenje kristala, ametist, roza kvarc, Beograd, prodavnica kristala">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#140C22">
+<meta property="og:title" content="Kristali Lunara · kristali, minerali i nakit od kamenja">
+<meta property="og:description" content="Katalog kristala i nakita od kamenja, vodič koji kristal je za tebe, poklon setovi i dostava širom Srbije.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/kristali-lunara/">
+<meta property="og:locale" content="sr_RS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kristali Lunara · kristali, minerali i nakit od kamenja">
+<meta name="twitter:description" content="Katalog kristala i nakita od kamenja, vodič koji kristal je za tebe, poklon setovi i dostava širom Srbije.">
+<link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/kristali-lunara/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23140C22'/%3E%3Cpath d='M16 4 L26 13 L16 28 L6 13 Z' fill='%239B7EBD'/%3E%3Cpath d='M16 4 L26 13 L16 16 Z' fill='%23E8DDF6'/%3E%3Cpath d='M16 4 L6 13 L16 16 Z' fill='%23C9B6E4'/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Kristali Lunara","description":"Prodavnica kristala, minerala i nakita od kamenja u Beogradu.","url":"https://webglowstudio.github.io/Webglowstudioportfolio/demos/kristali-lunara/","image":"https://webglowstudio.github.io/Webglowstudioportfolio/demos/kristali-lunara/","telephone":"+381 11 000 00 00","email":"info@kristalilunara.rs","address":{"@type":"PostalAddress","streetAddress":"Primer adrese 18","addressLocality":"Beograd","addressCountry":"RS"},"areaServed":"RS","openingHours":"Tu-Sa 11:00-19:00","priceRange":"RSD"}
+</script>
+<style>
+:root{
+  --night:#0B0714;
+  --night-2:#140C22;
+  --night-3:#1E1432;
+  --panel:rgba(255,247,252,.05);
+  --panel-2:rgba(255,247,252,.08);
+  --line:rgba(232,221,246,.16);
+  --text:#F7F2FA;
+  --muted:#C3B3D1;
+  --amethyst:#9B7EBD;
+  --amethyst-2:#C9B6E4;
+  --lavender:#E8DDF6;
+  --rose:#E8B4C4;
+  --rose-2:#F3D6DE;
+  --rose-deep:#C97B92;
+  --champagne:#E8D5A3;
+  --ok:#B7E0C2;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Jost",system-ui,sans-serif;
+  --gutter:clamp(18px,5vw,64px);
+  --max:1160px;
+  --header:72px;
+  --demo:36px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + var(--demo) + 12px);-webkit-text-size-adjust:100%}
+body{background:var(--night);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.65;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:var(--rose);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--rose-2)}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--amethyst-2);outline-offset:3px;border-radius:4px}
+.serif{font-family:var(--serif);font-style:normal;font-synthesis:none}
+.wrap{width:min(var(--max),100%);margin:0 auto;padding:0 var(--gutter)}
+.skip{position:absolute;left:-999px;top:0;background:var(--lavender);color:var(--night);padding:.6rem 1rem;z-index:80}
+.skip:focus{left:12px;top:8px}
+
+/* demo bar */
+.demo-bar{position:fixed;inset:0 0 auto 0;z-index:60;height:var(--demo);display:flex;align-items:center;justify-content:center;gap:.45rem;background:linear-gradient(90deg,#2A1844,#3A1E3A);color:var(--lavender);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.demo-bar a{color:var(--rose-2);text-decoration:none}
+.demo-bar a:hover{color:#fff}
+
+/* header */
+.top{position:fixed;top:var(--demo);left:0;right:0;z-index:50;height:var(--header);display:flex;align-items:center;transition:background .35s,box-shadow .35s,border-color .35s;border-bottom:1px solid transparent}
+.top.solid{background:rgba(11,7,20,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--text)}
+.logo-mark{width:34px;height:34px;flex-shrink:0}
+.logo b{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:1.35rem;letter-spacing:.02em;line-height:1}
+.logo span{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:.15rem}
+.nav{display:flex;align-items:center;gap:1.55rem;list-style:none}
+.nav a{color:var(--text);text-decoration:none;font-size:.92rem;font-weight:400;position:relative;padding:.2rem 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1px;background:var(--rose);transition:right .3s}
+.nav a:hover{color:var(--rose-2)}
+.nav a:hover::after{right:0}
+.nav-actions{display:flex;align-items:center;gap:.7rem}
+.icon-btn{position:relative;width:44px;height:44px;border:1px solid var(--line);background:var(--panel);border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--text)}
+.icon-btn:hover{border-color:var(--amethyst-2);background:var(--panel-2)}
+.cart-count{position:absolute;top:-2px;right:-2px;min-width:18px;height:18px;padding:0 5px;border-radius:99px;background:linear-gradient(180deg,var(--rose),var(--rose-deep));color:#2A1018;font-size:11px;font-weight:600;display:none;align-items:center;justify-content:center;line-height:1}
+.cart-count.on{display:flex}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger i{position:absolute;left:12px;right:12px;height:1.5px;background:var(--text);transition:transform .3s,opacity .2s}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:21px}.burger i:nth-child(3){top:26px}
+.menu-open .burger i:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.menu-open .burger i:nth-child(2){opacity:0}
+.menu-open .burger i:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.85rem 1.35rem;border-radius:999px;border:1px solid transparent;font-weight:500;font-size:.95rem;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s;line-height:1.2}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:linear-gradient(120deg,#E8B4C4,#C9B6E4);color:#1A0E1C;box-shadow:0 8px 28px rgba(201,126,170,.22)}
+.btn-primary:hover{color:#1A0E1C;box-shadow:0 10px 32px rgba(201,126,170,.35)}
+.btn-ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--amethyst-2);color:var(--lavender);background:var(--panel)}
+.btn-sm{padding:.6rem 1rem;font-size:.88rem}
+.btn-full{width:100%}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,860px);padding:calc(var(--demo) + var(--header) + 36px) 0 80px;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:
+  radial-gradient(ellipse 70% 50% at 78% 20%, rgba(155,126,189,.38), transparent 60%),
+  radial-gradient(ellipse 50% 45% at 12% 80%, rgba(201,123,146,.22), transparent 55%),
+  radial-gradient(ellipse 40% 30% at 50% 100%, rgba(232,181,196,.12), transparent 50%),
+  linear-gradient(180deg,var(--night-2),var(--night) 70%);
+  pointer-events:none}
+.sparkles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.sparkle{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.0;box-shadow:0 0 8px rgba(255,255,255,.8);animation:twinkle 3.6s ease-in-out infinite}
+.sparkle.rose{background:var(--rose-2);box-shadow:0 0 8px rgba(232,180,196,.9)}
+.sparkle.lav{background:var(--lavender);box-shadow:0 0 8px rgba(201,182,228,.9)}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.4)}40%{opacity:.9;transform:scale(1)}70%{opacity:.2;transform:scale(.7)}}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);font-weight:500;margin-bottom:1.15rem}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--rose)}
+.hero h1{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:clamp(2.35rem,5.6vw,4.35rem);line-height:1.12;letter-spacing:-.02em;max-width:14ch}
+.hero h1 em{font-style:normal;color:var(--lavender);background:linear-gradient(120deg,var(--lavender),var(--rose-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{margin-top:1.25rem;color:var(--muted);max-width:42ch;font-weight:300;font-size:1.08rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero-art{position:relative;display:grid;place-items:center;min-height:360px}
+.cluster{width:min(100%,420px);height:auto;filter:drop-shadow(0 20px 50px rgba(90,40,120,.45));animation:floaty 6s ease-in-out infinite}
+.cluster .glint{animation:glint 3.8s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes glint{0%,100%{opacity:.25}50%{opacity:1}}
+.hero-dust{position:absolute;inset:18% 16%;border-radius:50%;background:radial-gradient(circle,rgba(201,182,228,.18),transparent 70%);filter:blur(8px);pointer-events:none}
+
+/* sections */
+section{padding:88px 0;position:relative}
+.sec-kicker{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);font-weight:500;margin-bottom:.7rem}
+.sec-title{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:clamp(1.8rem,3.4vw,2.75rem);line-height:1.2;letter-spacing:-.015em}
+.sec-lead{color:var(--muted);max-width:50ch;margin-top:.85rem;font-weight:300}
+.sec-head{margin-bottom:2.2rem}
+
+/* values */
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:0 0 10px}
+.val{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px 22px 20px}
+.val h3{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:1.2rem;margin:.65rem 0 .4rem}
+.val p{color:var(--muted);font-size:.95rem;font-weight:300}
+.val-ico{width:36px;height:36px;color:var(--amethyst-2)}
+
+/* catalog */
+.filters{display:flex;flex-wrap:wrap;gap:.55rem;margin-bottom:1.6rem}
+.chip{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:.45rem .95rem;cursor:pointer;font-size:.88rem;font-weight:500;transition:.2s}
+.chip:hover,.chip.on{background:rgba(201,182,228,.14);color:var(--text);border-color:var(--amethyst)}
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(201,182,228,.4);box-shadow:0 16px 40px rgba(0,0,0,.28)}
+.card-vis{position:relative;aspect-ratio:1/1.05;display:grid;place-items:center;background:
+  radial-gradient(circle at 50% 40%, var(--glow, rgba(155,126,189,.28)), transparent 62%),
+  linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.18));
+  overflow:hidden}
+.card-vis::after{content:"";position:absolute;inset:-40% -60%;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.18) 50%,transparent 60%);transform:translateX(-40%);animation:shine 5.5s ease-in-out infinite}
+@keyframes shine{0%,70%{transform:translateX(-60%)}100%{transform:translateX(80%)}}
+.card-vis svg{width:46%;height:auto;filter:drop-shadow(0 10px 18px rgba(0,0,0,.28));position:relative;z-index:1}
+.card-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.card-cat{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);font-weight:500}
+.card h3{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:1.2rem;line-height:1.25}
+.card .meaning{color:var(--muted);font-size:.9rem;font-weight:300;flex:1}
+.card-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:.55rem}
+.price{font-weight:600;letter-spacing:.01em}
+.price small{font-weight:400;color:var(--muted);font-size:.8rem;margin-left:.15rem}
+
+/* guide */
+.guide{background:linear-gradient(180deg,rgba(30,20,50,.55),transparent 80%)}
+.picker{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:clamp(20px,4vw,36px);display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.tabs{display:flex;gap:.5rem;margin-bottom:1.1rem}
+.tab{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:.5rem 1rem;cursor:pointer;font-weight:500;font-size:.9rem}
+.tab.on{background:linear-gradient(120deg,#E8B4C4,#C9B6E4);color:#1A0E1C;border-color:transparent}
+.choices{display:flex;flex-wrap:wrap;gap:.5rem}
+.choice{border:1px solid var(--line);background:var(--night-2);color:var(--text);border-radius:12px;padding:.55rem .85rem;cursor:pointer;font-size:.9rem}
+.choice:hover,.choice.on{border-color:var(--amethyst-2);background:rgba(155,126,189,.18)}
+.result{min-height:240px;border-radius:20px;border:1px solid var(--line);background:
+  radial-gradient(circle at 80% 20%, rgba(232,180,196,.16), transparent 40%),
+  var(--night-2);padding:24px;display:flex;flex-direction:column;justify-content:center}
+.result .wait{color:var(--muted);font-weight:300}
+.result .gem-mini{width:64px;margin-bottom:12px}
+.result h3{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:1.7rem;margin-bottom:.4rem}
+.result p{color:var(--muted);font-weight:300;margin-bottom:1.1rem}
+.result-actions{display:flex;flex-wrap:wrap;gap:.6rem}
+
+/* sets */
+.set-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.set{display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:16px 18px 16px 16px}
+.set-vis{height:140px;border-radius:16px;display:grid;place-items:center;position:relative;overflow:hidden}
+.set-vis svg{width:78%;height:auto;position:relative;z-index:1}
+.set h3{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:1.35rem}
+.set .contains{color:var(--muted);font-size:.92rem;font-weight:300;margin:.35rem 0 .8rem}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.rev{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:.85rem}
+.stars{color:var(--champagne);letter-spacing:.12em;font-size:.85rem}
+.rev p{font-weight:300;color:var(--text);flex:1}
+.rev footer{color:var(--muted);font-size:.9rem}
+
+/* delivery */
+.ship-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ship{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+.ship h3{font-family:var(--serif);font-style:normal;font-synthesis:none;font-size:1.2rem;font-weight:600;margin:.5rem 0 .4rem}
+.ship p{color:var(--muted);font-size:.92rem;font-weight:300}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:800px}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:4px 18px}
+.faq summary{cursor:pointer;list-style:none;font-weight:500;padding:14px 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--amethyst-2);font-size:1.3rem;line-height:1;font-weight:300}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--muted);font-weight:300;padding:0 0 16px;max-width:62ch}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.contact-card{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:26px}
+.contact-list{list-style:none;display:grid;gap:14px;margin-top:1.2rem}
+.contact-list li{display:grid;grid-template-columns:20px 1fr;gap:12px;align-items:start;color:var(--muted);font-weight:300}
+.contact-list strong{display:block;color:var(--text);font-weight:500}
+.hours{margin-top:1.4rem;color:var(--muted);font-weight:300;font-size:.95rem}
+.note{margin-top:1.2rem;font-size:.85rem;color:var(--champagne);font-weight:400}
+.form{display:grid;gap:12px}
+.form label{display:grid;gap:6px;font-size:.88rem;color:var(--muted)}
+.form input,.form textarea,.form select{width:100%;background:var(--night-2);border:1px solid var(--line);border-radius:12px;padding:.75rem .9rem;color:var(--text)}
+.form textarea{min-height:110px;resize:vertical}
+.form-msg{font-size:.9rem;color:var(--ok);display:none}
+.form-msg.on{display:block}
+
+/* footer */
+.site-foot{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:.88rem;font-weight:300}
+.site-foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-foot a{color:var(--lavender);text-decoration:none}
+.site-foot a:hover{color:#fff}
+
+/* cart */
+.overlay{position:fixed;inset:0;background:rgba(5,2,10,.6);opacity:0;pointer-events:none;transition:opacity .3s;z-index:70}
+.overlay.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--night-2);border-left:1px solid var(--line);z-index:75;transform:translateX(100%);transition:transform .35s;display:flex;flex-direction:column;padding:calc(18px + env(safe-area-inset-top)) 20px 20px}
+.drawer.on{transform:none}
+.drawer header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.drawer h2{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:1.6rem}
+.cart-items{flex:1;overflow:auto;display:grid;align-content:start;gap:12px;padding:10px 0 16px}
+.cart-empty{color:var(--muted);padding:30px 0;text-align:center;font-weight:300}
+.cart-line{display:grid;grid-template-columns:1fr auto;gap:8px;padding:12px 0;border-bottom:1px solid var(--line)}
+.cart-line h3{font-size:1rem;font-weight:500}
+.cart-line .meta{color:var(--muted);font-size:.85rem}
+.qty{display:flex;align-items:center;gap:6px;margin-top:6px}
+.qty button{width:28px;height:28px;border-radius:8px;border:1px solid var(--line);background:var(--panel);cursor:pointer}
+.cart-total{display:flex;justify-content:space-between;align-items:center;font-weight:600;padding:10px 0 14px;border-top:1px solid var(--line)}
+.cart-actions{display:grid;gap:8px}
+.ship-hint{color:var(--muted);font-size:.82rem;font-weight:300;margin-bottom:8px}
+
+/* toast */
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#2A1A38;border:1px solid var(--amethyst);color:var(--text);padding:.7rem 1.1rem;border-radius:999px;opacity:0;pointer-events:none;transition:.3s;z-index:80;font-size:.9rem;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .hero-grid,.picker,.contact-grid{grid-template-columns:1fr}
+  .hero-art{order:-1;min-height:260px}
+  .cluster{width:min(70%,320px)}
+  .values,.ship-grid{grid-template-columns:1fr 1fr}
+  .set-grid{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .nav{position:fixed;top:calc(var(--demo) + var(--header));left:0;right:0;background:rgba(11,7,20,.96);backdrop-filter:blur(16px);flex-direction:column;align-items:stretch;gap:0;padding:8px var(--gutter) 18px;border-bottom:1px solid var(--line);display:none}
+  .menu-open .nav{display:flex}
+  .nav a{padding:12px 0;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+  .values,.ship-grid{grid-template-columns:1fr}
+  .set{grid-template-columns:1fr;text-align:left}
+  .set-vis{height:120px}
+  .hero{min-height:0;padding-bottom:56px}
+  section{padding:68px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .sparkle,.cluster,.cluster .glint,.card-vis::after,.rv{animation:none!important;transition:none!important;opacity:1;transform:none}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+<div class="demo-bar">Predlog sajta · <a href="../../">WebGlow Studio</a> · kontakti su izmišljeni</div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#pocetak">
+      <svg class="logo-mark" viewBox="0 0 34 34" aria-hidden="true">
+        <rect width="34" height="34" rx="9" fill="#1E1432"/>
+        <path d="M17 5 L27 14 L17 29 L7 14 Z" fill="#9B7EBD"/>
+        <path d="M17 5 L27 14 L17 16.5 Z" fill="#E8DDF6"/>
+        <path d="M17 5 L7 14 L17 16.5 Z" fill="#C9B6E4"/>
+        <path d="M17 16.5 L27 14 L17 29 Z" fill="#7A5EA0"/>
+      </svg>
+      <span><b class="serif">Lunara</b><span>Kristali</span></span>
+    </a>
+    <nav>
+      <ul class="nav" id="nav">
+        <li><a href="#katalog">Katalog</a></li>
+        <li><a href="#vodic">Vodič</a></li>
+        <li><a href="#setovi">Poklon setovi</a></li>
+        <li><a href="#dostava">Dostava</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" type="button" id="cart-btn" aria-label="Otvori korpu" aria-controls="drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h15l-1.5 9h-13z"/><path d="M6 7 5 3H2"/><circle cx="9" cy="20" r="1.3" fill="currentColor"/><circle cx="18" cy="20" r="1.3" fill="currentColor"/></svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <button class="burger" type="button" id="burger" aria-label="Meni" aria-expanded="false" aria-controls="nav">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="sadrzaj">
+<section class="hero" id="pocetak">
+  <div class="hero-bg"></div>
+  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Prodavnica kristala · Beograd</div>
+      <h1>Kamenje koje nosi <em>značenje</em>.</h1>
+      <p class="lead">U Lunari biramo kristale, minerale i nakit od kamenja po čistoći, obliku i energiji. Uz svaki komad stoji kratko značenje, a porudžbinu šalješ porukom, kad ti odgovara.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#katalog">Pogledaj katalog</a>
+        <a class="btn btn-ghost" href="#vodic">Koji kristal je za tebe</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="hero-dust"></div>
+      <svg class="cluster" viewBox="0 0 420 420" fill="none">
+        <ellipse cx="210" cy="355" rx="120" ry="22" fill="#0A0610" opacity=".55"/>
+        <g filter="url(#soft)">
+          <path d="M168 86 L230 128 L198 268 L112 150 Z" fill="#5C3E86"/>
+          <path d="M168 86 L230 128 L186 148 Z" fill="#E8DDF6"/>
+          <path d="M168 86 L112 150 L186 148 Z" fill="#C9B6E4"/>
+          <path d="M186 148 L230 128 L198 268 Z" fill="#7B5EA7"/>
+          <path d="M186 148 L112 150 L198 268 Z" fill="#4A2F6E"/>
+        </g>
+        <g>
+          <path d="M250 70 L318 126 L268 250 L198 128 Z" fill="#8A6BB3"/>
+          <path d="M250 70 L318 126 L258 140 Z" fill="#F3ECFA"/>
+          <path d="M250 70 L198 128 L258 140 Z" fill="#D3C0EA"/>
+          <path d="M258 140 L318 126 L268 250 Z" fill="#9B7EBD"/>
+          <path d="M258 140 L198 128 L268 250 Z" fill="#6A4B93"/>
+          <path class="glint" d="M252 96 L268 108" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+        </g>
+        <g>
+          <path d="M128 176 L186 206 L150 318 L88 228 Z" fill="#C97B92"/>
+          <path d="M128 176 L186 206 L148 220 Z" fill="#F7E3EA"/>
+          <path d="M128 176 L88 228 L148 220 Z" fill="#E8B4C4"/>
+          <path d="M148 220 L186 206 L150 318 Z" fill="#D896A8"/>
+          <path d="M148 220 L88 228 L150 318 Z" fill="#A85D74"/>
+        </g>
+        <g>
+          <path d="M286 188 L344 222 L300 330 L246 230 Z" fill="#B57A9A"/>
+          <path d="M286 188 L344 222 L296 232 Z" fill="#F3D6DE"/>
+          <path d="M286 188 L246 230 L296 232 Z" fill="#E8B4C4"/>
+          <path d="M296 232 L344 222 L300 330 Z" fill="#C97B92"/>
+          <path d="M296 232 L246 230 L300 330 Z" fill="#8E4F66"/>
+        </g>
+        <g>
+          <path d="M208 210 L250 236 L220 335 L176 248 Z" fill="#D7C4A0"/>
+          <path d="M208 210 L250 236 L218 246 Z" fill="#F7EFDA"/>
+          <path d="M208 210 L176 248 L218 246 Z" fill="#E8D5A3"/>
+          <path d="M218 246 L250 236 L220 335 Z" fill="#C9B489"/>
+          <path class="glint" d="M214 224 L226 232" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        </g>
+        <defs>
+          <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#4A2A70" flood-opacity=".35"/>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="values rv">
+      <article class="val">
+        <svg class="val-ico" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M18 4 L30 14 L18 32 L6 14 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M18 4 L30 14 L18 16 L6 14 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <h3>Prirodno kamenje</h3>
+        <p>Biramo kristale i minerale po čistoći i obliku. Svaki komad je jedinstven, baš kao i u prirodi.</p>
+      </article>
+      <article class="val">
+        <svg class="val-ico" viewBox="0 0 36 36" fill="none" aria-hidden="true"><circle cx="18" cy="18" r="12" stroke="currentColor" stroke-width="1.6"/><path d="M18 8v4M18 24v4M8 18h4M24 18h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h3>Značenje uz svaki komad</h3>
+        <p>Uz narukvicu, ogrlicu ili sirovi kristal dobijaš kratak opis: čemu služi i kako se čuva.</p>
+      </article>
+      <article class="val">
+        <svg class="val-ico" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="6" y="14" width="24" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M6 20h24M18 14v16" stroke="currentColor" stroke-width="1.6"/><path d="M14 14c0-4 8-4 8 0" stroke="currentColor" stroke-width="1.6"/></svg>
+        <h3>Dostava širom Srbije</h3>
+        <p>Šaljemo kurirskom službom. Preko 6.000 RSD dostava je besplatna, a u Beogradu može i lično preuzimanje.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="katalog">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-kicker">Katalog</div>
+      <h2 class="sec-title">Kristali, narukvice i ogrlice</h2>
+      <p class="sec-lead">Cene su u dinarima. Dugme „Poruči“ dodaje komad u korpu, a porudžbinu zatim šalješ preko Vibera ili Instagrama.</p>
+    </div>
+    <div class="filters" id="filters" role="tablist" aria-label="Kategorije"></div>
+    <div class="grid-cards" id="catalog"></div>
+  </div>
+</section>
+
+<section class="guide" id="vodic">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-kicker">Vodič</div>
+      <h2 class="sec-title">Koji kristal je za tebe</h2>
+      <p class="sec-lead">Nije uvek lako znati gde da kreneš. Izaberi nameru ili svoj horoskopski znak, a mi predlažemo kamen koji ti trenutno najviše prija.</p>
+    </div>
+    <div class="picker rv">
+      <div>
+        <div class="tabs" role="tablist">
+          <button class="tab on" type="button" id="tab-intent" aria-selected="true">Po nameri</button>
+          <button class="tab" type="button" id="tab-zodiac" aria-selected="false">Po znaku</button>
+        </div>
+        <div class="choices" id="choices"></div>
+      </div>
+      <div class="result" id="result" aria-live="polite">
+        <p class="wait">Izaberi nameru ili znak sa leve strane. Ovde će se pojaviti predlog i kratko objašnjenje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="setovi">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-kicker">Pokloni</div>
+      <h2 class="sec-title">Poklon setovi</h2>
+      <p class="sec-lead">Spremljeni u poklon kutiji, uz kratak vodič značenja. Lep izbor za rođendan, slavu ili „samo zato“.</p>
+    </div>
+    <div class="set-grid" id="sets"></div>
+  </div>
+</section>
+
+<section id="utisci">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-kicker">Utisci kupaca</div>
+      <h2 class="sec-title">Stiže lepo upakovano, i sa pričom.</h2>
+    </div>
+    <div class="reviews rv">
+      <figure class="rev">
+        <div class="stars" aria-label="Ocena 5 od 5">★★★★★</div>
+        <p>„Narukvica od roza kvarca stigla je prelepo upakovana, a kratak opis u kesici baš mi je bio drag. Nosim je svaki dan.“</p>
+        <footer>Milica · Novi Sad</footer>
+      </figure>
+      <figure class="rev">
+        <div class="stars" aria-label="Ocena 5 od 5">★★★★★</div>
+        <p>„Tražila sam ametist pred ispite. Javili su se odmah na Viberu i pomogli da izaberem veličinu. Topla preporuka.“</p>
+        <footer>Jovana · Beograd</footer>
+      </figure>
+      <figure class="rev">
+        <div class="stars" aria-label="Ocena 5 od 5">★★★★★</div>
+        <p>„Poklon set Zaštita za sestru. Kutija izgleda kao iz butika, ništa jeftino. Sestra je bila oduševljena.“</p>
+        <footer>Marko · Kragujevac</footer>
+      </figure>
+      <figure class="rev">
+        <div class="stars" aria-label="Ocena 5 od 5">★★★★★</div>
+        <p>„Labradorit je još lepši uživo. Prelivi na dnevnom svetlu su čarobni, a dostava do Čačka je stigla za dva dana.“</p>
+        <footer>Teodora · Čačak</footer>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="dostava">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-kicker">Dostava</div>
+      <h2 class="sec-title">Šaljemo širom Srbije</h2>
+      <p class="sec-lead">Porudžbinu spakujemo pažljivo, svaki kristal u mekoj kesici, setovi u poklon kutiji.</p>
+    </div>
+    <div class="ship-grid rv">
+      <article class="ship">
+        <h3>Kurirska služba</h3>
+        <p>Isporuka obično traje 2 do 4 radna dana, na kućnu adresu bilo gde u Srbiji.</p>
+      </article>
+      <article class="ship">
+        <h3>Besplatna preko 6.000 RSD</h3>
+        <p>Za manje porudžbine dostava je 400 RSD. Iznos vidiš u korpi pre slanja porudžbine.</p>
+      </article>
+      <article class="ship">
+        <h3>Lično preuzimanje</h3>
+        <p>U Beogradu možeš da preuzmeš na Primer adresi 18, uz prethodnu poruku i dogovor termina.</p>
+      </article>
+      <article class="ship">
+        <h3>Plaćanje pouzećem</h3>
+        <p>Plaćaš kad ti pošiljka stigne, ili gotovinom pri ličnom preuzimanju. Bez skrivenih troškova.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-kicker">Pitanja</div>
+      <h2 class="sec-title">Često pitate</h2>
+    </div>
+    <div class="faq rv">
+      <details open>
+        <summary>Kako da izaberem kristal ako nisam sigurna?</summary>
+        <p>Počni od vodiča „Koji kristal je za tebe“, po nameri ili znaku. Ako i dalje nisi sigurna, napiši nam u poruci šta ti je važno, pa predložimo dva-tri kamena.</p>
+      </details>
+      <details>
+        <summary>Da li šaljete širom Srbije?</summary>
+        <p>Da. Šaljemo kurirskom službom na teritoriji Srbije. Preko 6.000 RSD dostava je besplatna. Za Beograd postoji i lično preuzimanje.</p>
+      </details>
+      <details>
+        <summary>Da li je kamenje prirodno?</summary>
+        <p>Da, radi se o prirodnim kristalima i mineralima. Zbog toga se komadi razlikuju u nijansi, inkluzijama i obliku. Na fotografiji je primer, a tvoj komad biramo sa istom pažnjom.</p>
+      </details>
+      <details>
+        <summary>Kako da čuvam kristal?</summary>
+        <p>Većinu kamenja drži podalje od vode i jakog sunca, posebno selenit. Uz pošiljku ide kratko uputstvo. Ako želiš da ga „očistiš“, predlažemo mesečevu svetlost ili činiju sa suvim selenitom.</p>
+      </details>
+      <details>
+        <summary>Mogu li da vratim porudžbinu?</summary>
+        <p>Ako ti komad ne odgovara, javi se u roku od 14 dana. Nekorišćen nakit i neoštećeno kamenje možemo da zamenimo ili vratimo novac, uz trošak povratne dostave.</p>
+      </details>
+      <details>
+        <summary>Kako poručujem?</summary>
+        <p>Dodaj komade u korpu, pa pošalji porudžbinu preko Vibera ili Instagrama. Odgovaramo radnim danima, obično u roku od nekoliko sati, i potvrdimo dostupnost i adresu dostave.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-kicker">Kontakt</div>
+      <h2 class="sec-title">Piši nam na Viber ili Instagram</h2>
+      <p class="sec-lead">Odgovaramo od utorka do subote, obično u roku od nekoliko sati. Kaži nam šta tražiš, ili pošalji sadržaj korpe.</p>
+    </div>
+    <div class="contact-grid rv">
+      <div class="contact-card">
+        <h3 class="serif" style="font-size:1.5rem;font-weight:600">Kristali Lunara</h3>
+        <ul class="contact-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+            <div><strong>Primer adrese 18, Beograd</strong>Lično preuzimanje uz dogovor</div>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+            <div><strong>info@kristalilunara.rs</strong>Mejl za pitanja i porudžbine</div>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3A16 16 0 0 1 6.5 3.5z"/></svg>
+            <div><strong>011 000 00 00</strong>Telefon i Viber, demo broj</div>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <div><strong>@kristali.lunara</strong>Instagram prodavnice, demo profil</div>
+          </li>
+        </ul>
+        <p class="hours">Radno vreme: utorak–subota, 11–19h<br>Nedelja i ponedeljak neradni.</p>
+        <p class="note">Ovo je predlog sajta. Adresa, telefon, mejl i Instagram su izmišljeni i ne pripadaju pravoj prodavnici.</p>
+      </div>
+      <form class="contact-card form" id="contact-form">
+        <label>Ime
+          <input type="text" name="ime" required autocomplete="name" placeholder="Tvoje ime">
+        </label>
+        <label>Kako da ti se javimo
+          <select name="kanal">
+            <option value="Viber">Viber</option>
+            <option value="Instagram">Instagram</option>
+            <option value="mejl">Mejl</option>
+          </select>
+        </label>
+        <label>Poruka
+          <textarea name="poruka" required placeholder="Zdravo, zanima me..."></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Pripremi poruku</button>
+        <p class="form-msg" id="form-msg">Poruka je spremna. U pravoj prodavnici ovde bi se otvorio Viber, Instagram ili mejl. Za ovaj predlog, tekst možeš da kopiraš.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 Kristali Lunara · predlog sajta</span>
+    <a href="../../">Napravljeno u WebGlow Studiju</a>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+  <header>
+    <h2 id="cart-title">Tvoja korpa</h2>
+    <button class="icon-btn" type="button" id="close-cart" aria-label="Zatvori korpu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </header>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="ship-hint" id="ship-hint"></div>
+  <div class="cart-total"><span>Ukupno</span><span id="cart-total">0 RSD</span></div>
+  <div class="cart-actions">
+    <button class="btn btn-primary" type="button" id="order-viber">Poruči putem Vibera</button>
+    <button class="btn btn-ghost" type="button" id="order-ig">Poruči putem Instagrama</button>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  const SHIP = 400, FREE = 6000;
+  const PRODUCTS = [
+    {id:"ametist", name:"Ametist", cat:"kristal", catLabel:"Kristal", price:2400, meaning:"Smirenje, intuicija i miran san.", c:["#E8DDF6","#C9B6E4","#7B5EA7","#4A2F6E"]},
+    {id:"ametist-narukvica", name:"Ametist narukvica", cat:"narukvica", catLabel:"Narukvica", price:3200, meaning:"Nežna ljubičasta, za svakodnevno nošenje.", c:["#EDE4F8","#B49AD4","#7B5EA7","#4A2F6E"]},
+    {id:"roza-kvarc", name:"Roza kvarc", cat:"kristal", catLabel:"Kristal", price:1900, meaning:"Kamen srca: nežnost, samilost i ljubav.", c:["#F7E3EA","#E8B4C4","#C97B92","#8E4F66"]},
+    {id:"roza-ogrlica", name:"Roza kvarc ogrlica", cat:"ogrlica", catLabel:"Ogrlica", price:4500, meaning:"Lagani lančić sa glatkim srcem od kvarca.", c:["#FBEFF3","#F3D6DE","#E8B4C4","#C97B92"]},
+    {id:"citrin", name:"Citrin", cat:"kristal", catLabel:"Kristal", price:2200, meaning:"Radost, uspeh i topla, sunčana energija.", c:["#FBF0D2","#E8D5A3","#D4A84B","#9A7020"]},
+    {id:"labradorit", name:"Labradorit", cat:"kristal", catLabel:"Kristal", price:3600, meaning:"Zaštita i transformacija, sa plavim prelivima.", c:["#D5E4F2","#7FA8C9","#3E6C8A","#1E3A4C"]},
+    {id:"tigrovo-oko", name:"Tigrovo oko narukvica", cat:"narukvica", catLabel:"Narukvica", price:2800, meaning:"Hrabrost, fokus i čvrsto tlo pod nogama.", c:["#F0E0B8","#C9A24A","#8A5A22","#4A2E12"]},
+    {id:"selenit", name:"Selenit štapić", cat:"kristal", catLabel:"Mineral", price:1600, meaning:"Čisti prostor i smiruje misli. Čuvati od vode.", c:["#FFFEFB","#F3EEE4","#D9D0C0","#B9A990"]},
+    {id:"turmalin", name:"Crni turmalin", cat:"kristal", catLabel:"Kristal", price:2100, meaning:"Uzemljenje i zaštita od teških utisaka.", c:["#D8D6DC","#6A6A72","#2A2A30","#111114"]},
+    {id:"mesecev-kamen", name:"Mesečev kamen ogrlica", cat:"ogrlica", catLabel:"Ogrlica", price:5200, meaning:"Mekani sjaj, intuicija i ženska energija.", c:["#F7F4EA","#E6E0CE","#C9C0D8","#8A7CA4"]},
+    {id:"aventurin", name:"Aventurin", cat:"kristal", catLabel:"Kristal", price:1800, meaning:"Sreća, lakši novi počeci i smireno srce.", c:["#E5F0DC","#9CBC7A","#5E8A46","#2F4A24"]},
+    {id:"akvamarin", name:"Akvamarin", cat:"kristal", catLabel:"Kristal", price:3900, meaning:"Mirna komunikacija i bistra, hladna voda.", c:["#E6F6F8","#A8D8E0","#5EA8B4","#2C6A74"]},
+    {id:"fluorit", name:"Fluorit", cat:"kristal", catLabel:"Kristal", price:2500, meaning:"Fokus, učenje i sređivanje misli.", c:["#EDE4F8","#9B8ED0","#6AA0C8","#3E5A8A"]},
+    {id:"pirit", name:"Pirit", cat:"kristal", catLabel:"Mineral", price:2700, meaning:"Obilje, samopouzdanje i zlatni sjaj.", c:["#F6E7B0","#E0C35A","#B8942C","#6A5410"]}
+  ];
+  const SETS = [
+    {id:"set-neznost", name:"Set Nježnost", price:6900, meaning:"Roza kvarc, ametist i selenit, za mir i meko srce.", contains:"Roza kvarc · Ametist · Selenit štapić", c:["#F7E3EA","#E8B4C4","#C9B6E4","#7B5EA7"]},
+    {id:"set-zastita", name:"Set Zaštita", price:7400, meaning:"Turmalin, labradorit i tigrovo oko, za čvrst osećaj sigurnosti.", contains:"Crni turmalin · Labradorit · Tigrovo oko", c:["#D5E4F2","#6A6A72","#C9A24A","#1E3A4C"]},
+    {id:"set-pocetak", name:"Set Novi početak", price:7200, meaning:"Citrin, aventurin i pirit, za hrabrost kad krećeš nešto novo.", contains:"Citrin · Aventurin · Pirit", c:["#FBF0D2","#9CBC7A","#E0C35A","#5E8A46"]},
+    {id:"set-mesec", name:"Set Pun mesec", price:8500, meaning:"Mesečev kamen, selenit i ametist, za intuiciju i tihe večeri.", contains:"Mesečev kamen · Selenit · Ametist", c:["#F7F4EA","#C9C0D8","#E8DDF6","#8A7CA4"]}
+  ];
+  const ALL = PRODUCTS.concat(SETS.map(s => Object.assign({cat:"set", catLabel:"Poklon set"}, s)));
+  const INTENTS = {
+    ljubav:{label:"Ljubav", id:"roza-kvarc", text:"Roza kvarc je kamen srca. Nosi se kad želiš više nežnosti, prema sebi ili prema drugima, i kad želiš da omekšaš odnos."},
+    smirenje:{label:"Smirenje", id:"ametist", text:"Ametist smiruje misli i pomaže kad je u glavi previše buke. Često se drži pored kreveta, za mirniji san."},
+    zastita:{label:"Zaštita", id:"turmalin", text:"Crni turmalin je kamen uzemljenja. Biraju ga oni koji žele jasniju granicu prema tuđim raspoloženjima i teškim danima."},
+    uspeh:{label:"Uspeh", id:"citrin", text:"Citrin nosi toplu, sunčanu energiju. Lep je pratilac kad radiš na cilju, poslu ili želiš više lakoće oko novca."},
+    energija:{label:"Energija", id:"tigrovo-oko", text:"Tigrovo oko daje osećaj čvrstine i fokusa. Dobro stoji kad ti treba hrabrost da uradiš stvar do kraja."},
+    san:{label:"San i odmor", id:"ametist", text:"Za mirniji san često predlažemo ametist, ponekad uz selenit u prostoriji. Drži ga na noćnom ormariću, ne u čaši vode."},
+    fokus:{label:"Fokus", id:"fluorit", text:"Fluorit odgovara onima koji uče, planiraju ili teško srede misli. Drži ga na radnom stolu, pri ruci dok radiš."},
+    intuicija:{label:"Intuicija", id:"mesecev-kamen", text:"Mesečev kamen je mek, svetlucav i vezan za unutrašnji ritam. Biraju ga kad žele da bolje čuju sebe."}
+  };
+  const ZODIAC = {
+    ovan:{label:"Ovan", id:"citrin", text:"Ovnu prija vatreni, sunčani citrin: hrabrost, polet i čist cilj, bez rasipanja energije."},
+    bik:{label:"Bik", id:"roza-kvarc", text:"Biku odgovara roza kvarc: mekoća, čula i osećaj da je srce na sigurnom."},
+    blizanci:{label:"Blizanci", id:"akvamarin", text:"Blizancima predlažemo akvamarin, za bistriju reč i lakšu razmenu ideja."},
+    rak:{label:"Rak", id:"mesecev-kamen", text:"Raku prija mesečev kamen: nežna zaštita, intuicija i osećaj doma u sebi."},
+    lav:{label:"Lav", id:"pirit", text:"Lavu stoji pirit, zbog sjaja, samopouzdanja i osećaja da zaslužuješ svoje mesto."},
+    devica:{label:"Devica", id:"fluorit", text:"Devici je fluorit drag: sređuje misli, pomaže u učenju i donosi osećaj reda."},
+    vaga:{label:"Vaga", id:"roza-ogrlica", text:"Vagi lepo stoji roza kvarc, naročito kao ogrlica: sklad, nežnost i topli odnosi."},
+    skorpija:{label:"Škorpija", id:"labradorit", text:"Škorpiji predlažemo labradorit: transformacija, dubina i prelivi koji se ne daju odmah pročitati."},
+    strelac:{label:"Strelac", id:"tigrovo-oko", text:"Strelcu prija tigrovo oko: hrabrost za put, fokus i toplo, zemljano tlo."},
+    jarac:{label:"Jarac", id:"turmalin", text:"Jarcu odgovara crni turmalin: uzemljenje, granice i tiha, čvrsta zaštita."},
+    vodolija:{label:"Vodolija", id:"fluorit", text:"Vodoliji ide fluorit: jasne ideje, originalnost i um koji voli da slaže delove."},
+    ribe:{label:"Ribe", id:"ametist", text:"Ribama je ametist blizak: san, intuicija i meka, ljubičasta tišina."}
+  };
+
+  const fmt = n => n.toLocaleString("sr-RS") + " RSD";
+  const byId = id => ALL.find(p => p.id === id);
+
+  function gemSvg(c, w=80, h=100){
+    const [a,b,d,e] = c;
+    return `<svg viewBox="0 0 80 100" width="${w}" height="${h}" aria-hidden="true"><path d="M40 4 L70 32 L40 96 L10 32 Z" fill="${e}"/><path d="M40 4 L70 32 L40 40 Z" fill="${a}"/><path d="M40 4 L10 32 L40 40 Z" fill="${b}"/><path d="M10 32 L40 96 L40 40 Z" fill="${d}"/><path d="M70 32 L40 96 L40 40 Z" fill="${e}"/><path d="M32 16 L40 8 L44 20" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.6" stroke-linecap="round"/></svg>`;
+  }
+
+  /* catalog */
+  const filters = [
+    {id:"svi", label:"Svi"},
+    {id:"kristal", label:"Kristali i minerali"},
+    {id:"narukvica", label:"Narukvice"},
+    {id:"ogrlica", label:"Ogrlice"}
+  ];
+  let activeFilter = "svi";
+  const filtersEl = document.getElementById("filters");
+  const catalogEl = document.getElementById("catalog");
+  filters.forEach(f => {
+    const b = document.createElement("button");
+    b.className = "chip" + (f.id==="svi" ? " on" : "");
+    b.type = "button";
+    b.textContent = f.label;
+    b.setAttribute("aria-pressed", f.id==="svi" ? "true" : "false");
+    b.onclick = () => { activeFilter = f.id; [...filtersEl.children].forEach((el,i)=>{el.classList.toggle("on", filters[i].id===f.id); el.setAttribute("aria-pressed", filters[i].id===f.id?"true":"false");}); renderCatalog(); };
+    filtersEl.appendChild(b);
+  });
+  function productCard(p){
+    return `<article class="card" id="art-${p.id}">
+      <div class="card-vis" style="--glow:${p.c[1]}55">${gemSvg(p.c)}</div>
+      <div class="card-body">
+        <div class="card-cat">${p.catLabel}</div>
+        <h3>${p.name}</h3>
+        <p class="meaning">${p.meaning}</p>
+        <div class="card-row">
+          <span class="price">${fmt(p.price)}</span>
+          <button class="btn btn-primary btn-sm" type="button" data-add="${p.id}">Poruči</button>
+        </div>
+      </div>
+    </article>`;
+  }
+  function renderCatalog(){
+    const list = PRODUCTS.filter(p => activeFilter==="svi" || p.cat===activeFilter);
+    catalogEl.innerHTML = list.map(productCard).join("");
+  }
+  renderCatalog();
+
+  /* sets */
+  document.getElementById("sets").innerHTML = SETS.map(s => `
+    <article class="set" id="art-${s.id}">
+      <div class="set-vis" style="background:radial-gradient(circle at 50% 40%, ${s.c[1]}55, #1A1028)">
+        ${gemSvg(s.c, 90, 110)}
+      </div>
+      <div>
+        <div class="card-cat">Poklon set</div>
+        <h3>${s.name}</h3>
+        <p class="contains">${s.contains}<br>${s.meaning}</p>
+        <div class="card-row">
+          <span class="price">${fmt(s.price)}</span>
+          <button class="btn btn-primary btn-sm" type="button" data-add="${s.id}">Poruči</button>
+        </div>
+      </div>
+    </article>`).join("");
+
+  /* cart */
+  const cart = new Map();
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("overlay");
+  const countEl = document.getElementById("cart-count");
+  function total(){ let n=0; cart.forEach((q,id)=>{ n += byId(id).price * q; }); return n; }
+  function shipping(){ const t=total(); if(!t) return 0; return t>=FREE ? 0 : SHIP; }
+  function renderCart(){
+    const box = document.getElementById("cart-items");
+    if(!cart.size){ box.innerHTML = `<p class="cart-empty">Korpa je prazna. Dodaj kristal ili set iz kataloga.</p>`; }
+    else {
+      box.innerHTML = [...cart].map(([id,q]) => {
+        const p = byId(id);
+        return `<div class="cart-line">
+          <div>
+            <h3>${p.name}</h3>
+            <div class="meta">${fmt(p.price)} · ${p.catLabel}</div>
+            <div class="qty">
+              <button type="button" data-q="${id}" data-d="-1" aria-label="Manje">−</button>
+              <span>${q}</span>
+              <button type="button" data-q="${id}" data-d="1" aria-label="Više">+</button>
+              <button type="button" data-q="${id}" data-d="0" aria-label="Ukloni" style="margin-left:6px;width:auto;padding:0 8px">Ukloni</button>
+            </div>
+          </div>
+          <strong>${fmt(p.price*q)}</strong>
+        </div>`;
+      }).join("");
+    }
+    const t = total(), s = shipping();
+    document.getElementById("cart-total").textContent = fmt(t + s);
+    const hint = document.getElementById("ship-hint");
+    if(!t) hint.textContent = "";
+    else if(s===0) hint.textContent = "Dostava je besplatna.";
+    else hint.textContent = `Dostava 400 RSD. Još ${fmt(FREE-t)} do besplatne dostave.`;
+    const c = [...cart.values()].reduce((a,b)=>a+b,0);
+    countEl.textContent = c;
+    countEl.classList.toggle("on", c>0);
+  }
+  function add(id, n=1){
+    const p = byId(id); if(!p) return;
+    cart.set(id, (cart.get(id)||0)+n);
+    if(cart.get(id)<=0) cart.delete(id);
+    renderCart();
+    toast(`${p.name} je u korpi.`);
+  }
+  function toast(msg){
+    const t = document.getElementById("toast");
+    t.textContent = msg; t.classList.add("on");
+    clearTimeout(toast._id); toast._id = setTimeout(()=>t.classList.remove("on"), 2200);
+  }
+  document.body.addEventListener("click", e => {
+    const addBtn = e.target.closest("[data-add]");
+    if(addBtn){ add(addBtn.getAttribute("data-add")); return; }
+    const q = e.target.closest("[data-q]");
+    if(q){
+      const id = q.getAttribute("data-q");
+      const d = Number(q.getAttribute("data-d"));
+      if(d===0) cart.delete(id); else add(id, d);
+      renderCart();
+    }
+  });
+  function openCart(){ drawer.hidden=false; overlay.hidden=false; requestAnimationFrame(()=>{ drawer.classList.add("on"); overlay.classList.add("on"); }); }
+  function closeCart(){ drawer.classList.remove("on"); overlay.classList.remove("on"); setTimeout(()=>{ drawer.hidden=true; overlay.hidden=true; }, 320); }
+  document.getElementById("cart-btn").onclick = openCart;
+  document.getElementById("close-cart").onclick = closeCart;
+  overlay.onclick = closeCart;
+  document.addEventListener("keydown", e => { if(e.key==="Escape"){ closeCart(); closeMenu(); } });
+  renderCart();
+
+  function orderText(){
+    if(!cart.size) return "";
+    const lines = [...cart].map(([id,q]) => `• ${byId(id).name} × ${q} — ${fmt(byId(id).price*q)}`);
+    const t=total(), s=shipping();
+    lines.push(`Dostava: ${s?fmt(s):"besplatna"}`);
+    lines.push(`Ukupno: ${fmt(t+s)}`);
+    return `Zdravo, želim da poručim iz Kristala Lunara:\n${lines.join("\n")}\nHvala!`;
+  }
+  function sendOrder(channel){
+    if(!cart.size){ toast("Korpa je prazna."); return; }
+    const text = orderText();
+    copy(text);
+    if(channel==="viber"){
+      toast("Tekst porudžbine je kopiran. U predlogu sajta Viber broj je izmišljen.");
+      const a = document.createElement("a");
+      a.href = "viber://chat?number=381110000000";
+      a.click();
+    } else {
+      toast("Tekst porudžbine je kopiran. Instagram @kristali.lunara je demo profil.");
+    }
+  }
+  function copy(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).catch(()=>{}); }
+  }
+  document.getElementById("order-viber").onclick = () => sendOrder("viber");
+  document.getElementById("order-ig").onclick = () => sendOrder("ig");
+
+  /* guide */
+  let mode = "intent";
+  const choicesEl = document.getElementById("choices");
+  const resultEl = document.getElementById("result");
+  const tabIntent = document.getElementById("tab-intent");
+  const tabZodiac = document.getElementById("tab-zodiac");
+  function renderChoices(){
+    const data = mode==="intent" ? INTENTS : ZODIAC;
+    choicesEl.innerHTML = Object.entries(data).map(([k,v]) => `<button class="choice" type="button" data-pick="${k}">${v.label}</button>`).join("");
+    resultEl.innerHTML = `<p class="wait">Izaberi ${mode==="intent"?"nameru":"horoskopski znak"} sa leve strane. Ovde će se pojaviti predlog i kratko objašnjenje.</p>`;
+  }
+  function showPick(key){
+    const data = mode==="intent" ? INTENTS : ZODIAC;
+    const item = data[key];
+    const p = byId(item.id);
+    [...choicesEl.children].forEach(el => el.classList.toggle("on", el.getAttribute("data-pick")===key));
+    resultEl.innerHTML = `${gemSvg(p.c, 64, 80)}
+      <div class="card-cat">${p.name}</div>
+      <h3>${p.name}</h3>
+      <p>${item.text}</p>
+      <div class="result-actions">
+        <a class="btn btn-ghost btn-sm" href="#art-${p.id}">Pogledaj u katalogu</a>
+        <button class="btn btn-primary btn-sm" type="button" data-add="${p.id}">Poruči · ${fmt(p.price)}</button>
+      </div>`;
+  }
+  choicesEl.addEventListener("click", e => {
+    const b = e.target.closest("[data-pick]"); if(b) showPick(b.getAttribute("data-pick"));
+  });
+  tabIntent.onclick = () => { mode="intent"; tabIntent.classList.add("on"); tabZodiac.classList.remove("on"); tabIntent.setAttribute("aria-selected","true"); tabZodiac.setAttribute("aria-selected","false"); renderChoices(); };
+  tabZodiac.onclick = () => { mode="zodiac"; tabZodiac.classList.add("on"); tabIntent.classList.remove("on"); tabZodiac.setAttribute("aria-selected","true"); tabIntent.setAttribute("aria-selected","false"); renderChoices(); };
+  renderChoices();
+
+  /* contact form */
+  document.getElementById("contact-form").addEventListener("submit", e => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const ime = fd.get("ime").toString().trim();
+    const kanal = fd.get("kanal");
+    const poruka = fd.get("poruka").toString().trim();
+    const text = `Zdravo, ja sam ${ime}. ${poruka}`;
+    copy(text);
+    const msg = document.getElementById("form-msg");
+    msg.classList.add("on");
+    if(kanal==="mejl"){
+      location.href = "mailto:info@kristalilunara.rs?subject=" + encodeURIComponent("Poruka za Kristali Lunara") + "&body=" + encodeURIComponent(text);
+    } else if(kanal==="Viber"){
+      toast("Tekst je kopiran. Viber broj u ovom predlogu je izmišljen.");
+    } else {
+      toast("Tekst je kopiran. Instagram @kristali.lunara je demo profil.");
+    }
+  });
+
+  /* header / menu / sparkles / reveal */
+  const topEl = document.getElementById("top");
+  const burger = document.getElementById("burger");
+  function closeMenu(){ document.body.classList.remove("menu-open"); burger.setAttribute("aria-expanded","false"); }
+  burger.onclick = () => {
+    const open = document.body.classList.toggle("menu-open");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+  document.getElementById("nav").addEventListener("click", e => { if(e.target.closest("a")) closeMenu(); });
+  const onScroll = () => topEl.classList.toggle("solid", window.scrollY > 12);
+  onScroll(); window.addEventListener("scroll", onScroll, {passive:true});
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(!reduce){
+    const box = document.getElementById("sparkles");
+    for(let i=0;i<36;i++){
+      const s = document.createElement("span");
+      s.className = "sparkle" + (i%3===0?" rose":i%3===1?" lav":"");
+      s.style.left = (4+Math.random()*92)+"%";
+      s.style.top = (6+Math.random()*88)+"%";
+      s.style.animationDelay = (Math.random()*3.6)+"s";
+      s.style.animationDuration = (2.6+Math.random()*2.4)+"s";
+      s.style.width = s.style.height = (1.5+Math.random()*2.4)+"px";
+      box.appendChild(s);
+    }
+  }
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }), {threshold:.12});
+  document.querySelectorAll(".rv").forEach((el,i) => { el.style.transitionDelay = (i%4)*70+"ms"; io.observe(el); });
+})();
+</script>
+</body>
+</html>

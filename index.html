@@ -191,7 +191,17 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 @container (max-width:336px){.ph.borovi b{font-size:17px}}
 @keyframes borovisway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
 @keyframes boroviglow{0%,100%{opacity:.7}50%{opacity:1}}
-@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip,.ph.klas .sway,.ph.lila .tilt,.ph.lila .gleam,.ph.bozur .bloom,.ph.zare .ember,.ph.volan .car,.ph.volan .wheel,.ph.borovi .pine,.ph.borovi .glow{animation:none}}
+
+/* lunara placeholder */
+.ph.lunara{background:radial-gradient(circle at 50% 28%, #4A2A6A, #140C22 72%);color:#F6F0FA;container-type:inline-size}
+.ph.lunara svg{width:88px;height:72px;flex-shrink:0;filter:drop-shadow(0 0 12px rgba(196,160,230,.45))}
+.ph.lunara .gem{animation:lunarfloat 3.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.ph.lunara .spark{animation:lunaraspark 2.6s ease-in-out infinite}
+.ph.lunara small{color:#E8B4C4}
+.ph.lunara b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px;font-size:17px}
+@keyframes lunarfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes lunaraspark{0%,100%{opacity:.35}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip,.ph.klas .sway,.ph.lila .tilt,.ph.lila .gleam,.ph.bozur .bloom,.ph.zare .ember,.ph.volan .car,.ph.volan .wheel,.ph.borovi .pine,.ph.borovi .glow,.ph.lunara .gem,.ph.lunara .spark{animation:none}}
 
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
@@ -382,6 +392,15 @@ button.btn{font-family:inherit;cursor:pointer}
           <h3>Zvezdana Karta</h3>
           <p>Sajt za tarot, astrologiju i Reiki: usluge kao tarot karte koje se okreću, interaktivna karta dana i zakazivanje seanse.</p>
           <a class="btn small" href="demos/zvezdana-karta/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+      <article class="card">
+        <a class="shot" href="demos/kristali-lunara/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph lunara" aria-hidden="true"><svg viewBox="0 0 88 72" fill="none"><g class="gem"><path d="M36 10 L54 24 L44 58 L22 28 Z" fill="#5C3E86"/><path d="M36 10 L54 24 L40 28 Z" fill="#E8DDF6"/><path d="M36 10 L22 28 L40 28 Z" fill="#C9B6E4"/><path d="M40 28 L54 24 L44 58 Z" fill="#7B5EA7"/><path d="M40 28 L22 28 L44 58 Z" fill="#4A2F6E"/><path d="M52 16 L68 28 L56 56 L42 30 Z" fill="#8A6BB3"/><path d="M52 16 L68 28 L54 32 Z" fill="#F3ECFA"/><path d="M52 16 L42 30 L54 32 Z" fill="#D3C0EA"/><path d="M54 32 L68 28 L56 56 Z" fill="#9B7EBD"/><path d="M28 32 L44 42 L34 62 L18 44 Z" fill="#C97B92"/><path d="M28 32 L44 42 L34 46 Z" fill="#F7E3EA"/><path d="M28 32 L18 44 L34 46 Z" fill="#E8B4C4"/></g><g class="spark" fill="#F6F0FA"><path d="M70 12l1.2 3 3 1.2-3 1.2-1.2 3-1.2-3-3-1.2 3-1.2z"/><path d="M16 14l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" opacity=".8"/></g></svg><b>Kristali Lunara</b><small>Kristali i nakit od kamenja</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Kristali</span><span class="tag">Predlog sajta</span></div>
+          <h3>Kristali Lunara</h3>
+          <p>Sajt za prodavnicu kristala i minerala: katalog sa cenama, vodič koji kristal je za tebe, poklon setovi i poručivanje preko Vibera.</p>
+          <a class="btn small" href="demos/kristali-lunara/" target="_blank" rel="noopener">Otvori sajt →</a>
         </div>
       </article>
       <article class="card">
