@@ -150,13 +150,14 @@ section{padding:88px 0;position:relative}
 .grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:18px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s}
 .card:hover{transform:translateY(-4px);border-color:rgba(201,182,228,.4);box-shadow:0 16px 40px rgba(0,0,0,.28)}
-.card-vis{position:relative;aspect-ratio:1/1.05;display:grid;place-items:center;background:
+.card-vis{position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:18px;background:
   radial-gradient(circle at 50% 40%, var(--glow, rgba(155,126,189,.28)), transparent 62%),
   linear-gradient(180deg,rgba(255,255,255,.04),rgba(0,0,0,.18));
   overflow:hidden}
-.card-vis::after{content:"";position:absolute;inset:-40% -60%;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.18) 50%,transparent 60%);transform:translateX(-40%);animation:shine 5.5s ease-in-out infinite}
+.card-vis::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.16) 50%,transparent 58%);transform:translateX(-60%);animation:shine 5.5s ease-in-out infinite;pointer-events:none;z-index:2}
 @keyframes shine{0%,70%{transform:translateX(-60%)}100%{transform:translateX(80%)}}
-.card-vis svg{width:46%;height:auto;filter:drop-shadow(0 10px 18px rgba(0,0,0,.28));position:relative;z-index:1}
+.gem{width:76%;height:76%;max-width:230px;max-height:230px;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.gem svg{width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;flex:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.32))}
 .card-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:.4rem;flex:1}
 .card-cat{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);font-weight:500}
 .card h3{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:1.2rem;line-height:1.25}
@@ -178,7 +179,7 @@ section{padding:88px 0;position:relative}
   radial-gradient(circle at 80% 20%, rgba(232,180,196,.16), transparent 40%),
   var(--night-2);padding:24px;display:flex;flex-direction:column;justify-content:center}
 .result .wait{color:var(--muted);font-weight:300}
-.result .gem-mini{width:64px;margin-bottom:12px}
+.result .gem{width:88px;height:88px;max-width:88px;max-height:88px;margin-bottom:12px}
 .result h3{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:1.7rem;margin-bottom:.4rem}
 .result p{color:var(--muted);font-weight:300;margin-bottom:1.1rem}
 .result-actions{display:flex;flex-wrap:wrap;gap:.6rem}
@@ -186,8 +187,8 @@ section{padding:88px 0;position:relative}
 /* sets */
 .set-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .set{display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:16px 18px 16px 16px}
-.set-vis{height:140px;border-radius:16px;display:grid;place-items:center;position:relative;overflow:hidden}
-.set-vis svg{width:78%;height:auto;position:relative;z-index:1}
+.set-vis{height:150px;border-radius:16px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:12px}
+.set-vis .gem{width:88%;height:88%;max-width:none;max-height:none}
 .set h3{font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:1.35rem}
 .set .contains{color:var(--muted);font-size:.92rem;font-weight:300;margin:.35rem 0 .8rem}
 
@@ -679,12 +680,259 @@ section{padding:88px 0;position:relative}
   const fmt = n => n.toLocaleString("sr-RS") + " RSD";
   const byId = id => ALL.find(p => p.id === id);
 
-  function gemSvg(c, w=80, h=100){
-    const [a,b,d,e] = c;
-    return `<svg viewBox="0 0 80 100" width="${w}" height="${h}" aria-hidden="true"><path d="M40 4 L70 32 L40 96 L10 32 Z" fill="${e}"/><path d="M40 4 L70 32 L40 40 Z" fill="${a}"/><path d="M40 4 L10 32 L40 40 Z" fill="${b}"/><path d="M10 32 L40 96 L40 40 Z" fill="${d}"/><path d="M70 32 L40 96 L40 40 Z" fill="${e}"/><path d="M32 16 L40 8 L44 20" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.6" stroke-linecap="round"/></svg>`;
+  function svgWrap(inner){
+    return `<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">${inner}</svg>`;
+  }
+  function braceletSvg(c, banded){
+    const [hi, mid, deep, ink] = c;
+    const beads = [];
+    const n = 14;
+    for(let i=0;i<n;i++){
+      const t = (i/n)*Math.PI*2 + 0.4;
+      beads.push({
+        cx: 50 + 30*Math.cos(t),
+        cy: 52 + 23*Math.sin(t),
+        r: i%5===0 ? 7.1 : 6.2,
+        z: Math.sin(t),
+        i
+      });
+    }
+    beads.sort((a,b)=>a.z-b.z);
+    const body = beads.map((b,idx) => {
+      const shade = b.z < 0 ? deep : mid;
+      if(banded){
+        return `<g>
+          <circle cx="${b.cx.toFixed(1)}" cy="${b.cy.toFixed(1)}" r="${b.r}" fill="${shade}" stroke="${ink}" stroke-width=".5"/>
+          <path d="M${(b.cx-b.r*0.7).toFixed(1)} ${(b.cy-1.2).toFixed(1)} Q${b.cx.toFixed(1)} ${(b.cy-b.r*0.3).toFixed(1)} ${(b.cx+b.r*0.7).toFixed(1)} ${(b.cy-1).toFixed(1)}" fill="none" stroke="${hi}" stroke-width="1.4" opacity=".85"/>
+          <path d="M${(b.cx-b.r*0.65).toFixed(1)} ${(b.cy+1.6).toFixed(1)} Q${b.cx.toFixed(1)} ${(b.cy+b.r*0.25).toFixed(1)} ${(b.cx+b.r*0.65).toFixed(1)} ${(b.cy+1.4).toFixed(1)}" fill="none" stroke="${ink}" stroke-width="1.1" opacity=".55"/>
+        </g>`;
+      }
+      return `<g>
+        <circle cx="${b.cx.toFixed(1)}" cy="${b.cy.toFixed(1)}" r="${b.r}" fill="${shade}" stroke="${ink}" stroke-width=".4"/>
+        <ellipse cx="${(b.cx-1.6).toFixed(1)}" cy="${(b.cy-2).toFixed(1)}" rx="${b.r*0.35}" ry="${b.r*0.28}" fill="${hi}" opacity=".8"/>
+      </g>`;
+    }).join("");
+    return svgWrap(`<ellipse cx="50" cy="86" rx="26" ry="5" fill="#000" opacity=".22"/>${body}`);
+  }
+  function necklaceSvg(c, kind){
+    const [hi, mid, deep, ink] = c;
+    const chain = `
+      <path d="M16 14 Q50 34 84 14" fill="none" stroke="${ink}" stroke-width="1.15"/>
+      <path d="M16 14 Q50 30 84 14" fill="none" stroke="${mid}" stroke-width=".6" opacity=".8"/>
+      <path d="M28 20 Q50 58 72 20" fill="none" stroke="${ink}" stroke-width="1.15"/>
+      <path d="M28 20 Q50 54 72 20" fill="none" stroke="${mid}" stroke-width=".55" opacity=".75"/>
+      <circle cx="16" cy="14" r="1.5" fill="${hi}"/><circle cx="84" cy="14" r="1.5" fill="${hi}"/>`;
+    let pendant;
+    if(kind==="heart"){
+      pendant = `
+        <path d="M50 84 C50 84 24 66 24 48 C24 38 32 32 40 32 C45 32 49 35 50 40 C51 35 55 32 60 32 C68 32 76 38 76 48 C76 66 50 84 50 84 Z" fill="${deep}"/>
+        <path d="M50 78 C50 78 30 63 30 49 C30 41 36 36 42 36 C46 36 49 38 50 43 C51 38 54 36 58 36 C64 36 70 41 70 49 C70 63 50 78 50 78 Z" fill="${mid}"/>
+        <path d="M40 42 C37 46 36 50 38 54" fill="none" stroke="${hi}" stroke-width="2" stroke-linecap="round" opacity=".8"/>`;
+    } else {
+      pendant = `
+        <ellipse cx="50" cy="64" rx="16" ry="20" fill="${deep}"/>
+        <ellipse cx="50" cy="64" rx="13.5" ry="17.5" fill="${mid}"/>
+        <ellipse cx="45" cy="58" rx="6" ry="8" fill="${hi}" opacity=".7"/>
+        <ellipse cx="56" cy="70" rx="5" ry="6" fill="#9BB7E8" opacity=".35"/>`;
+    }
+    return svgWrap(`<ellipse cx="50" cy="90" rx="20" ry="4" fill="#000" opacity=".2"/>${chain}${pendant}`);
+  }
+  function giftSetSvg(stones){
+    // stones: array of {c, kind} where kind is point|pebble|cube
+    const box = `
+      <rect x="18" y="52" width="64" height="32" rx="3" fill="#4A2A28"/>
+      <rect x="18" y="52" width="64" height="32" rx="3" fill="none" stroke="#E8D5A3" stroke-width="1.2"/>
+      <path d="M18 60 H82" stroke="#E8D5A3" stroke-width="1"/>
+      <rect x="46" y="52" width="8" height="32" fill="#C9A24A"/>
+      <path d="M22 52 L28 38 H72 L78 52 Z" fill="#6A3A36" stroke="#E8D5A3" stroke-width="1"/>
+      <path d="M28 38 L32 28 H68 L72 38 Z" fill="#8A4E48"/>
+      <rect x="46" y="28" width="8" height="24" fill="#E8D5A3"/>
+      <path d="M50 26 C50 26 42 20 46 16 C48 14 50 18 50 18 C50 18 52 14 54 16 C58 20 50 26 50 26" fill="#C97B92"/>`;
+    const mini = (x, col, kind) => {
+      const [hi, mid, deep] = col;
+      if(kind==="cube"){
+        return `<g transform="translate(${x},34)">
+          <path d="M0 8 L8 4 L16 8 L8 12 Z" fill="${hi}"/>
+          <path d="M0 8 L8 12 L8 20 L0 16 Z" fill="${deep}"/>
+          <path d="M16 8 L8 12 L8 20 L16 16 Z" fill="${mid}"/>
+        </g>`;
+      }
+      if(kind==="pebble"){
+        return `<ellipse cx="${x+8}" cy="46" rx="8" ry="10" fill="${deep}"/><ellipse cx="${x+7}" cy="44" rx="5.5" ry="7" fill="${mid}"/><ellipse cx="${x+5}" cy="41" rx="2.2" ry="2.8" fill="${hi}" opacity=".8"/>`;
+      }
+      return `<path d="M${x+8} 28 L${x+15} 46 L${x+8} 54 L${x+1} 46 Z" fill="${deep}"/><path d="M${x+8} 28 L${x+15} 46 L${x+8} 44 Z" fill="${hi}"/><path d="M${x+8} 28 L${x+1} 46 L${x+8} 44 Z" fill="${mid}"/>`;
+    };
+    return svgWrap(`${box}${stones.map((s,i)=>mini(26+i*20, s.c, s.kind)).join("")}`);
+  }
+  function gemSvg(p){
+    const id = p.id || "";
+    const c = p.c;
+    const [hi, mid, deep, ink] = c;
+    if(id==="ametist-narukvica") return braceletSvg(c, false);
+    if(id==="tigrovo-oko") return braceletSvg(c, true);
+    if(id==="roza-ogrlica") return necklaceSvg(c, "heart");
+    if(id==="mesecev-kamen") return necklaceSvg(c, "cabochon");
+    if(id==="set-neznost") return giftSetSvg([
+      {c:["#F7E3EA","#E8B4C4","#C97B92"], kind:"pebble"},
+      {c:["#E8DDF6","#9B7EBD","#4A2F6E"], kind:"point"},
+      {c:["#FFFEFB","#F3EEE4","#D9D0C0"], kind:"point"}
+    ]);
+    if(id==="set-zastita") return giftSetSvg([
+      {c:["#6A6A72","#2A2A30","#111114"], kind:"point"},
+      {c:["#7FA8C9","#3E6C8A","#1E3A4C"], kind:"pebble"},
+      {c:["#F0E0B8","#C9A24A","#8A5A22"], kind:"pebble"}
+    ]);
+    if(id==="set-pocetak") return giftSetSvg([
+      {c:["#FBF0D2","#E8D5A3","#D4A84B"], kind:"point"},
+      {c:["#E5F0DC","#9CBC7A","#5E8A46"], kind:"pebble"},
+      {c:["#F6E7B0","#E0C35A","#B8942C"], kind:"cube"}
+    ]);
+    if(id==="set-mesec") return giftSetSvg([
+      {c:["#F7F4EA","#E6E0CE","#C9C0D8"], kind:"pebble"},
+      {c:["#FFFEFB","#F3EEE4","#D9D0C0"], kind:"point"},
+      {c:["#E8DDF6","#9B7EBD","#4A2F6E"], kind:"point"}
+    ]);
+
+    if(id==="ametist"){
+      return svgWrap(`
+        <ellipse cx="50" cy="90" rx="28" ry="5.5" fill="#000" opacity=".25"/>
+        <path d="M30 82 L22 48 L38 80 Z" fill="#4A2F6E"/>
+        <path d="M22 48 L32 44 L38 80 Z" fill="#7B5EA7"/>
+        <path d="M70 84 L80 44 L60 80 Z" fill="#4A2F6E"/>
+        <path d="M80 44 L70 40 L60 80 Z" fill="#9B7EBD"/>
+        <path d="M38 84 L28 40 L50 16 L72 42 L62 84 Z" fill="#4A2F6E"/>
+        <path d="M50 16 L72 42 L50 48 Z" fill="#E8DDF6"/>
+        <path d="M50 16 L28 40 L50 48 Z" fill="#C9B6E4"/>
+        <path d="M50 48 L72 42 L62 84 L50 84 Z" fill="#7B5EA7"/>
+        <path d="M50 48 L28 40 L38 84 L50 84 Z" fill="#5C3E86"/>
+        <path d="M18 80 L14 58 L26 78 Z" fill="#6A4B93"/>
+        <path d="M14 58 L22 56 L26 78 Z" fill="#C9B6E4"/>
+        <path d="M82 82 L88 60 L74 80 Z" fill="#5C3E86"/>
+        <path d="M44 28 L50 20 L53 34" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity=".65"/>`);
+    }
+    if(id==="citrin"){
+      return svgWrap(`
+        <ellipse cx="50" cy="90" rx="22" ry="5" fill="#000" opacity=".22"/>
+        <path d="M50 8 L68 36 L58 90 L42 90 L32 36 Z" fill="#9A7020"/>
+        <path d="M50 8 L68 36 L50 42 Z" fill="#FBF0D2"/>
+        <path d="M50 8 L32 36 L50 42 Z" fill="#E8D5A3"/>
+        <path d="M50 42 L68 36 L58 90 L50 90 Z" fill="#D4A84B"/>
+        <path d="M50 42 L32 36 L42 90 L50 90 Z" fill="#B8862C"/>
+        <path d="M28 86 L22 54 L36 84 Z" fill="#9A7020"/>
+        <path d="M22 54 L30 50 L36 84 Z" fill="#E8D5A3"/>
+        <path d="M72 86 L80 50 L64 84 Z" fill="#9A7020"/>
+        <path d="M80 50 L70 48 L64 84 Z" fill="#FBF0D2"/>
+        <path d="M46 22 L50 12 L54 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>`);
+    }
+    if(id==="roza-kvarc"){
+      return svgWrap(`
+        <ellipse cx="50" cy="90" rx="26" ry="5" fill="#000" opacity=".2"/>
+        <path d="M24 58 C18 40 30 22 48 20 C62 18 80 30 82 48 C84 66 72 82 54 86 C36 90 28 76 24 58 Z" fill="#8E4F66"/>
+        <path d="M28 56 C24 42 34 28 48 26 C60 24 74 34 76 50 C78 66 66 80 52 82 C36 84 32 70 28 56 Z" fill="#C97B92"/>
+        <path d="M34 48 C32 38 40 30 50 30 C62 30 70 40 68 52 C66 62 54 68 44 64 C36 60 35 54 34 48 Z" fill="#E8B4C4"/>
+        <ellipse cx="42" cy="42" rx="8" ry="6" fill="#F7E3EA" opacity=".85"/>`);
+    }
+    if(id==="labradorit"){
+      return svgWrap(`
+        <ellipse cx="50" cy="90" rx="28" ry="5" fill="#000" opacity=".25"/>
+        <path d="M16 58 C14 36 30 18 52 16 C76 14 90 32 88 54 C86 78 64 88 42 86 C22 84 18 74 16 58 Z" fill="#152430"/>
+        <path d="M22 56 C20 38 34 24 52 22 C72 20 84 36 82 54 C80 74 62 82 44 80 C26 78 24 70 22 56 Z" fill="#1E3A4C"/>
+        <path d="M28 60 C36 40 58 28 78 48 C70 70 40 78 28 60 Z" fill="#2EA0C8" opacity=".85"/>
+        <path d="M34 52 C42 38 62 34 74 50 C66 64 44 68 34 52 Z" fill="#7FE0C8" opacity=".55"/>
+        <path d="M30 44 C38 32 54 30 66 40" fill="none" stroke="#D5E4F2" stroke-width="1.4" opacity=".45"/>`);
+    }
+    if(id==="selenit"){
+      return svgWrap(`
+        <ellipse cx="50" cy="92" rx="16" ry="4" fill="#000" opacity=".18"/>
+        <path d="M42 10 L58 10 L62 88 L38 88 Z" fill="#B9A990"/>
+        <path d="M44 10 L56 10 L58 88 L42 88 Z" fill="#F3EEE4"/>
+        <path d="M46 10 L52 10 L54 88 L46 88 Z" fill="#FFFEFB"/>
+        <path d="M42 10 L50 4 L58 10 Z" fill="#F7F1E6"/>
+        <path d="M42 10 L50 4 L50 10 Z" fill="#FFFEFB"/>
+        <path d="M46 28 L54 26" stroke="#fff" stroke-width="1.2" opacity=".7" stroke-linecap="round"/>
+        <path d="M45 50 L55 48" stroke="#D9D0C0" stroke-width=".8" opacity=".6"/>`);
+    }
+    if(id==="turmalin"){
+      return svgWrap(`
+        <ellipse cx="50" cy="92" rx="14" ry="4" fill="#000" opacity=".3"/>
+        <path d="M40 12 L60 12 L66 88 L34 88 Z" fill="#111114"/>
+        <path d="M42 12 L50 12 L48 88 L36 88 Z" fill="#2A2A30"/>
+        <path d="M52 12 L60 12 L64 88 L52 88 Z" fill="#0A0A0C"/>
+        <path d="M44 12 L50 12 L50 88 L46 88 Z" fill="#6A6A72" opacity=".55"/>
+        <path d="M40 12 L50 4 L60 12 Z" fill="#2A2A30"/>
+        <path d="M40 12 L50 4 L50 12 Z" fill="#D8D6DC" opacity=".45"/>
+        <path d="M44 22 L48 86" stroke="#6A6A72" stroke-width=".7" opacity=".5"/>
+        <path d="M54 22 L58 86" stroke="#000" stroke-width=".8" opacity=".5"/>`);
+    }
+    if(id==="aventurin"){
+      return svgWrap(`
+        <ellipse cx="50" cy="90" rx="24" ry="5" fill="#000" opacity=".2"/>
+        <ellipse cx="50" cy="52" rx="28" ry="34" fill="#2F4A24"/>
+        <ellipse cx="50" cy="52" rx="24" ry="30" fill="#5E8A46"/>
+        <ellipse cx="46" cy="46" rx="16" ry="20" fill="#9CBC7A"/>
+        <ellipse cx="40" cy="40" rx="6" ry="7" fill="#E5F0DC" opacity=".75"/>
+        <circle cx="58" cy="44" r="1.2" fill="#F7FFE8"/><circle cx="52" cy="58" r="1" fill="#F7FFE8"/>
+        <circle cx="62" cy="62" r="1.1" fill="#F7FFE8"/><circle cx="44" cy="64" r=".9" fill="#F7FFE8"/>
+        <circle cx="56" cy="36" r=".8" fill="#fff" opacity=".8"/>`);
+    }
+    if(id==="akvamarin"){
+      return svgWrap(`
+        <ellipse cx="50" cy="92" rx="16" ry="4" fill="#000" opacity=".2"/>
+        <path d="M38 22 L50 10 L62 22 L66 86 L34 86 Z" fill="#2C6A74"/>
+        <path d="M38 22 L50 10 L50 22 L42 86 L34 86 Z" fill="#5EA8B4"/>
+        <path d="M50 10 L62 22 L50 22 Z" fill="#E6F6F8"/>
+        <path d="M50 22 L62 22 L66 86 L58 86 Z" fill="#3E8894"/>
+        <path d="M42 22 L50 22 L50 86 L42 86 Z" fill="#A8D8E0"/>
+        <path d="M38 22 L50 10 L50 22 Z" fill="#C5E8EE"/>
+        <path d="M44 34 L50 32" stroke="#fff" stroke-width="1.3" stroke-linecap="round" opacity=".7"/>`);
+    }
+    if(id==="fluorit"){
+      return svgWrap(`
+        <ellipse cx="50" cy="90" rx="26" ry="5" fill="#000" opacity=".22"/>
+        <g transform="translate(22,38)">
+          <path d="M0 16 L18 6 L36 16 L18 26 Z" fill="#C9B6E4"/>
+          <path d="M0 16 L18 26 L18 48 L0 38 Z" fill="#5C3E86"/>
+          <path d="M36 16 L18 26 L18 48 L36 38 Z" fill="#9B8ED0"/>
+        </g>
+        <g transform="translate(42,22)">
+          <path d="M0 16 L16 8 L32 16 L16 24 Z" fill="#B8DCC8"/>
+          <path d="M0 16 L16 24 L16 44 L0 36 Z" fill="#3E5A8A"/>
+          <path d="M32 16 L16 24 L16 44 L32 36 Z" fill="#6AA0C8"/>
+        </g>
+        <path d="M48 30 L56 26" stroke="#fff" stroke-width="1.3" stroke-linecap="round" opacity=".55"/>`);
+    }
+    if(id==="pirit"){
+      return svgWrap(`
+        <ellipse cx="50" cy="90" rx="26" ry="5" fill="#000" opacity=".25"/>
+        <g transform="translate(16,40)">
+          <path d="M0 14 L16 6 L32 14 L16 22 Z" fill="#F6E7B0"/>
+          <path d="M0 14 L16 22 L16 40 L0 32 Z" fill="#6A5410"/>
+          <path d="M32 14 L16 22 L16 40 L32 32 Z" fill="#B8942C"/>
+        </g>
+        <g transform="translate(46,28)">
+          <path d="M0 16 L18 6 L36 16 L18 26 Z" fill="#FBF0D2"/>
+          <path d="M0 16 L18 26 L18 50 L0 40 Z" fill="#6A5410"/>
+          <path d="M36 16 L18 26 L18 50 L36 40 Z" fill="#E0C35A"/>
+        </g>
+        <g transform="translate(34,54)">
+          <path d="M0 10 L12 4 L24 10 L12 16 Z" fill="#F6E7B0"/>
+          <path d="M0 10 L12 16 L12 30 L0 24 Z" fill="#8A7018"/>
+          <path d="M24 10 L12 16 L12 30 L24 24 Z" fill="#C9A24A"/>
+        </g>
+        <path d="M56 34 L64 30" stroke="#fff" stroke-width="1.4" stroke-linecap="round" opacity=".65"/>`);
+    }
+    // fallback point
+    return svgWrap(`
+      <ellipse cx="50" cy="90" rx="20" ry="5" fill="#000" opacity=".22"/>
+      <path d="M50 8 L70 36 L50 90 L30 36 Z" fill="${ink}"/>
+      <path d="M50 8 L70 36 L50 42 Z" fill="${hi}"/>
+      <path d="M50 8 L30 36 L50 42 Z" fill="${mid}"/>
+      <path d="M50 42 L70 36 L50 90 Z" fill="${ink}"/>
+      <path d="M50 42 L30 36 L50 90 Z" fill="${deep}"/>
+      <path d="M44 24 L50 14 L54 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>`);
   }
 
-  /* catalog */
+    /* catalog */
   const filters = [
     {id:"svi", label:"Svi"},
     {id:"kristal", label:"Kristali i minerali"},
@@ -705,7 +953,7 @@ section{padding:88px 0;position:relative}
   });
   function productCard(p){
     return `<article class="card" id="art-${p.id}">
-      <div class="card-vis" style="--glow:${p.c[1]}55">${gemSvg(p.c)}</div>
+      <div class="card-vis" style="--glow:${p.c[1]}55"><div class="gem">${gemSvg(p)}</div></div>
       <div class="card-body">
         <div class="card-cat">${p.catLabel}</div>
         <h3>${p.name}</h3>
@@ -727,7 +975,7 @@ section{padding:88px 0;position:relative}
   document.getElementById("sets").innerHTML = SETS.map(s => `
     <article class="set" id="art-${s.id}">
       <div class="set-vis" style="background:radial-gradient(circle at 50% 40%, ${s.c[1]}55, #1A1028)">
-        ${gemSvg(s.c, 90, 110)}
+        <div class="gem">${gemSvg(s)}</div>
       </div>
       <div>
         <div class="card-cat">Poklon set</div>
@@ -852,7 +1100,7 @@ section{padding:88px 0;position:relative}
     const item = data[key];
     const p = byId(item.id);
     [...choicesEl.children].forEach(el => el.classList.toggle("on", el.getAttribute("data-pick")===key));
-    resultEl.innerHTML = `${gemSvg(p.c, 64, 80)}
+    resultEl.innerHTML = `<div class="gem">${gemSvg(p)}</div>
       <div class="card-cat">${p.name}</div>
       <h3>${p.name}</h3>
       <p>${item.text}</p>
