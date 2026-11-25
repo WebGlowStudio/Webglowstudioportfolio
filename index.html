@@ -227,6 +227,13 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 .ph.pagoda b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px;font-size:17px}
 @container (max-width:336px){.ph.pagoda b{font-size:17px}}
 
+
+.ph.kombi{background:radial-gradient(circle at 50% 28%, #1C3C68, #0B1220 74%);color:#F7F4EC;container-type:inline-size}
+.ph.kombi svg{width:96px;height:64px;flex-shrink:0}
+.ph.kombi small{color:#FFD56A}
+.ph.kombi b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px;font-size:17px}
+@container (max-width:336px){.ph.kombi b{font-size:17px}}
+
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
 .ben{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
@@ -556,6 +563,17 @@ button.btn{font-family:inherit;cursor:pointer}
           <a class="btn small" href="demos/moja-pagoda/" target="_blank" rel="noopener">Otvori sajt →</a>
         </div>
       </article>
+
+      <article class="card">
+        <a class="shot" href="demos/kombimove/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph kombi" aria-hidden="true"><svg viewBox="0 0 96 64" fill="none"><path d="M18 42h48l8-12h8v12h4" stroke="#F0B429" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round"/><path d="M18 42v-16h30l6 8H18z" stroke="#FFD56A" stroke-width="1.5" fill="none" stroke-linejoin="round"/><circle cx="30" cy="44" r="4.2" stroke="#F0B429" stroke-width="1.5"/><circle cx="62" cy="44" r="4.2" stroke="#F0B429" stroke-width="1.5"/><path d="M16 48h68" stroke="#D9891A" stroke-width="1.2" stroke-linecap="round"/></svg><b>KombiMove</b><small>Selidbe Beograd</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Selidbe</span><span class="tag">Predlog sajta</span></div>
+          <h3>KombiMove</h3>
+          <p>Sajt za selidbe i prevoz robe: stanovi i kuće, transport nameštaja, dostava i relacije širom Srbije.</p>
+          <a class="btn small" href="demos/kombimove/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+
 
 
     </div>
