@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Beauty studio Angelina · nokti, šminka, depilacija i edukacija</title>
+  <meta name="description" content="Beauty studio Angelina: izlivanje i gel na prirodnim noktima, šminka, depilacija toplim i hladnim voskom, gel lak na nogama i profesionalna edukacija depilacije. Predlog sajta WebGlow Studija.">
+  <meta name="keywords" content="Beauty studio Angelina, nokti, izlivanje noktiju, gel na prirodnim noktima, šminka, depilacija, topli vosak, hladni vosak, gel lak na nogama, edukacija depilacije, salon lepote, Srbija">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#4A215C">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Beauty studio Angelina · nokti, šminka i depilacija">
+  <meta name="twitter:description" content="Nokti, šminka, depilacija i edukacija depilacije. Predlog sajta u ljubičastom stilu, izradio WebGlow Studio.">
+  <meta property="og:title" content="Beauty studio Angelina · nokti, šminka i depilacija">
+  <meta property="og:description" content="Izlivanje i gel na noktima, šminka, depilacija toplim i hladnim voskom, plus profesionalna edukacija depilacije.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/beauty-studio-angelina/">
+  <meta property="og:locale" content="sr_RS">
+  <link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/beauty-studio-angelina/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%234A215C'/%3E%3Cpath d='M16 7c2.2 3.2 3 5.4 2.4 7.2C21 13.4 24 14 25 16.4c.8 1.8-.2 4-2.6 4.6-1.8.5-3.4-.2-4.4-1.5.2 2.2.2 4.2 1.2 6.5H12.8c1-2.3 1-4.3 1.2-6.5-1 1.3-2.6 2-4.4 1.5C7.2 20.4 6.2 18.2 7 16.4 8 14 11 13.4 13.6 14.2 13 12.4 13.8 10.2 16 7Z' fill='%23E8D5F0'/%3E%3Ccircle cx='16' cy='16.2' r='1.7' fill='%23C9A8D8'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Beauty studio Angelina",
+    "description": "Predlog sajta za beauty studio: nokti, šminka, depilacija i edukacija depilacije. Napravio WebGlow Studio. Kontakt podaci su izmišljeni.",
+    "url": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/beauty-studio-angelina/",
+    "telephone": "06x xxx xxxx",
+    "email": "kontakt@primer.rs",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ulica primera 12",
+      "addressCountry": "RS"
+    },
+    "areaServed": "RS",
+    "priceRange": "RSD"
+  }
+  </script>
+  <style>
+    :root{
+      --bg:#FBF8FC;
+      --bg-soft:#F3EAF8;
+      --ink:#2A1838;
+      --muted:#6B5478;
+      --line:#E6D7EE;
+      --lilac:#C9A8D8;
+      --violet:#6E3B86;
+      --plum:#4A215C;
+      --orchid:#A85A9A;
+      --white:#fff;
+      --gold:#C4A574;
+      --header:72px;
+      --demo:36px;
+      --gutter:clamp(20px,4vw,56px);
+      --serif:"Playfair Display",Georgia,serif;
+      --sans:"Jost",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:var(--sans);
+      font-size:17px;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    img,svg{max-width:100%;display:block}
+    a{color:var(--violet)}
+    button,input,select,textarea{font:inherit}
+    h1,h2,h3,.serif,.logo-name{
+      font-family:var(--serif);
+      font-style:normal;
+      font-synthesis:none;
+      font-weight:600;
+    }
+    .skip{
+      position:absolute;left:-999px;top:0;
+      background:var(--plum);color:#fff;padding:8px 16px;z-index:100;
+    }
+    .skip:focus{left:12px;top:12px}
+    .wrap{width:min(1120px,100% - 2*var(--gutter));margin-inline:auto}
+    .demo-bar{
+      position:sticky;top:0;z-index:40;
+      height:var(--demo);
+      display:flex;align-items:center;justify-content:center;gap:.5rem;
+      background:var(--plum);color:#F7EEF8;
+      font-size:13px;font-weight:400;letter-spacing:.02em;text-align:center;padding:0 16px;
+    }
+    .demo-bar a{color:#F0D9F6;text-decoration:none}
+    .demo-bar a:hover{color:#fff}
+    .site-header{
+      position:sticky;top:var(--demo);z-index:30;
+      height:var(--header);
+      display:flex;align-items:center;
+      background:rgba(251,248,252,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid transparent;
+      transition:border-color .3s,background .3s;
+    }
+    .site-header.solid{border-bottom-color:var(--line);background:rgba(251,248,252,.96)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+    .logo-mark{width:36px;height:36px;flex-shrink:0}
+    .logo-kicker{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--violet);font-weight:500}
+    .logo-name{display:block;font-size:1.25rem;letter-spacing:.01em;line-height:1;color:var(--plum)}
+    .nav{display:flex;align-items:center;gap:22px}
+    .nav a{text-decoration:none;color:var(--ink);font-size:.95rem;font-weight:400}
+    .nav a:hover{color:var(--violet)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 22px;border-radius:999px;border:0;
+      background:var(--plum);color:#fff;text-decoration:none;
+      font-weight:500;font-size:.95rem;cursor:pointer;
+      transition:background .25s,transform .25s,box-shadow .25s;
+    }
+    .btn:hover{background:var(--violet);transform:translateY(-1px)}
+    .btn-ghost{
+      background:transparent;color:var(--plum);
+      border:1px solid var(--lilac);
+    }
+    .btn-ghost:hover{background:var(--bg-soft);color:var(--plum)}
+    .nav-cta{padding:10px 18px}
+    .burger{display:none;width:42px;height:42px;border:0;background:transparent;padding:10px;cursor:pointer}
+    .burger span{display:block;height:1.5px;background:var(--plum);margin:6px 0;transition:transform .25s,opacity .25s}
+    .hero{
+      position:relative;
+      padding:clamp(36px,6vw,72px) 0 clamp(64px,8vw,110px);
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:-20% -10% auto auto;
+      width:min(70vw,640px);height:min(70vw,640px);
+      background:radial-gradient(circle,rgba(201,168,216,.45),rgba(168,90,154,.08) 54%,transparent 70%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:clamp(28px,5vw,64px);
+      align-items:center;
+    }
+    .hero-kicker{
+      font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--violet);font-weight:500;margin:0 0 14px;
+    }
+    .hero h1{
+      margin:0 0 18px;
+      font-size:clamp(2.6rem,7vw,5.2rem);
+      line-height:1.05;
+      letter-spacing:-.02em;
+      color:var(--plum);
+    }
+    .hero-lead{margin:0 0 28px;max-width:38ch;color:var(--muted);font-weight:300;font-size:1.08rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-art{position:relative;display:grid;place-items:center;min-height:340px}
+    .orchid{
+      width:min(100%,420px);height:auto;
+      filter:drop-shadow(0 22px 40px rgba(74,33,92,.18));
+      animation:floaty 7s ease-in-out infinite;
+    }
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    section{padding:clamp(64px,8vw,104px) 0}
+    .sec-kicker{
+      font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--violet);font-weight:500;margin:0 0 10px;
+    }
+    .sec-title{margin:0 0 12px;font-size:clamp(1.85rem,3.6vw,2.8rem);line-height:1.15;letter-spacing:-.02em;color:var(--plum)}
+    .sec-lead{margin:0 0 36px;max-width:46ch;color:var(--muted);font-weight:300}
+    .services{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .service{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:26px 24px 24px;
+      transition:transform .3s,box-shadow .3s;
+    }
+    .service:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(74,33,92,.08)}
+    .service svg{width:44px;height:44px;margin-bottom:14px}
+    .service h3{margin:0 0 8px;font-size:1.3rem;color:var(--plum)}
+    .service p{margin:0;color:var(--muted);font-weight:300;font-size:.98rem}
+    .edu{
+      background:
+        radial-gradient(circle at 88% 20%,rgba(201,168,216,.4),transparent 42%),
+        linear-gradient(180deg,var(--plum),#351544);
+      color:#F7EEF8;
+    }
+    .edu .sec-kicker{color:#E4C8F0}
+    .edu .sec-title,.edu .sec-lead{color:#fff}
+    .edu .sec-lead{color:#E8D5F0}
+    .edu-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start}
+    .motto{
+      margin:0 0 28px;
+      font-family:var(--serif);
+      font-style:normal;
+      font-synthesis:none;
+      font-size:clamp(1.15rem,2.2vw,1.45rem);
+      letter-spacing:.04em;
+      color:#F0D9F6;
+    }
+    .edu-points{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+    .edu-points li{
+      display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(232,213,240,.18);
+      border-radius:16px;padding:14px 16px;
+    }
+    .edu-points b{display:block;font-weight:500;color:#fff}
+    .edu-points span{display:block;color:#E4C8F0;font-weight:300;font-size:.94rem}
+    .dot{
+      width:10px;height:10px;margin-top:7px;border-radius:50%;
+      background:#E8D5F0;box-shadow:0 0 0 6px rgba(232,213,240,.15);
+    }
+    .edu-panel{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(232,213,240,.2);
+      border-radius:24px;padding:28px 26px;
+    }
+    .edu-panel p{margin:0 0 18px;color:#E8D5F0;font-weight:300}
+    .edu-panel .btn{background:#fff;color:var(--plum)}
+    .edu-panel .btn:hover{background:#F3EAF8}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .tile{
+      position:relative;aspect-ratio:1;
+      border-radius:22px;overflow:hidden;
+      border:1px solid var(--line);
+      display:grid;place-items:end start;
+      padding:16px 18px;
+      color:var(--plum);
+    }
+    .tile strong{
+      position:relative;z-index:1;
+      font-family:var(--serif);font-style:normal;font-synthesis:none;
+      font-weight:600;font-size:1.15rem;
+    }
+    .tile svg{position:absolute;inset:0;width:100%;height:100%}
+    .price-note{
+      display:inline-block;margin:0 0 28px;padding:6px 12px;
+      border-radius:999px;background:var(--bg-soft);color:var(--violet);
+      font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;font-weight:500;
+    }
+    .prices{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .price-card{
+      background:var(--white);border:1px solid var(--line);border-radius:20px;padding:22px 22px 8px;
+    }
+    .price-card h3{margin:0 0 12px;font-size:1.25rem;color:var(--plum)}
+    .price-row{
+      display:flex;justify-content:space-between;gap:16px;align-items:baseline;
+      padding:12px 0;border-top:1px solid var(--line);
+      font-size:.97rem;
+    }
+    .price-row span{color:var(--muted);font-weight:300}
+    .price-row b{font-weight:500;white-space:nowrap;color:var(--plum)}
+    .okvirno{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--orchid);font-weight:500;margin-top:2px}
+    .contact{background:var(--bg-soft)}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;align-items:start}
+    .info-list{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:14px}
+    .info-list li{display:grid;gap:2px}
+    .info-list small{color:var(--violet);letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;font-weight:500}
+    .info-list b{font-weight:500}
+    .map-ph{
+      margin-top:8px;height:160px;border-radius:18px;border:1px dashed var(--lilac);
+      background:
+        linear-gradient(180deg,transparent 21px,rgba(201,168,216,.25) 22px),
+        linear-gradient(90deg,transparent 21px,rgba(201,168,216,.25) 22px),
+        #fff;
+      background-size:22px 22px;
+      display:grid;place-items:center;color:var(--muted);font-size:.9rem;text-align:center;padding:16px;
+    }
+    .form{
+      background:var(--white);border:1px solid var(--line);border-radius:24px;padding:26px;
+    }
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .field{display:grid;gap:6px}
+    .field-full{grid-column:1/-1}
+    .field span{font-size:.82rem;font-weight:500;color:var(--plum)}
+    .field input,.field select,.field textarea{
+      width:100%;border:1px solid var(--line);border-radius:12px;
+      padding:12px 14px;background:#FDFBFE;color:var(--ink);
+    }
+    .field input:focus,.field select:focus,.field textarea:focus{
+      outline:2px solid var(--lilac);outline-offset:1px;border-color:var(--violet);
+    }
+    .form .btn{margin-top:16px;width:100%}
+    .form-success{display:none}
+    .form.is-sent .fields,.form.is-sent .btn,.form.is-sent .form-hint{display:none}
+    .form.is-sent .form-success{display:block}
+    .form-success h3{margin:0 0 8px;color:var(--plum)}
+    .form-hint{margin:12px 0 0;color:var(--muted);font-size:.85rem;font-weight:300}
+    .site-footer{
+      border-top:1px solid var(--line);
+      padding:28px 0 40px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+    .site-footer a{color:var(--violet);text-decoration:none}
+    .site-footer a:hover{color:var(--plum)}
+    .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+    .rv.in{opacity:1;transform:none}
+    @media (max-width:900px){
+      .hero-grid,.edu-grid,.contact-grid,.prices{grid-template-columns:1fr}
+      .hero-art{order:-1;min-height:260px}
+      .orchid{width:min(70%,320px)}
+      .gallery{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:720px){
+      .nav{
+        display:none;position:fixed;top:calc(var(--demo) + var(--header));
+        left:0;right:0;background:rgba(251,248,252,.98);
+        flex-direction:column;align-items:stretch;gap:0;
+        padding:8px var(--gutter) 18px;border-bottom:1px solid var(--line);
+      }
+      .menu-open .nav{display:flex}
+      .nav a{padding:12px 0;border-bottom:1px solid var(--line)}
+      .nav-cta{margin-top:10px;width:fit-content}
+      .burger{display:block}
+      .services,.fields{grid-template-columns:1fr}
+      .hero{padding-bottom:48px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .orchid,.rv,.service,.btn{animation:none!important;transition:none!important}
+      .rv{opacity:1;transform:none}
+      .service:hover,.btn:hover{transform:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+  <div class="demo-bar">Predlog sajta · <a href="https://webglowstudio.github.io/Webglowstudioportfolio/">WebGlow Studio</a> · kontakti su izmišljeni, cene su okvirne</div>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="logo" href="#pocetna">
+        <svg class="logo-mark" viewBox="0 0 36 36" aria-hidden="true">
+          <rect width="36" height="36" rx="12" fill="#4A215C"/>
+          <path d="M18 6.5c2.6 3.8 3.6 6.4 2.8 8.5 3-1 6.6-.2 7.8 2.6 1 2.2-.3 4.8-3.1 5.5-2.1.6-4-.3-5.2-1.8.2 2.6.2 5 1.4 7.7h-7.4c1.2-2.7 1.2-5.1 1.4-7.7-1.2 1.5-3.1 2.4-5.2 1.8-2.8-.7-4.1-3.3-3.1-5.5 1.2-2.8 4.8-3.6 7.8-2.6-.8-2.1.2-4.7 2.8-8.5Z" fill="#E8D5F0"/>
+          <circle cx="18" cy="17.2" r="2" fill="#C9A8D8"/>
+        </svg>
+        <span>
+          <span class="logo-kicker">Beauty studio</span>
+          <span class="logo-name">Angelina</span>
+        </span>
+      </a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otvori meni">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Glavna navigacija">
+        <a href="#usluge">Usluge</a>
+        <a href="#edukacija">Edukacija</a>
+        <a href="#galerija">Galerija</a>
+        <a href="#cenovnik">Cenovnik</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn nav-cta" href="#kontakt">Zakaži termin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="sadrzaj">
+    <section class="hero" id="pocetna">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hero-kicker">Salon lepote</p>
+          <h1>Beauty studio Angelina</h1>
+          <p class="hero-lead">Nokti, šminka i depilacija u nežnim ljubičastim tonovima, uz edukaciju za one koji žele da rastu u poslu.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#kontakt">Zakaži termin</a>
+            <a class="btn btn-ghost" href="#usluge">Pogledaj usluge</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg class="orchid" viewBox="0 0 420 420" fill="none">
+            <defs>
+              <radialGradient id="bloom" cx="50%" cy="42%" r="60%">
+                <stop offset="0%" stop-color="#F7EEF8"/>
+                <stop offset="55%" stop-color="#D4B3E2"/>
+                <stop offset="100%" stop-color="#8A4A96"/>
+              </radialGradient>
+              <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FBF6FD"/>
+                <stop offset="100%" stop-color="#C9A8D8"/>
+              </linearGradient>
+            </defs>
+            <circle cx="210" cy="210" r="180" fill="url(#bloom)" opacity=".35"/>
+            <path d="M210 86c28 42 48 78 28 118 44-18 96 2 108 52 10 40-22 78-70 82" stroke="#C9A8D8" stroke-width="1.2" opacity=".7"/>
+            <path d="M210 70c32 54 38 92 18 124 22-8 70-4 88 36 16 36-8 78-50 90-28 8-52-4-68-24" fill="url(#petal)"/>
+            <path d="M210 70c-32 54-38 92-18 124-22-8-70-4-88 36-16 36 8 78 50 90 28 8 52-4 68-24" fill="#E8D5F0"/>
+            <path d="M168 200c-40 8-86 48-86 96 0 38 32 66 78 58 30-6 56-30 62-58" fill="#B57BB8" opacity=".85"/>
+            <path d="M252 200c40 8 86 48 86 96 0 38-32 66-78 58-30-6-56-30-62-58" fill="#A85A9A" opacity=".8"/>
+            <path d="M210 196c22 18 34 48 18 86-8 20-26 36-48 28-18-6-26-28-18-48 8-22 28-48 48-66Z" fill="#4A215C"/>
+            <circle cx="204" cy="248" r="10" fill="#E8D5F0"/>
+            <path d="M210 282v72" stroke="#6E3B86" stroke-width="3" stroke-linecap="round"/>
+            <path d="M210 330c-28 10-46 34-50 58" stroke="#6E3B86" stroke-width="2" stroke-linecap="round"/>
+            <path d="M210 318c24 14 40 36 46 58" stroke="#8A4A96" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="usluge">
+      <div class="wrap">
+        <div class="rv">
+          <p class="sec-kicker">Usluge</p>
+          <h2 class="sec-title">Sve što treba, na jednom mestu</h2>
+          <p class="sec-lead">Pažljiv rad, čist stil i termin koji se poštuje. Izaberi uslugu, a detalje dogovaramo kad zakažeš.</p>
+        </div>
+        <div class="services">
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect width="44" height="44" rx="14" fill="#F3EAF8"/>
+              <path d="M16 30c6-10 8-16 8-22 4 6 7 14 4 22" stroke="#6E3B86" stroke-width="1.7" stroke-linecap="round"/>
+              <path d="M18 30h11" stroke="#A85A9A" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+            <h3>Nokti</h3>
+            <p>Izlivanje i gel na prirodnim noktima, urednog oblika i dugotrajnog sjaja.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect width="44" height="44" rx="14" fill="#F3EAF8"/>
+              <circle cx="18" cy="20" r="5" stroke="#6E3B86" stroke-width="1.7"/>
+              <circle cx="27" cy="18" r="3.5" stroke="#A85A9A" stroke-width="1.6"/>
+              <path d="M14 30c3-4 13-4 16 0" stroke="#6E3B86" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+            <h3>Šminka</h3>
+            <p>Dnevni ili svečani look, usklađen sa tvojom linijom lica i prilikom.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect width="44" height="44" rx="14" fill="#F3EAF8"/>
+              <path d="M14 28c8-10 16-10 16 0" stroke="#6E3B86" stroke-width="1.7" stroke-linecap="round"/>
+              <path d="M16 18h12" stroke="#A85A9A" stroke-width="1.7" stroke-linecap="round"/>
+              <circle cx="22" cy="18" r="2" fill="#C9A8D8"/>
+            </svg>
+            <h3>Depilacija</h3>
+            <p>Topli i hladni vosak, temeljno i pažljivo, prilagođeno tvojoj koži.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect width="44" height="44" rx="14" fill="#F3EAF8"/>
+              <path d="M15 17c8 2 12 8 14 16" stroke="#6E3B86" stroke-width="1.7" stroke-linecap="round"/>
+              <path d="M15 17c-2 6 2 12 8 14" stroke="#A85A9A" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="15" cy="17" r="2.2" fill="#C9A8D8"/>
+            </svg>
+            <h3>Gel lak na nogama</h3>
+            <p>Uredan pedikir sa gel lakom koji traje i lepo izgleda u svakom koraku.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="edu" id="edukacija">
+      <div class="wrap edu-grid">
+        <div class="rv">
+          <p class="sec-kicker">Edukacija depilacije</p>
+          <h2 class="sec-title">Postanite stručnjak u depilaciji!</h2>
+          <p class="motto">Učite · usavršavajte se · ostvarite svoje ciljeve</p>
+          <ul class="edu-points">
+            <li><i class="dot" aria-hidden="true"></i><div><b>Profesionalna obuka</b><span>Jasan program, od osnova do sigurnog rada sa klijentima.</span></div></li>
+            <li><i class="dot" aria-hidden="true"></i><div><b>Praktičan rad</b><span>Vežbaš tehniku uz podršku, ne samo teoriju sa strane.</span></div></li>
+            <li><i class="dot" aria-hidden="true"></i><div><b>Saveti i podrška nakon edukacije</b><span>Ostaješ u kontaktu i posle obuke, dok ne staneš na svoje noge.</span></div></li>
+            <li><i class="dot" aria-hidden="true"></i><div><b>Napredovanje u karijeri</b><span>Korak ka sopstvenom salonu, novim klijentima i sigurnijoj zaradi.</span></div></li>
+          </ul>
+        </div>
+        <aside class="edu-panel rv">
+          <p>Ako razmišljaš da radiš depilaciju profesionalno, javi se i pitaš za sledeći termin obuke. Raspored i cenu dogovaramo u razgovoru.</p>
+          <a class="btn" href="#kontakt">Pitaj za edukaciju</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="galerija">
+      <div class="wrap">
+        <div class="rv">
+          <p class="sec-kicker">Galerija</p>
+          <h2 class="sec-title">Atmosfera studija</h2>
+          <p class="sec-lead">Vizuelni predlog u ljubičastim i belim tonovima, sa motivom orhideje. U pravoj verziji ovde dolaze vaše fotografije rada.</p>
+        </div>
+        <div class="gallery">
+          <figure class="tile rv" style="background:linear-gradient(160deg,#FBF6FD,#D4B3E2 70%,#8A4A96)">
+            <svg viewBox="0 0 200 200" aria-hidden="true"><path d="M100 36c16 28 22 48 12 68 20-8 52-2 62 28 8 24-8 48-36 54" fill="#F7EEF8" opacity=".85"/><path d="M100 36c-16 28-22 48-12 68-20-8-52-2-62 28-8 24 8 48 36 54" fill="#E8D5F0" opacity=".9"/><ellipse cx="100" cy="128" rx="18" ry="22" fill="#4A215C"/></svg>
+            <strong>Orhideja</strong>
+          </figure>
+          <figure class="tile rv" style="background:linear-gradient(200deg,#FFF,#F3EAF8 40%,#C9A8D8)">
+            <svg viewBox="0 0 200 200" aria-hidden="true"><path d="M86 40c20 40 28 70 20 110" stroke="#6E3B86" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M70 150h50" stroke="#A85A9A" stroke-width="6" stroke-linecap="round"/><circle cx="128" cy="64" r="16" fill="#D4B3E2"/></svg>
+            <strong>Nokti</strong>
+          </figure>
+          <figure class="tile rv" style="background:linear-gradient(180deg,#F7EEF8,#E8D5F0 50%,#B57BB8)">
+            <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="80" cy="90" r="28" fill="#fff" opacity=".7"/><circle cx="120" cy="80" r="20" fill="#F3EAF8"/><circle cx="108" cy="118" r="24" fill="#C9A8D8" opacity=".85"/></svg>
+            <strong>Šminka</strong>
+          </figure>
+          <figure class="tile rv" style="background:linear-gradient(220deg,#FBF8FC,#E6D7EE 60%,#A85A9A)">
+            <svg viewBox="0 0 200 200" aria-hidden="true"><path d="M40 120c40-40 80-40 120 0" stroke="#4A215C" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M52 86h96" stroke="#C9A8D8" stroke-width="8" stroke-linecap="round"/></svg>
+            <strong>Depilacija</strong>
+          </figure>
+          <figure class="tile rv" style="background:linear-gradient(160deg,#FFF,#E8D5F0 55%,#6E3B86)">
+            <svg viewBox="0 0 200 200" aria-hidden="true"><path d="M60 70c40 10 70 40 80 90" stroke="#4A215C" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M60 70c-8 30 8 60 40 74" stroke="#C9A8D8" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+            <strong>Gel lak</strong>
+          </figure>
+          <figure class="tile rv" style="background:linear-gradient(200deg,#4A215C,#6E3B86 60%,#C9A8D8)">
+            <svg viewBox="0 0 200 200" aria-hidden="true"><rect x="55" y="50" width="90" height="110" rx="8" fill="#F7EEF8"/><path d="M74 86h52M74 108h52M74 128h36" stroke="#6E3B86" stroke-width="5" stroke-linecap="round"/><circle cx="128" cy="150" r="10" fill="#A85A9A"/></svg>
+            <strong>Edukacija</strong>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="cenovnik">
+      <div class="wrap">
+        <div class="rv">
+          <p class="sec-kicker">Cenovnik</p>
+          <h2 class="sec-title">Okvirne cene, kao primer</h2>
+          <p class="sec-lead">Tačan iznos zavisi od usluge i dogovora pre termina. Ovo su orijentacione vrednosti za predlog sajta.</p>
+          <p class="price-note">Cene su okvirne</p>
+        </div>
+        <div class="prices">
+          <article class="price-card rv">
+            <h3>Nokti</h3>
+            <div class="price-row"><span>Izlivanje noktiju</span><b>od 3.000 RSD<small class="okvirno">okvirno</small></b></div>
+            <div class="price-row"><span>Gel na prirodnim noktima</span><b>od 2.200 RSD<small class="okvirno">okvirno</small></b></div>
+            <div class="price-row"><span>Gel lak na nogama</span><b>od 1.800 RSD<small class="okvirno">okvirno</small></b></div>
+          </article>
+          <article class="price-card rv">
+            <h3>Šminka</h3>
+            <div class="price-row"><span>Dnevna šminka</span><b>od 2.500 RSD<small class="okvirno">okvirno</small></b></div>
+            <div class="price-row"><span>Večernja i svečana šminka</span><b>od 3.500 RSD<small class="okvirno">okvirno</small></b></div>
+          </article>
+          <article class="price-card rv">
+            <h3>Depilacija</h3>
+            <div class="price-row"><span>Noge cele, topli ili hladni vosak</span><b>od 2.000 RSD<small class="okvirno">okvirno</small></b></div>
+            <div class="price-row"><span>Podlaktice</span><b>od 1.200 RSD<small class="okvirno">okvirno</small></b></div>
+            <div class="price-row"><span>Pazuhe</span><b>od 800 RSD<small class="okvirno">okvirno</small></b></div>
+            <div class="price-row"><span>Lice</span><b>od 600 RSD<small class="okvirno">okvirno</small></b></div>
+          </article>
+          <article class="price-card rv">
+            <h3>Edukacija depilacije</h3>
+            <div class="price-row"><span>Profesionalna obuka, praktičan rad i podrška nakon kursa</span><b>na upit<small class="okvirno">okvirno</small></b></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt">
+      <div class="wrap contact-grid">
+        <div class="rv">
+          <p class="sec-kicker">Kontakt i lokacija</p>
+          <h2 class="sec-title">Zakaži termin</h2>
+          <p class="sec-lead">Javi se porukom ili ostavi kratak upit. U ovom predlogu kontakt podaci nisu pravi.</p>
+          <ul class="info-list">
+            <li><small>Telefon</small><b>06x xxx xxxx</b></li>
+            <li><small>Mejl</small><b>kontakt@primer.rs</b></li>
+            <li><small>Lokacija</small><b>Ulica primera 12, Srbija</b></li>
+            <li><small>Radno vreme</small><b>Pon–sub, 10–20h (primer)</b></li>
+          </ul>
+          <div class="map-ph">Mapa lokacije · primer prikaz, bez prave adrese</div>
+        </div>
+        <form class="form rv" id="termin" action="#" method="post" novalidate>
+          <div class="fields">
+            <label class="field"><span>Ime</span><input id="ime" name="ime" type="text" autocomplete="name" required></label>
+            <label class="field"><span>Telefon</span><input id="telefon" name="telefon" type="tel" inputmode="tel" placeholder="06x xxx xxxx"></label>
+            <label class="field field-full">
+              <span>Usluga</span>
+              <select id="usluga" name="usluga" required>
+                <option value="" selected disabled>Izaberi uslugu</option>
+                <option>Izlivanje noktiju</option>
+                <option>Gel na prirodnim noktima</option>
+                <option>Gel lak na nogama</option>
+                <option>Šminka</option>
+                <option>Depilacija, topli vosak</option>
+                <option>Depilacija, hladni vosak</option>
+                <option>Edukacija depilacije</option>
+              </select>
+            </label>
+            <label class="field field-full"><span>Željeni datum</span><input id="datum" name="datum" type="date"></label>
+            <label class="field field-full"><span>Poruka</span><textarea id="poruka" name="poruka" rows="4" maxlength="600" placeholder="Reci nam šta želiš da zakažeš…"></textarea></label>
+          </div>
+          <button class="btn" type="submit">Zakaži termin</button>
+          <p class="form-hint">Forma je deo predloga sajta i ne šalje pravu poruku.</p>
+          <div class="form-success" role="status" aria-live="polite">
+            <h3>Hvala, <span data-guest></span>.</h3>
+            <p>Ovo je predlog sajta. U pravoj verziji poruka bi stigla salonu, a ovde je ostala samo kao primer zakazivanja.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Beauty studio Angelina · predlog početne strane</p>
+      <p><a href="https://webglowstudio.github.io/Webglowstudioportfolio/">Izradio WebGlow Studio</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    const header = document.getElementById("top");
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("site-nav");
+    function closeMenu(){
+      document.body.classList.remove("menu-open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Otvori meni");
+    }
+    burger.addEventListener("click", function(){
+      const open = document.body.classList.toggle("menu-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "Zatvori meni" : "Otvori meni");
+    });
+    nav.addEventListener("click", function(e){ if(e.target.closest("a")) closeMenu(); });
+    const onScroll = function(){ header.classList.toggle("solid", window.scrollY > 8); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, {passive:true});
+
+    const form = document.getElementById("termin");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      const ime = (document.getElementById("ime").value || "").trim();
+      if(!ime || !document.getElementById("usluga").value){
+        form.reportValidity();
+        return;
+      }
+      form.querySelector("[data-guest]").textContent = ime;
+      form.classList.add("is-sent");
+    });
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reduce){
+      document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+      return;
+    }
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll(".rv").forEach(function(el, i){
+      el.style.transitionDelay = (i % 4) * 70 + "ms";
+      io.observe(el);
+    });
+  })();
+  </script>
+</body>
+</html>
