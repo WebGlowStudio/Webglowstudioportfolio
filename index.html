@@ -210,7 +210,14 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 .ph.otisak b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px}
 @container (max-width:336px){.ph.otisak b{font-size:17px}}
 @keyframes otisakslide{0%,100%{transform:translateY(2px)}50%{transform:translateY(-3px)}}
-@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip,.ph.klas .sway,.ph.lila .tilt,.ph.lila .gleam,.ph.bozur .bloom,.ph.zare .ember,.ph.volan .car,.ph.volan .wheel,.ph.borovi .pine,.ph.borovi .glow,.ph.lunara .gem,.ph.lunara .spark,.ph.otisak .sheet{animation:none}}
+.ph.rumena{background:radial-gradient(circle at 50% 28%, #8C4A5A, #3B2433 72%);color:#F7F1EA;container-type:inline-size}
+.ph.rumena svg{width:96px;height:64px;flex-shrink:0}
+.ph.rumena .curl{animation:rumenacurl 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:left center}
+.ph.rumena small{color:#E3B7B0}
+.ph.rumena b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px;font-size:17px}
+@container (max-width:336px){.ph.rumena b{font-size:17px}}
+@keyframes rumenacurl{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-10deg)}}
+@media (prefers-reduced-motion:reduce){.ph.band svg,.ph.mistik svg,.ph.sapica svg,.ph.lokna svg,.ph.pulsfit svg,.ph.ostrica .stripes,.ph.nabor .drip,.ph.klas .sway,.ph.lila .tilt,.ph.lila .gleam,.ph.bozur .bloom,.ph.zare .ember,.ph.volan .car,.ph.volan .wheel,.ph.borovi .pine,.ph.borovi .glow,.ph.lunara .gem,.ph.lunara .spark,.ph.otisak .sheet,.ph.rumena .curl{animation:none}}
 
 
 /* benefits */
@@ -520,6 +527,16 @@ button.btn{font-family:inherit;cursor:pointer}
           <h3>Kopirnica Čist Otisak</h3>
           <p>Sajt za kopirnicu: usluge i cenovnik, slanje fajla mejlom ili Viberom, porudžbina preko forme i mapa lokacije.</p>
           <a class="btn small" href="demos/kopirnica-cist-otisak/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="shot" href="demos/atelje-rumena/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph rumena" aria-hidden="true"><svg viewBox="0 0 96 64" fill="none"><g class="curl" stroke="#F7F1EA" stroke-linecap="round" fill="none"><path d="M18 42c8-4 16-16 18-26" stroke-width="2"/><path d="M26 44c8-3 15-14 17-24" stroke-width="1.8" stroke="#E3B7B0"/><path d="M34 45c7-2 13-12 15-22" stroke-width="1.7"/><path d="M42 46c7-2 12-11 14-20" stroke-width="1.8" stroke="#C4A265"/><path d="M50 46c6-1 11-10 13-18" stroke-width="1.6"/></g><path d="M16 46c18 10 48 10 66-2" stroke="#E3B7B0" stroke-width="1.4" fill="none" stroke-linecap="round"/><circle cx="78" cy="18" r="3" fill="#C4A265"/></svg><b>Atelje Rumena</b><small>Šminka i trepavice</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Šminka</span><span class="tag">Predlog sajta</span></div>
+          <h3>Atelje Rumena</h3>
+          <p>Sajt za šminkerku: šminka, trepavice i obrve, cenovnik, zahtev za termin i galerija ilustracija.</p>
+          <a class="btn small" href="demos/atelje-rumena/" target="_blank" rel="noopener">Otvori sajt →</a>
         </div>
       </article>
 
