@@ -183,6 +183,8 @@
     .faq summary::after{content:"+";color:var(--yellow);background:var(--navy);width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-family:var(--sans);font-weight:700;font-size:16px;flex:none}
     .faq details[open] summary::after{content:"–"}
     .faq details p{color:var(--muted);padding:0 0 16px}
+    .cal-section{background:#fff6d6}
+    .cal-section .section-head h2{font-size:clamp(32px,4.6vw,52px)}
     .book-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(22px,4vw,40px);align-items:start}
     .cal-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px 22px 24px;box-shadow:0 10px 30px rgba(11,31,58,.05)}
     .cal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
@@ -337,7 +339,7 @@
         <a href="#vaucer">Vaučer</a>
         <a href="#utisci">Recenzije</a>
         <a href="#pitanja">Pitanja</a>
-        <a class="btn btn-yellow" href="#upis">Zakaži u DM</a>
+        <a class="btn btn-yellow" href="#kalendar">Kalendar za prijavu</a>
       </nav>
     </div>
   </header>
@@ -351,9 +353,9 @@
         <div>
           <p class="eyebrow">Niš · B kategorija</p>
           <h1 id="hero-title">Tvoj put ka vozačkoj dozvoli počinje ovde</h1>
-          <p>Auto škola Desetka u Nišu. Stručna obuka za B kategoriju, da do dozvole stigneš sigurno i samouvereno. Za upis i termine, piši u Instagram DM.</p>
+          <p>Auto škola Desetka u Nišu. Stručna obuka za B kategoriju, da do dozvole stigneš sigurno i samouvereno. Datum za upis ili prvi čas biraš u kalendaru za prijavu, a dogovor dovršavaš u Instagram DM.</p>
           <div class="hero-actions">
-            <a class="btn btn-yellow" href="#upis">Zakaži upis</a>
+            <a class="btn btn-yellow" href="#kalendar">Kalendar za prijavu</a>
             <a class="btn btn-ghost" href="#kako">Kako do dozvole</a>
           </div>
         </div>
@@ -408,7 +410,7 @@
             <article class="aside-box reveal">
               <p class="eyebrow" style="color:var(--navy)">Informacije</p>
               <h3>Sve što treba, u DM</h3>
-              <p>Za cenu, slobodne termine i upis u narednu grupu, piši nam na Instagramu. Na sajtu je i kalendar, kao predlog datuma.</p>
+              <p>Za cenu, slobodne termine i upis u narednu grupu, otvori kalendar za prijavu ili piši u Instagram DM.</p>
             </article>
             <article class="aside-box reveal">
               <p class="eyebrow" style="color:var(--navy)">Testovi</p>
@@ -477,7 +479,7 @@
               <li>Grupa za B kategoriju</li>
               <li>Posle teorije nastavljamo sa vožnjom, prema tvom rasporedu</li>
             </ul>
-            <a class="btn btn-yellow" href="#upis">Zakaži upis</a>
+            <a class="btn btn-yellow" href="#kalendar">Kalendar za prijavu</a>
           </div>
         </div>
       </div>
@@ -552,7 +554,7 @@
           </details>
           <details>
             <summary>Kako se upisujem?</summary>
-            <p>Piši u DM ili izaberi datum na sajtu i potvrdi izbor. Potvrda ostaje na stranici, a upis završavamo u poruci, jer termini idu preko Instagrama.</p>
+            <p>Otvori kalendar za prijavu, izaberi datum i da li želiš upis na teoriju ili prvi čas vožnje, pa potvrdi izbor. Potvrda ostaje na stranici, a prijavu završavamo u Instagram DM.</p>
           </details>
           <details>
             <summary>Može li poklon vaučer za Novu godinu?</summary>
@@ -566,13 +568,13 @@
       </div>
     </section>
 
-    <section id="upis">
+    <section id="kalendar" class="cal-section" aria-labelledby="kalendar-title">
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow" style="color:var(--navy)">Zakazivanje</p>
-            <h2>Izaberi datum za upis ili prvi čas</h2>
-            <p class="lede" style="margin-top:10px">Ovo je predlog na sajtu, bez slanja u pozadini. Kad potvrdiš izbor, dobijaš poruku na stranici, a dogovor dovršavaš u Instagram DM.</p>
+            <p class="eyebrow" style="color:var(--navy)">Prijava</p>
+            <h2 id="kalendar-title">Kalendar za prijavu</h2>
+            <p class="lede" style="margin-top:10px">Izaberi datum, da li je reč o upisu na teoriju ili o prvom času vožnje, i ostavi ime. Kad potvrdiš izbor, dobijaš poruku na stranici, a prijavu dovršavaš u Instagram DM. Ovo je predlog na sajtu, bez slanja u pozadini.</p>
           </div>
         </div>
         <div class="book-grid reveal">
@@ -596,10 +598,9 @@
             <div class="field">
               <label for="book-type">Šta želiš</label>
               <select id="book-type" name="zahtev" required>
-                <option value="" selected disabled>Izaberi opciju</option>
-                <option>Upis na obuku, B kategorija</option>
-                <option>Informacije o decembarskoj grupi</option>
-                <option>Dogovor za prvi čas</option>
+                <option value="" selected disabled>Izaberi tip prijave</option>
+                <option>Upis / teorija</option>
+                <option>Prvi čas vožnje</option>
                 <option>Poklon vaučer</option>
               </select>
             </div>
@@ -607,12 +608,12 @@
               <label for="book-name">Ime</label>
               <input id="book-name" name="ime" type="text" autocomplete="given-name" placeholder="Tvoje ime">
             </div>
-            <p class="book-summary" id="book-summary">Odaberi datum u kalendaru i šta želiš da dogovoriš.</p>
+            <p class="book-summary" id="book-summary">Odaberi datum u kalendaru i tip prijave: upis / teorija ili prvi čas vožnje.</p>
             <button class="btn btn-yellow" id="book-send" type="submit" disabled>Potvrdi izbor</button>
             <div class="confirm" id="book-confirm" role="status" aria-live="polite">
               <h3>Izbor je sačuvan na stranici</h3>
               <p id="book-confirm-text"></p>
-              <p>Ovo je potvrda na sajtu, bez slanja u pozadini. Da završimo zakazivanje, javi se u Instagram DM, na <a href="https://ig.me/m/auto_skola_desetka" target="_blank" rel="noopener">@auto_skola_desetka</a>.</p>
+              <p>Ovo je potvrda na sajtu, bez slanja u pozadini. Da završimo prijavu, javi se u Instagram DM, na <a href="https://ig.me/m/auto_skola_desetka" target="_blank" rel="noopener">@auto_skola_desetka</a>.</p>
             </div>
             <noscript><p class="cal-note">Kalendar radi uz JavaScript. Piši direktno na Instagramu, @auto_skola_desetka.</p></noscript>
           </form>
@@ -655,7 +656,7 @@
       </div>
       <div>
         <p style="font-weight:600;color:#fff;margin-bottom:8px">Na stranici</p>
-        <p><a href="#obuka">B kategorija</a><br><a href="#kako">Kako do dozvole</a><br><a href="#grupe">Nove grupe</a><br><a href="#vaucer">Vaučer</a><br><a href="#upis">Zakazivanje</a></p>
+        <p><a href="#obuka">B kategorija</a><br><a href="#kako">Kako do dozvole</a><br><a href="#grupe">Nove grupe</a><br><a href="#vaucer">Vaučer</a><br><a href="#kalendar">Kalendar za prijavu</a></p>
       </div>
       <div>
         <p style="font-weight:600;color:#fff;margin-bottom:8px">Napomena</p>
@@ -757,7 +758,7 @@
       } else if(selected){
         summary.textContent = formatSr(selected) + " je slobodan predlog. Izaberi još šta želiš da dogovoriš.";
       } else {
-        summary.textContent = "Odaberi datum u kalendaru i šta želiš da dogovoriš.";
+        summary.textContent = "Odaberi datum u kalendaru i tip prijave: upis / teorija ili prvi čas vožnje.";
       }
       sendBtn.disabled = !ready();
     }
