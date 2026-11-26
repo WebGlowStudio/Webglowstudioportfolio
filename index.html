@@ -258,6 +258,16 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 @keyframes tihitoksway{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @media (prefers-reduced-motion:reduce){.ph.tihitok .mark{animation:none}}
 
+.ph.ostava{background:radial-gradient(circle at 50% 28%, #5C3A28, #2A1A14 74%);color:#F7F1E8;container-type:inline-size}
+.ph.ostava svg{width:96px;height:64px;flex-shrink:0}
+.ph.ostava .jar{animation:ostavasway 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+.ph.ostava small{color:#C4A574}
+.ph.ostava b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px;font-size:17px}
+@container (max-width:336px){.ph.ostava b{font-size:17px}}
+@keyframes ostavasway{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){.ph.ostava .jar{animation:none}}
+
+
 
 
 /* benefits */
@@ -480,6 +490,16 @@ button.btn{font-family:inherit;cursor:pointer}
     <div class="radovi-more" id="radovi-ostali" aria-hidden="true" inert>
       <div class="radovi-more-inner">
         <div class="grid">
+<article class="card">
+        <a class="shot" href="demos/sumska-ostava/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph ostava" aria-hidden="true"><svg viewBox="0 0 96 64" fill="none"><g class="jar"><rect x="38" y="10" width="20" height="5" rx="1.2" fill="#C4A574"/><rect x="41" y="15" width="14" height="3.2" rx="0.8" fill="#E4C98A"/><path d="M36 19.5c0-1 1-1.6 2.2-1.6h19.6c1.2 0 2.2.6 2.2 1.6v2.2c0 1.2-8 2.4-12 2.4s-12-1.2-12-2.4V19.5Z" fill="#A8844E"/><path d="M37.5 24.2c-.4 1.2-.7 3.4-.7 6.3 0 10.2 1.6 22.3 11.2 22.3s11.2-12.1 11.2-22.3c0-2.9-.3-5.1-.7-6.3H37.5Z" fill="#F3E6D0" stroke="#C4A574" stroke-width="1.2"/><path d="M38.2 31.5c.8 9.2 2.6 19.5 9.8 19.5s9-10.3 9.8-19.5c-2.6 1.4-6.2 2.1-9.8 2.1s-7.2-.7-9.8-2.1Z" fill="#7A2E32"/><path d="M42 36c2.2 1.2 5 1.8 7 1.8 2 0 3.6-.3 5-.8" stroke="#C45B55" stroke-width="1.2" stroke-linecap="round" opacity=".7"/></g></svg><b>Šumska ostava</b><small>Džem · slatko · kolači</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Poslastice</span><span class="tag">Predlog sajta</span></div>
+          <h3>Šumska ostava</h3>
+          <p>Sajt za kućnu izradu džema, slatkog, kolača i torti po porudžbini, sa kalendarom i poručivanjem preko Instagram DM.</p>
+          <a class="btn small" href="demos/sumska-ostava/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+
 <article class="card">
         <a class="shot" href="demos/beauty-studio-angelina/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph angelina" aria-hidden="true"><svg viewBox="0 0 88 88" fill="none"><g class="bloom"><path d="M44 14c10 16 12 28 6 38 14-6 30 0 34 16 4 12-4 24-18 27" fill="#F7EEF8"/><path d="M44 14c-10 16-12 28-6 38-14-6-30 0-34 16-4 12 4 24 18 27" fill="#E8D5F0"/><path d="M44 46c8 6 12 16 6 28-8 4-16-2-18-12-2-8 6-16 12-16Z" fill="#4A215C"/><circle cx="42" cy="62" r="3.5" fill="#E8D5F0"/></g></svg><b>Beauty studio Angelina</b><small>Nokti · šminka · edukacija</small></div></a>
         <div class="card-body">
