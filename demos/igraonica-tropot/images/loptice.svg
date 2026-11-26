@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img">
+
+  <rect width="800" height="640" fill="#F6E3D2"/>
+  <defs>
+    <filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#3A2C28" flood-opacity=".12"/></filter>
+  </defs>
+  <!-- soft wall -->
+  <rect x="0" y="0" width="800" height="640" fill="#F6E3D2"/>
+  <circle cx="80" cy="80" r="90" fill="#F0B49A" opacity=".25"/>
+  <circle cx="720" cy="120" r="110" fill="#B5D4D6" opacity=".28"/>
+  <ellipse cx="400" cy="500" rx="300" ry="110" fill="#B5523C" filter="url(#s)"/>
+  <ellipse cx="400" cy="470" rx="280" ry="90" fill="#C45C3E"/>
+  <g>
+    <circle cx="250" cy="430" r="36" fill="#F0D48A"/>
+    <circle cx="242" cy="420" r="7" fill="#fff" opacity=".4"/>
+    <circle cx="310" cy="410" r="40" fill="#B5D4D6"/>
+    <circle cx="302" cy="400" r="8" fill="#fff" opacity=".4"/>
+    <circle cx="380" cy="400" r="44" fill="#8FBEB0"/>
+    <circle cx="372" cy="390" r="8" fill="#fff" opacity=".4"/>
+    <circle cx="450" cy="415" r="38" fill="#E8B4C4"/>
+    <circle cx="442" cy="405" r="7" fill="#fff" opacity=".4"/>
+    <circle cx="520" cy="430" r="42" fill="#F2C14E"/>
+    <circle cx="512" cy="420" r="8" fill="#fff" opacity=".4"/>
+    <circle cx="280" cy="480" r="34" fill="#E8876C"/>
+    <circle cx="272" cy="470" r="6" fill="#fff" opacity=".4"/>
+    <circle cx="345" cy="470" r="38" fill="#7EB0C8"/>
+    <circle cx="337" cy="460" r="7" fill="#fff" opacity=".4"/>
+    <circle cx="415" cy="460" r="40" fill="#F0B49A"/>
+    <circle cx="407" cy="450" r="8" fill="#fff" opacity=".4"/>
+    <circle cx="490" cy="475" r="36" fill="#7BA87A"/>
+    <circle cx="482" cy="465" r="7" fill="#fff" opacity=".4"/>
+    <circle cx="560" cy="460" r="34" fill="#F0D48A"/>
+    <circle cx="552" cy="450" r="6" fill="#fff" opacity=".4"/>
+    <circle cx="220" cy="480" r="30" fill="#E8B4C4"/>
+    <circle cx="212" cy="470" r="6" fill="#fff" opacity=".4"/>
+    <circle cx="600" cy="490" r="32" fill="#B5D4D6"/>
+    <circle cx="592" cy="480" r="6" fill="#fff" opacity=".4"/>
+    <circle cx="330" cy="520" r="32" fill="#F2C14E"/>
+    <circle cx="322" cy="510" r="6" fill="#fff" opacity=".4"/>
+    <circle cx="400" cy="515" r="34" fill="#3E8A83"/>
+    <circle cx="392" cy="505" r="6" fill="#fff" opacity=".4"/>
+    <circle cx="470" cy="525" r="30" fill="#E8876C"/>
+    <circle cx="462" cy="515" r="6" fill="#fff" opacity=".4"/>
+    <circle cx="200" cy="440" r="28" fill="#8FBEB0"/>
+    <circle cx="192" cy="430" r="6" fill="#fff" opacity=".4"/>
+    <circle cx="580" cy="430" r="30" fill="#F0B49A"/>
+    <circle cx="572" cy="420" r="6" fill="#fff" opacity=".4"/>
+    <circle cx="640" cy="470" r="26" fill="#E8B4C4"/>
+    <circle cx="632" cy="460" r="6" fill="#fff" opacity=".4"/>
+
+  </g>
+
+</svg>

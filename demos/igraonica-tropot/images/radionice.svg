@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img">
+
+  <rect width="800" height="640" fill="#F7EEE4"/>
+  <rect x="0" y="480" width="800" height="160" fill="#E8D2B8"/>
+  <!-- table -->
+  <rect x="80" y="360" width="640" height="28" rx="8" fill="#C45C3E"/>
+  <rect x="90" y="388" width="14" height="140" fill="#9A4230"/>
+  <rect x="696" y="388" width="14" height="140" fill="#9A4230"/>
+  <!-- paper and paints -->
+  <rect x="160" y="250" width="160" height="110" rx="8" fill="#FFF8F1" stroke="#E8D5C4" stroke-width="3"/>
+  <path d="M180 300 Q200 280 220 305 T260 300" fill="none" stroke="#2F6F6A" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="230" cy="330" r="10" fill="#E8876C"/>
+  <rect x="380" y="270" width="140" height="90" rx="8" fill="#FFF8F1" stroke="#E8D5C4" stroke-width="3"/>
+  <circle cx="420" cy="310" r="16" fill="#F2C14E"/>
+  <rect x="450" y="300" width="40" height="28" rx="4" fill="#8FBEB0"/>
+  <rect x="580" y="280" width="100" height="80" rx="8" fill="#FFF8F1" stroke="#E8D5C4" stroke-width="3"/>
+  <path d="M600 320 L620 300 L650 330 L670 310" fill="none" stroke="#B5523C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- paint pots -->
+  <circle cx="200" cy="400" r="22" fill="#E8876C"/>
+  <circle cx="200" cy="392" r="14" fill="#E89A88"/>
+  <circle cx="260" cy="400" r="22" fill="#2F6F6A"/>
+  <circle cx="260" cy="392" r="14" fill="#3E8A83"/>
+  <circle cx="320" cy="400" r="22" fill="#F0D48A"/>
+  <circle cx="320" cy="392" r="14" fill="#F7E3A8"/>
+  <circle cx="500" cy="400" r="22" fill="#7EB0C8"/>
+  <circle cx="500" cy="392" r="14" fill="#A8CDE0"/>
+  <circle cx="560" cy="400" r="22" fill="#E8B4C4"/>
+  <circle cx="560" cy="392" r="14" fill="#F0C8D4"/>
+  <!-- brushes -->
+  <g transform="rotate(-30 400 420)">
+    <rect x="390" y="360" width="10" height="80" rx="3" fill="#8B5A3C"/>
+    <rect x="388" y="348" width="14" height="18" rx="3" fill="#3A2C28"/>
+    <rect x="390" y="338" width="10" height="14" rx="3" fill="#E8876C"/>
+  </g>
+  <!-- hanging art -->
+  <rect x="200" y="60" width="90" height="70" rx="6" fill="#B5D4D6" stroke="#fff" stroke-width="6"/>
+  <rect x="355" y="40" width="90" height="70" rx="6" fill="#F0B49A" stroke="#fff" stroke-width="6"/>
+  <rect x="510" y="60" width="90" height="70" rx="6" fill="#8FBEB0" stroke="#fff" stroke-width="6"/>
+  <line x1="245" y1="0" x2="245" y2="60" stroke="#C9B094" stroke-width="2"/>
+  <line x1="400" y1="0" x2="400" y2="40" stroke="#C9B094" stroke-width="2"/>
+  <line x1="555" y1="0" x2="555" y2="60" stroke="#C9B094" stroke-width="2"/>
+
+</svg>

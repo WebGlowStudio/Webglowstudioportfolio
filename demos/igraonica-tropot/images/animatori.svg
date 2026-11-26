@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img">
+
+  <rect width="800" height="640" fill="#F3E6D6"/>
+  <circle cx="700" cy="80" r="120" fill="#F0D48A" opacity=".35"/>
+  <circle cx="80" cy="560" r="140" fill="#C5DDDA" opacity=".4"/>
+  <!-- confetti -->
+  <g>
+    <rect x="120" y="80" width="10" height="22" rx="2" fill="#E8876C" transform="rotate(20 125 91)"/>
+    <rect x="640" y="140" width="10" height="22" rx="2" fill="#2F6F6A" transform="rotate(-30 645 151)"/>
+    <rect x="200" y="160" width="10" height="22" rx="2" fill="#F0D48A" transform="rotate(40 205 171)"/>
+    <rect x="560" y="60" width="10" height="22" rx="2" fill="#E8B4C4" transform="rotate(-15 565 71)"/>
+    <circle cx="300" cy="90" r="7" fill="#7EB0C8"/>
+    <circle cx="500" cy="120" r="7" fill="#E8876C"/>
+    <circle cx="150" cy="200" r="6" fill="#F2C14E"/>
+    <circle cx="680" cy="240" r="6" fill="#8FBEB0"/>
+  </g>
+  <!-- two stylized figures, no faces really - simple rounded characters -->
+  <g>
+    <!-- left animator -->
+    <ellipse cx="300" cy="520" rx="70" ry="16" fill="#D9C0A4"/>
+    <circle cx="300" cy="250" r="48" fill="#F3D1B8"/>
+    <path d="M250 300 C250 290,350 290,350 300 L370 470 Q300 500 230 470 Z" fill="#2F6F6A"/>
+    <rect x="232" y="330" width="28" height="90" rx="14" fill="#F3D1B8"/>
+    <rect x="340" y="330" width="28" height="90" rx="14" fill="#F3D1B8"/>
+    <!-- balloon -->
+    <ellipse cx="200" cy="200" rx="32" ry="40" fill="#E8876C"/>
+    <path d="M200 240 Q210 270 190 310" fill="none" stroke="#3A2C28" stroke-width="2"/>
+    <rect x="270" y="460" width="26" height="80" rx="10" fill="#3A2C28"/>
+    <rect x="304" y="460" width="26" height="80" rx="10" fill="#3A2C28"/>
+    <!-- hair -->
+    <path d="M260 240 C260 200 340 200 340 240 C340 215 260 215 260 240" fill="#5A3A32"/>
+    <!-- smile -->
+    <path d="M282 258 Q300 272 318 258" fill="none" stroke="#9A4230" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="284" cy="246" r="4" fill="#3A2C28"/>
+    <circle cx="316" cy="246" r="4" fill="#3A2C28"/>
+  </g>
+  <g>
+    <!-- right animator -->
+    <ellipse cx="520" cy="520" rx="70" ry="16" fill="#D9C0A4"/>
+    <circle cx="520" cy="260" r="48" fill="#F6C9A8"/>
+    <path d="M470 310 C470 300,570 300,570 310 L590 470 Q520 500 450 470 Z" fill="#B5523C"/>
+    <rect x="452" y="340" width="28" height="90" rx="14" fill="#F6C9A8"/>
+    <rect x="560" y="340" width="28" height="90" rx="14" fill="#F6C9A8"/>
+    <rect x="490" y="460" width="26" height="80" rx="10" fill="#3A2C28"/>
+    <rect x="524" y="460" width="26" height="80" rx="10" fill="#3A2C28"/>
+    <path d="M478 250 C490 200 560 200 562 255 C540 230 500 230 478 250" fill="#3A2C28"/>
+    <path d="M502 268 Q520 282 538 268" fill="none" stroke="#9A4230" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="504" cy="256" r="4" fill="#3A2C28"/>
+    <circle cx="536" cy="256" r="4" fill="#3A2C28"/>
+    <!-- star wand -->
+    <line x1="588" y1="380" x2="670" y2="230" stroke="#C9B094" stroke-width="4"/>
+    <polygon points="670,200 682,228 712,230 688,248 696,276 670,258 644,276 652,248 628,230 658,228" fill="#F0D48A"/>
+  </g>
+
+</svg>

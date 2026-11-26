@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img">
+
+  <rect width="800" height="640" fill="#F7EEE4"/>
+  <rect x="0" y="430" width="800" height="210" fill="#E8D2B8"/>
+  <!-- window behind -->
+  <rect x="80" y="60" width="280" height="220" rx="16" fill="#D8EEF0" stroke="#E0C8B0" stroke-width="10"/>
+  <line x1="220" y1="60" x2="220" y2="280" stroke="#E0C8B0" stroke-width="8"/>
+  <line x1="80" y1="170" x2="360" y2="170" stroke="#E0C8B0" stroke-width="8"/>
+  <circle cx="150" cy="120" r="22" fill="#F7D56A"/>
+  <!-- counter -->
+  <rect x="420" y="280" width="300" height="160" rx="16" fill="#B5523C"/>
+  <rect x="430" y="250" width="280" height="40" rx="10" fill="#9A4230"/>
+  <!-- coffee machine -->
+  <rect x="460" y="180" width="80" height="80" rx="10" fill="#3A2C28"/>
+  <rect x="472" y="160" width="56" height="28" rx="6" fill="#5A3A32"/>
+  <circle cx="500" cy="210" r="12" fill="#FFF8F1"/>
+  <rect x="580" y="200" width="50" height="60" rx="8" fill="#5A3A32"/>
+  <rect x="588" y="188" width="34" height="16" rx="4" fill="#F0D48A"/>
+  <!-- cups -->
+  <rect x="470" y="300" width="28" height="24" rx="4" fill="#FFF8F1"/>
+  <rect x="510" y="300" width="28" height="24" rx="4" fill="#FFF8F1"/>
+  <rect x="550" y="300" width="28" height="24" rx="4" fill="#C5DDDA"/>
+  <!-- plant -->
+  <rect x="650" y="220" width="36" height="30" rx="4" fill="#2F6F6A"/>
+  <ellipse cx="668" cy="200" rx="24" ry="32" fill="#3E8A83"/>
+  <!-- table and chairs in front -->
+  <ellipse cx="250" cy="500" rx="110" ry="28" fill="#C9B094"/>
+  <rect x="160" y="430" width="180" height="70" rx="16" fill="#F4E6D4"/>
+  <!-- two cups on table -->
+  <rect x="200" y="448" width="26" height="20" rx="4" fill="#FFF8F1"/>
+  <path d="M226 452 Q238 458 226 466" fill="none" stroke="#7A6A62" stroke-width="3"/>
+  <rect x="270" y="448" width="26" height="20" rx="4" fill="#FFF8F1"/>
+  <path d="M296 452 Q308 458 296 466" fill="none" stroke="#7A6A62" stroke-width="3"/>
+  <!-- chairs -->
+  <rect x="120" y="470" width="50" height="70" rx="10" fill="#2F6F6A"/>
+  <rect x="330" y="470" width="50" height="70" rx="10" fill="#2F6F6A"/>
+  <!-- pastry plate -->
+  <ellipse cx="250" cy="470" rx="22" ry="8" fill="#E8D5C4"/>
+  <ellipse cx="250" cy="464" rx="14" ry="8" fill="#F0B49A"/>
+
+</svg>
