@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Boost Beauty · Face Gym u Kragujevcu</title>
+  <meta name="description" content="Boost Beauty Face Gym u Kragujevcu: prirodni lifting lica bez igle, stimulacija mišića lica, lifting masaža i limfna drenaža. Sertifikovani terapeut za lice. Predlog sajta WebGlow Studija.">
+  <meta name="keywords" content="Boost Beauty, Face Gym, face gym Kragujevac, lifting lica, stimulacija mišića lica, masaža lica, limfna drenaža lica, terapeut za lice, Kragujevac, Srbija">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#8B3A52">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Boost Beauty · Face Gym u Kragujevcu">
+  <meta name="twitter:description" content="Prirodni lifting lica, bez igle. Predlog sajta, izradio WebGlow Studio.">
+  <meta property="og:title" content="Boost Beauty · Face Gym u Kragujevcu">
+  <meta property="og:description" content="Stimulacija mišića lica, lifting masaža i limfna drenaža u Kragujevcu. Prirodni lifting, bez igle.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/boost-beauty-face-gym/">
+  <meta property="og:locale" content="sr_RS">
+  <link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/boost-beauty-face-gym/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3Cpattern id='s' width='4' height='32' patternUnits='userSpaceOnUse'%3E%3Crect width='2' height='32' fill='%23F3C9D4'/%3E%3Crect x='2' width='2' height='32' fill='%23FBF6F8'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='32' height='32' rx='10' fill='url(%23s)'/%3E%3Cpath d='M10 7h3.2c6.2 0 10.4 2.8 10.4 6.6 0 2.2-1.6 3.6-4.2 4.2 3.2.6 5.4 2.4 5.4 5.6 0 4-4.6 6.6-11 6.6H10V7zm3.4 2.6v6.4h4.2c2.6 0 3.4-1.6 3.4-3.1 0-1.9-1.8-3.3-4.4-3.3H13.4zm0 8.8V25h4.6c3.2 0 4.2-2 4.2-4.1 0-2.6-2-4.5-5-4.5h-3.8z' fill='%238B3A52'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Boost Beauty Face Gym",
+    "description": "Predlog sajta za face gym u Kragujevcu: stimulacija mišića lica, lifting masaža i limfna drenaža. Napravio WebGlow Studio. Kontakt podaci su izmišljeni, cene su okvirne.",
+    "url": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/boost-beauty-face-gym/",
+    "telephone": "06x xxx xxxx",
+    "email": "kontakt@primer.rs",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kragujevac",
+      "addressCountry": "RS"
+    },
+    "areaServed": "Kragujevac",
+    "priceRange": "RSD"
+  }
+  </script>
+  <style>
+    :root{
+      --bg:#FBF6F8;
+      --bg-soft:#F4E8F0;
+      --lavender:#EEE6F4;
+      --ink:#3A2432;
+      --muted:#7A5A68;
+      --line:#EBD5DC;
+      --blush:#F3C9D4;
+      --rose:#C45B72;
+      --deep:#8B3A52;
+      --lilac:#C5A6D4;
+      --lilac-deep:#7E5A96;
+      --cream:#FFFCFD;
+      --white:#fff;
+      --header:72px;
+      --demo:36px;
+      --gutter:clamp(20px,4vw,56px);
+      --serif:"Playfair Display",Georgia,serif;
+      --sans:"Jost",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:var(--sans);
+      font-size:17px;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    img,svg{max-width:100%;display:block}
+    a{color:var(--deep)}
+    button,input,select,textarea{font:inherit}
+    h1,h2,h3,.serif,.logo-name,.step-num,.faq summary{
+      font-family:var(--serif);
+      font-style:normal;
+      font-synthesis:none;
+      font-weight:600;
+    }
+    .skip{
+      position:absolute;left:-999px;top:0;
+      background:var(--deep);color:#fff;padding:8px 16px;z-index:100;
+    }
+    .skip:focus{left:12px;top:12px}
+    .wrap{width:min(1120px,100% - 2*var(--gutter));margin-inline:auto}
+    .demo-bar{
+      position:sticky;top:0;z-index:40;
+      height:var(--demo);
+      display:flex;align-items:center;justify-content:center;gap:.5rem;
+      background:var(--deep);color:#FBF6F8;
+      font-size:13px;font-weight:400;letter-spacing:.02em;text-align:center;padding:0 16px;
+    }
+    .demo-bar a{color:#F3C9D4;text-decoration:none}
+    .demo-bar a:hover{color:#fff}
+    .site-header{
+      position:sticky;top:var(--demo);z-index:30;
+      height:var(--header);
+      display:flex;align-items:center;
+      background:rgba(251,246,248,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid transparent;
+      transition:border-color .3s,background .3s;
+    }
+    .site-header.solid{border-bottom-color:var(--line);background:rgba(251,246,248,.96)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+    .logo-mark{width:36px;height:36px;flex-shrink:0}
+    .logo-kicker{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);font-weight:500}
+    .logo-name{display:block;font-size:1.25rem;letter-spacing:.01em;line-height:1;color:var(--deep)}
+    .nav{display:flex;align-items:center;gap:22px}
+    .nav a{text-decoration:none;color:var(--ink);font-size:.95rem;font-weight:400}
+    .nav a:hover{color:var(--deep)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 22px;border-radius:999px;border:0;
+      background:var(--deep);color:#fff;text-decoration:none;
+      font-weight:500;font-size:.95rem;cursor:pointer;
+      transition:background .25s,transform .25s,box-shadow .25s;
+    }
+    .btn:hover{background:var(--rose);transform:translateY(-1px)}
+    .btn-ghost{
+      background:transparent;color:var(--deep);
+      border:1px solid var(--blush);
+    }
+    .btn-ghost:hover{background:var(--bg-soft);color:var(--deep)}
+    .btn-lilac{
+      background:var(--lilac-deep);color:#fff;
+    }
+    .btn-lilac:hover{background:#6A4A82}
+    .nav-cta{padding:10px 18px}
+    .burger{display:none;width:42px;height:42px;border:0;background:transparent;padding:10px;cursor:pointer}
+    .burger span{display:block;height:1.5px;background:var(--deep);margin:6px 0;transition:transform .25s,opacity .25s}
+    .menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .menu-open .burger span:nth-child(2){opacity:0}
+    .menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+    .hero{
+      position:relative;
+      padding:clamp(36px,6vw,72px) 0 clamp(64px,8vw,110px);
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background:repeating-linear-gradient(90deg,#F8D5DE 0 11px,transparent 11px 22px);
+      opacity:.28;
+      pointer-events:none;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;inset:-20% -10% auto auto;
+      width:min(70vw,640px);height:min(70vw,640px);
+      background:
+        radial-gradient(circle at 40% 40%,rgba(197,166,212,.45),transparent 58%),
+        radial-gradient(circle,rgba(243,201,212,.55),rgba(196,91,114,.08) 54%,transparent 70%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:clamp(28px,5vw,64px);
+      align-items:center;
+    }
+    .hero-kicker{
+      font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--rose);font-weight:500;margin:0 0 14px;
+    }
+    .hero h1{
+      margin:0 0 18px;
+      font-size:clamp(2.15rem,5.4vw,3.85rem);
+      line-height:1.12;
+      letter-spacing:-.02em;
+      color:var(--deep);
+    }
+    .hero-lead{margin:0 0 28px;max-width:40ch;color:var(--muted);font-weight:300;font-size:1.08rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-art{position:relative;display:grid;place-items:center;min-height:380px}
+    .face-art{
+      width:min(100%,420px);height:auto;
+      filter:drop-shadow(0 22px 40px rgba(139,58,82,.16));
+      transform-origin:50% 90%;
+      animation:sway 8s ease-in-out infinite;
+    }
+    @keyframes sway{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    section{padding:clamp(64px,8vw,104px) 0}
+    .sec-kicker{
+      font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--rose);font-weight:500;margin:0 0 10px;
+    }
+    .sec-title{margin:0 0 12px;font-size:clamp(1.85rem,3.6vw,2.8rem);line-height:1.15;letter-spacing:-.02em;color:var(--deep)}
+    .sec-lead{margin:0 0 36px;max-width:46ch;color:var(--muted);font-weight:300}
+    .about{background:linear-gradient(180deg,var(--bg),var(--bg-soft) 40%,var(--lavender) 100%)}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,56px);align-items:center}
+    .about-text p{margin:0 0 16px;color:var(--muted);font-weight:300}
+    .about-text p:last-of-type{margin-bottom:0}
+    .about-art{
+      background:var(--cream);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:22px;
+      box-shadow:0 18px 40px rgba(139,58,82,.06);
+    }
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px}
+    .service{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:26px 24px 24px;
+      transition:transform .3s,box-shadow .3s;
+    }
+    .service:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(139,58,82,.08)}
+    .service svg{width:44px;height:44px;margin-bottom:14px}
+    .service h3{margin:0 0 8px;font-size:1.25rem;color:var(--deep)}
+    .service p{margin:0;color:var(--muted);font-weight:300;font-size:.98rem}
+    .results{background:var(--cream)}
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .result{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:20px;
+      overflow:hidden;
+      transition:transform .3s,box-shadow .3s;
+    }
+    .result:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(139,58,82,.08)}
+    .ba{
+      display:grid;grid-template-columns:1fr 1fr;
+      min-height:168px;
+      background:repeating-linear-gradient(90deg,#F8D5DE 0 8px,#FBF6F8 8px 16px);
+    }
+    .ba figure{
+      margin:0;padding:16px 12px 12px;
+      display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;
+    }
+    .ba figure:last-child{background:linear-gradient(180deg,rgba(238,230,244,.55),rgba(243,201,212,.35))}
+    .ba figcaption{
+      font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--rose);font-weight:500;
+    }
+    .result-body{padding:20px 20px 22px}
+    .result h3{margin:0 0 8px;font-size:1.15rem;color:var(--deep)}
+    .result p{margin:0;color:var(--muted);font-weight:300;font-size:.96rem}
+    .process{background:var(--deep);color:#FBF6F8}
+    .process .sec-kicker{color:#F3C9D4}
+    .process .sec-title{color:#fff}
+    .process .sec-lead{color:#F3C9D4}
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin:0;padding:0;list-style:none}
+    .step{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(243,201,212,.18);
+      border-radius:20px;
+      padding:22px 18px 24px;
+    }
+    .step-num{
+      display:block;
+      font-size:1.35rem;
+      color:#E8C4E0;
+      margin-bottom:10px;
+    }
+    .step h3{margin:0 0 8px;font-size:1.15rem;color:#fff}
+    .step p{margin:0;color:#F3C9D4;font-weight:300;font-size:.95rem}
+    .price-note{
+      display:inline-block;margin:0 0 28px;padding:6px 12px;
+      border-radius:999px;background:var(--bg-soft);color:var(--rose);
+      font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;font-weight:500;
+    }
+    .prices{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .price-card{
+      background:var(--white);border:1px solid var(--line);border-radius:20px;padding:22px 22px 8px;
+    }
+    .price-card h3{margin:0 0 12px;font-size:1.25rem;color:var(--deep)}
+    .price-row{
+      display:flex;justify-content:space-between;gap:16px;align-items:baseline;
+      padding:12px 0;border-top:1px solid var(--line);
+      font-size:.97rem;
+    }
+    .price-row span{color:var(--muted);font-weight:300}
+    .price-row b{font-weight:500;white-space:nowrap;color:var(--deep)}
+    .okvirno{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);font-weight:500;margin-top:2px}
+    .faq-list{display:grid;gap:12px;max-width:760px}
+    .faq details{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:4px 20px;
+    }
+    .faq summary{
+      cursor:pointer;
+      list-style:none;
+      padding:16px 0;
+      font-size:1.15rem;
+      color:var(--deep);
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{
+      content:"+";
+      float:right;
+      font-family:var(--sans);
+      font-weight:400;
+      color:var(--rose);
+    }
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:0 0 16px;color:var(--muted);font-weight:300}
+    .contact{background:linear-gradient(180deg,var(--bg-soft),var(--lavender))}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;align-items:start}
+    .info-list{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:14px}
+    .info-list li{display:grid;gap:2px}
+    .info-list small{color:var(--rose);letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;font-weight:500}
+    .info-list b{font-weight:500}
+    .map-ph{
+      margin:16px 0 22px;height:140px;border-radius:18px;border:1px dashed var(--lilac);
+      background:
+        linear-gradient(180deg,transparent 21px,rgba(197,166,212,.28) 22px),
+        linear-gradient(90deg,transparent 21px,rgba(243,201,212,.28) 22px),
+        #fff;
+      background-size:22px 22px;
+      display:grid;place-items:center;color:var(--muted);font-size:.9rem;text-align:center;padding:16px;
+    }
+    .form{
+      background:var(--white);border:1px solid var(--line);border-radius:24px;padding:26px;
+    }
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .field{display:grid;gap:6px}
+    .field-full{grid-column:1/-1}
+    .field span{font-size:.82rem;font-weight:500;color:var(--deep)}
+    .field input,.field select,.field textarea{
+      width:100%;border:1px solid var(--line);border-radius:12px;
+      padding:12px 14px;background:#FFFCFD;color:var(--ink);
+    }
+    .field input:focus,.field select:focus,.field textarea:focus{
+      outline:2px solid var(--blush);outline-offset:1px;border-color:var(--rose);
+    }
+    .form .btn{margin-top:16px;width:100%}
+    .form-success{display:none}
+    .form.is-sent .fields,.form.is-sent .btn,.form.is-sent .form-hint{display:none}
+    .form.is-sent .form-success{display:block}
+    .form-success h3{margin:0 0 8px;color:var(--deep)}
+    .form-hint{margin:12px 0 0;color:var(--muted);font-size:.85rem;font-weight:300}
+    .site-footer{
+      border-top:1px solid var(--line);
+      padding:28px 0 40px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+    .site-footer a{color:var(--deep);text-decoration:none}
+    .site-footer a:hover{color:var(--rose)}
+    .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+    .rv.in{opacity:1;transform:none}
+    @media (max-width:900px){
+      .hero-grid,.about-grid,.contact-grid,.prices{grid-template-columns:1fr 1fr}
+      .hero-art{order:-1;min-height:280px}
+      .face-art{width:min(72%,340px)}
+      .results-grid{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:720px){
+      .demo-bar{font-size:11px;letter-spacing:0;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .nav{
+        display:none;position:fixed;top:calc(var(--demo) + var(--header));
+        left:0;right:0;background:rgba(251,246,248,.98);
+        flex-direction:column;align-items:stretch;gap:0;
+        padding:8px var(--gutter) 18px;border-bottom:1px solid var(--line);
+      }
+      .menu-open .nav{display:flex}
+      .nav a{padding:12px 0;border-bottom:1px solid var(--line)}
+      .nav-cta{margin-top:10px;width:fit-content}
+      .burger{display:block}
+      .services,.fields,.hero-grid,.about-grid,.contact-grid,.prices,.steps{grid-template-columns:1fr}
+      .hero{padding-bottom:48px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .face-art,.rv,.service,.result,.btn{animation:none!important;transition:none!important}
+      .rv{opacity:1;transform:none}
+      .service:hover,.result:hover,.btn:hover{transform:none}
+    }
+  </style>
+  <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+  <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+  <div class="demo-bar">Predlog sajta · <a href="https://webglowstudio.github.io/Webglowstudioportfolio/">WebGlow Studio</a> · kontakti su izmišljeni, cene su okvirne</div>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="logo" href="#pocetna">
+        <svg class="logo-mark" viewBox="0 0 36 36" aria-hidden="true">
+          <defs>
+            <pattern id="logoStripes" width="5" height="36" patternUnits="userSpaceOnUse">
+              <rect width="2.5" height="36" fill="#F3C9D4"/>
+              <rect x="2.5" width="2.5" height="36" fill="#FBF6F8"/>
+            </pattern>
+          </defs>
+          <rect width="36" height="36" rx="11" fill="url(#logoStripes)"/>
+          <path d="M11 7.2h3.4c6.6 0 11 3 11 7.1 0 2.4-1.7 3.9-4.5 4.5 3.4.6 5.8 2.6 5.8 6 0 4.3-4.9 7.1-11.7 7.1H11V7.2Zm3.6 2.8v6.8h4.5c2.8 0 3.7-1.7 3.7-3.3 0-2-2-3.5-4.8-3.5h-3.4Zm0 9.4V28h4.9c3.5 0 4.5-2.2 4.5-4.4 0-2.8-2.2-4.8-5.3-4.8h-4.1Z" fill="#8B3A52"/>
+          <path d="M28.2 6.4c1.4 1.2 1.2 3.4-.2 4.2-1.1.6-2.2.1-2.7-1.1-.4-1.1.2-2.4 1.4-2.9.5-.2 1-.2 1.5-.2Z" fill="#C5A6D4"/>
+        </svg>
+        <span>
+          <span class="logo-kicker">Face Gym</span>
+          <span class="logo-name">Boost Beauty</span>
+        </span>
+      </a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otvori meni">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Glavna navigacija">
+        <a href="#o-tretmanu">O tretmanu</a>
+        <a href="#usluge">Usluge</a>
+        <a href="#rezultati">Rezultati</a>
+        <a href="#cenovnik">Cenovnik</a>
+        <a class="btn nav-cta" href="#kontakt">Zakaži tretman</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="sadrzaj">
+    <section class="hero" id="pocetna">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hero-kicker">Face gym · Kragujevac</p>
+          <h1>Prirodni lifting lica, bez igle</h1>
+          <p class="hero-lead">Stimulacija mišića lica i masaža koja oblikuje konture, ublažava otok i vraća licu puniji, odmorniji izgled.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#kontakt">Zakaži tretman</a>
+            <a class="btn btn-ghost" href="#usluge">Pogledaj usluge</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg class="face-art" viewBox="0 0 400 440" fill="none">
+            <defs>
+              <pattern id="heroStripes" width="18" height="400" patternUnits="userSpaceOnUse">
+                <rect width="9" height="400" fill="#F3C9D4"/>
+                <rect x="9" width="9" height="400" fill="#FBF6F8"/>
+              </pattern>
+              <radialGradient id="heroGlow" cx="50%" cy="42%" r="58%">
+                <stop offset="0%" stop-color="#FFFCFD"/>
+                <stop offset="50%" stop-color="#F3C9D4"/>
+                <stop offset="100%" stop-color="#C5A6D4"/>
+              </radialGradient>
+            </defs>
+            <circle cx="200" cy="200" r="168" fill="url(#heroGlow)" opacity=".34"/>
+            <ellipse cx="200" cy="414" rx="118" ry="14" fill="#8B3A52" opacity=".12"/>
+            <rect x="86" y="48" width="228" height="300" rx="114" fill="url(#heroStripes)" opacity=".9"/>
+            <rect x="86" y="48" width="228" height="300" rx="114" fill="none" stroke="#EBD5DC" stroke-width="2"/>
+            <circle cx="200" cy="196" r="78" fill="#FFFCFD" opacity=".86"/>
+            <path d="M172 148h20c24 0 40 11 40 25.5 0 8.6-6 14-16 16.2 12.2 2.2 21 9.4 21 21.4 0 15.6-17.6 25.9-42.2 25.9H172V148Zm13.2 10.8v24.4h16.2c10 0 13.4-6.2 13.4-12 0-7.2-7.2-12.4-17.2-12.4h-12.4Zm0 34.4v35.6h17.8c12.6 0 16.4-8.2 16.4-16 0-10-7.8-19.6-19.2-19.6H185.2Z" fill="#8B3A52"/>
+            <path d="M92 126c14-28 38-40 58-28 8 5 10 14 6 22-10 18-32 16-50 22-10 3-18-6-14-16Z" fill="#C5A6D4" opacity=".85"/>
+            <path d="M118 118c6-4 16-2 14 8-8 6-16 4-14-8Z" fill="#EEE6F4"/>
+            <path d="M304 150c16-18 40-16 48 2 5 12-2 22-14 26-22 8-28-6-40-12-10-5-8-12 6-16Z" fill="#C5A6D4" opacity=".9"/>
+            <path d="M328 154c8-2 14 4 8 12-8 2-14-4-8-12Z" fill="#7E5A96" opacity=".55"/>
+            <path d="M70 250c22-10 42 4 38 22-3 14-18 16-32 12-16-4-22-8-6-34Z" fill="#E8C4E0" opacity=".8"/>
+            <path d="M318 262c18 8 22 24 8 34-12 8-24 0-30-14-4-12 6-26 22-20Z" fill="#C5A6D4" opacity=".75"/>
+            <path d="M148 300c22 18 54 26 86 8 10-6 8-16-2-18-28 10-54 6-78-8-8-5-16 6-6 18Z" fill="#8B3A52" opacity=".12"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="o-tretmanu">
+      <div class="wrap about-grid">
+        <div class="about-text rv">
+          <p class="sec-kicker">O tretmanu</p>
+          <h2 class="sec-title">Face gym je vežba i masaža za mišiće lica</h2>
+          <p>Boost Beauty je studio za face gym u Kragujevcu. Sertifikovani terapeut za lice radi stimulaciju mišića masažom i ciljanim pokretima, bez igle i bez filera.</p>
+          <p>Tretman podiže konture, ublažava otok i sitne bore i vraća licu puniji, skladniji izgled. Radi se sa vašim tkivom, polako i mereno, da rezultat deluje prirodno.</p>
+        </div>
+        <div class="about-art rv" aria-hidden="true">
+          <svg viewBox="0 0 420 320" fill="none">
+            <rect width="420" height="320" rx="16" fill="#FBF6F8"/>
+            <rect x="24" y="24" width="372" height="272" rx="12" fill="url(#panelStripes)" stroke="#EBD5DC"/>
+            <defs>
+              <pattern id="panelStripes" width="14" height="272" patternUnits="userSpaceOnUse">
+                <rect width="7" height="272" fill="#F8D5DE"/>
+                <rect x="7" width="7" height="272" fill="#FFFCFD"/>
+              </pattern>
+            </defs>
+            <ellipse cx="210" cy="168" rx="92" ry="118" fill="#FFFCFD" stroke="#C45B72" stroke-width="1.6"/>
+            <path d="M168 150c18-28 56-28 74 0" stroke="#C5A6D4" stroke-width="3" stroke-linecap="round"/>
+            <path d="M160 200c22 28 78 28 100 0" stroke="#8B3A52" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="178" cy="168" r="6" fill="#E8C4E0"/>
+            <circle cx="242" cy="168" r="6" fill="#E8C4E0"/>
+            <path d="M46 70c16-8 34 2 30 18-12 8-28 4-30-18Z" fill="#C5A6D4"/>
+            <path d="M360 86c14-10 32-2 28 14-10 10-26 6-28-14Z" fill="#E8C4E0"/>
+            <path d="M52 230c18 6 22 22 8 30-14 6-24-4-28-16-3-10 6-18 20-14Z" fill="#C5A6D4" opacity=".85"/>
+            <text x="210" y="292" text-anchor="middle" fill="#7A5A68" font-size="12" font-family="Jost,sans-serif" letter-spacing="1.6">ILUSTRACIJA · NIJE FOTOGRAFIJA</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="usluge">
+      <div class="wrap">
+        <p class="sec-kicker rv">Usluge</p>
+        <h2 class="sec-title rv">Tretmani po meri lica</h2>
+        <p class="sec-lead rv">Svaki termin prilagođavamo vašim konturama i onome što želite da se istakne ili umiri.</p>
+        <div class="services">
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect width="44" height="44" rx="14" fill="#F4E8F0"/>
+              <path d="M14 30c4-8 6-14 8-18 2 4 4 10 8 18" stroke="#8B3A52" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="22" cy="16" r="3" fill="#C5A6D4"/>
+            </svg>
+            <h3>Face gym tretman</h3>
+            <p>Puna stimulacija mišića lica, od čela do vilice, da konture deluju čvršće i oblikovanije.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect width="44" height="44" rx="14" fill="#F4E8F0"/>
+              <path d="M12 28c8-10 20-10 20 0" stroke="#8B3A52" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M16 22c6-8 14-8 14 0" stroke="#C45B72" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <h3>Lifting masaža</h3>
+            <p>Podizanje obraza i donje trećine lica, za svežiji, odmorniji izraz bez oštrih prelaza.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect width="44" height="44" rx="14" fill="#EEE6F4"/>
+              <path d="M14 18c4-6 12-6 16 0 2 4 0 8-4 10-4 2-8 0-10-4-2-2-2-4-2-6Z" fill="#C5A6D4"/>
+              <path d="M18 30h12" stroke="#8B3A52" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <h3>Limfna drenaža lica</h3>
+            <p>Nežni pokreti koji smanjuju otok i umoran izgled, posebno ujutru ili posle dužeg dana.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect width="44" height="44" rx="14" fill="#F4E8F0"/>
+              <rect x="13" y="14" width="18" height="18" rx="4" stroke="#8B3A52" stroke-width="1.6"/>
+              <path d="M18 22h8M22 18v8" stroke="#C45B72" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <h3>Paket tretmana</h3>
+            <p>Niz termina u dogovorenom ritmu, da se rezultat vidi jasnije i duže zadrži.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="results" id="rezultati">
+      <div class="wrap">
+        <p class="sec-kicker rv">Rezultati</p>
+        <h2 class="sec-title rv">Lice deluje punije i odmornije</h2>
+        <p class="sec-lead rv">Izgledi pre i posle su ilustracije, ne fotografije. Opisi prate tipične promene koje klijentkinje primete posle niza tretmana.</p>
+        <div class="results-grid">
+          <article class="result rv">
+            <div class="ba" aria-hidden="true">
+              <figure>
+                <svg viewBox="0 0 80 90" width="72" height="80" fill="none">
+                  <ellipse cx="40" cy="46" rx="22" ry="30" stroke="#C45B72" stroke-width="1.6"/>
+                  <path d="M28 58c6 2 18 2 24-6" stroke="#8B3A52" stroke-width="1.3" stroke-linecap="round"/>
+                  <path d="M30 40h6M44 40h6" stroke="#7A5A68" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <figcaption>Pre</figcaption>
+              </figure>
+              <figure>
+                <svg viewBox="0 0 80 90" width="72" height="80" fill="none">
+                  <ellipse cx="40" cy="46" rx="24" ry="30" fill="#F3C9D4" stroke="#8B3A52" stroke-width="1.6"/>
+                  <path d="M26 54c8 10 20 10 28 0" stroke="#8B3A52" stroke-width="1.4" stroke-linecap="round"/>
+                  <circle cx="32" cy="42" r="2.2" fill="#C5A6D4"/>
+                  <circle cx="48" cy="42" r="2.2" fill="#C5A6D4"/>
+                </svg>
+                <figcaption>Posle</figcaption>
+              </figure>
+            </div>
+            <div class="result-body">
+              <h3>Obrazi i konture</h3>
+              <p>Od izraženije skeletizovanog izgleda lica do punijih, skladnije oblikovanih obraza.</p>
+            </div>
+          </article>
+          <article class="result rv">
+            <div class="ba" aria-hidden="true">
+              <figure>
+                <svg viewBox="0 0 80 90" width="72" height="80" fill="none">
+                  <ellipse cx="40" cy="46" rx="22" ry="30" stroke="#C45B72" stroke-width="1.6"/>
+                  <path d="M24 52c10 0 12 8 16 8" stroke="#8B3A52" stroke-width="1.3" stroke-linecap="round"/>
+                  <path d="M56 52c-10 0-12 8-16 8" stroke="#8B3A52" stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+                <figcaption>Pre</figcaption>
+              </figure>
+              <figure>
+                <svg viewBox="0 0 80 90" width="72" height="80" fill="none">
+                  <ellipse cx="40" cy="46" rx="24" ry="30" fill="#EEE6F4" stroke="#8B3A52" stroke-width="1.6"/>
+                  <path d="M26 56c8 8 20 8 28 0" stroke="#7E5A96" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M30 50c4 6 16 6 20 0" stroke="#C45B72" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <figcaption>Posle</figcaption>
+              </figure>
+            </div>
+            <div class="result-body">
+              <h3>Juguloidna regija</h3>
+              <p>Naglašena juguloidna (buccal) regija, da srednji deo lica deluje punije i mekše.</p>
+            </div>
+          </article>
+          <article class="result rv">
+            <div class="ba" aria-hidden="true">
+              <figure>
+                <svg viewBox="0 0 80 90" width="72" height="80" fill="none">
+                  <ellipse cx="40" cy="46" rx="22" ry="30" stroke="#C45B72" stroke-width="1.6"/>
+                  <path d="M28 38c4 4 8 4 12 0M40 38c4 4 8 4 12 0" stroke="#8B3A52" stroke-width="1.2" stroke-linecap="round"/>
+                  <path d="M30 42c3 3 7 3 10 0M40 42c3 3 7 3 10 0" stroke="#C45B72" stroke-width="1" stroke-linecap="round"/>
+                </svg>
+                <figcaption>Pre</figcaption>
+              </figure>
+              <figure>
+                <svg viewBox="0 0 80 90" width="72" height="80" fill="none">
+                  <ellipse cx="40" cy="46" rx="24" ry="30" fill="#F3C9D4" stroke="#8B3A52" stroke-width="1.6"/>
+                  <path d="M28 40c5 2 9 2 12 0M40 40c5 2 9 2 12 0" stroke="#8B3A52" stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+                <figcaption>Posle</figcaption>
+              </figure>
+            </div>
+            <div class="result-body">
+              <h3>Regija oko očiju</h3>
+              <p>Regija oko očiju izgleda zaglađenije, sitne bore su vidno smanjene, a otok je blaži.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="tretman">
+      <div class="wrap">
+        <p class="sec-kicker rv">Kako izgleda tretman</p>
+        <h2 class="sec-title rv">Od razgovora do odmornijeg lica</h2>
+        <p class="sec-lead rv">Termin traje oko 50 do 70 minuta, zavisno od usluge koju odaberete.</p>
+        <ol class="steps">
+          <li class="step rv">
+            <span class="step-num">01</span>
+            <h3>Razgovor</h3>
+            <p>Kratka analiza lica i dogovor šta želite da se podigne, umiri ili ispuni.</p>
+          </li>
+          <li class="step rv">
+            <span class="step-num">02</span>
+            <h3>Priprema</h3>
+            <p>Čišćenje i priprema kože, da masaža i stimulacija budu prijatne i precizne.</p>
+          </li>
+          <li class="step rv">
+            <span class="step-num">03</span>
+            <h3>Stimulacija</h3>
+            <p>Rad na mišićima lica i lifting masaža, merenim pritiskom i ritmom.</p>
+          </li>
+          <li class="step rv">
+            <span class="step-num">04</span>
+            <h3>Drenaža</h3>
+            <p>Limfna drenaža i umirivanje, da se smanji otok i lice ostane mekše.</p>
+          </li>
+          <li class="step rv">
+            <span class="step-num">05</span>
+            <h3>Savet</h3>
+            <p>Kratke smernice za kuću i dogovor o narednom terminu, ako želite niz tretmana.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="cenovnik">
+      <div class="wrap">
+        <p class="sec-kicker rv">Cenovnik</p>
+        <h2 class="sec-title rv">Okvirne cene tretmana</h2>
+        <p class="price-note rv">Cene su okvirne i deo predloga sajta</p>
+        <div class="prices">
+          <div class="price-card rv">
+            <h3>Pojedinačni tretmani</h3>
+            <div class="price-row"><span>Face gym tretman, 60 min</span><b>4.500 RSD<span class="okvirno">okvirno</span></b></div>
+            <div class="price-row"><span>Lifting masaža, 45 min</span><b>3.800 RSD<span class="okvirno">okvirno</span></b></div>
+            <div class="price-row"><span>Limfna drenaža lica, 45 min</span><b>3.500 RSD<span class="okvirno">okvirno</span></b></div>
+          </div>
+          <div class="price-card rv">
+            <h3>Paketi</h3>
+            <div class="price-row"><span>Paket od 4 face gym tretmana</span><b>16.000 RSD<span class="okvirno">okvirno</span></b></div>
+            <div class="price-row"><span>Paket od 8 face gym tretmana</span><b>29.000 RSD<span class="okvirno">okvirno</span></b></div>
+            <div class="price-row"><span>Kombinovani paket, 6 termina</span><b>22.000 RSD<span class="okvirno">okvirno</span></b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="pitanja">
+      <div class="wrap">
+        <p class="sec-kicker rv">Česta pitanja</p>
+        <h2 class="sec-title rv">Šta klijentkinje najčešće pitaju</h2>
+        <div class="faq-list">
+          <details class="rv">
+            <summary>Da li face gym zamenjuje filere?</summary>
+            <p>Ne. To je prirodan pristup bez igle. Rezultat je blag i postepen, jer radimo sa vašim mišićima i tkivom, a ne sa injekcijama.</p>
+          </details>
+          <details class="rv">
+            <summary>Da li tretman boli?</summary>
+            <p>Ne. Pritisak je meren i prilagođen vama. Možete osetiti rad mišića, ali tretman treba da bude prijatan.</p>
+          </details>
+          <details class="rv">
+            <summary>Kad se vide rezultati?</summary>
+            <p>Već posle prvog tretmana lice često deluje odmorije i manje otoklo. Jasniji oblik i puniji obrazi dolaze kroz niz termina.</p>
+          </details>
+          <details class="rv">
+            <summary>Koliko traje termin?</summary>
+            <p>Oko 50 do 70 minuta, zavisno od toga da li radimo face gym, lifting masažu ili limfnu drenažu.</p>
+          </details>
+          <details class="rv">
+            <summary>Kako da zakažem tretman?</summary>
+            <p>Najlakše je da pišete na Instagramu. Tu dogovaramo termin i odgovaramo na pitanja.</p>
+          </details>
+          <details class="rv">
+            <summary>Da li je potrebna posebna priprema?</summary>
+            <p>Dođite bez debelog make-upa ako možete. Ostalo rešavamo na licu mesta, a posle tretmana dobijate kratak savet za kuću.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt">
+      <div class="wrap contact-grid">
+        <div class="rv">
+          <p class="sec-kicker">Kontakt</p>
+          <h2 class="sec-title">Zakažite tretman u Kragujevcu</h2>
+          <p class="sec-lead">Termini se dogovaraju porukom. Telefon i mejl ispod su primer, ne pravi kontakt.</p>
+          <ul class="info-list">
+            <li><small>Instagram</small><b>Piši na Instagramu</b></li>
+            <li><small>Telefon</small><b>06x xxx xxxx</b></li>
+            <li><small>Mejl</small><b>kontakt@primer.rs</b></li>
+            <li><small>Grad</small><b>Kragujevac</b></li>
+          </ul>
+          <a class="btn btn-lilac" href="#">Piši na Instagramu</a>
+          <div class="map-ph">Kragujevac · tačna adresa se unosi u pravoj verziji sajta</div>
+        </div>
+        <form class="form rv" id="termin" action="#" method="post">
+          <h3 class="serif" style="margin:0 0 16px;font-size:1.45rem;color:var(--deep)">Pošaljite upit</h3>
+          <div class="fields">
+            <label class="field"><span>Ime</span><input id="ime" name="ime" type="text" autocomplete="name" required></label>
+            <label class="field"><span>Usluga</span>
+              <select id="usluga" name="usluga" required>
+                <option value="">Izaberite</option>
+                <option>Face gym tretman</option>
+                <option>Lifting masaža</option>
+                <option>Limfna drenaža lica</option>
+                <option>Paket tretmana</option>
+              </select>
+            </label>
+            <label class="field field-full"><span>Poruka</span><textarea name="poruka" rows="4" placeholder="Kada vam odgovara termin, i da li imate pitanje o tretmanu."></textarea></label>
+          </div>
+          <button class="btn" type="submit">Pošalji upit</button>
+          <p class="form-hint">Forma je deo predloga sajta i ne šalje pravu poruku.</p>
+          <div class="form-success" role="status" aria-live="polite">
+            <h3>Hvala, <span data-guest></span>.</h3>
+            <p>Ovo je predlog sajta. U pravoj verziji poruka bi stigla studiju, a ovde je ostala samo kao primer zakazivanja.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Boost Beauty · Face Gym · predlog početne strane</p>
+      <p><a href="https://webglowstudio.github.io/Webglowstudioportfolio/">Izradio WebGlow Studio</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    const header = document.querySelector(".site-header");
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("site-nav");
+    function closeMenu(){
+      document.body.classList.remove("menu-open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Otvori meni");
+    }
+    burger.addEventListener("click", function(){
+      const open = document.body.classList.toggle("menu-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "Zatvori meni" : "Otvori meni");
+    });
+    nav.addEventListener("click", function(e){ if(e.target.closest("a")) closeMenu(); });
+    const onScroll = function(){ header.classList.toggle("solid", window.scrollY > 8); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, {passive:true});
+
+    const form = document.getElementById("termin");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      const ime = (document.getElementById("ime").value || "").trim();
+      if(!ime || !document.getElementById("usluga").value){
+        form.reportValidity();
+        return;
+      }
+      form.querySelector("[data-guest]").textContent = ime;
+      form.classList.add("is-sent");
+    });
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reduce){
+      document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+      return;
+    }
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll(".rv").forEach(function(el, i){
+      el.style.transitionDelay = (i % 4) * 70 + "ms";
+      io.observe(el);
+    });
+  })();
+  </script>
+</body>
+</html>

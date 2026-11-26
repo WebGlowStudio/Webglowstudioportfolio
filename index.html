@@ -253,6 +253,15 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 @media (prefers-reduced-motion:reduce){.ph.tihitok .mark{animation:none}}
 
 
+.ph.boost{background:radial-gradient(circle at 50% 28%, #FBF6F8, #F3C9D4 52%, #C5A6D4);color:#4A2432;container-type:inline-size}
+.ph.boost svg{width:88px;height:88px;flex-shrink:0}
+.ph.boost .mark{animation:boostsway 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+.ph.boost small{color:#8B3A52}
+.ph.boost b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px;font-size:17px}
+@keyframes boostsway{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){.ph.boost .mark{animation:none}}
+
+
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
 .ben{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
@@ -429,7 +438,16 @@ button.btn{font-family:inherit;cursor:pointer}
       <p>Svaki sajt je napravljen od nule, po meri posla za koji je namenjen.</p>
     </div>
     <div class="grid">
-      <article class="card">
+            <article class="card">
+        <a class="shot" href="demos/boost-beauty-face-gym/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph boost" aria-hidden="true"><svg viewBox="0 0 88 88" fill="none"><g class="mark"><defs><pattern id="boostStripes" width="8" height="88" patternUnits="userSpaceOnUse"><rect width="4" height="88" fill="#F3C9D4"/><rect x="4" width="4" height="88" fill="#FBF6F8"/></pattern></defs><rect x="14" y="8" width="60" height="60" rx="18" fill="url(#boostStripes)"/><path d="M32 20h8c14 0 23 6.2 23 15 0 5-3.6 8.2-9.4 9.4 7.2 1.2 12.2 5.4 12.2 12.6 0 9-10.2 14.8-24.4 14.8H32V20Zm7.6 5.8v14.2h9.4c5.8 0 7.6-3.6 7.6-7 0-4.2-4.2-7.2-10-7.2h-7Zm0 19.6V58h10.2c7.2 0 9.4-4.6 9.4-9.2 0-5.8-4.6-10-11-10H39.6Z" fill="#8B3A52"/><path d="M68 16c3 2.4 2.6 6.8-.4 8.4-2.2 1.2-4.4.2-5.4-2.2-.8-2.2.4-4.8 2.8-5.8 1-.4 2-.4 3-.4Z" fill="#C5A6D4"/></g></svg><b>Boost Beauty</b><small>Face gym · Kragujevac</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Beauty</span><span class="tag">Predlog sajta</span></div>
+          <h3>Boost Beauty</h3>
+          <p>Predlog sajta za face gym u Kragujevcu: stimulacija mišića lica, lifting masaža i zakazivanje preko Instagrama.</p>
+          <a class="btn small" href="demos/boost-beauty-face-gym/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
+<article class="card">
         <a class="shot" href="demos/atelje-tihi-tok/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph tihitok" aria-hidden="true"><svg viewBox="0 0 88 88" fill="none"><g class="mark"><path d="M14 64c14-3 18-16 36-20 14-3 20 7 32 4" stroke="#6B1C26" stroke-width="3" stroke-linecap="round"/><path d="M32 58 44 46l12 12v14H32z" fill="#FFFCF8" stroke="#6B1C26" stroke-width="2" stroke-linejoin="round"/><path d="M29 60 44 46l15 14" stroke="#6B1C26" stroke-width="2" stroke-linecap="round"/><rect x="41" y="62" width="6" height="10" rx="1" fill="#6B1C26"/><circle cx="68" cy="42" r="4" fill="#C97B82"/></g></svg><b>Atelje Tihi Tok</b><small>Feng šui · Beograd</small></div></a>
         <div class="card-body">
           <div class="tags"><span class="tag">Feng šui</span><span class="tag">Predlog sajta</span></div>
