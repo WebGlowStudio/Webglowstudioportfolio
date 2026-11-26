@@ -478,15 +478,73 @@
       .nav-cta{margin-top:10px;width:fit-content}
       .burger{display:block}
       .services,.fields,.hero-grid,.contact-grid,.why-grid,.shots{grid-template-columns:1fr}
-      .hero{padding-bottom:48px}
+      .hero{padding-bottom:128px}
+      .hero-art{min-height:0}
+      .mono-wrap{width:min(48%,176px)}
+      .hero-lead{margin-bottom:18px}
       .tab-bar{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}
       .tab-bar label{white-space:nowrap}
     }
+    @media (max-width:720px) and (max-height:780px){
+      .mono-wrap{width:min(42%,150px)}
+      .hero{padding-top:16px;padding-bottom:120px}
+      .hero h1{font-size:clamp(1.7rem,8vw,2.15rem)}
+    }
+
+    .ig-float{
+      position:fixed;
+      right:max(16px, env(safe-area-inset-right, 0px));
+      bottom:max(16px, env(safe-area-inset-bottom, 0px));
+      z-index:50;
+      display:flex;align-items:center;gap:10px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .ig-float-label{
+      background:var(--black);
+      color:#F0D7B8;
+      border:1px solid rgba(201,162,124,.45);
+      padding:7px 12px;
+      border-radius:999px;
+      font-size:.78rem;font-weight:500;letter-spacing:.02em;
+      white-space:nowrap;
+      box-shadow:0 10px 24px rgba(20,17,15,.22);
+    }
+    .ig-float-btn{
+      width:56px;height:56px;flex-shrink:0;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:var(--black);
+      color:#F0D7B8;
+      border:1px solid var(--copper);
+      box-shadow:0 12px 28px rgba(20,17,15,.28);
+      transition:transform .25s,background .25s,color .25s,box-shadow .25s;
+    }
+    .ig-float-btn svg{width:24px;height:24px;display:block}
+    .ig-float:hover .ig-float-btn,
+    .ig-float:focus-visible .ig-float-btn{
+      transform:translateY(-2px);
+      background:linear-gradient(135deg,#F0D7B8,#C9A27C 50%,#8E5E3A);
+      color:var(--black);
+      box-shadow:0 16px 32px rgba(20,17,15,.3);
+    }
+    .ig-float:focus-visible{outline:none}
+    .ig-float:focus-visible .ig-float-btn{outline:2px solid #F0D7B8;outline-offset:3px}
+    .site-footer{padding-bottom:118px}
+    .footer-inner{padding-right:92px}
+    @media (max-width:720px){
+      .ig-float{right:max(12px, env(safe-area-inset-right, 0px));bottom:max(12px, env(safe-area-inset-bottom, 0px));gap:8px}
+      .ig-float-btn{width:50px;height:50px}
+      .ig-float-btn svg{width:22px;height:22px}
+      .ig-float-label{font-size:.72rem;padding:6px 10px}
+      .footer-inner{padding-right:0}
+    }
+
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
-      .mono-wrap,.rv,.service,.why-card,.shot,.btn{animation:none!important;transition:none!important}
+      .mono-wrap,.rv,.service,.why-card,.shot,.btn,.ig-float-btn{animation:none!important;transition:none!important}
       .rv{opacity:1;transform:none}
-      .service:hover,.why-card:hover,.shot:hover,.btn:hover{transform:none}
+      .service:hover,.why-card:hover,.shot:hover,.btn:hover,.ig-float:hover .ig-float-btn,.ig-float:focus-visible .ig-float-btn{transform:none}
     }
   </style>
 </head>
@@ -835,6 +893,17 @@
       </div>
     </section>
   </main>
+
+  <a class="ig-float" href="#" aria-label="Zakaži u DM na Instagramu">
+    <span class="ig-float-label">Zakaži u DM</span>
+    <span class="ig-float-btn" aria-hidden="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="17.15" cy="6.85" r="1.15" fill="currentColor"/>
+      </svg>
+    </span>
+  </a>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">

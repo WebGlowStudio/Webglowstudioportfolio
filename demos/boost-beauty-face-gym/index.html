@@ -369,13 +369,63 @@
       .nav-cta{margin-top:10px;width:fit-content}
       .burger{display:block}
       .services,.fields,.hero-grid,.about-grid,.contact-grid,.prices,.steps{grid-template-columns:1fr}
-      .hero{padding-bottom:48px}
+      .hero{padding-bottom:128px}
     }
+
+    .ig-float{
+      position:fixed;
+      right:max(16px, env(safe-area-inset-right, 0px));
+      bottom:max(16px, env(safe-area-inset-bottom, 0px));
+      z-index:50;
+      display:flex;align-items:center;gap:10px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .ig-float-label{
+      background:var(--deep);
+      color:#FBF6F8;
+      border:1px solid rgba(243,201,212,.4);
+      padding:7px 12px;
+      border-radius:999px;
+      font-size:.78rem;font-weight:500;letter-spacing:.02em;
+      white-space:nowrap;
+      box-shadow:0 10px 24px rgba(139,58,82,.28);
+    }
+    .ig-float-btn{
+      width:56px;height:56px;flex-shrink:0;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:var(--deep);
+      color:#F3C9D4;
+      border:1px solid var(--lilac);
+      box-shadow:0 12px 28px rgba(139,58,82,.32);
+      transition:transform .25s,background .25s,color .25s,box-shadow .25s;
+    }
+    .ig-float-btn svg{width:24px;height:24px;display:block}
+    .ig-float:hover .ig-float-btn,
+    .ig-float:focus-visible .ig-float-btn{
+      transform:translateY(-2px);
+      background:var(--lilac-deep);
+      color:#fff;
+      box-shadow:0 16px 32px rgba(126,90,150,.35);
+    }
+    .ig-float:focus-visible{outline:none}
+    .ig-float:focus-visible .ig-float-btn{outline:2px solid var(--lilac);outline-offset:3px}
+    .site-footer{padding-bottom:118px}
+    .footer-inner{padding-right:92px}
+    @media (max-width:720px){
+      .ig-float{right:max(12px, env(safe-area-inset-right, 0px));bottom:max(12px, env(safe-area-inset-bottom, 0px));gap:8px}
+      .ig-float-btn{width:50px;height:50px}
+      .ig-float-btn svg{width:22px;height:22px}
+      .ig-float-label{font-size:.72rem;padding:6px 10px}
+      .footer-inner{padding-right:0}
+    }
+
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
-      .face-art,.rv,.service,.result,.btn{animation:none!important;transition:none!important}
+      .face-art,.rv,.service,.result,.btn,.ig-float-btn{animation:none!important;transition:none!important}
       .rv{opacity:1;transform:none}
-      .service:hover,.result:hover,.btn:hover{transform:none}
+      .service:hover,.result:hover,.btn:hover,.ig-float:hover .ig-float-btn,.ig-float:focus-visible .ig-float-btn{transform:none}
     }
   </style>
   <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
@@ -749,6 +799,17 @@
       </div>
     </section>
   </main>
+
+  <a class="ig-float" href="#" aria-label="Zakaži u DM na Instagramu">
+    <span class="ig-float-label">Zakaži u DM</span>
+    <span class="ig-float-btn" aria-hidden="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="17.15" cy="6.85" r="1.15" fill="currentColor"/>
+      </svg>
+    </span>
+  </a>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
