@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MCraft · Lasersko graviranje i sečenje u Novoj Pazovi</title>
+  <meta name="description" content="MCraft iz Nove Pazove: uslužno lasersko graviranje i sečenje drveta, pleksiglasa, kože i metala. Logo reklame, svetleći natpisi, stalci, pokloni i CNC. Predlog sajta WebGlow Studija.">
+  <meta name="keywords" content="MCraft, lasersko graviranje, lasersko sečenje, logo reklame, svetleći natpisi, svetleći logo, stalci, CNC, Nova Pazova, pleksiglas, graviranje drveta, Srbija">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#161618">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MCraft · Lasersko graviranje i sečenje u Novoj Pazovi">
+  <meta name="twitter:description" content="Vaše ideje, precizno u delo. Lasersko graviranje, sečenje materijala, svetleći natpisi i logo reklame. Predlog sajta, izradio WebGlow Studio.">
+  <meta property="og:title" content="MCraft · Lasersko graviranje i sečenje u Novoj Pazovi">
+  <meta property="og:description" content="Uslužno graviranje i sečenje različitih materijala u Novoj Pazovi. Logo reklame, svetleći natpisi, stalci i pokloni.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/mcraft/">
+  <meta property="og:locale" content="sr_RS">
+  <link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/mcraft/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161618'/%3E%3Cpath d='M8 23V9l5.4 9.2L18.8 9v14' fill='none' stroke='%23F4F1EC' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='24.2' cy='8.4' r='2.1' fill='%23D21C2C'/%3E%3Cpath d='M24.2 4.8v1.4M24.2 10.6v1.4M20.6 8.4h1.4M26.4 8.4h1.4M21.6 5.8l1 .9M25.8 10.1l1 .9M25.8 5.8l-1 .9M21.6 10.1l-1 .9' stroke='%23D21C2C' stroke-width='.9' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MCraft",
+    "description": "Predlog sajta za MCraft iz Nove Pazove: uslužno lasersko graviranje i sečenje materijala, logo reklame i svetleći natpisi. Napravio WebGlow Studio. Kontakt podaci su izmišljeni.",
+    "url": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/mcraft/",
+    "telephone": "06x xxx xxxx",
+    "email": "kontakt@primer.rs",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nova Pazova",
+      "addressCountry": "RS"
+    },
+    "areaServed": "Nova Pazova",
+    "priceRange": "RSD"
+  }
+  </script>
+  <style>
+    :root{
+      --ink:#161618;
+      --char:#1C1D21;
+      --char-2:#232428;
+      --paper:#F5F3EF;
+      --cream:#FAF8F5;
+      --white:#FFFcf8;
+      --muted:#5C5F64;
+      --soft:#8A8D93;
+      --line:#E2DED7;
+      --red:#D21C2C;
+      --red-deep:#A41422;
+      --laser:#FF3A3A;
+      --glow:#FF7A7A;
+      --warm:#E8C9A8;
+      --header:72px;
+      --demo:36px;
+      --gutter:clamp(20px,4vw,56px);
+      --serif:"Playfair Display",Georgia,serif;
+      --sans:"Jost",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:var(--sans);
+      font-size:17px;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    img,svg{max-width:100%;display:block}
+    a{color:var(--red-deep)}
+    button,input,select,textarea{font:inherit}
+    h1,h2,h3,.serif,.logo-name,.faq summary{
+      font-family:var(--serif);
+      font-style:normal;
+      font-synthesis:none;
+      font-weight:600;
+    }
+    .skip{
+      position:absolute;left:-999px;top:0;
+      background:var(--red);color:#fff;padding:8px 16px;z-index:100;
+    }
+    .skip:focus{left:12px;top:12px}
+    .wrap{width:min(1120px,100% - 2*var(--gutter));margin-inline:auto}
+    .demo-bar{
+      position:sticky;top:0;z-index:40;
+      height:var(--demo);
+      display:flex;align-items:center;justify-content:center;gap:.5rem;
+      background:#0F0F11;color:#E8E4DE;
+      font-size:13px;font-weight:400;letter-spacing:.02em;text-align:center;padding:0 16px;
+    }
+    .demo-bar a{color:#FF8A8A;text-decoration:none}
+    .demo-bar a:hover{color:#fff}
+    .site-header{
+      position:sticky;top:var(--demo);z-index:30;
+      height:var(--header);
+      display:flex;align-items:center;
+      background:rgba(22,22,24,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid transparent;
+      transition:border-color .3s,background .3s;
+    }
+    .site-header.solid{border-bottom-color:rgba(255,255,255,.08);background:rgba(22,22,24,.96)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#F5F3EF}
+    .logo-mark{width:40px;height:40px;flex-shrink:0}
+    .logo-kicker{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#FF8A8A;font-weight:500}
+    .logo-name{display:block;font-size:1.2rem;letter-spacing:.01em;line-height:1.1;color:#F5F3EF}
+    .nav{display:flex;align-items:center;gap:22px}
+    .nav a{text-decoration:none;color:#E8E4DE;font-size:.95rem;font-weight:400}
+    .nav a:hover{color:#fff}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 22px;border-radius:999px;border:0;
+      background:var(--red);color:#fff;text-decoration:none;
+      font-weight:500;font-size:.95rem;cursor:pointer;
+      transition:background .25s,transform .25s,box-shadow .25s;
+    }
+    .btn:hover{background:var(--red-deep);transform:translateY(-1px);box-shadow:0 10px 22px rgba(210,28,44,.28)}
+    .btn-ghost{
+      background:transparent;color:#F5F3EF;
+      border:1px solid rgba(255,255,255,.22);
+    }
+    .btn-ghost:hover{background:rgba(255,255,255,.06);color:#fff;box-shadow:none}
+    .btn-dark{
+      background:var(--ink);color:#fff;
+    }
+    .btn-dark:hover{background:#000;box-shadow:0 10px 22px rgba(22,22,24,.2)}
+    .nav-cta{padding:10px 18px}
+    .burger{display:none;width:42px;height:42px;border:0;background:transparent;padding:10px;cursor:pointer}
+    .burger span{display:block;height:1.5px;background:#F5F3EF;margin:6px 0;transition:transform .25s,opacity .25s}
+    .menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .menu-open .burger span:nth-child(2){opacity:0}
+    .menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+    .hero{
+      position:relative;
+      background:
+        radial-gradient(ellipse at 80% 20%,rgba(210,28,44,.18),transparent 42%),
+        radial-gradient(ellipse at 10% 80%,rgba(210,28,44,.08),transparent 46%),
+        linear-gradient(180deg,#161618 0%,#1A1B1F 100%);
+      color:#F5F3EF;
+      padding:clamp(36px,6vw,72px) 0 clamp(64px,8vw,110px);
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:48px 48px;
+      mask-image:radial-gradient(ellipse at 70% 50%,#000 20%,transparent 72%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:clamp(28px,5vw,64px);
+      align-items:center;
+    }
+    .hero-kicker{
+      font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+      color:#FF8A8A;font-weight:500;margin:0 0 14px;
+    }
+    .hero h1{
+      margin:0 0 18px;
+      font-size:clamp(2.05rem,5.2vw,3.6rem);
+      line-height:1.14;
+      letter-spacing:-.02em;
+      color:#F5F3EF;
+    }
+    .hero-lead{margin:0 0 28px;max-width:40ch;color:#C4C0BA;font-weight:300;font-size:1.08rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-art{position:relative;display:grid;place-items:center;min-height:400px}
+    .laser-art{
+      width:min(100%,460px);height:auto;
+      filter:drop-shadow(0 22px 40px rgba(0,0,0,.45));
+    }
+    .laser-beam{
+      transform-box:fill-box;
+      transform-origin:left center;
+      animation:beam-sweep 5.6s ease-in-out infinite;
+    }
+    .laser-spark{animation:spark-pulse 5.6s ease-in-out infinite}
+    .cut-glow{animation:cut-glow 5.6s ease-in-out infinite}
+    @keyframes beam-sweep{
+      0%,8%{transform:translate(0,0);opacity:.15}
+      18%{opacity:1}
+      72%{transform:translate(168px,0);opacity:1}
+      82%,100%{transform:translate(168px,0);opacity:.15}
+    }
+    @keyframes spark-pulse{
+      0%,8%{transform:translate(0,0);opacity:0}
+      18%{opacity:1}
+      72%{transform:translate(168px,0);opacity:1}
+      82%,100%{transform:translate(168px,0);opacity:0}
+    }
+    @keyframes cut-glow{
+      0%,12%{opacity:.25}
+      75%{opacity:1}
+      100%{opacity:.7}
+    }
+
+    section{padding:clamp(64px,8vw,104px) 0}
+    .sec-kicker{
+      font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--red);font-weight:500;margin:0 0 10px;
+    }
+    .sec-title{margin:0 0 12px;font-size:clamp(1.85rem,3.6vw,2.8rem);line-height:1.15;letter-spacing:-.02em;color:var(--ink)}
+    .sec-lead{margin:0 0 36px;max-width:46ch;color:var(--muted);font-weight:300}
+
+    .about{background:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,56px);align-items:center}
+    .about-text p{margin:0 0 16px;color:var(--muted);font-weight:300}
+    .about-text p:last-of-type{margin-bottom:0}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+    .chip{
+      border:1px solid var(--line);
+      background:var(--cream);
+      color:var(--ink);
+      border-radius:999px;
+      padding:7px 14px;
+      font-size:.85rem;font-weight:500;
+    }
+    .about-art{
+      background:var(--char);
+      border-radius:24px;
+      padding:28px 24px;
+      min-height:280px;
+      display:grid;place-items:center;
+      box-shadow:0 18px 40px rgba(22,22,24,.16);
+    }
+
+    .services-sec{background:var(--cream)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:26px 24px 24px;
+      transition:transform .3s,box-shadow .3s;
+    }
+    .service:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(22,22,24,.08)}
+    .service svg{width:44px;height:44px;margin-bottom:14px}
+    .service h3{margin:0 0 8px;font-size:1.25rem;color:var(--ink)}
+    .service p{margin:0;color:var(--muted);font-weight:300;font-size:.98rem}
+
+    .process{background:var(--ink);color:#F5F3EF}
+    .process .sec-kicker{color:#FF8A8A}
+    .process .sec-title{color:#fff}
+    .process .sec-lead{color:#C4C0BA}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:0;padding:0;list-style:none}
+    .step{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:20px;
+      padding:22px 18px 24px;
+    }
+    .step-num{display:block;font-family:var(--sans);font-weight:600;font-size:1.15rem;letter-spacing:.08em;margin-bottom:10px;color:#FF8A8A}
+    .step h3{margin:0 0 8px;font-size:1.15rem;color:#fff}
+    .step p{margin:0;color:#C4C0BA;font-weight:300;font-size:.95rem}
+
+    .gallery{background:var(--paper)}
+    .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .shot{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:20px;
+      overflow:hidden;
+      transition:transform .3s,box-shadow .3s;
+    }
+    .shot:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(22,22,24,.08)}
+    .shot-art{height:200px;position:relative;overflow:hidden}
+    .shot figcaption{padding:14px 18px 18px}
+    .shot h3{margin:0 0 4px;font-size:1.12rem}
+    .shot p{margin:0;color:var(--muted);font-weight:300;font-size:.9rem}
+
+    .art-plaque{background:linear-gradient(180deg,#3A2A1E,#2A1E14)}
+    .art-neon{background:#0C0C10}
+    .art-logo{background:linear-gradient(180deg,#1A1A1E,#111113)}
+    .art-stand{background:linear-gradient(180deg,#E8E4DC,#D4CFC5)}
+    .art-leather{background:linear-gradient(180deg,#6B3F28,#4A2A1A)}
+    .art-kids{background:linear-gradient(180deg,#F0E6D4,#E2D4BC)}
+
+    .faq-list{display:grid;gap:12px;max-width:760px}
+    .faq details{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:4px 20px;
+    }
+    .faq summary{
+      cursor:pointer;
+      list-style:none;
+      padding:16px 0;
+      font-size:1.15rem;
+      color:var(--ink);
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{
+      content:"+";
+      float:right;
+      font-family:var(--sans);
+      font-weight:400;
+      color:var(--red);
+    }
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:0 0 16px;color:var(--muted);font-weight:300}
+
+    .contact{background:linear-gradient(180deg,var(--cream),#EFEBE4)}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;align-items:start}
+    .info-list{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:14px}
+    .info-list li{display:grid;gap:2px}
+    .info-list small{color:var(--red);letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;font-weight:500}
+    .info-list b{font-weight:500}
+    .map-ph{
+      margin:16px 0 22px;height:140px;border-radius:18px;border:1px dashed #C8C2B8;
+      background:
+        linear-gradient(180deg,transparent 21px,rgba(210,28,44,.08) 22px),
+        linear-gradient(90deg,transparent 21px,rgba(22,22,24,.06) 22px),
+        #fff;
+      background-size:22px 22px;
+      display:grid;place-items:center;color:var(--muted);font-size:.9rem;text-align:center;padding:16px;
+    }
+    .form{
+      background:var(--white);border:1px solid var(--line);border-radius:24px;padding:26px;
+    }
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .field{display:grid;gap:6px}
+    .field-full{grid-column:1/-1}
+    .field span{font-size:.82rem;font-weight:500;color:var(--ink)}
+    .field input,.field select,.field textarea{
+      width:100%;border:1px solid var(--line);border-radius:12px;
+      padding:12px 14px;background:var(--cream);color:var(--ink);
+    }
+    .field input:focus,.field select:focus,.field textarea:focus{
+      outline:2px solid rgba(210,28,44,.28);outline-offset:1px;border-color:var(--red);
+    }
+    .form .btn{margin-top:16px;width:100%}
+    .form-success{display:none}
+    .form.is-sent .fields,.form.is-sent .btn,.form.is-sent .form-hint{display:none}
+    .form.is-sent .form-success{display:block}
+    .form-success h3{margin:0 0 8px;color:var(--ink)}
+    .form-hint{margin:12px 0 0;color:var(--muted);font-size:.85rem;font-weight:300}
+
+    .site-footer{
+      background:var(--ink);
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:28px 0 40px;
+      color:#A8A59F;
+      font-size:.9rem;
+    }
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+    .site-footer a{color:#FF8A8A;text-decoration:none}
+    .site-footer a:hover{color:#fff}
+    .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+    .rv.in{opacity:1;transform:none}
+
+    .ig-float{
+      position:fixed;
+      right:max(16px, env(safe-area-inset-right, 0px));
+      bottom:max(16px, env(safe-area-inset-bottom, 0px));
+      z-index:50;
+      display:flex;align-items:center;gap:10px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .ig-float-label{
+      background:var(--ink);
+      color:#F5F3EF;
+      border:1px solid rgba(210,28,44,.45);
+      padding:7px 12px;
+      border-radius:999px;
+      font-size:.78rem;font-weight:500;letter-spacing:.02em;
+      white-space:nowrap;
+      box-shadow:0 10px 24px rgba(22,22,24,.28);
+    }
+    .ig-float-btn{
+      width:56px;height:56px;flex-shrink:0;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:var(--red);
+      color:#fff;
+      border:1px solid var(--red-deep);
+      box-shadow:0 12px 28px rgba(210,28,44,.36);
+      transition:transform .25s,background .25s,box-shadow .25s;
+    }
+    .ig-float-btn svg{width:24px;height:24px;display:block}
+    .ig-float:hover .ig-float-btn,
+    .ig-float:focus-visible .ig-float-btn{
+      transform:translateY(-2px);
+      background:var(--red-deep);
+      box-shadow:0 16px 32px rgba(210,28,44,.42);
+    }
+    .ig-float:focus-visible{outline:none}
+    .ig-float:focus-visible .ig-float-btn{outline:2px solid #FFB0B0;outline-offset:3px}
+    .site-footer{padding-bottom:118px}
+    .footer-inner{padding-right:92px}
+
+    @media (max-width:900px){
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr 1fr}
+      .hero-art{order:-1;min-height:280px}
+      .laser-art{width:min(82%,380px)}
+      .steps,.services,.shots{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:720px){
+      .demo-bar{font-size:11px;letter-spacing:0;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .nav{
+        display:none;position:fixed;top:calc(var(--demo) + var(--header));
+        left:0;right:0;background:rgba(22,22,24,.98);
+        flex-direction:column;align-items:stretch;gap:0;
+        padding:8px var(--gutter) 18px;border-bottom:1px solid rgba(255,255,255,.08);
+      }
+      .menu-open .nav{display:flex}
+      .nav a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+      .nav-cta{margin-top:10px;width:fit-content}
+      .burger{display:block}
+      .services,.fields,.hero-grid,.about-grid,.contact-grid,.steps,.shots{grid-template-columns:1fr}
+      .hero{padding-bottom:128px}
+      .ig-float{right:max(12px, env(safe-area-inset-right, 0px));bottom:max(12px, env(safe-area-inset-bottom, 0px));gap:8px}
+      .ig-float-btn{width:50px;height:50px}
+      .ig-float-btn svg{width:22px;height:22px}
+      .ig-float-label{font-size:.72rem;padding:6px 10px}
+      .footer-inner{padding-right:0}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .laser-beam,.laser-spark,.cut-glow,.rv,.service,.shot,.btn,.ig-float-btn{animation:none!important;transition:none!important}
+      .rv{opacity:1;transform:none}
+      .service:hover,.shot:hover,.btn:hover,.ig-float:hover .ig-float-btn,.ig-float:focus-visible .ig-float-btn{transform:none}
+    }
+  </style>
+  <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+  <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+  <div class="demo-bar">Predlog sajta · <a href="https://webglowstudio.github.io/Webglowstudioportfolio/">WebGlow Studio</a> · kontakti su izmišljeni</div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#pocetna">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#0F0F11"/>
+          <rect x=".6" y=".6" width="38.8" height="38.8" rx="8.4" fill="none" stroke="rgba(210,28,44,.55)"/>
+          <path d="M10 29V11l6.8 11.6L23.6 11v18" fill="none" stroke="#F5F3EF" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="30.2" cy="11" r="2.15" fill="#D21C2C"/>
+          <path d="M30.2 7.4v1.3M30.2 13.3v1.3M26.8 11h1.3M32.3 11h1.3M27.7 8.5l.95.85M31.75 12.65l.95.85M31.75 8.5l-.95.85M27.7 12.65l-.95.85" stroke="#D21C2C" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+        <span>
+          <span class="logo-kicker">Laser cut</span>
+          <span class="logo-name">MCraft</span>
+        </span>
+      </a>
+      <nav class="nav" id="site-nav">
+        <a href="#usluge">Usluge</a>
+        <a href="#proces">Kako radimo</a>
+        <a href="#radovi">Radovi</a>
+        <a href="#pitanja">Pitanja</a>
+        <a class="btn nav-cta" href="#kontakt">Pošaljite upit</a>
+      </nav>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otvori meni">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="sadrzaj">
+    <section class="hero" id="pocetna">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hero-kicker">Laserska radionica · Nova Pazova</p>
+          <h1>Vaše ideje, precizno u delo.</h1>
+          <p class="hero-lead">Uslužno graviranje i sečenje različitih vrsta materijala. Od logoa i svetlećih natpisa do stalaka, poklona i delova po meri.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#kontakt">Pošaljite upit</a>
+            <a class="btn btn-ghost" href="#usluge">Pogledajte usluge</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg class="laser-art" viewBox="0 0 460 420" fill="none">
+            <rect x="36" y="48" width="388" height="324" rx="22" fill="#232428" stroke="rgba(255,255,255,.08)"/>
+            <rect x="62" y="86" width="336" height="230" rx="8" fill="#3B2A1C"/>
+            <rect x="70" y="94" width="320" height="214" rx="5" fill="url(#wood)"/>
+            <path d="M150 250V150l40 68 40-68v100" fill="none" stroke="#5A3A24" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+            <path d="M150 250V150l40 68 40-68v100" fill="none" stroke="#E8C9A8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity=".95"/>
+            <path class="cut-glow" d="M150 250V150l40 68 40-68v100" fill="none" stroke="#D21C2C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+            <rect x="86" y="42" width="288" height="14" rx="3" fill="#2A2B30" stroke="rgba(255,255,255,.1)"/>
+            <rect x="118" y="28" width="28" height="36" rx="3" fill="#3A3B40"/>
+            <g class="laser-beam">
+              <rect x="128" y="64" width="8" height="18" rx="1" fill="#8A8D93"/>
+              <rect x="130.6" y="82" width="2.8" height="132" fill="#FF3A3A" opacity=".9"/>
+              <rect x="131.2" y="82" width="1.6" height="132" fill="#FFD0D0"/>
+            </g>
+            <g class="laser-spark">
+              <circle cx="132" cy="218" r="5" fill="#FF5A5A"/>
+              <circle cx="132" cy="218" r="10" fill="#FF3A3A" opacity=".28"/>
+              <path d="M132 206v8M132 222v8M120 218h8M136 218h8M123.5 209.5l5.5 5.5M135 221l5.5 5.5M135 209.5l-5.5 5.5M123.5 221l-5.5 5.5" stroke="#FF8A8A" stroke-width="1.4" stroke-linecap="round"/>
+            </g>
+            <rect x="46" y="348" width="368" height="16" rx="3" fill="#1A1B1F"/>
+            <text x="230" y="390" text-anchor="middle" fill="#8A8D93" font-family="Jost,sans-serif" font-size="13" letter-spacing="3">LASER CUT · NOVA PAZOVA</text>
+            <defs>
+              <linearGradient id="wood" x1="70" y1="94" x2="390" y2="308" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#8B5A32"/>
+                <stop offset=".45" stop-color="#A56A3C"/>
+                <stop offset="1" stop-color="#6E4528"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="o-nama">
+      <div class="wrap about-grid">
+        <div class="about-text rv">
+          <p class="sec-kicker">Lokalna radionica</p>
+          <h2 class="sec-title">Tu smo da vašu ideju pretvorimo u predmet koji se drži u ruci</h2>
+          <p>MCraft je lokalno preduzeće iz Nove Pazove. Radimo uslužno graviranje i sečenje, pažljivo i po meri, bilo da vam treba jedan poklon ili serija za lokal ili događaj.</p>
+          <p>Pošaljete skicu, meru ili samo želju. Mi pripremimo crtež, isečemo ili ugraviramo materijal i predamo vam gotov komad, čisto i precizno.</p>
+          <div class="chips">
+            <span class="chip">Drvo</span>
+            <span class="chip">Pleksiglas</span>
+            <span class="chip">Akril</span>
+            <span class="chip">Koža</span>
+            <span class="chip">Metal</span>
+            <span class="chip">Šperploča</span>
+          </div>
+        </div>
+        <div class="about-art rv" aria-hidden="true">
+          <svg viewBox="0 0 280 220" width="260" height="200">
+            <rect x="24" y="28" width="232" height="164" rx="10" fill="#2A2B30"/>
+            <rect x="40" y="46" width="200" height="116" rx="4" fill="#1A1B1F"/>
+            <path d="M86 132V76l28 48 28-48v56" fill="none" stroke="#F5F3EF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="196" cy="70" r="10" fill="#D21C2C"/>
+            <circle cx="196" cy="70" r="18" fill="#D21C2C" opacity=".25"/>
+            <path d="M40 178h200" stroke="rgba(255,255,255,.12)" stroke-width="6"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-sec" id="usluge">
+      <div class="wrap">
+        <p class="sec-kicker rv">Usluge</p>
+        <h2 class="sec-title rv">Šta možemo da izradimo za vas</h2>
+        <p class="sec-lead rv">Od malog graviranog detalja do svetlećeg natpisa za izlog. Sve po vašoj ideji, u materijalu koji odgovara nameni.</p>
+        <div class="services">
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#F5E8E8"/><path d="M12 30V14l6 10 6-10v16" stroke="#D21C2C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 14v16" stroke="#D21C2C" stroke-width="1.8" stroke-linecap="round"/><circle cx="30" cy="14" r="2.2" fill="#D21C2C"/></svg>
+            <h3>Lasersko graviranje</h3>
+            <p>Imena, logoi, posvete i šare na drvetu, koži, akrilu i metalu, čisto i čitko, po vašem crtežu.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#F5E8E8"/><rect x="11" y="14" width="22" height="16" rx="2" stroke="#D21C2C" stroke-width="1.8"/><path d="M11 22h22M22 14v16" stroke="#D21C2C" stroke-width="1.4" stroke-dasharray="2 3" stroke-linecap="round"/></svg>
+            <h3>Sečenje materijala</h3>
+            <p>Precizno sečenje drveta, pleksiglasa, kože, metala i šperploče, od jednog komada do manjih serija.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#F5E8E8"/><rect x="12" y="13" width="20" height="18" rx="2" stroke="#D21C2C" stroke-width="1.8"/><path d="M16 22h12M19 18h6" stroke="#D21C2C" stroke-width="1.6" stroke-linecap="round"/><path d="M18 31h8" stroke="#D21C2C" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <h3>Logo reklame</h3>
+            <p>Table, izlozi i reklamni natpisi sa vašim logoom, da vas klijenti prepoznaju već sa ulice.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#F5E8E8"/><path d="M12 28c4-10 16-10 20 0" stroke="#D21C2C" stroke-width="1.8" stroke-linecap="round"/><circle cx="22" cy="16" r="3" fill="#D21C2C"/><path d="M22 19v4" stroke="#D21C2C" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <h3>Svetleći natpisi i logoi</h3>
+            <p>LED i neon natpisi, svetleći logoi za lokal, događaj ili zid kod kuće, u boji koju odaberete.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#F5E8E8"/><path d="M14 30h16L26 16h-8L14 30z" stroke="#D21C2C" stroke-width="1.8" stroke-linejoin="round"/><path d="M18 16V13h8v3" stroke="#D21C2C" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <h3>Stalci i pokloni</h3>
+            <p>Slatki stalci, držači, privesci i pokloni sa imenom ili logoom, za svakodnevnu upotrebu ili za poklon.</p>
+          </article>
+          <article class="service rv">
+            <svg viewBox="0 0 44 44" fill="none" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#F5E8E8"/><circle cx="16" cy="22" r="5" stroke="#D21C2C" stroke-width="1.8"/><circle cx="28" cy="22" r="5" stroke="#D21C2C" stroke-width="1.8"/><path d="M21 22h2" stroke="#D21C2C" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <h3>CNC i program za decu</h3>
+            <p>CNC obrada za precizne delove, i drvene igračke, slagalice i sitnice iz programa za najmlađe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="proces">
+      <div class="wrap">
+        <p class="sec-kicker rv">Kako radimo</p>
+        <h2 class="sec-title rv">Četiri koraka, od ideje do preuzimanja</h2>
+        <p class="sec-lead rv">Jednostavan tok, da tačno znate šta sledi i kada možete da očekujete gotov komad.</p>
+        <ol class="steps">
+          <li class="step rv">
+            <span class="step-num">01</span>
+            <h3>Ideja</h3>
+            <p>Pošaljete skicu, meru, logo ili samo opišete šta želite. Dogovorimo materijal i namenu.</p>
+          </li>
+          <li class="step rv">
+            <span class="step-num">02</span>
+            <h3>Dizajn</h3>
+            <p>Pripremamo crtež za graviranje ili sečenje i uskladimo detalje sa vama pre izrade.</p>
+          </li>
+          <li class="step rv">
+            <span class="step-num">03</span>
+            <h3>Izrada</h3>
+            <p>Radimo na laseru ili CNC-u, pažljivo i precizno, pa proveravamo svaki gotov komad.</p>
+          </li>
+          <li class="step rv">
+            <span class="step-num">04</span>
+            <h3>Preuzimanje</h3>
+            <p>Preuzimate u Novoj Pazovi ili dogovaramo dostavu, spremno za korišćenje ili poklon.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="gallery" id="radovi">
+      <div class="wrap">
+        <p class="sec-kicker rv">Radovi</p>
+        <h2 class="sec-title rv">Primeri onoga što izlazi iz radionice</h2>
+        <p class="sec-lead rv">Ovo su ilustracije predloga sajta, ne fotografije. U pravoj verziji ovde idu vaši gotovi radovi.</p>
+        <div class="shots">
+          <figure class="shot rv">
+            <div class="shot-art art-plaque" aria-hidden="true">
+              <svg viewBox="0 0 300 200" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="300" height="200" fill="#3B2A1C"/>
+                <rect x="48" y="36" width="204" height="128" rx="6" fill="#8B5A32"/>
+                <rect x="56" y="44" width="188" height="112" rx="3" fill="#A56A3C"/>
+                <path d="M110 132V72l28 40 28-40v60" fill="none" stroke="#6E4528" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M110 132V72l28 40 28-40v60" fill="none" stroke="#E8C9A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
+              </svg>
+            </div>
+            <figcaption>
+              <h3>Gravirane table</h3>
+              <p>Imena, logoi i posvete u drvetu.</p>
+            </figcaption>
+          </figure>
+          <figure class="shot rv">
+            <div class="shot-art art-neon" aria-hidden="true">
+              <svg viewBox="0 0 300 200" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="300" height="200" fill="#0C0C10"/>
+                <rect x="40" y="58" width="220" height="84" rx="8" fill="#16161C" stroke="#2A2A32"/>
+                <text x="150" y="112" text-anchor="middle" font-family="Jost,sans-serif" font-size="28" font-weight="600" fill="#FF4A4A" letter-spacing="4">OTVORENO</text>
+                <text x="150" y="112" text-anchor="middle" font-family="Jost,sans-serif" font-size="28" font-weight="600" fill="none" stroke="#FF8A8A" stroke-width="1.2" letter-spacing="4" opacity=".85">OTVORENO</text>
+              </svg>
+            </div>
+            <figcaption>
+              <h3>Svetleći natpisi</h3>
+              <p>LED i neon slova za izlog i zid.</p>
+            </figcaption>
+          </figure>
+          <figure class="shot rv">
+            <div class="shot-art art-logo" aria-hidden="true">
+              <svg viewBox="0 0 300 200" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="300" height="200" fill="#141416"/>
+                <rect x="86" y="34" width="128" height="128" rx="16" fill="#1C1D21" stroke="#D21C2C" stroke-width="3"/>
+                <path d="M118 140V68l26 44 26-44v72" fill="none" stroke="#F5F3EF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="196" cy="62" r="8" fill="#D21C2C"/>
+              </svg>
+            </div>
+            <figcaption>
+              <h3>Svetleći logoi</h3>
+              <p>Reklamni znak koji se vidi i noću.</p>
+            </figcaption>
+          </figure>
+          <figure class="shot rv">
+            <div class="shot-art art-stand" aria-hidden="true">
+              <svg viewBox="0 0 300 200" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="300" height="200" fill="#E8E4DC"/>
+                <path d="M90 158h120l-14-20H104L90 158z" fill="#C8C0B4" stroke="#8A8378" stroke-width="2"/>
+                <path d="M124 138V62h52v76" fill="#EDE8E0" stroke="#8A8378" stroke-width="2"/>
+                <rect x="136" y="74" width="28" height="44" rx="3" fill="#D21C2C" opacity=".85"/>
+                <path d="M118 158h64" stroke="#6E6A62" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <figcaption>
+              <h3>Slatki stalci</h3>
+              <p>Držači i stalci za izlog i kuću.</p>
+            </figcaption>
+          </figure>
+          <figure class="shot rv">
+            <div class="shot-art art-leather" aria-hidden="true">
+              <svg viewBox="0 0 300 200" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="300" height="200" fill="#4A2A1A"/>
+                <rect x="86" y="44" width="128" height="112" rx="14" fill="#6B3F28" stroke="#E8C9A8" stroke-width="2" stroke-dasharray="3 5"/>
+                <circle cx="150" cy="68" r="6" fill="#3A2014"/>
+                <path d="M126 124V88l18 28 18-28v36" fill="none" stroke="#E8C9A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <figcaption>
+              <h3>Koža i detalji</h3>
+              <p>Privesci, etiketice i sitni pokloni.</p>
+            </figcaption>
+          </figure>
+          <figure class="shot rv">
+            <div class="shot-art art-kids" aria-hidden="true">
+              <svg viewBox="0 0 300 200" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect width="300" height="200" fill="#E2D4BC"/>
+                <circle cx="110" cy="100" r="36" fill="#D21C2C"/>
+                <rect x="156" y="66" width="70" height="70" rx="8" fill="#F5F3EF" stroke="#8B5A32" stroke-width="3"/>
+                <path d="M80 150h140" stroke="#8B5A32" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="191" cy="101" r="10" fill="#D21C2C"/>
+              </svg>
+            </div>
+            <figcaption>
+              <h3>Za najmlađe</h3>
+              <p>Drvene igračke, slagalice i oblici.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="pitanja">
+      <div class="wrap">
+        <p class="sec-kicker rv">Česta pitanja</p>
+        <h2 class="sec-title rv">Ono što klijenti najčešće pitaju</h2>
+        <div class="faq-list">
+          <details class="rv">
+            <summary>Koje materijale obrađujete?</summary>
+            <p>Drvo, šperploču, pleksiglas i akril, kožu i metal, kao i druge materijale pogodne za laser ili CNC. Recite nam namenu, pa predlažemo šta najbolje stoji.</p>
+          </details>
+          <details class="rv">
+            <summary>Da li radite po mojoj ideji ili crtežu?</summary>
+            <p>Da. Možete da pošaljete gotov logo, skicu ili samo opis. Pripremamo crtež za izradu i usklađujemo detalje sa vama pre sečenja i graviranja.</p>
+          </details>
+          <details class="rv">
+            <summary>Radite li svetleće natpise i logo reklame?</summary>
+            <p>Da. Izrađujemo svetleće natpise, svetleće logoe i reklamne table, da lokal ili brend budu vidljivi i danju i noću.</p>
+          </details>
+          <details class="rv">
+            <summary>Koliko treba da se čeka?</summary>
+            <p>Zavisi od zahteva i trenutnih porudžbina. Za jednostavnije komade često ide brzo, a za veće natpise i serije dogovaramo rok unapred.</p>
+          </details>
+          <details class="rv">
+            <summary>Gde preuzimam porudžbinu?</summary>
+            <p>Radionica je u Novoj Pazovi. Preuzimanje dogovaramo tamo, a po potrebi i dostavu.</p>
+          </details>
+          <details class="rv">
+            <summary>Kako da poručim?</summary>
+            <p>Najlakše je da pišete na Instagramu ili da ostavite upit na sajtu. Telefon i mejl ovde su primer, ne pravi kontakt.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt">
+      <div class="wrap contact-grid">
+        <div class="rv">
+          <p class="sec-kicker">Kontakt i porudžbina</p>
+          <h2 class="sec-title">Recite nam šta želite da izradimo</h2>
+          <p class="sec-lead">Upit šaljete porukom. Telefon i mejl ispod su primer, ne pravi kontakt.</p>
+          <ul class="info-list">
+            <li><small>Instagram</small><b>Piši nam u DM</b></li>
+            <li><small>Telefon</small><b>06x xxx xxxx</b></li>
+            <li><small>Mejl</small><b>kontakt@primer.rs</b></li>
+            <li><small>Mesto</small><b>Nova Pazova</b></li>
+          </ul>
+          <a class="btn btn-dark" href="#">Piši nam u DM</a>
+          <div class="map-ph">Nova Pazova</div>
+        </div>
+        <form class="form rv" id="termin" action="#" method="post">
+          <h3 class="serif" style="margin:0 0 16px;font-size:1.45rem;color:var(--ink)">Pošaljite upit</h3>
+          <div class="fields">
+            <label class="field"><span>Ime</span><input id="ime" name="ime" type="text" autocomplete="name" required></label>
+            <label class="field"><span>Usluga</span>
+              <select id="usluga" name="usluga" required>
+                <option value="">Izaberite</option>
+                <option>Lasersko graviranje</option>
+                <option>Sečenje materijala</option>
+                <option>Logo reklama</option>
+                <option>Svetleći natpis ili logo</option>
+                <option>Stalci i pokloni</option>
+                <option>CNC obrada</option>
+                <option>Program za decu</option>
+                <option>Nešto drugo</option>
+              </select>
+            </label>
+            <label class="field field-full"><span>Poruka</span><textarea name="poruka" rows="4" placeholder="Opišite ideju, meru ili materijal, i kada vam odgovara da se čujemo."></textarea></label>
+          </div>
+          <button class="btn" type="submit">Pošalji upit</button>
+          <p class="form-hint">Forma je deo predloga sajta i ne šalje pravu poruku.</p>
+          <div class="form-success" role="status" aria-live="polite">
+            <h3>Hvala, <span data-guest></span>.</h3>
+            <p>Ovo je predlog sajta. U pravoj verziji poruka bi stigla MCraftu, a ovde je ostala samo kao primer upita.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <a class="ig-float" href="#" aria-label="Piši nam u DM na Instagramu">
+    <span class="ig-float-label">Piši nam u DM</span>
+    <span class="ig-float-btn" aria-hidden="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="17.15" cy="6.85" r="1.15" fill="currentColor"/>
+      </svg>
+    </span>
+  </a>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>MCraft · Lasersko graviranje i sečenje · predlog početne strane</p>
+      <p><a href="https://webglowstudio.github.io/Webglowstudioportfolio/">Izradio WebGlow Studio</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    const header = document.querySelector(".site-header");
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("site-nav");
+    function closeMenu(){
+      document.body.classList.remove("menu-open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Otvori meni");
+    }
+    burger.addEventListener("click", function(){
+      const open = document.body.classList.toggle("menu-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "Zatvori meni" : "Otvori meni");
+    });
+    nav.addEventListener("click", function(e){ if(e.target.closest("a")) closeMenu(); });
+    const onScroll = function(){ header.classList.toggle("solid", window.scrollY > 8); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, {passive:true});
+
+    const form = document.getElementById("termin");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      const ime = (document.getElementById("ime").value || "").trim();
+      if(!ime || !document.getElementById("usluga").value){
+        form.reportValidity();
+        return;
+      }
+      form.querySelector("[data-guest]").textContent = ime;
+      form.classList.add("is-sent");
+    });
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reduce){
+      document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+      return;
+    }
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll(".rv").forEach(function(el, i){
+      el.style.transitionDelay = (i % 4) * 70 + "ms";
+      io.observe(el);
+    });
+  })();
+  </script>
+</body>
+</html>
