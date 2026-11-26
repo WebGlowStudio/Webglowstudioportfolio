@@ -267,6 +267,16 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 @keyframes ostavasway{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @media (prefers-reduced-motion:reduce){.ph.ostava .jar{animation:none}}
 
+.ph.luca{background:radial-gradient(circle at 50% 28%, #2A3140, #14181E 74%);color:#F6F3EE;container-type:inline-size}
+.ph.luca svg{width:72px;height:96px;flex-shrink:0}
+.ph.luca .flame{animation:lucaflicker 1.8s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 85%}
+.ph.luca small{color:#E8C97A}
+.ph.luca b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px;font-size:17px}
+@container (max-width:336px){.ph.luca b{font-size:17px}}
+@keyframes lucaflicker{0%,100%{transform:scale(1,1) rotate(-1deg)}40%{transform:scale(1.06,.94) rotate(1.2deg)}70%{transform:scale(.97,1.05) rotate(-.6deg)}}
+@media (prefers-reduced-motion:reduce){.ph.luca .flame{animation:none}}
+
+
 
 
 
@@ -490,6 +500,15 @@ button.btn{font-family:inherit;cursor:pointer}
     <div class="radovi-more" id="radovi-ostali" aria-hidden="true" inert>
       <div class="radovi-more-inner">
         <div class="grid">
+<article class="card">
+        <a class="shot" href="demos/tiha-luca/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph luca" aria-hidden="true"><svg viewBox="0 0 72 96" fill="none"><g class="flame"><path d="M36 8c8 12 12 18 12 26A12 12 0 0 1 36 46 12 12 0 0 1 24 34C24 26 28 20 36 8Z" fill="#E8C97A"/><path d="M36 18c4 6 6 10 6 14a6 6 0 0 1-12 0c0-4 2-8 6-14Z" fill="#F7E7B0"/></g><rect x="31" y="48" width="10" height="32" rx="3.5" fill="#EDE9E2"/><rect x="25" y="80" width="22" height="7" rx="2" fill="#C9A45C"/></svg><b>Tiha luča</b><small>Pogrebne usluge · Kragujevac</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Pogrebne usluge</span><span class="tag">Predlog sajta</span></div>
+          <h3>Tiha luča</h3>
+          <p>Dostojanstven sajt za pogrebno preduzeće: dežurstvo 0–24, usluge, koraci posle gubitka i paketi na upit.</p>
+          <a class="btn small" href="demos/tiha-luca/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
 <article class="card">
         <a class="shot" href="demos/sumska-ostava/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph ostava" aria-hidden="true"><svg viewBox="0 0 96 64" fill="none"><g class="jar"><rect x="38" y="10" width="20" height="5" rx="1.2" fill="#C4A574"/><rect x="41" y="15" width="14" height="3.2" rx="0.8" fill="#E4C98A"/><path d="M36 19.5c0-1 1-1.6 2.2-1.6h19.6c1.2 0 2.2.6 2.2 1.6v2.2c0 1.2-8 2.4-12 2.4s-12-1.2-12-2.4V19.5Z" fill="#A8844E"/><path d="M37.5 24.2c-.4 1.2-.7 3.4-.7 6.3 0 10.2 1.6 22.3 11.2 22.3s11.2-12.1 11.2-22.3c0-2.9-.3-5.1-.7-6.3H37.5Z" fill="#F3E6D0" stroke="#C4A574" stroke-width="1.2"/><path d="M38.2 31.5c.8 9.2 2.6 19.5 9.8 19.5s9-10.3 9.8-19.5c-2.6 1.4-6.2 2.1-9.8 2.1s-7.2-.7-9.8-2.1Z" fill="#7A2E32"/><path d="M42 36c2.2 1.2 5 1.8 7 1.8 2 0 3.6-.3 5-.8" stroke="#C45B55" stroke-width="1.2" stroke-linecap="round" opacity=".7"/></g></svg><b>Šumska ostava</b><small>Džem · slatko · kolači</small></div></a>
         <div class="card-body">

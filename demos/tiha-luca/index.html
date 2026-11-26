@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tiha luča — pogrebno preduzeće Kragujevac | dežurstvo 0–24</title>
+  <meta name="description" content="Pogrebno preduzeće Tiha luča u Kragujevcu: organizacija sahrane, prevoz pokojnika, oprema, dokumentacija i kremacija. Dežurstvo 0–24. Predlog sajta, izradio WebGlow Studio.">
+  <meta name="keywords" content="pogrebno preduzeće Kragujevac, Tiha luča, organizacija sahrane, prevoz pokojnika, sanduci i urne, venci, umrlice, čitulje, kremacija, dežurstvo 0-24">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="WebGlow Studio">
+  <meta name="theme-color" content="#14181E">
+  <link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/tiha-luca/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sr_RS">
+  <meta property="og:site_name" content="Tiha luča">
+  <meta property="og:title" content="Tiha luča — pogrebno preduzeće Kragujevac">
+  <meta property="og:description" content="Kad je najteže, tu smo da preuzmemo sve. Organizacija sahrane, prevoz i dokumentacija, dežurstvo 0–24. Predlog sajta WebGlow Studija.">
+  <meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/tiha-luca/">
+  <meta property="og:image" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/tiha-luca/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tiha luča — pogrebno preduzeće Kragujevac">
+  <meta name="twitter:description" content="Kad je najteže, tu smo da preuzmemo sve. Dežurstvo 0–24. Predlog sajta, izradio WebGlow Studio.">
+  <meta name="twitter:image" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/tiha-luca/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FuneralHome",
+    "name": "Tiha luča",
+    "description": "Izmišljeno pogrebno preduzeće iz Kragujevca, predlog sajta koji je izradio WebGlow Studio. Telefon, mejl i adresa su izmišljeni primer.",
+    "url": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/tiha-luca/",
+    "image": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/tiha-luca/og.png",
+    "telephone": "06x xxx xxxx",
+    "email": "kontakt@primer.rs",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ulica primer 12",
+      "postalCode": "34000",
+      "addressLocality": "Kragujevac",
+      "addressCountry": "RS"
+    },
+    "areaServed": "Kragujevac",
+    "priceRange": "Na upit"
+  }
+  </script>
+  <style>
+    :root{
+      --slate:#14181E;
+      --slate-mid:#1C222B;
+      --slate-soft:#252C36;
+      --slate-line:rgba(232,226,214,.14);
+      --stone:#EDE9E2;
+      --stone-mid:#E2DDD4;
+      --ivory:#F6F3EE;
+      --paper:#FBFAF7;
+      --ink:#1C1A16;
+      --muted:#6B645A;
+      --line:#D6D0C6;
+      --gold:#C9A45C;
+      --gold-soft:#E8C97A;
+      --gold-pale:#F4E2A8;
+      --gold-deep:#8C6A2E;
+      --header:72px;
+      --demo:36px;
+      --gutter:clamp(20px,5vw,64px);
+      --serif:"Playfair Display",Georgia,serif;
+      --sans:"Jost",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + var(--demo) + 8px);-webkit-text-size-adjust:100%}
+    body{
+      margin:0;
+      background:var(--stone);
+      color:var(--ink);
+      font-family:var(--sans);
+      font-size:17px;
+      line-height:1.65;
+      overflow-x:clip;
+    }
+    img,svg{max-width:100%;display:block}
+    a{color:var(--gold-deep)}
+    button,input,select,textarea{font:inherit}
+    h1,h2,h3,.serif,.logo-name,.faq summary,.pack-name{
+      font-family:var(--serif);
+      font-style:normal;
+      font-synthesis:none;
+      font-weight:600;
+    }
+    .skip{
+      position:absolute;left:-999px;top:0;
+      background:var(--slate);color:var(--ivory);padding:8px 16px;z-index:100;
+    }
+    .skip:focus{left:12px;top:12px}
+    .wrap{width:min(1160px,100% - 2*var(--gutter));margin-inline:auto}
+    .demo-bar{
+      position:sticky;top:0;z-index:40;
+      height:var(--demo);
+      display:flex;align-items:center;justify-content:center;gap:.5rem;
+      background:var(--slate);color:var(--stone);
+      font-size:13px;font-weight:400;letter-spacing:.02em;text-align:center;padding:0 16px;
+    }
+    .demo-bar a{color:var(--gold-soft);text-decoration:none}
+    .demo-bar a:hover{color:#fff}
+    .site-header{
+      position:sticky;top:var(--demo);z-index:30;
+      height:var(--header);
+      display:flex;align-items:center;
+      background:rgba(20,24,30,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid transparent;
+      transition:border-color .3s,background .3s;
+    }
+    .site-header.solid{border-bottom-color:var(--slate-line);background:rgba(20,24,30,.96)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+    .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+    .logo-mark{width:42px;height:42px;flex-shrink:0}
+    .logo-kicker{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft);font-weight:500}
+    .logo-name{display:block;font-size:1.18rem;letter-spacing:.02em;line-height:1.15;color:var(--ivory)}
+    .nav{display:flex;align-items:center;gap:22px}
+    .nav a{text-decoration:none;color:var(--stone);font-size:.95rem;font-weight:400}
+    .nav a:hover{color:var(--gold-soft)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:13px 24px;border-radius:999px;border:0;
+      background:var(--gold);color:var(--slate);text-decoration:none;
+      font-weight:500;font-size:.95rem;cursor:pointer;
+      transition:background .25s,transform .25s,box-shadow .25s,color .25s,border-color .25s;
+    }
+    .btn:hover{background:var(--gold-soft);transform:translateY(-1px);box-shadow:0 12px 24px rgba(201,164,92,.28)}
+    .btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+    .btn-ghost{
+      background:transparent;color:var(--ivory);
+      border:1px solid var(--slate-line);
+    }
+    .btn-ghost:hover{background:rgba(255,255,255,.06);color:var(--gold-pale);box-shadow:none;border-color:var(--gold)}
+    .nav-cta{padding:10px 18px;color:var(--slate)}
+    .nav-cta:hover{color:var(--slate)}
+    .burger{display:none;width:42px;height:42px;border:0;background:transparent;padding:10px;cursor:pointer}
+    .burger span{display:block;height:1.5px;background:var(--ivory);margin:6px 0;transition:transform .25s,opacity .25s}
+    .menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .menu-open .burger span:nth-child(2){opacity:0}
+    .menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+    /* Hero: photo-like stone chamber + candle */
+    .hero{
+      position:relative;
+      min-height:calc(100svh - var(--demo) - var(--header));
+      display:flex;align-items:center;
+      background:
+        radial-gradient(ellipse 50% 60% at 78% 58%, rgba(232,201,122,.22), transparent 62%),
+        radial-gradient(ellipse 40% 36% at 76% 22%, rgba(244,226,168,.1), transparent 55%),
+        radial-gradient(ellipse 80% 70% at 20% 80%, rgba(20,24,30,.4), transparent 60%),
+        linear-gradient(180deg, #10141A 0%, #171C24 42%, #1A1510 100%);
+      color:var(--ivory);
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        radial-gradient(120% 80% at 50% 120%, rgba(0,0,0,.45), transparent 55%),
+        linear-gradient(90deg, rgba(16,18,22,.55) 0%, transparent 46%);
+      pointer-events:none;
+    }
+    .hero-grain{
+      position:absolute;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    }
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+      gap:clamp(28px,6vw,80px);
+      align-items:center;
+      padding:clamp(36px,6vw,80px) 0 clamp(56px,8vw,96px);
+      width:100%;
+    }
+    .hero-kicker{
+      font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;
+      color:var(--gold-soft);font-weight:500;margin:0 0 18px;
+    }
+    .hero h1{
+      margin:0 0 18px;
+      font-size:clamp(3rem,7vw,5.4rem);
+      line-height:1.02;
+      letter-spacing:-.03em;
+      color:var(--ivory);
+    }
+    .hero-lead{
+      margin:0 0 16px;max-width:24ch;
+      font-family:var(--serif);font-style:normal;font-synthesis:none;
+      font-weight:500;font-size:clamp(1.25rem,2.4vw,1.7rem);
+      line-height:1.35;color:var(--gold-pale);
+    }
+    .hero-copy{margin:0 0 32px;max-width:38ch;color:rgba(246,243,238,.78);font-weight:300;font-size:1.05rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-art{position:relative;display:grid;place-items:center;min-height:320px}
+    .glow{
+      position:absolute;width:280px;height:280px;border-radius:50%;
+      background:radial-gradient(circle, rgba(244,226,168,.55) 0%, rgba(201,164,92,.22) 38%, transparent 70%);
+      filter:blur(8px);
+      animation:glowpulse 3.6s ease-in-out infinite;
+      pointer-events:none;
+    }
+    .candle{position:relative;width:min(280px,70vw);z-index:1}
+    .flame{transform-origin:50% 80%;transform-box:fill-box;animation:flicker 1.8s ease-in-out infinite}
+    .flame-core{animation:flicker 1.15s ease-in-out infinite reverse;transform-origin:50% 90%;transform-box:fill-box}
+    .hero-badge{
+      position:absolute;right:8%;bottom:8%;
+      background:rgba(20,24,30,.72);
+      backdrop-filter:blur(8px);
+      color:var(--gold-pale);
+      border:1px solid rgba(201,164,92,.35);
+      border-radius:999px;
+      padding:8px 14px;
+      font-size:.76rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+    }
+    @keyframes glowpulse{
+      0%,100%{transform:scale(1);opacity:.85}
+      40%{transform:scale(1.08);opacity:1}
+      70%{transform:scale(.96);opacity:.7}
+    }
+    @keyframes flicker{
+      0%,100%{transform:scale(1,1) rotate(-1deg)}
+      20%{transform:scale(1.04,.94) rotate(1.4deg)}
+      45%{transform:scale(.96,1.06) rotate(-.8deg)}
+      70%{transform:scale(1.03,.97) rotate(.6deg)}
+    }
+
+    section{padding:clamp(72px,9vw,120px) 0}
+    .sec-kicker{
+      font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;
+      color:var(--gold-deep);font-weight:500;margin:0 0 12px;
+    }
+    .sec-title{margin:0 0 14px;font-size:clamp(2rem,4vw,3rem);line-height:1.12;letter-spacing:-.03em;color:var(--ink)}
+    .sec-lead{margin:0 0 48px;max-width:44ch;color:var(--muted);font-weight:300}
+
+    .about{background:var(--ivory)}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px);align-items:center}
+    .about-panel{
+      background:var(--slate);
+      color:var(--ivory);
+      border-radius:24px;
+      padding:clamp(28px,4vw,44px);
+      display:grid;gap:22px;
+      box-shadow:0 24px 50px rgba(20,24,30,.18);
+    }
+    .stat small{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:4px;font-weight:500}
+    .stat b{font-family:var(--serif);font-style:normal;font-synthesis:none;font-size:1.35rem;font-weight:600}
+    .stat p{margin:6px 0 0;color:rgba(246,243,238,.7);font-weight:300;font-size:.95rem}
+
+    .services{background:var(--stone-mid)}
+    .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .svc{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:24px 22px 26px;
+      transition:transform .25s,box-shadow .25s,border-color .25s;
+    }
+    .svc:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(20,24,30,.08);border-color:var(--gold)}
+    .svc-icon{
+      width:48px;height:48px;margin-bottom:16px;
+      display:grid;place-items:center;
+      border-radius:14px;
+      background:var(--slate);
+      color:var(--gold-soft);
+    }
+    .svc-icon svg{width:24px;height:24px}
+    .svc h3{margin:0 0 8px;font-size:1.15rem;color:var(--ink)}
+    .svc p{margin:0;color:var(--muted);font-weight:300;font-size:.95rem}
+
+    .steps-sec{background:var(--slate);color:var(--ivory)}
+    .steps-sec .sec-kicker{color:var(--gold-soft)}
+    .steps-sec .sec-title{color:var(--ivory)}
+    .steps-sec .sec-lead{color:rgba(246,243,238,.68)}
+    .timeline{position:relative;max-width:860px;margin:0 auto;padding:0;list-style:none}
+    .timeline::before{
+      content:"";
+      position:absolute;top:0;bottom:0;left:50%;width:1px;
+      background:linear-gradient(180deg, transparent, var(--gold) 8%, var(--gold) 92%, transparent);
+      transform:translateX(-50%);
+    }
+    .t-item{position:relative;width:50%;padding:0 36px 48px;display:grid;gap:6px}
+    .t-item:nth-child(odd){margin-left:0;text-align:right;padding-right:48px}
+    .t-item:nth-child(even){margin-left:50%;text-align:left;padding-left:48px}
+    .t-item:last-child{padding-bottom:0}
+    .t-num{
+      position:absolute;top:0;
+      width:36px;height:36px;border-radius:50%;
+      background:var(--slate-mid);border:1px solid var(--gold);
+      color:var(--gold-pale);
+      display:grid;place-items:center;
+      font-family:var(--serif);font-style:normal;font-synthesis:none;font-weight:600;font-size:.95rem;
+    }
+    .t-item:nth-child(odd) .t-num{right:-18px}
+    .t-item:nth-child(even) .t-num{left:-18px}
+    .t-item h3{margin:4px 0 0;font-size:1.25rem;color:var(--ivory)}
+    .t-item p{margin:0;color:rgba(246,243,238,.68);font-weight:300}
+
+    .packages{background:var(--ivory)}
+    .pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+    .pack{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px 26px 30px;
+      display:flex;flex-direction:column;gap:12px;
+      transition:transform .25s,box-shadow .25s,border-color .25s;
+    }
+    .pack:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(20,24,30,.08);border-color:var(--gold)}
+    .pack.featured{
+      background:var(--slate);
+      color:var(--ivory);
+      border-color:var(--gold);
+      box-shadow:0 24px 48px rgba(20,24,30,.16);
+    }
+    .pack-label{
+      font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--gold-deep);
+    }
+    .pack.featured .pack-label{color:var(--gold-soft)}
+    .pack-name{margin:0;font-size:1.55rem}
+    .pack.featured .pack-name{color:var(--ivory)}
+    .pack p{margin:0;color:var(--muted);font-weight:300;flex:1}
+    .pack.featured p{color:rgba(246,243,238,.72)}
+    .pack ul{margin:4px 0 8px;padding:0 0 0 18px;color:var(--ink);font-weight:300}
+    .pack.featured ul{color:rgba(246,243,238,.88)}
+    .pack li{margin:6px 0}
+    .pack-price{
+      font-family:var(--serif);font-style:normal;font-synthesis:none;
+      font-size:1.35rem;color:var(--gold-deep);margin-top:auto;
+    }
+    .pack.featured .pack-price{color:var(--gold-pale)}
+    .pack .btn{align-self:flex-start;margin-top:8px}
+    .pack.featured .btn{background:var(--gold);color:var(--slate)}
+
+    .faq{background:var(--stone-mid)}
+    .faq-list{display:grid;gap:10px;max-width:800px}
+    .faq details{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:0 20px;transition:border-color .25s}
+    .faq details[open]{border-color:var(--gold)}
+    .faq summary{
+      cursor:pointer;list-style:none;
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:18px 0;font-size:1.15rem;color:var(--ink);
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{
+      content:"+";color:var(--slate);background:var(--gold);
+      width:22px;height:22px;border-radius:50%;
+      display:grid;place-items:center;
+      font-family:var(--sans);font-weight:700;font-size:16px;flex:none;
+    }
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:0 0 18px;color:var(--muted);font-weight:300}
+
+    .contact{background:var(--slate);color:var(--ivory)}
+    .contact .sec-kicker{color:var(--gold-soft)}
+    .contact .sec-title{color:var(--ivory)}
+    .contact .sec-lead{color:rgba(246,243,238,.68)}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,4vw,48px);align-items:start}
+    .info{display:grid;gap:22px}
+    .info a{color:var(--gold-pale);text-decoration:none}
+    .info a:hover{color:#fff}
+    .info small{display:block;color:var(--gold-soft);letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;font-weight:500;margin-bottom:4px}
+    .info p{margin:0;font-size:1.05rem}
+    .form-card{
+      background:var(--ivory);color:var(--ink);
+      border-radius:24px;padding:clamp(22px,3vw,36px);
+    }
+    .form-card h3{margin:0 0 6px;font-size:1.4rem}
+    .form-card .form-lead{margin:0 0 22px;color:var(--muted);font-weight:300}
+    form{display:grid;gap:14px}
+    .field{display:grid;gap:6px}
+    .field span{font-size:.82rem;font-weight:500;letter-spacing:.04em}
+    input,textarea,select{
+      width:100%;border:1px solid var(--line);border-radius:12px;
+      background:var(--paper);color:var(--ink);
+      padding:12px 14px;outline:none;
+      transition:border-color .2s,box-shadow .2s;
+    }
+    input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,164,92,.2)}
+    textarea{min-height:120px;resize:vertical}
+    .confirm{
+      display:none;
+      background:var(--slate);
+      color:var(--ivory);
+      border:1px solid var(--gold);
+      border-radius:16px;
+      padding:18px 18px 16px;
+    }
+    .confirm.is-on{display:block}
+    .confirm h3{margin:0 0 8px;color:var(--gold-pale)}
+    .confirm p{margin:0;color:rgba(246,243,238,.8);font-weight:300}
+
+    .site-footer{
+      background:#0E1217;color:rgba(246,243,238,.7);
+      padding:28px 0 36px;font-size:.92rem;
+    }
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+    .site-footer a{color:var(--gold-soft);text-decoration:none}
+    .site-footer a:hover{color:#fff}
+
+    .call-float{
+      display:none;
+      position:fixed;
+      right:max(16px, env(safe-area-inset-right, 0px));
+      bottom:max(16px, env(safe-area-inset-bottom, 0px));
+      z-index:50;
+      align-items:center;gap:10px;
+      text-decoration:none;color:inherit;
+    }
+    .call-float-label{
+      background:var(--slate);color:var(--ivory);
+      border:1px solid rgba(201,164,92,.4);
+      padding:7px 12px;border-radius:999px;
+      font-size:.78rem;font-weight:500;white-space:nowrap;
+      box-shadow:0 10px 24px rgba(20,24,30,.28);
+    }
+    .call-float-btn{
+      width:56px;height:56px;flex-shrink:0;
+      display:grid;place-items:center;border-radius:50%;
+      background:var(--gold);color:var(--slate);
+      box-shadow:0 12px 28px rgba(20,24,30,.32);
+      transition:transform .25s,background .25s,box-shadow .25s;
+    }
+    .call-float-btn svg{width:22px;height:22px;display:block}
+    .call-float:hover .call-float-btn,
+    .call-float:focus-visible .call-float-btn{
+      transform:translateY(-2px);background:var(--gold-soft);
+      box-shadow:0 16px 32px rgba(201,164,92,.35);
+    }
+    .site-footer{padding-bottom:36px}
+
+    .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+    .rv.in{opacity:1;transform:none}
+
+    @media (max-width:900px){
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .hero-art{order:-1;min-height:260px}
+      .svc-grid{grid-template-columns:1fr 1fr}
+      .pack-grid{grid-template-columns:1fr}
+      .timeline::before{left:18px}
+      .t-item,.t-item:nth-child(odd),.t-item:nth-child(even){
+        width:100%;margin-left:0;text-align:left;
+        padding:0 0 40px 56px;
+      }
+      .t-item .t-num,.t-item:nth-child(odd) .t-num,.t-item:nth-child(even) .t-num{left:0;right:auto}
+    }
+    @media (max-width:720px){
+      .demo-bar{font-size:11px;letter-spacing:0;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .nav{
+        display:none;position:fixed;top:calc(var(--demo) + var(--header));
+        left:0;right:0;background:rgba(20,24,30,.98);
+        flex-direction:column;align-items:stretch;gap:0;
+        padding:8px var(--gutter) 18px;border-bottom:1px solid var(--slate-line);
+      }
+      .menu-open .nav{display:flex}
+      .nav a{padding:12px 0;border-bottom:1px solid var(--slate-line)}
+      .nav-cta{margin-top:10px;width:fit-content}
+      .burger{display:block}
+      .svc-grid{grid-template-columns:1fr}
+      .hero{min-height:calc(100svh - var(--demo) - var(--header));align-items:center}
+      .hero-grid{display:block;position:relative;padding:16px 0 72px;width:100%}
+      .hero-art{
+        order:0;
+        position:absolute;right:-10%;bottom:8px;top:auto;
+        width:44%;min-height:0;height:42%;
+        opacity:1;pointer-events:none;z-index:0;
+      }
+      .hero-grid > div:first-child{position:relative;z-index:1;max-width:100%;padding-top:8px;padding-right:0}
+      .hero h1{font-size:clamp(2.6rem,13vw,3.6rem)}
+      .hero-lead{max-width:18ch}
+      .hero-copy{max-width:28ch;padding-right:0}
+      .hero-badge{display:none}
+      .hero-actions{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;padding-bottom:8px;max-width:16rem}
+      .hero-actions .btn{width:100%}
+      .hero-actions .btn-ghost{background:rgba(20,24,30,.72);backdrop-filter:blur(10px)}
+      .call-float{display:flex;right:max(12px, env(safe-area-inset-right, 0px));bottom:max(12px, env(safe-area-inset-bottom, 0px));gap:8px}
+      .call-float-btn{width:50px;height:50px}
+      .call-float-label{display:none}
+      .site-footer{padding-bottom:100px}
+      .footer-inner{padding-right:0}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .glow,.flame,.flame-core,.rv,.svc,.pack,.btn,.call-float-btn{animation:none!important;transition:none!important}
+      .rv{opacity:1;transform:none}
+      .svc:hover,.pack:hover,.btn:hover,.call-float:hover .call-float-btn{transform:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+  <div class="demo-bar">Predlog sajta · <a href="https://webglowstudio.github.io/Webglowstudioportfolio/">WebGlow Studio</a> · kontakti su izmišljeni</div>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="logo" href="#pocetna">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="12" fill="#1C222B"/>
+          <rect x="0.6" y="0.6" width="38.8" height="38.8" rx="11.4" fill="none" stroke="#C9A45C" stroke-width="1.1"/>
+          <path d="M20 8c2.4 3.4 3.6 5.6 3.6 7.6A3.6 3.6 0 0 1 20 19.2 3.6 3.6 0 0 1 16.4 15.6C16.4 13.6 17.6 11.4 20 8Z" fill="#E8C97A"/>
+          <path d="M20 10.4c1.15 1.7 1.8 2.9 1.8 4.05A1.8 1.8 0 0 1 20 16.25a1.8 1.8 0 0 1-1.8-1.8c0-1.15.65-2.35 1.8-4.05Z" fill="#F7E7B0"/>
+          <rect x="18.35" y="19.2" width="3.3" height="9.4" rx="1.2" fill="#E2DDD4"/>
+          <rect x="15.8" y="28.2" width="8.4" height="2.3" rx=".8" fill="#C9A45C"/>
+        </svg>
+        <span>
+          <span class="logo-kicker">Kragujevac · 0–24</span>
+          <span class="logo-name">Tiha luča</span>
+        </span>
+      </a>
+      <nav class="nav" id="site-nav">
+        <a href="#usluge">Usluge</a>
+        <a href="#koraci">Koraci</a>
+        <a href="#paketi">Paketi</a>
+        <a href="#pitanja">Pitanja</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn nav-cta" href="tel:06xxxxxxx">Pozovite 0–24</a>
+      </nav>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otvori meni">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="sadrzaj">
+    <section class="hero" id="pocetna">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hero-kicker">Pogrebno preduzeće · Kragujevac</p>
+          <h1>Tiha luča</h1>
+          <p class="hero-lead">Kad je najteže, tu smo da preuzmemo sve.</p>
+          <p class="hero-copy">U trenucima kada je teško razmišljati o organizaciji, mi preuzimamo prevoz, dokumentaciju, opremu i ispraćaj. Tu smo danju i noću, tiho i jasno.</p>
+          <div class="hero-actions">
+            <a class="btn" href="tel:06xxxxxxx">Pozovite 06x xxx xxxx</a>
+            <a class="btn btn-ghost" href="#kontakt">Pošaljite upit</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="glow"></div>
+          <svg class="candle" viewBox="0 0 200 280" fill="none">
+            <ellipse cx="100" cy="248" rx="58" ry="10" fill="#0B0E12" opacity=".45"/>
+            <path d="M62 236c8 14 76 14 84 0v-8c-8 10-76 10-84 0z" fill="#8C6A2E"/>
+            <path d="M62 228c8 12 76 12 84 0 0-6-8-11-42-11s-42 5-42 11z" fill="#C9A45C"/>
+            <path d="M70 226c6 7 54 7 60 0v-6c-8 6-52 6-60 0z" fill="#A7843E"/>
+            <rect x="86" y="118" width="28" height="108" rx="8" fill="#EDE9E2"/>
+            <rect x="88" y="122" width="8" height="100" rx="4" fill="#FBFAF7" opacity=".7"/>
+            <rect x="86" y="118" width="28" height="10" rx="4" fill="#D6D0C6"/>
+            <path d="M100 116c0-6 1.2-10 2.2-14" stroke="#C9A45C" stroke-width="1.2" stroke-linecap="round"/>
+            <g class="flame">
+              <path d="M100 46c12 18 18 28 18 40 0 16-10 28-18 28s-18-12-18-28c0-12 6-22 18-40Z" fill="#E8C97A" opacity=".95"/>
+              <path class="flame-core" d="M100 66c6 10 9 16 9 23 0 9-5 15-9 15s-9-6-9-15c0-7 3-13 9-23Z" fill="#F7E7B0"/>
+            </g>
+            <ellipse cx="100" cy="114" rx="16" ry="5" fill="#F4E2A8" opacity=".35"/>
+          </svg>
+          <span class="hero-badge">Dežurstvo 0–24</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="o-nama">
+      <div class="wrap about-grid">
+        <div>
+          <p class="sec-kicker rv">O nama</p>
+          <h2 class="sec-title rv">Dostojanstven ispraćaj, bez brige za porodicu</h2>
+          <p class="sec-lead rv">Tiha luča je izmišljeno pogrebno preduzeće iz Kragujevca, napravljeno kao predlog sajta. Porodice treba da imaju jedno mesto gde mogu da se jave u bilo koje doba, i tim koji preuzima organizaciju sa poštovanjem.</p>
+          <p class="rv" style="margin:0;color:var(--muted);font-weight:300">Radimo prema veri i običajima porodice, bez žurbe i bez nametanja. Vi nam se javite, a mi vodimo računa o svemu ostalom.</p>
+        </div>
+        <div class="about-panel rv">
+          <div class="stat">
+            <small>Dežurstvo</small>
+            <b>0–24, svakog dana</b>
+            <p>Pozovite i noću, i vikendom, i praznikom. Dolazimo čim se dogovorimo.</p>
+          </div>
+          <div class="stat">
+            <small>Pristup</small>
+            <b>Sve na jednom mestu</b>
+            <p>Prevoz, oprema, dokumentacija, venci i čitulje, bez odlaska na deset adresa.</p>
+          </div>
+          <div class="stat">
+            <small>Poštovanje</small>
+            <b>Običaji porodice</b>
+            <p>Ispraćaj organizujemo onako kako porodica želi, uz diskreciju i miran razgovor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="usluge">
+      <div class="wrap">
+        <p class="sec-kicker rv">Usluge</p>
+        <h2 class="sec-title rv">Sve što treba, preuzimamo mi</h2>
+        <p class="sec-lead rv">Od prvog poziva do ispraćaja, tu smo da organizujemo svaki korak.</p>
+        <div class="svc-grid">
+          <article class="svc rv">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V7l8-3 8 3v12"/><path d="M4 19l8 3 8-3"/><path d="M12 10v12"/><path d="M8 12.5c1.5-1 3.2-1 4-1s2.5 0 4 1"/></svg>
+            </div>
+            <h3>Organizacija sahrane</h3>
+            <p>Kompletan dogovor oko termina, groblja, sveštenika i toka ispraćaja.</p>
+          </article>
+          <article class="svc rv">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16h13l5-5V8H8L3 13v3z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/><path d="M16 16l5-5"/></svg>
+            </div>
+            <h3>Prevoz pokojnika</h3>
+            <p>Dostojanstven prevoz u Kragujevcu, u zemlji i iz inostranstva, uz potrebne dozvole.</p>
+          </article>
+          <article class="svc rv">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18c2-4 4-6 8-6s6 2 8 6"/><path d="M9 8.5a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/></svg>
+            </div>
+            <h3>Opremanje</h3>
+            <p>Priprema i opremanje uz puno poštovanje prema pokojniku i željama porodice.</p>
+          </article>
+          <article class="svc rv">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19h8v-7.5c0-3.2-1.6-5.4-4-6.5-2.4 1.1-4 3.3-4 6.5V19z"/><path d="M7 19h10"/></svg>
+            </div>
+            <h3>Sanduci i urne</h3>
+            <p>Izbor sanduka, krstova i urni, od jednostavnih do svečanijih modela.</p>
+          </article>
+          <article class="svc rv">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="6"/><path d="M12 7V4"/><path d="M9 13c.8-2 2-3 3-3s2.2 1 3 3"/><path d="M8.5 15.5c1 .8 2.4 1.2 3.5 1.2s2.5-.4 3.5-1.2"/></svg>
+            </div>
+            <h3>Venci i cveće</h3>
+            <p>Venci, suze, buketi i aranžmani po dogovoru, spremni za dan ispraćaja.</p>
+          </article>
+          <article class="svc rv">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h8l4 4v12H7z"/><path d="M15 4v4h4"/><path d="M10 12h6M10 16h4"/></svg>
+            </div>
+            <h3>Umrlice i čitulje</h3>
+            <p>Izrada umrlica i objava čitulja u novinama, diskretno i na vreme.</p>
+          </article>
+          <article class="svc rv">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c3 4.5 4.5 7 4.5 10A4.5 4.5 0 0 1 12 18.5 4.5 4.5 0 0 1 7.5 14C7.5 11 9 8.5 12 4z"/></svg>
+            </div>
+            <h3>Kremacija</h3>
+            <p>Organizacija kremacije i ispraćaja, uz urnu i tok koji porodica izabere.</p>
+          </article>
+          <article class="svc rv">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h9l3 3v13H6z"/><path d="M15 4v3h3"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Dokumentacija</h3>
+            <p>Prijave, dozvole i pomoć oko refundacije troškova preko PIO fonda.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-sec" id="koraci">
+      <div class="wrap">
+        <p class="sec-kicker rv">Prvi koraci</p>
+        <h2 class="sec-title rv">Šta raditi kada se dogodi gubitak</h2>
+        <p class="sec-lead rv">Ne morate sve da znate unapred. Javite nam se, a mi vas vodimo kroz svaki korak.</p>
+        <ol class="timeline">
+          <li class="t-item rv">
+            <span class="t-num">1</span>
+            <h3>Javite nam se, u bilo koje doba</h3>
+            <p>Pozovite nas čim ste spremni. Dežuramo 0–24 i dogovaramo dolazak odmah, bez čekanja na jutro.</p>
+          </li>
+          <li class="t-item rv">
+            <span class="t-num">2</span>
+            <h3>Preuzimanje i prevoz</h3>
+            <p>Organizujemo dostojanstven prevoz pokojnika, u gradu, u zemlji ili iz inostranstva, uz potrebnu dokumentaciju.</p>
+          </li>
+          <li class="t-item rv">
+            <span class="t-num">3</span>
+            <h3>Dokumentacija i prijave</h3>
+            <p>Pribavljamo umrlice, pomažemo oko čitulja, prijava i ostalih papira, uključujući i postupak preko PIO fonda.</p>
+          </li>
+          <li class="t-item rv">
+            <span class="t-num">4</span>
+            <h3>Dogovor o ispraćaju</h3>
+            <p>Birate sanduk ili urnu, cveće i tok sahrane ili kremacije. Mi predlažemo, vi odlučujete, bez žurbe.</p>
+          </li>
+          <li class="t-item rv">
+            <span class="t-num">5</span>
+            <h3>Dan ispraćaja</h3>
+            <p>Na dan sahrane ili kremacije pratimo svaki korak, da porodica može da bude sa svojim najmilijima.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="packages" id="paketi">
+      <div class="wrap">
+        <p class="sec-kicker rv">Paketi</p>
+        <h2 class="sec-title rv">Jasna ponuda, cena na upit</h2>
+        <p class="sec-lead rv">Svaka situacija je drugačija, zato cene ne stavljamo unapred. Na poziv ćemo vam reći tačno šta ulazi u cenu.</p>
+        <div class="pack-grid">
+          <article class="pack rv">
+            <div class="pack-label">Osnovno</div>
+            <h3 class="pack-name">Osnovni ispraćaj</h3>
+            <p>Za porodice kojima treba pouzdana podrška i osnovna organizacija.</p>
+            <ul>
+              <li>Dolazak na poziv i prevoz</li>
+              <li>Osnovna oprema</li>
+              <li>Pomoć oko dokumentacije</li>
+            </ul>
+            <div class="pack-price">Na upit</div>
+            <a class="btn" href="#kontakt">Pošaljite upit</a>
+          </article>
+          <article class="pack featured rv">
+            <div class="pack-label">Najčešći izbor</div>
+            <h3 class="pack-name">Potpuna organizacija</h3>
+            <p>Sve od prvog poziva do ispraćaja, na jednom mestu.</p>
+            <ul>
+              <li>Prevoz, opremanje i oprema</li>
+              <li>Venci, umrlice i čitulje</li>
+              <li>Dogovor sa grobljem i sveštenikom</li>
+              <li>Pratnja na dan ispraćaja</li>
+            </ul>
+            <div class="pack-price">Na upit</div>
+            <a class="btn" href="#kontakt">Pošaljite upit</a>
+          </article>
+          <article class="pack rv">
+            <div class="pack-label">Kremacija</div>
+            <h3 class="pack-name">Kremacija uz ispraćaj</h3>
+            <p>Organizacija kremacije, uz urnu i ispraćaj po želji porodice.</p>
+            <ul>
+              <li>Priprema i prevoz</li>
+              <li>Organizacija kremacije</li>
+              <li>Urna i dogovoreni ispraćaj</li>
+            </ul>
+            <div class="pack-price">Na upit</div>
+            <a class="btn" href="#kontakt">Pošaljite upit</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="pitanja">
+      <div class="wrap">
+        <p class="sec-kicker rv">Pitanja</p>
+        <h2 class="sec-title rv">Ono što porodice najčešće pitaju</h2>
+        <p class="sec-lead rv">Ako nešto nije ovde, javite nam se. Odgovaramo u svako doba.</p>
+        <div class="faq-list">
+          <details class="rv">
+            <summary>Da li ste dostupni noću i vikendom?</summary>
+            <p>Da. Dežuramo 0–24, svakog dana u godini, uključujući vikende i praznike.</p>
+          </details>
+          <details class="rv">
+            <summary>Koliko košta organizacija sahrane?</summary>
+            <p>Svaka situacija je drugačija, zato su paketi na upit. Na poziv ćemo vam jasno reći šta ulazi u cenu, bez skrivenih stavki.</p>
+          </details>
+          <details class="rv">
+            <summary>Da li pomažete oko dokumentacije i PIO fonda?</summary>
+            <p>Da. Preuzimamo pribavljanje dokumenata i pomažemo oko refundacije troškova preko PIO fonda, tamo gde postoji pravo.</p>
+          </details>
+          <details class="rv">
+            <summary>Da li radite prevoz iz inostranstva?</summary>
+            <p>Da. Organizujemo prevoz pokojnika iz inostranstva, uz sve dozvole i pratnju dokumentacije.</p>
+          </details>
+          <details class="rv">
+            <summary>Da li poštujete verske i porodične običaje?</summary>
+            <p>Da. Ispraćaj organizujemo prema veri i željama porodice, bez nametanja.</p>
+          </details>
+          <details class="rv">
+            <summary>Koliko brzo možete da dođete?</summary>
+            <p>Čim nas pozovete, dogovaramo dolazak. U Kragujevcu i okolini stižemo u najkraćem roku.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt">
+      <div class="wrap">
+        <p class="sec-kicker rv">Kontakt</p>
+        <h2 class="sec-title rv">Tu smo, 0–24</h2>
+        <p class="sec-lead rv">Pozovite nas ili ostavite upit. Na ovom predlogu sajta poruka ostaje na stranici i ne šalje se dalje.</p>
+        <div class="contact-grid">
+          <div class="info rv">
+            <div>
+              <small>Telefon</small>
+              <p><a href="tel:06xxxxxxx">06x xxx xxxx</a></p>
+            </div>
+            <div>
+              <small>Mejl</small>
+              <p><a href="mailto:kontakt@primer.rs">kontakt@primer.rs</a></p>
+            </div>
+            <div>
+              <small>Adresa</small>
+              <p>Ulica primer 12<br>34000 Kragujevac</p>
+            </div>
+            <div>
+              <small>Radno vreme</small>
+              <p>Dežurstvo 0–24, svakog dana</p>
+            </div>
+          </div>
+          <div class="form-card rv">
+            <h3>Pošaljite upit</h3>
+            <p class="form-lead">Ostavite ime, telefon i kratku poruku. Odgovorili bismo na navedeni broj.</p>
+            <form id="inquiry-form" novalidate>
+              <label class="field">
+                <span>Ime i prezime</span>
+                <input id="ime" name="ime" type="text" autocomplete="name" required>
+              </label>
+              <label class="field">
+                <span>Telefon</span>
+                <input id="telefon" name="telefon" type="tel" autocomplete="tel" required>
+              </label>
+              <label class="field">
+                <span>Mejl, nije obavezno</span>
+                <input id="email" name="email" type="email" autocomplete="email">
+              </label>
+              <label class="field">
+                <span>Poruka</span>
+                <textarea id="poruka" name="poruka" required placeholder="Kako možemo da pomognemo?"></textarea>
+              </label>
+              <button class="btn" type="submit">Pošaljite upit</button>
+              <div class="confirm" id="form-confirm" role="status" aria-live="polite">
+                <h3>Upit je zabeležen</h3>
+                <p id="form-confirm-text"></p>
+              </div>
+              <noscript><p class="form-lead">Obrazac radi uz JavaScript. Pošaljite mejl na kontakt@primer.rs ili pozovite 06x xxx xxxx.</p></noscript>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Tiha luča · Kragujevac · izmišljeno pogrebno preduzeće, predlog sajta</p>
+      <p>Izradio <a href="https://webglowstudio.github.io/Webglowstudioportfolio/">WebGlow Studio</a></p>
+    </div>
+  </footer>
+
+  <a class="call-float" href="tel:06xxxxxxx">
+    <span class="call-float-label">Pozovite 0–24</span>
+    <span class="call-float-btn" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.2 3.8l2.6 2.6a1.5 1.5 0 0 1 0 2.1l-1.2 1.2a12 12 0 0 0 6.7 6.7l1.2-1.2a1.5 1.5 0 0 1 2.1 0l2.6 2.6a1.5 1.5 0 0 1 0 2.1l-1.5 1.5c-.8.8-2 1.1-3.1.6A18 18 0 0 1 3.6 8.3c-.5-1.1-.2-2.3.6-3.1L5.7 3.8a1.5 1.5 0 0 1 2.1 0z"/></svg>
+    </span>
+  </a>
+
+  <script>
+  (function(){
+    const header = document.querySelector(".site-header");
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("site-nav");
+    const onScroll = function(){
+      if(!header) return;
+      header.classList.toggle("solid", window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, {passive:true});
+
+    if(burger && nav){
+      burger.addEventListener("click", function(){
+        const open = document.body.classList.toggle("menu-open");
+        burger.setAttribute("aria-expanded", open ? "true" : "false");
+        burger.setAttribute("aria-label", open ? "Zatvori meni" : "Otvori meni");
+      });
+      nav.querySelectorAll("a").forEach(function(a){
+        a.addEventListener("click", function(){
+          document.body.classList.remove("menu-open");
+          burger.setAttribute("aria-expanded", "false");
+          burger.setAttribute("aria-label", "Otvori meni");
+        });
+      });
+    }
+
+    const form = document.getElementById("inquiry-form");
+    const confirmBox = document.getElementById("form-confirm");
+    const confirmText = document.getElementById("form-confirm-text");
+    if(form){
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+        if(!form.reportValidity()) return;
+        const ime = document.getElementById("ime").value.trim();
+        confirmText.textContent = "Hvala, " + ime + ". Vaš upit je zabeležen na sajtu. Ovo je predlog sajta, poruka se ne šalje u pozadini. U stvarnom radu, javili bismo se na navedeni telefon.";
+        confirmBox.classList.add("is-on");
+        confirmBox.scrollIntoView({block:"nearest", behavior:"smooth"});
+      });
+    }
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reduce){
+      document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+      return;
+    }
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll(".rv").forEach(function(el, i){
+      el.style.transitionDelay = (i % 5) * 70 + "ms";
+      io.observe(el);
+    });
+  })();
+  </script>
+</body>
+</html>
