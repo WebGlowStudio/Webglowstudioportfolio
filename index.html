@@ -262,6 +262,15 @@ h2{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.5px;margin-t
 @media (prefers-reduced-motion:reduce){.ph.boost .mark{animation:none}}
 
 
+.ph.nika{background:radial-gradient(circle at 50% 28%, #FBF6F0, #E8D5C4 52%, #2A221C);color:#1C1612;container-type:inline-size}
+.ph.nika svg{width:88px;height:88px;flex-shrink:0}
+.ph.nika .mark{animation:nikasway 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+.ph.nika small{color:#8E5E3A}
+.ph.nika b{letter-spacing:0;text-align:center;line-height:1.15;padding:0 8px;font-size:17px}
+@keyframes nikasway{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media (prefers-reduced-motion:reduce){.ph.nika .mark{animation:none}}
+
+
 /* benefits */
 .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
 .ben{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
@@ -438,6 +447,15 @@ button.btn{font-family:inherit;cursor:pointer}
       <p>Svaki sajt je napravljen od nule, po meri posla za koji je namenjen.</p>
     </div>
     <div class="grid">
+            <article class="card">
+        <a class="shot" href="demos/nika-studio/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph nika" aria-hidden="true"><svg viewBox="0 0 88 88" fill="none"><g class="mark"><defs><linearGradient id="nikaRg" x1="18" y1="12" x2="70" y2="76"><stop stop-color="#F0D7B8"/><stop offset=".45" stop-color="#C9A27C"/><stop offset="1" stop-color="#8E5E3A"/></linearGradient><linearGradient id="nikaMb" x1="14" y1="8" x2="74" y2="80"><stop stop-color="#FBF6F0"/><stop offset=".5" stop-color="#EDE3D6"/><stop offset="1" stop-color="#E2D2C2"/></linearGradient></defs><circle cx="44" cy="40" r="30" fill="url(#nikaMb)"/><path d="M26 26c8-3 14 6 24-2 8-4 16-2 14 10" stroke="#D9C8B4" stroke-width="1.1" fill="none"/><circle cx="44" cy="40" r="28.4" stroke="url(#nikaRg)" stroke-width="1.4"/><circle cx="44" cy="40" r="25.6" stroke="url(#nikaRg)" stroke-width=".4" opacity=".7"/><path d="M25 54V26h3.6L41 45.6V26h3.6v28H41L28.6 34.2V54H25Z" fill="url(#nikaRg)"/><path d="M65 24.2C65 20.4 60.6 18.8 54.8 18.8C48.4 18.8 45.2 21.8 45.2 26.2C45.2 30.6 50 33 56 35C62.8 37.2 66 40.6 66 45.4C66 50.6 60.8 53.2 54.8 53.2C48.4 53.2 44.4 50.2 44.4 45.6" stroke="url(#nikaRg)" stroke-width="3.2" fill="none" stroke-linecap="round"/></g></svg><b>Nika Studio</b><small>Lash &amp; Brow · Kragujevac</small></div></a>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Beauty</span><span class="tag">Predlog sajta</span></div>
+          <h3>Nika Studio</h3>
+          <p>Predlog sajta za studio u Kragujevcu: trepavice, obrve, PMU, laserska epilacija, nokti i šminkanje.</p>
+          <a class="btn small" href="demos/nika-studio/" target="_blank" rel="noopener">Otvori sajt →</a>
+        </div>
+      </article>
             <article class="card">
         <a class="shot" href="demos/boost-beauty-face-gym/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><div class="ph boost" aria-hidden="true"><svg viewBox="0 0 88 88" fill="none"><g class="mark"><defs><pattern id="boostStripes" width="8" height="88" patternUnits="userSpaceOnUse"><rect width="4" height="88" fill="#F3C9D4"/><rect x="4" width="4" height="88" fill="#FBF6F8"/></pattern></defs><rect x="14" y="8" width="60" height="60" rx="18" fill="url(#boostStripes)"/><path d="M32 20h8c14 0 23 6.2 23 15 0 5-3.6 8.2-9.4 9.4 7.2 1.2 12.2 5.4 12.2 12.6 0 9-10.2 14.8-24.4 14.8H32V20Zm7.6 5.8v14.2h9.4c5.8 0 7.6-3.6 7.6-7 0-4.2-4.2-7.2-10-7.2h-7Zm0 19.6V58h10.2c7.2 0 9.4-4.6 9.4-9.2 0-5.8-4.6-10-11-10H39.6Z" fill="#8B3A52"/><path d="M68 16c3 2.4 2.6 6.8-.4 8.4-2.2 1.2-4.4.2-5.4-2.2-.8-2.2.4-4.8 2.8-5.8 1-.4 2-.4 3-.4Z" fill="#C5A6D4"/></g></svg><b>Boost Beauty</b><small>Face gym · Kragujevac</small></div></a>
         <div class="card-body">
