@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bebina dar · Torte od pelena u Pančevu</title>
+  <meta name="description" content="Bebina dar iz Pančeva slaže torte od pelena za babine, krštenje, prvo viđenje bebe i prvi rođendan. Poklon koji piše ljubav. Predlog sajta WebGlow Studija.">
+  <meta name="keywords" content="Bebina dar, torte od pelena, torta od pelena, Pančevo, poklon za bebu, babine, krštenje, prvi rođendan, prvo viđenje bebe, poklon za devojčicu, poklon za dečaka, bebina_dar">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#6B3F46">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bebina dar · Torte od pelena u Pančevu">
+  <meta name="twitter:description" content="Poklon koji piše ljubav. Ručno slagane torte od pelena za najnežnije prilike. Predlog sajta, izradio WebGlow Studio.">
+  <meta name="twitter:image" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/bebina-dar/images/hero.jpg">
+  <meta property="og:title" content="Bebina dar · Torte od pelena u Pančevu">
+  <meta property="og:description" content="Ručno slagane torte od pelena u Pančevu, za babine, krštenje, prvo viđenje bebe i prvi rođendan. Poklon koji piše ljubav.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/bebina-dar/">
+  <meta property="og:image" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/bebina-dar/images/hero.jpg">
+  <meta property="og:locale" content="sr_RS">
+  <link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/bebina-dar/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23F7F1EA'/%3E%3Cellipse cx='13.2' cy='20.4' rx='4.4' ry='5.2' fill='%23C9898A'/%3E%3Cellipse cx='14.6' cy='13.6' rx='5' ry='4.2' fill='%23C9898A'/%3E%3Ccircle cx='10.2' cy='9.2' r='1.55' fill='%23C9898A'/%3E%3Ccircle cx='13.1' cy='7.7' r='1.45' fill='%23C9898A'/%3E%3Ccircle cx='16.2' cy='7.5' r='1.35' fill='%23C9898A'/%3E%3Ccircle cx='18.9' cy='8.8' r='1.25' fill='%23C9898A'/%3E%3Ccircle cx='21' cy='10.8' r='1.15' fill='%23C9898A'/%3E%3Cpath d='M22.6 20.2c1.15-1.7 3.7-1.55 4.55.25.85 1.8-.35 3.55-2.15 4.85-1.8-1.3-3-3.05-2.15-4.85.2-.45.55-.8 1-.1z' fill='%236B3F46'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bebina dar",
+    "alternateName": "Torte od pelena Pančevo",
+    "description": "Predlog sajta za Bebinu dar iz Pančeva: ručno slagane torte od pelena. Napravio WebGlow Studio. Kontakt telefon i mejl su izmišljeni.",
+    "url": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/bebina-dar/",
+    "image": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/bebina-dar/images/hero.jpg",
+    "telephone": "06x xxx xxxx",
+    "email": "kontakt@primer.rs",
+    "sameAs": "https://www.instagram.com/bebina_dar/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pančevo",
+      "addressCountry": "RS"
+    },
+    "areaServed": "Pančevo",
+    "priceRange": "RSD"
+  }
+  </script>
+  <style>
+    :root{
+      --bg:#F7F1EA;
+      --bg-soft:#F3E8DF;
+      --ink:#3E342F;
+      --muted:#7A6B64;
+      --line:#E8DCD3;
+      --deep:#6B3F46;
+      --blush:#C9898A;
+      --blush-soft:#E8C9C6;
+      --beige:#C4B3A5;
+      --sage:#8A9A86;
+      --cream:#FBF7F2;
+      --white:#FFFAF6;
+      --header:72px;
+      --demo:36px;
+      --gutter:clamp(20px,4vw,56px);
+      --serif:"Playfair Display",Georgia,serif;
+      --sans:"Jost",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:var(--sans);
+      font-size:17px;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    img,svg{max-width:100%;display:block}
+    a{color:var(--deep)}
+    button,input,select,textarea{font:inherit}
+    h1,h2,h3,.serif,.logo-name,.step-num,.faq summary,.cal-title,.offer h3{
+      font-family:var(--serif);
+      font-style:normal;
+      font-synthesis:none;
+      font-weight:600;
+    }
+    .skip{
+      position:absolute;left:-999px;top:0;
+      background:var(--deep);color:#fff;padding:8px 16px;z-index:100;
+    }
+    .skip:focus{left:12px;top:12px}
+    .wrap{width:min(1120px,100% - 2*var(--gutter));margin-inline:auto}
+    .demo-bar{
+      position:sticky;top:0;z-index:40;
+      height:var(--demo);
+      display:flex;align-items:center;justify-content:center;gap:.5rem;
+      background:var(--deep);color:#F7F1EA;
+      font-size:13px;font-weight:400;letter-spacing:.02em;text-align:center;padding:0 16px;
+    }
+    .demo-bar a{color:#F3D4D0;text-decoration:none}
+    .demo-bar a:hover{color:#fff}
+    .site-header{
+      position:sticky;top:var(--demo);z-index:30;
+      height:var(--header);
+      display:flex;align-items:center;
+      background:rgba(247,241,234,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid transparent;
+      transition:border-color .3s,background .3s;
+    }
+    .site-header.solid{border-bottom-color:var(--line);background:rgba(247,241,234,.96)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+    .logo-mark{width:42px;height:42px;flex-shrink:0}
+    .logo-kicker{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--blush);font-weight:500}
+    .logo-name{display:block;font-size:1.2rem;letter-spacing:.01em;line-height:1.15;color:var(--deep)}
+    .nav{display:flex;align-items:center;gap:22px}
+    .nav a{text-decoration:none;color:var(--ink);font-size:.95rem;font-weight:400}
+    .nav a:hover{color:var(--deep)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 22px;border-radius:999px;border:0;
+      background:var(--deep);color:#fff;text-decoration:none;
+      font-weight:500;font-size:.95rem;cursor:pointer;
+      transition:background .25s,transform .25s,box-shadow .25s;
+    }
+    .btn:hover{background:#5a3339;transform:translateY(-1px);box-shadow:0 10px 22px rgba(107,63,70,.22)}
+    .btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+    .btn-ghost{
+      background:transparent;color:var(--deep);
+      border:1px solid var(--line);
+    }
+    .btn-ghost:hover{background:var(--bg-soft);color:var(--deep);box-shadow:none}
+    .nav-cta{padding:10px 18px}
+    .burger{display:none;width:42px;height:42px;border:0;background:transparent;padding:10px;cursor:pointer}
+    .burger span{display:block;height:1.5px;background:var(--deep);margin:6px 0;transition:transform .25s,opacity .25s}
+    .menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .menu-open .burger span:nth-child(2){opacity:0}
+    .menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+    .hero{
+      position:relative;
+      padding:clamp(36px,6vw,72px) 0 clamp(64px,8vw,110px);
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse at 12% 18%,rgba(201,137,138,.16),transparent 44%),
+        radial-gradient(ellipse at 88% 12%,rgba(196,179,165,.22),transparent 48%),
+        radial-gradient(ellipse at 80% 86%,rgba(232,201,198,.22),transparent 46%),
+        radial-gradient(ellipse at 18% 90%,rgba(138,154,134,.10),transparent 42%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:clamp(28px,5vw,64px);
+      align-items:center;
+    }
+    .hero-kicker{
+      font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--blush);font-weight:500;margin:0 0 14px;
+    }
+    .hero h1{
+      margin:0 0 18px;
+      font-size:clamp(2.15rem,5.2vw,3.7rem);
+      line-height:1.14;
+      letter-spacing:-.02em;
+      color:var(--deep);
+    }
+    .hero-lead{margin:0 0 28px;max-width:40ch;color:var(--muted);font-weight:300;font-size:1.08rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-art{position:relative}
+    .hero-frame{
+      position:relative;
+      border-radius:28px;
+      overflow:hidden;
+      background:var(--bg-soft);
+      box-shadow:0 24px 48px rgba(62,52,47,.12);
+      animation:floaty 8s ease-in-out infinite;
+    }
+    .hero-frame img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+    .hero-badge{
+      position:absolute;left:18px;bottom:18px;
+      background:rgba(251,247,242,.92);
+      backdrop-filter:blur(8px);
+      color:var(--deep);
+      border-radius:999px;
+      padding:8px 14px;
+      font-size:.78rem;font-weight:500;letter-spacing:.04em;
+      box-shadow:0 8px 20px rgba(62,52,47,.1);
+    }
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    section{padding:clamp(64px,8vw,104px) 0}
+    .sec-kicker{
+      font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--blush);font-weight:500;margin:0 0 10px;
+    }
+    .sec-title{margin:0 0 12px;font-size:clamp(1.85rem,3.6vw,2.8rem);line-height:1.15;letter-spacing:-.02em;color:var(--deep)}
+    .sec-lead{margin:0 0 36px;max-width:46ch;color:var(--muted);font-weight:300}
+    .offers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .offer{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:26px 24px 24px;
+      display:grid;
+      gap:10px;
+      transition:transform .25s,box-shadow .25s,border-color .25s;
+    }
+    .offer:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(62,52,47,.08);border-color:var(--blush-soft)}
+    .offer-icon{width:44px;height:44px;color:var(--deep)}
+    .offer h3{margin:6px 0 0;font-size:1.28rem;color:var(--deep)}
+    .offer p{margin:0;color:var(--muted);font-weight:300;font-size:.98rem}
+    .steps-sec{background:linear-gradient(180deg,var(--bg),var(--bg-soft) 60%,#EFE3DA)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px 20px 24px;
+    }
+    .step-num{
+      display:block;
+      font-size:1.8rem;
+      color:var(--blush);
+      line-height:1;
+      margin-bottom:10px;
+    }
+    .step h3{margin:0 0 8px;font-size:1.15rem;color:var(--deep)}
+    .step p{margin:0;color:var(--muted);font-weight:300;font-size:.95rem}
+    .gallery{background:var(--bg)}
+    .shots{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+    .shot{
+      position:relative;
+      margin:0;
+      border-radius:22px;
+      overflow:hidden;
+      background:var(--bg-soft);
+      transition:transform .25s,box-shadow .25s;
+    }
+    .shot:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(62,52,47,.1)}
+    .shot img{width:100%;height:100%;object-fit:cover;aspect-ratio:1}
+    .shot-wide{grid-row:1 / span 2}
+    .shot-wide img{aspect-ratio:auto;min-height:100%;object-fit:cover}
+    .shot figcaption{
+      position:absolute;left:0;right:0;bottom:0;
+      padding:28px 16px 14px;
+      background:linear-gradient(transparent,rgba(62,52,47,.55));
+      color:#fff;
+      font-size:.88rem;font-weight:500;
+    }
+    .book{background:linear-gradient(180deg,#EFE3DA,var(--bg-soft) 40%,var(--bg))}
+    .book-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(24px,4vw,48px);align-items:start}
+    .cal-card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:22px 22px 24px;
+      box-shadow:0 16px 40px rgba(62,52,47,.06);
+    }
+    .cal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+    .cal-title{margin:0;font-size:1.35rem;color:var(--deep);text-transform:capitalize}
+    .cal-nav{
+      width:40px;height:40px;border-radius:50%;
+      border:1px solid var(--line);background:var(--cream);color:var(--deep);
+      cursor:pointer;display:grid;place-items:center;
+      transition:background .2s,border-color .2s;
+    }
+    .cal-nav:hover{background:var(--bg-soft);border-color:var(--blush-soft)}
+    .cal-week,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+    .cal-week span{
+      text-align:center;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+      color:var(--muted);font-weight:500;padding:6px 0;
+    }
+    .cal-day{
+      appearance:none;border:0;background:transparent;color:var(--ink);
+      aspect-ratio:1;border-radius:50%;cursor:pointer;
+      font-weight:400;font-size:.95rem;
+      transition:background .2s,color .2s,box-shadow .2s;
+    }
+    .cal-day:hover:not(:disabled):not(.is-selected){background:var(--blush-soft);color:var(--deep)}
+    .cal-day.is-today:not(.is-selected){box-shadow:inset 0 0 0 1.5px var(--blush)}
+    .cal-day.is-selected{background:var(--deep);color:#fff}
+    .cal-day:disabled{color:#C4B8B0;cursor:not-allowed;background:transparent}
+    .cal-day.is-pad{visibility:hidden}
+    .cal-note{margin:12px 0 0;color:var(--muted);font-size:.85rem;font-weight:300}
+    .book-form{display:grid;gap:16px}
+    .field{display:grid;gap:6px}
+    .field span{font-size:.82rem;font-weight:500;color:var(--deep)}
+    .field select{
+      width:100%;border:1px solid var(--line);border-radius:14px;
+      padding:12px 14px;background:var(--cream);color:var(--ink);
+    }
+    .field select:focus{
+      outline:2px solid rgba(201,137,138,.4);outline-offset:1px;border-color:var(--blush);
+    }
+    .seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .seg label{
+      display:flex;align-items:center;justify-content:center;
+      padding:11px 12px;border-radius:999px;border:1px solid var(--line);
+      background:var(--cream);cursor:pointer;font-weight:500;font-size:.95rem;
+      transition:background .2s,border-color .2s,color .2s;
+    }
+    .seg input{position:absolute;opacity:0;pointer-events:none}
+    .seg label:has(input:checked){background:var(--deep);color:#fff;border-color:var(--deep)}
+    .seg label:has(input:focus-visible){outline:2px solid rgba(201,137,138,.5);outline-offset:2px}
+    .book-summary{
+      margin:0;
+      padding:12px 14px;
+      border-radius:16px;
+      background:var(--cream);
+      border:1px dashed var(--line);
+      color:var(--muted);font-weight:300;font-size:.95rem;min-height:3.4em;
+    }
+    .book-summary strong{color:var(--deep);font-weight:500}
+    .confirm{
+      display:none;
+      background:var(--white);
+      border:1px solid var(--blush-soft);
+      border-radius:20px;
+      padding:18px 18px 16px;
+    }
+    .confirm.is-on{display:block}
+    .confirm h3{margin:0 0 8px;font-size:1.2rem;color:var(--deep)}
+    .confirm p{margin:0 0 8px;color:var(--muted);font-weight:300}
+    .confirm p:last-child{margin-bottom:0}
+    .about{background:linear-gradient(180deg,var(--bg),var(--bg-soft))}
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,56px);align-items:center}
+    .about-text p{margin:0 0 16px;color:var(--muted);font-weight:300}
+    .about-text p:last-of-type{margin-bottom:0}
+    .about-shot{border-radius:28px;overflow:hidden;box-shadow:0 20px 40px rgba(62,52,47,.1)}
+    .about-shot img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+    .sizes{background:var(--bg-soft)}
+    .size-table-wrap{
+      overflow:auto;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:var(--white);
+    }
+    table{width:100%;border-collapse:collapse;min-width:520px}
+    th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line)}
+    th{
+      font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
+      color:var(--blush);font-weight:500;background:var(--cream);
+    }
+    td{color:var(--ink);font-weight:300}
+    tr:last-child td{border-bottom:0}
+    .size-note{margin:16px 0 0;color:var(--muted);font-weight:300;font-size:.95rem}
+    .faq-list{display:grid;gap:12px;max-width:760px}
+    .faq details{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:4px 20px;
+    }
+    .faq summary{
+      cursor:pointer;
+      list-style:none;
+      padding:16px 0;
+      font-size:1.15rem;
+      color:var(--deep);
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{
+      content:"+";
+      float:right;
+      font-family:var(--sans);
+      font-weight:400;
+      color:var(--blush);
+    }
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:0 0 16px;color:var(--muted);font-weight:300}
+    .contact-lite{
+      margin-top:36px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    .info{
+      background:var(--cream);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px 18px;
+    }
+    .info small{display:block;color:var(--blush);letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;font-weight:500;margin-bottom:4px}
+    .info b{font-weight:500}
+    .info a{color:var(--deep);text-decoration:none}
+    .info a:hover{text-decoration:underline}
+    .site-footer{
+      border-top:1px solid var(--line);
+      padding:28px 0 40px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+    .site-footer a{color:var(--deep);text-decoration:none}
+    .site-footer a:hover{color:var(--blush)}
+    .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+    .rv.in{opacity:1;transform:none}
+    @media (max-width:900px){
+      .hero-grid,.about-grid,.book-grid{grid-template-columns:1fr}
+      .hero-art{order:-1}
+      .offers,.steps{grid-template-columns:1fr 1fr}
+      .shots{grid-template-columns:1fr 1fr}
+      .shot-wide{grid-row:auto}
+      .shot-wide img{aspect-ratio:4/3}
+      .contact-lite{grid-template-columns:1fr}
+    }
+    @media (max-width:720px){
+      .demo-bar{font-size:11px;letter-spacing:0;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .nav{
+        display:none;position:fixed;top:calc(var(--demo) + var(--header));
+        left:0;right:0;background:rgba(247,241,234,.98);
+        flex-direction:column;align-items:stretch;gap:0;
+        padding:8px var(--gutter) 18px;border-bottom:1px solid var(--line);
+      }
+      .menu-open .nav{display:flex}
+      .nav a{padding:12px 0;border-bottom:1px solid var(--line)}
+      .nav-cta{margin-top:10px;width:fit-content}
+      .burger{display:block}
+      .offers,.steps,.fields,.shots{grid-template-columns:1fr}
+      .hero{padding-bottom:48px}
+    }
+    .ig-float{
+      position:fixed;
+      right:max(16px, env(safe-area-inset-right, 0px));
+      bottom:max(16px, env(safe-area-inset-bottom, 0px));
+      z-index:50;
+      display:flex;align-items:center;gap:10px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .ig-float-label{
+      background:var(--deep);
+      color:#F7F1EA;
+      border:1px solid rgba(243,212,208,.35);
+      padding:7px 12px;
+      border-radius:999px;
+      font-size:.78rem;font-weight:500;letter-spacing:.02em;
+      white-space:nowrap;
+      box-shadow:0 10px 24px rgba(107,63,70,.28);
+    }
+    .ig-float-btn{
+      width:56px;height:56px;flex-shrink:0;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:var(--deep);
+      color:#F3D4D0;
+      border:1px solid var(--blush);
+      box-shadow:0 12px 28px rgba(107,63,70,.32);
+      transition:transform .25s,background .25s,color .25s,box-shadow .25s;
+    }
+    .ig-float-btn svg{width:24px;height:24px;display:block}
+    .ig-float:hover .ig-float-btn,
+    .ig-float:focus-visible .ig-float-btn{
+      transform:translateY(-2px);
+      background:var(--blush);
+      color:#fff;
+      box-shadow:0 16px 32px rgba(201,137,138,.35);
+    }
+    .ig-float:focus-visible{outline:none}
+    .ig-float:focus-visible .ig-float-btn{outline:2px solid #E8C9C6;outline-offset:3px}
+    .site-footer{padding-bottom:118px}
+    .footer-inner{padding-right:92px}
+    @media (max-width:720px){
+      .ig-float{right:max(12px, env(safe-area-inset-right, 0px));bottom:max(12px, env(safe-area-inset-bottom, 0px));gap:8px}
+      .ig-float-btn{width:50px;height:50px}
+      .ig-float-btn svg{width:22px;height:22px}
+      .ig-float-label{font-size:.72rem;padding:6px 10px}
+      .footer-inner{padding-right:0}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .hero-frame,.rv,.offer,.shot,.btn,.ig-float-btn{animation:none!important;transition:none!important}
+      .rv{opacity:1;transform:none}
+      .offer:hover,.shot:hover,.btn:hover,.ig-float:hover .ig-float-btn,.ig-float:focus-visible .ig-float-btn{transform:none}
+    }
+  </style>
+  <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+  <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+  <div class="demo-bar">Predlog sajta · <a href="https://webglowstudio.github.io/Webglowstudioportfolio/">WebGlow Studio</a> · kontakti su izmišljeni</div>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="logo" href="#pocetna">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="#FBFAF6"/>
+          <circle cx="20" cy="20" r="18.2" fill="none" stroke="#E8C9C6" stroke-width="1.2"/>
+          <ellipse cx="16.2" cy="25" rx="5.3" ry="6.2" fill="#C9898A"/>
+          <ellipse cx="17.8" cy="16.6" rx="6.1" ry="5.1" fill="#C9898A"/>
+          <circle cx="12.4" cy="11.2" r="1.9" fill="#C9898A"/>
+          <circle cx="16" cy="9.3" r="1.75" fill="#C9898A"/>
+          <circle cx="19.8" cy="9.1" r="1.6" fill="#C9898A"/>
+          <circle cx="23.2" cy="10.7" r="1.5" fill="#C9898A"/>
+          <circle cx="25.7" cy="13.2" r="1.35" fill="#C9898A"/>
+          <path d="M27.6 24.2c1.4-2.05 4.45-1.85 5.45.35 1 2.2-.4 4.3-2.6 5.85-2.2-1.55-3.6-3.65-2.6-5.85.25-.55.7-1 1.25-.1z" fill="#6B3F46"/>
+        </svg>
+        <span>
+          <span class="logo-kicker">Torte od pelena · Pančevo</span>
+          <span class="logo-name">Bebina dar</span>
+        </span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Glavna navigacija">
+        <a href="#ponuda">Ponuda</a>
+        <a href="#galerija">Galerija</a>
+        <a href="#kalendar">Kalendar</a>
+        <a href="#o-nama">O nama</a>
+        <a href="#pitanja">Pitanja</a>
+        <a class="btn nav-cta" href="#kalendar">Zakaži u DM</a>
+      </nav>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otvori meni">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="sadrzaj">
+    <section class="hero" id="pocetna">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hero-kicker">Torte od pelena · Pančevo</p>
+          <h1>Poklon koji piše ljubav</h1>
+          <p class="hero-lead">Ručno slagane torte od pelena, nežno ukrašene za babine, krštenje, prvo viđenje bebe i prvi rođendan. Nisu za jelo, ali ostaju u uspomeni, a pelene se posle zaista koriste.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#kalendar">Izaberite datum</a>
+            <a class="btn btn-ghost" href="#ponuda">Pogledajte ponudu</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-frame">
+            <img src="images/hero.jpg" width="1152" height="864" alt="Torta od pelena u dva sprata, sa plišanim medom i svetloružičastom satenskom trakom, na krem stolnjaku." fetchpriority="high">
+            <span class="hero-badge">Ručno složeno u Pančevu</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ponuda">
+      <div class="wrap">
+        <p class="sec-kicker rv">Ponuda</p>
+        <h2 class="sec-title rv">Za svaku nežnu priliku</h2>
+        <p class="sec-lead rv">Svaka torta se slaže po vama: boja trake, plišanog mede, patikica i veličina pelena. Recite nam za koga je poklon, a mi složimo ostatak.</p>
+        <div class="offers">
+          <article class="offer rv">
+            <svg class="offer-icon" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F3E8DF"/><path d="M22 32s-8.5-5.2-8.5-11A5 5 0 0 1 22 16a5 5 0 0 1 8.5 5c0 5.8-8.5 11-8.5 11z" fill="#C9898A"/></svg>
+            <h3>Za babine</h3>
+            <p>Nežan poklon za mamu i bebu, spreman da dočeka goste i ostane kao uspomena na prve dane.</p>
+          </article>
+          <article class="offer rv">
+            <svg class="offer-icon" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F3E8DF"/><path d="M16 28c0-6 3-9 6-12 3 3 6 6 6 12" fill="none" stroke="#6B3F46" stroke-width="1.6" stroke-linecap="round"/><circle cx="22" cy="29.5" r="2.2" fill="#C9898A"/></svg>
+            <h3>Za krštenje</h3>
+            <p>Svetliji, svečaniji sloj: bela i krem traka, beli meda i cvetići, u duhu tihog praznika.</p>
+          </article>
+          <article class="offer rv">
+            <svg class="offer-icon" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F3E8DF"/><ellipse cx="18" cy="26" rx="4" ry="4.6" fill="#C9898A"/><ellipse cx="19.2" cy="19.6" rx="4.6" ry="3.8" fill="#C9898A"/><circle cx="15.4" cy="15.6" r="1.35" fill="#C9898A"/><circle cx="18.2" cy="14.2" r="1.25" fill="#C9898A"/><circle cx="21.1" cy="14.1" r="1.15" fill="#C9898A"/><circle cx="23.6" cy="15.3" r="1.05" fill="#C9898A"/><circle cx="25.4" cy="17.2" r="1" fill="#C9898A"/><path d="M27 24.4c.9-1.4 2.9-1.3 3.55.2.65 1.5-.25 2.9-1.7 3.95-1.45-1.05-2.35-2.45-1.7-3.95.15-.35.45-.6.8-.08z" fill="#6B3F46"/></svg>
+            <h3>Prvo viđenje bebe</h3>
+            <p>Kad prvi put idete kod bebe, ponesite poklon koji je lep na stolu, a koristan u fioci.</p>
+          </article>
+          <article class="offer rv">
+            <svg class="offer-icon" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F3E8DF"/><path d="M22 12l1.6 5h5.2l-4.2 3.1 1.6 5L22 22.1 17.8 25l1.6-5-4.2-3.1h5.2z" fill="#C9898A"/></svg>
+            <h3>Prvi rođendan</h3>
+            <p>Mala svečanost, velika radost. Torta od pelena može da bude i središnji poklon na slavlju.</p>
+          </article>
+          <article class="offer rv">
+            <svg class="offer-icon" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F3E8DF"/><path d="M14 26c2-6 5-9 8-9s6 3 8 9" fill="none" stroke="#C9898A" stroke-width="1.8" stroke-linecap="round"/><path d="M16 18c.4-2.4 2-3.8 3.6-3.2M28 18c-.4-2.4-2-3.8-3.6-3.2" fill="none" stroke="#6B3F46" stroke-width="1.4" stroke-linecap="round"/></svg>
+            <h3>Za devojčice</h3>
+            <p>Blush, puder, krem i sitne patikice. Slažemo u mekim ružičastim tonovima, bez preterane slatkoće.</p>
+          </article>
+          <article class="offer rv">
+            <svg class="offer-icon" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F3E8DF"/><circle cx="22" cy="20" r="6.5" fill="none" stroke="#8A9A86" stroke-width="1.7"/><circle cx="22" cy="20" r="1.6" fill="#C4B3A5"/><path d="M16 29h12" stroke="#C4B3A5" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <h3>Za dečake</h3>
+            <p>Bež, topla sage zelena i medeni meda. Mirni tonovi koji lepo stoje i u dečijoj sobi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-sec" id="kako">
+      <div class="wrap">
+        <p class="sec-kicker rv">Kako naručiti</p>
+        <h2 class="sec-title rv">Četiri lagana koraka</h2>
+        <p class="sec-lead rv">Bez komplikovane forme. Izaberete datum, a ostatak dogovorimo u Instagram poruci.</p>
+        <div class="steps">
+          <article class="step rv">
+            <span class="step-num">01</span>
+            <h3>Izaberite priliku</h3>
+            <p>Babine, krštenje, prvo viđenje ili rođendan, za devojčicu ili dečaka.</p>
+          </article>
+          <article class="step rv">
+            <span class="step-num">02</span>
+            <h3>Odaberite datum</h3>
+            <p>U kalendaru označite dan preuzimanja ili dostave. Ostavljamo bar tri dana za slaganje.</p>
+          </article>
+          <article class="step rv">
+            <span class="step-num">03</span>
+            <h3>Pošaljite poruku</h3>
+            <p>Dugme otvara Instagram DM i kopira vaš izbor, da ga samo nalepite.</p>
+          </article>
+          <article class="step rv">
+            <span class="step-num">04</span>
+            <h3>Dogovorimo detalje</h3>
+            <p>Boje, veličinu pelena, plišanog medu i preuzimanje uskladimo u poruci, bez žurbe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="galerija">
+      <div class="wrap">
+        <p class="sec-kicker rv">Galerija</p>
+        <h2 class="sec-title rv">Kako mogu da izgledaju</h2>
+        <p class="sec-lead rv">Ilustrativni predlozi u krem i blush tonovima. Vaša torta se slaže po meri, nije kopija tuđe.</p>
+        <div class="shots">
+          <figure class="shot shot-wide rv">
+            <img src="images/krsenje.jpg" width="1024" height="1024" alt="Svečana bela torta od pelena na keramičkom stalku, sa belim plišanim medom i gipsofilom." loading="lazy">
+            <figcaption>Za krštenje, u belom i kremu</figcaption>
+          </figure>
+          <figure class="shot rv">
+            <img src="images/devojcica.jpg" width="1024" height="1024" alt="Torta od pelena sa blush trakom, krem plišanim medom i pletenim patikicama za devojčicu." loading="lazy">
+            <figcaption>Za devojčicu</figcaption>
+          </figure>
+          <figure class="shot rv">
+            <img src="images/decak.jpg" width="1024" height="1024" alt="Torta od pelena u tri sprata, sa bež i sage trakom, plišanim medom i drvenom glodalicom." loading="lazy">
+            <figcaption>Za dečaka</figcaption>
+          </figure>
+          <figure class="shot rv">
+            <img src="images/detalj.jpg" width="1024" height="1024" alt="Pletene patikice sa ušima kao u mede u krem i blush nijansi, pored savijenih pelena." loading="lazy">
+            <figcaption>Detalj: patikice i pelene</figcaption>
+          </figure>
+          <figure class="shot rv">
+            <img src="images/hero.jpg" width="1152" height="864" alt="Torta od pelena sa plišanim medom i svetloružičastom trakom." loading="lazy">
+            <figcaption>Klasična torta s plišanim medom</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="book" id="kalendar">
+      <div class="wrap">
+        <p class="sec-kicker rv">Kalendar zakazivanja</p>
+        <h2 class="sec-title rv">Izaberite dan, mi složimo tortu</h2>
+        <p class="sec-lead rv">Ovo je predlog zakazivanja, bez pozadine. Kad odaberete datum i vrstu torte, otvara se Instagram i detalji se kopiraju da ih samo nalepite u poruku.</p>
+        <div class="book-grid rv">
+          <div class="cal-card">
+            <div class="cal-head">
+              <button class="cal-nav" id="cal-prev" type="button" aria-label="Prethodni mesec">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <h3 class="cal-title" id="cal-title">Novembar 2026</h3>
+              <button class="cal-nav" id="cal-next" type="button" aria-label="Sledeći mesec">
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <div class="cal-week" aria-hidden="true">
+              <span>Pon</span><span>Uto</span><span>Sre</span><span>Čet</span><span>Pet</span><span>Sub</span><span>Ned</span>
+            </div>
+            <div class="cal-grid" id="cal-grid" role="grid" aria-labelledby="cal-title"></div>
+            <p class="cal-note">Torte se slažu ručno, zato je najraniji termin za tri dana. Prošli datumi nisu dostupni.</p>
+          </div>
+          <form class="book-form" id="book-form">
+            <label class="field">
+              <span>Vrsta torte</span>
+              <select id="cake-type" name="torta" required>
+                <option value="" selected disabled>Izaberite priliku</option>
+                <option>Za babine</option>
+                <option>Za krštenje</option>
+                <option>Prvo viđenje bebe</option>
+                <option>Prvi rođendan</option>
+                <option>Za devojčicu</option>
+                <option>Za dečaka</option>
+                <option>Po dogovoru</option>
+              </select>
+            </label>
+            <fieldset class="field" style="border:0;padding:0;margin:0">
+              <span>Način</span>
+              <div class="seg">
+                <label><input type="radio" name="nacin" value="Preuzimanje" checked> Preuzimanje</label>
+                <label><input type="radio" name="nacin" value="Dostava"> Dostava</label>
+              </div>
+            </fieldset>
+            <p class="book-summary" id="book-summary">Odaberite datum u kalendaru i vrstu torte.</p>
+            <button class="btn" id="book-send" type="submit" disabled>Zakaži u DM</button>
+            <div class="confirm" id="book-confirm" role="status" aria-live="polite">
+              <h3>Vaš izbor je spreman</h3>
+              <p id="book-confirm-text"></p>
+              <p>Instagram DM se otvara, a tekst je kopiran da ga samo nalepite. Ako se ne otvori, pišite nam na <a href="https://ig.me/m/bebina_dar">@bebina_dar</a>.</p>
+            </div>
+            <noscript><p class="cal-note">Kalendar radi uz JavaScript. Pišite nam direktno na Instagramu, @bebina_dar.</p></noscript>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="o-nama">
+      <div class="wrap about-grid">
+        <div class="about-text">
+          <p class="sec-kicker rv">O nama</p>
+          <h2 class="sec-title rv">Složeno ručno, iz Pančeva</h2>
+          <p class="rv">Bebina dar slaže torte od pelena kao poklon koji je lep kad stigne, i koristan kad se odmota. Svaka se radi ručno, od novih, nekorišćenih pelena, sa trakom, plišanim medom i sitnicama koje odgovaraju prilici.</p>
+          <p class="rv">Radimo za porodice iz Pančeva i okoline. Boje, veličinu i detalje dogovaramo u poruci, bez žurbe i bez šablona. Slogan koji pratimo je jednostavan: poklon koji piše ljubav.</p>
+        </div>
+        <div class="about-shot rv">
+          <img src="images/detalj.jpg" width="1024" height="1024" alt="Detalj poklona: pletene patikice i pelene vezane blush trakom." loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="sizes" id="velicine">
+      <div class="wrap">
+        <p class="sec-kicker rv">Vodič kroz veličine</p>
+        <h2 class="sec-title rv">Kad birate pelene i garderobu</h2>
+        <p class="sec-lead rv">Mali orijentir za mame i kume. Tačnu veličinu pelena i detalje uvek uskladimo u DM, prema uzrastu bebe.</p>
+        <div class="size-table-wrap rv">
+          <table>
+            <thead>
+              <tr><th>Veličina</th><th>Uzrast, orijentirno</th><th>Dužina</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>50</td><td>Novorođenče</td><td>do 50 cm</td></tr>
+              <tr><td>56</td><td>0–2 meseca</td><td>50–56 cm</td></tr>
+              <tr><td>62</td><td>2–4 meseca</td><td>56–62 cm</td></tr>
+              <tr><td>68</td><td>4–6 meseci</td><td>62–68 cm</td></tr>
+              <tr><td>74</td><td>6–9 meseci</td><td>68–74 cm</td></tr>
+              <tr><td>80</td><td>9–12 meseci</td><td>74–80 cm</td></tr>
+              <tr><td>86</td><td>12–18 meseci</td><td>80–86 cm</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="size-note rv">Ovo je samo vodič. Bebe rastu različito, zato je najsigurnije da nam u poruci kažete uzrast ili broj koji već nosi.</p>
+      </div>
+    </section>
+
+    <section class="faq" id="pitanja">
+      <div class="wrap">
+        <p class="sec-kicker rv">Česta pitanja</p>
+        <h2 class="sec-title rv">Šta vas obično zanima</h2>
+        <div class="faq-list">
+          <details class="rv">
+            <summary>Šta je torta od pelena?</summary>
+            <p>Nije za jelo. Slaže se od novih, nekorišćenih pelena u spratove, pa se ukrašava trakom, plišanim medom i sitnim poklonima za bebu. Kad prođe slavlje, pelene se odmotaju i koriste kao i svaka druga pelena.</p>
+          </details>
+          <details class="rv">
+            <summary>Da li su pelene nove?</summary>
+            <p>Da, uvek nekorišćene. Biramo ih prema uzrastu bebe, a marku i broj možemo da uskladimo s vama u poruci.</p>
+          </details>
+          <details class="rv">
+            <summary>Koliko unapred treba naručiti?</summary>
+            <p>Bar tri dana pre preuzimanja ili dostave. Za krštenja, praznike i vikende javite se ranije, da stignemo da složimo bez žurbe.</p>
+          </details>
+          <details class="rv">
+            <summary>Radite li dostavu?</summary>
+            <p>Preuzimanje je u Pančevu, a dostavu dogovaramo u Instagram poruci, prema adresi i terminu.</p>
+          </details>
+          <details class="rv">
+            <summary>Mogu li da izaberem boje i dodatke?</summary>
+            <p>Da. Traka, plišani meda, patikice i cvetići biraju se po prilici i po tome da li je poklon za devojčicu, dečaka, ili još ne znate pol.</p>
+          </details>
+          <details class="rv">
+            <summary>Šta ako još ne znam pol bebe?</summary>
+            <p>Slažemo i u nežnim krem, bež i belim tonovima, koji lepo stoje u svakoj sobi i za svaku priliku.</p>
+          </details>
+        </div>
+        <div class="contact-lite">
+          <div class="info rv">
+            <small>Instagram</small>
+            <b><a href="https://ig.me/m/bebina_dar">@bebina_dar</a></b>
+          </div>
+          <div class="info rv">
+            <small>Telefon, primer</small>
+            <b>06x xxx xxxx</b>
+          </div>
+          <div class="info rv">
+            <small>Mejl, primer</small>
+            <b>kontakt@primer.rs</b>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="ig-float" href="https://ig.me/m/bebina_dar" target="_blank" rel="noopener" aria-label="Zakaži u DM na Instagramu">
+    <span class="ig-float-label">Zakaži u DM</span>
+    <span class="ig-float-btn" aria-hidden="true">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="17.15" cy="6.85" r="1.15" fill="currentColor"/>
+      </svg>
+    </span>
+  </a>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Bebina dar · Torte od pelena · Pančevo</p>
+      <p><a href="https://webglowstudio.github.io/Webglowstudioportfolio/">Demo izrada: WebGlow Studio</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    const header = document.querySelector(".site-header");
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("site-nav");
+    function closeMenu(){
+      document.body.classList.remove("menu-open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Otvori meni");
+    }
+    burger.addEventListener("click", function(){
+      const open = document.body.classList.toggle("menu-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "Zatvori meni" : "Otvori meni");
+    });
+    nav.addEventListener("click", function(e){ if(e.target.closest("a")) closeMenu(); });
+    const onScroll = function(){ header.classList.toggle("solid", window.scrollY > 8); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, {passive:true});
+
+    const MONTHS = ["januar","februar","mart","april","maj","jun","jul","avgust","septembar","oktobar","novembar","decembar"];
+    const LEAD_DAYS = 3;
+    const IG = "https://ig.me/m/bebina_dar";
+    const grid = document.getElementById("cal-grid");
+    const title = document.getElementById("cal-title");
+    const summary = document.getElementById("book-summary");
+    const sendBtn = document.getElementById("book-send");
+    const typeSel = document.getElementById("cake-type");
+    const confirmBox = document.getElementById("book-confirm");
+    const confirmText = document.getElementById("book-confirm-text");
+    const today = new Date();
+    today.setHours(0,0,0,0);
+    const minDate = new Date(today);
+    minDate.setDate(minDate.getDate() + LEAD_DAYS);
+    let view = new Date(minDate.getFullYear(), minDate.getMonth(), 1);
+    let selected = null;
+
+    function ymd(d){ return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); }
+    function formatSr(d){ return d.getDate() + ". " + MONTHS[d.getMonth()] + " " + d.getFullYear() + "."; }
+    function nacin(){
+      const el = document.querySelector("input[name=nacin]:checked");
+      return el ? el.value : "Preuzimanje";
+    }
+    function ready(){ return !!(selected && typeSel.value); }
+    function message(){
+      return "Zdravo! Želela bih da naručim tortu od pelena — " + typeSel.value + ". " + nacin() + ": " + formatSr(selected);
+    }
+    function refreshSummary(){
+      if(selected && typeSel.value){
+        summary.innerHTML = "<strong>" + typeSel.value + "</strong> · " + nacin() + " · " + formatSr(selected);
+      } else if(selected){
+        summary.textContent = formatSr(selected) + " je slobodan. Izaberite još vrstu torte.";
+      } else {
+        summary.textContent = "Odaberite datum u kalendaru i vrstu torte.";
+      }
+      sendBtn.disabled = !ready();
+    }
+    function render(){
+      title.textContent = MONTHS[view.getMonth()] + " " + view.getFullYear();
+      grid.innerHTML = "";
+      const first = new Date(view.getFullYear(), view.getMonth(), 1);
+      let start = (first.getDay() + 6) % 7;
+      const days = new Date(view.getFullYear(), view.getMonth()+1, 0).getDate();
+      for(let i=0;i<start;i++){
+        const pad = document.createElement("span");
+        pad.className = "cal-day is-pad";
+        pad.setAttribute("aria-hidden","true");
+        grid.appendChild(pad);
+      }
+      for(let day=1; day<=days; day++){
+        const date = new Date(view.getFullYear(), view.getMonth(), day);
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "cal-day";
+        btn.textContent = String(day);
+        btn.setAttribute("role","gridcell");
+        const disabled = date < minDate;
+        btn.disabled = disabled;
+        if(ymd(date) === ymd(today)) btn.classList.add("is-today");
+        if(selected && ymd(date) === ymd(selected)){
+          btn.classList.add("is-selected");
+          btn.setAttribute("aria-selected","true");
+        } else {
+          btn.setAttribute("aria-selected","false");
+        }
+        btn.setAttribute("aria-label", formatSr(date) + (disabled ? ", nije dostupno" : ""));
+        btn.addEventListener("click", function(){
+          selected = date;
+          confirmBox.classList.remove("is-on");
+          render();
+          refreshSummary();
+        });
+        grid.appendChild(btn);
+      }
+      document.getElementById("cal-prev").disabled = (view.getFullYear() < minDate.getFullYear()) || (view.getFullYear() === minDate.getFullYear() && view.getMonth() <= minDate.getMonth());
+    }
+    document.getElementById("cal-prev").addEventListener("click", function(){
+      view = new Date(view.getFullYear(), view.getMonth()-1, 1);
+      render();
+    });
+    document.getElementById("cal-next").addEventListener("click", function(){
+      view = new Date(view.getFullYear(), view.getMonth()+1, 1);
+      render();
+    });
+    typeSel.addEventListener("change", function(){
+      confirmBox.classList.remove("is-on");
+      refreshSummary();
+    });
+    document.querySelectorAll("input[name=nacin]").forEach(function(el){
+      el.addEventListener("change", function(){
+        confirmBox.classList.remove("is-on");
+        refreshSummary();
+      });
+    });
+    document.getElementById("book-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      if(!ready()){
+        this.reportValidity();
+        return;
+      }
+      const text = message();
+      confirmText.textContent = text;
+      confirmBox.classList.add("is-on");
+      const openIg = function(){ window.open(IG, "_blank", "noopener"); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(openIg).catch(openIg);
+      } else {
+        openIg();
+      }
+    });
+    render();
+    refreshSummary();
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reduce){
+      document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+      return;
+    }
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll(".rv").forEach(function(el, i){
+      el.style.transitionDelay = (i % 4) * 70 + "ms";
+      io.observe(el);
+    });
+  })();
+  </script>
+</body>
+</html>
