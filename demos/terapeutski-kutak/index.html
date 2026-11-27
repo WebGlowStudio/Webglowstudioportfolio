@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Terapeutski kutak · Online psihoterapija za adolescente i mlade</title>
+  <meta name="description" content="Terapeutski kutak Marine Popović: online psihoterapijski susreti za adolescente i mlade. Diplomirani psiholog, profesor psihologije i O.L.I. terapeut pod supervizijom. Predlog sajta WebGlow Studija.">
+  <meta name="keywords" content="Terapeutski kutak, Marina Popović, online psihoterapija, O.L.I. terapeut, psiholog, profesor psihologije, adolescenti, mladi, online terapija, online susreti, psihoterapija Srbija">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#5E735C">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terapeutski kutak · Online psihoterapija za adolescente i mlade">
+  <meta name="twitter:description" content="Miran prostor za razgovor, online, u vašem ritmu. Marina Popović, O.L.I. terapeut pod supervizijom. Predlog sajta, izradio WebGlow Studio.">
+  <meta property="og:title" content="Terapeutski kutak · Online psihoterapija za adolescente i mlade">
+  <meta property="og:description" content="Online psihoterapijski susreti za adolescente i mlade. Marina Popović, diplomirani psiholog i O.L.I. terapeut pod supervizijom.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/terapeutski-kutak/">
+  <meta property="og:image" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/terapeutski-kutak/og.png">
+  <meta property="og:locale" content="sr_RS">
+  <link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/terapeutski-kutak/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Terapeutski kutak",
+    "description": "Predlog sajta za Terapeutski kutak Marine Popović: online psihoterapijski susreti za adolescente i mlade. Napravio WebGlow Studio. Kontakt podaci su izmišljeni.",
+    "url": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/terapeutski-kutak/",
+    "telephone": "06x xxx xxxx",
+    "email": "kontakt@primer.rs",
+    "areaServed": "RS",
+    "founder": {
+      "@type": "Person",
+      "name": "Marina Popović",
+      "jobTitle": "Diplomirani psiholog, profesor psihologije, O.L.I. terapeut pod supervizijom"
+    }
+  }
+  </script>
+  <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+  <style>
+    :root{
+      --bg:#F4EEE4;
+      --bg-soft:#EBE3D6;
+      --cream:#FAF7F1;
+      --white:#FFFCF7;
+      --ink:#3A342C;
+      --muted:#6B645A;
+      --line:#E0D5C4;
+      --sage:#5E735C;
+      --sage-deep:#4A5C48;
+      --sage-soft:#DDE6D4;
+      --gold:#C4A574;
+      --gold-deep:#9A7A4A;
+      --clay:#8C6A4E;
+      --header:72px;
+      --demo:36px;
+      --gutter:clamp(20px,4vw,56px);
+      --serif:"Playfair Display",Georgia,serif;
+      --sans:"Jost",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:var(--sans);
+      font-size:17px;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    img,svg{max-width:100%;display:block}
+    a{color:var(--sage-deep)}
+    button,input,select,textarea{font:inherit}
+    h1,h2,h3,.serif,.logo-name,.step-num{
+      font-family:var(--serif);
+      font-style:normal;
+      font-synthesis:none;
+      font-weight:600;
+    }
+    .skip{
+      position:absolute;left:-999px;top:0;
+      background:var(--sage-deep);color:#fff;padding:8px 16px;z-index:100;
+    }
+    .skip:focus{left:12px;top:12px}
+    .wrap{width:min(1120px,100% - 2*var(--gutter));margin-inline:auto}
+    .demo-bar{
+      position:sticky;top:0;z-index:40;
+      height:var(--demo);
+      display:flex;align-items:center;justify-content:center;gap:.5rem;
+      background:var(--sage-deep);color:#F4EEE4;
+      font-size:13px;font-weight:400;letter-spacing:.02em;text-align:center;padding:0 16px;
+    }
+    .demo-bar a{color:#E8D4A8;text-decoration:none}
+    .demo-bar a:hover{color:#fff}
+    .site-header{
+      position:sticky;top:var(--demo);z-index:30;
+      height:var(--header);
+      display:flex;align-items:center;
+      background:rgba(244,238,228,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid transparent;
+      transition:border-color .3s,background .3s;
+    }
+    .site-header.solid{border-bottom-color:var(--line);background:rgba(244,238,228,.96)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+    .logo-mark{width:44px;height:44px;flex-shrink:0}
+    .logo-kicker{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);font-weight:500}
+    .logo-name{display:block;font-size:1.12rem;letter-spacing:.01em;line-height:1.15;color:var(--sage-deep)}
+    .nav{display:flex;align-items:center;gap:20px}
+    .nav a{text-decoration:none;color:var(--ink);font-size:.95rem;font-weight:400}
+    .nav a:hover{color:var(--sage-deep)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 22px;border-radius:999px;border:0;
+      background:var(--sage-deep);color:#fff;text-decoration:none;
+      font-weight:500;font-size:.95rem;cursor:pointer;
+      transition:background .25s,transform .25s,box-shadow .25s;
+    }
+    .btn:hover{background:var(--sage);transform:translateY(-1px);box-shadow:0 8px 20px rgba(74,92,72,.18)}
+    .btn-ghost{
+      background:transparent;color:var(--sage-deep);
+      border:1px solid var(--line);
+    }
+    .btn-ghost:hover{background:var(--bg-soft);color:var(--sage-deep);box-shadow:none}
+    .nav-cta{padding:10px 18px}
+    .burger{display:none;width:42px;height:42px;border:0;background:transparent;padding:10px;cursor:pointer}
+    .burger span{display:block;height:1.5px;background:var(--sage-deep);margin:6px 0;transition:transform .25s,opacity .25s}
+    .menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .menu-open .burger span:nth-child(2){opacity:0}
+    .menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+    .hero{
+      position:relative;
+      padding:clamp(36px,6vw,72px) 0 clamp(64px,8vw,110px);
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse at 12% 18%,rgba(94,115,92,.16),transparent 46%),
+        radial-gradient(ellipse at 86% 12%,rgba(196,165,116,.16),transparent 44%),
+        radial-gradient(ellipse at 70% 90%,rgba(222,230,212,.55),transparent 50%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:clamp(28px,5vw,64px);
+      align-items:center;
+    }
+    .hero-kicker{
+      font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--sage);font-weight:500;margin:0 0 14px;
+    }
+    .hero h1{
+      margin:0 0 18px;
+      font-size:clamp(2.05rem,5.2vw,3.5rem);
+      line-height:1.14;
+      letter-spacing:-.02em;
+      color:var(--sage-deep);
+    }
+    .hero-lead{margin:0 0 28px;max-width:40ch;color:var(--muted);font-weight:300;font-size:1.08rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-art{position:relative;display:grid;place-items:center;min-height:380px}
+    .hero-ring{
+      position:absolute;border-radius:50%;border:1px solid rgba(94,115,92,.16);
+      animation:breathe 8s ease-in-out infinite;
+    }
+    .hero-ring:nth-child(1){width:92%;aspect-ratio:1;animation-delay:0s}
+    .hero-ring:nth-child(2){width:76%;aspect-ratio:1;animation-delay:.8s}
+    .hero-badge{
+      width:min(100%,360px);height:auto;
+      filter:drop-shadow(0 22px 40px rgba(74,92,72,.14));
+      animation:floaty 7s ease-in-out infinite;
+    }
+    .sprig-sway{transform-origin:40px 118px;animation:sway 6.5s ease-in-out infinite}
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @keyframes sway{0%,100%{transform:rotate(0)}50%{transform:rotate(2.2deg)}}
+    @keyframes breathe{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.03);opacity:1}}
+    section{padding:clamp(64px,8vw,104px) 0}
+    .sec-kicker{
+      font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--sage);font-weight:500;margin:0 0 10px;
+    }
+    .sec-title{margin:0 0 12px;font-size:clamp(1.85rem,3.6vw,2.7rem);line-height:1.15;letter-spacing:-.02em;color:var(--sage-deep)}
+    .sec-lead{margin:0 0 36px;max-width:48ch;color:var(--muted);font-weight:300}
+    .about{background:linear-gradient(180deg,var(--bg),var(--bg-soft) 100%)}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,56px);align-items:center}
+    .about-text p{margin:0 0 16px;color:var(--muted);font-weight:300}
+    .about-text p:last-of-type{margin-bottom:0}
+    .about-card{
+      background:var(--cream);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:clamp(28px,4vw,40px);
+      box-shadow:0 16px 40px rgba(58,52,44,.05);
+    }
+    .about-card h3{margin:0 0 8px;font-size:1.55rem;color:var(--sage-deep)}
+    .about-role{margin:0 0 18px;color:var(--sage);font-weight:500;font-size:.95rem}
+    .about-card ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+    .about-card li{
+      display:flex;gap:12px;align-items:flex-start;
+      color:var(--muted);font-weight:300;font-size:.98rem;
+    }
+    .about-card li::before{
+      content:"";
+      width:8px;height:8px;border-radius:50%;
+      background:var(--sage);flex-shrink:0;margin-top:.55em;
+    }
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service{
+      background:var(--cream);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px 24px 26px;
+      transition:transform .3s,box-shadow .3s;
+    }
+    .service:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(74,92,72,.08)}
+    .service-icon{
+      width:48px;height:48px;border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--sage-soft);color:var(--sage-deep);margin-bottom:16px;
+    }
+    .service-icon svg{width:24px;height:24px}
+    .service h3{margin:0 0 10px;font-size:1.28rem;color:var(--sage-deep)}
+    .service p{margin:0;color:var(--muted);font-weight:300}
+    .meet{background:var(--cream)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px 20px 22px;
+    }
+    .step-num{
+      display:block;font-size:1.7rem;color:var(--gold-deep);
+      line-height:1;margin-bottom:12px;
+    }
+    .step h3{margin:0 0 8px;font-size:1.12rem;color:var(--sage-deep)}
+    .step p{margin:0;color:var(--muted);font-weight:300;font-size:.98rem}
+    .thought{
+      padding:0 0 clamp(24px,4vw,16px);
+    }
+    .thought-card{
+      width:min(760px,100%);
+      margin:0 auto;
+      text-align:center;
+      padding:clamp(36px,5vw,56px) clamp(24px,5vw,48px);
+      background:linear-gradient(180deg,var(--cream),var(--sage-soft));
+      border:1px solid var(--line);
+      border-radius:28px;
+    }
+    .thought-card blockquote{
+      margin:0 0 14px;
+      font-family:var(--serif);
+      font-style:normal;
+      font-synthesis:none;
+      font-size:clamp(1.35rem,3vw,1.85rem);
+      line-height:1.4;
+      color:var(--sage-deep);
+    }
+    .thought-card p{margin:0;color:var(--muted);font-weight:300;font-size:.95rem}
+    .faq-list{display:grid;gap:12px;max-width:760px}
+    .faq-list details{
+      background:var(--cream);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:4px 8px;
+    }
+    .faq-list summary{
+      cursor:pointer;
+      list-style:none;
+      padding:16px 44px 16px 16px;
+      font-weight:500;
+      color:var(--sage-deep);
+      position:relative;
+    }
+    .faq-list summary::-webkit-details-marker{display:none}
+    .faq-list summary::after{
+      content:"";
+      position:absolute;right:18px;top:50%;width:10px;height:10px;
+      border-right:1.6px solid var(--sage);border-bottom:1.6px solid var(--sage);
+      transform:translateY(-70%) rotate(45deg);
+      transition:transform .25s;
+    }
+    .faq-list details[open] summary::after{transform:translateY(-20%) rotate(225deg)}
+    .faq-list details p{
+      margin:0 16px 16px;
+      color:var(--muted);font-weight:300;
+    }
+    .contact{background:linear-gradient(180deg,var(--bg-soft),var(--bg))}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,56px);align-items:start}
+    .contact-note{margin:16px 0 0;color:var(--muted);font-weight:300}
+    .contact-meta{margin:28px 0 0;display:grid;gap:10px;color:var(--muted);font-weight:300}
+    .contact-meta a{color:var(--sage-deep);text-decoration:none}
+    .contact-meta a:hover{text-decoration:underline}
+    .form{
+      background:var(--cream);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:clamp(22px,3vw,32px);
+      display:grid;gap:14px;
+    }
+    .form label{display:grid;gap:6px;font-size:.9rem;font-weight:500;color:var(--sage-deep)}
+    .form input,.form textarea{
+      width:100%;
+      border:1px solid var(--line);
+      background:var(--white);
+      border-radius:12px;
+      padding:12px 14px;
+      color:var(--ink);
+      outline:none;
+      transition:border-color .2s,box-shadow .2s;
+    }
+    .form input:focus,.form textarea:focus{
+      border-color:var(--sage);
+      box-shadow:0 0 0 3px rgba(94,115,92,.15);
+    }
+    .form textarea{min-height:120px;resize:vertical}
+    .form-ok{
+      display:none;
+      margin:0;
+      padding:14px 16px;
+      border-radius:14px;
+      background:var(--sage-soft);
+      color:var(--sage-deep);
+      font-weight:400;
+    }
+    .form.sent .form-fields{display:none}
+    .form.sent .form-ok{display:block}
+    .site-footer{
+      padding:28px var(--gutter) 140px;
+      border-top:1px solid var(--line);
+      background:var(--bg);
+    }
+    .footer-inner{
+      width:min(1120px,100%);
+      margin-inline:auto;
+      display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
+      color:var(--muted);font-size:.92rem;font-weight:300;
+    }
+    .footer-inner a{color:var(--sage-deep);text-decoration:none}
+    .footer-inner a:hover{text-decoration:underline}
+    .float-stack{
+      position:fixed;
+      right:max(16px, env(safe-area-inset-right, 0px));
+      bottom:max(16px, env(safe-area-inset-bottom, 0px));
+      z-index:50;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:10px;
+    }
+    .float-btn{
+      display:flex;align-items:center;gap:10px;
+      text-decoration:none;color:inherit;
+    }
+    .float-label{
+      background:var(--sage-deep);
+      color:#F4EEE4;
+      border:1px solid rgba(232,212,168,.35);
+      padding:7px 12px;
+      border-radius:999px;
+      font-size:.78rem;font-weight:500;letter-spacing:.02em;
+      white-space:nowrap;
+      box-shadow:0 10px 24px rgba(74,92,72,.28);
+    }
+    .float-icon{
+      width:56px;height:56px;flex-shrink:0;
+      display:grid;place-items:center;
+      border-radius:50%;
+      background:var(--sage-deep);
+      color:#E8D4A8;
+      border:1px solid var(--gold);
+      box-shadow:0 12px 28px rgba(74,92,72,.32);
+      transition:transform .25s,background .25s,color .25s;
+    }
+    .float-icon svg{width:24px;height:24px;display:block}
+    .float-btn:hover .float-icon,
+    .float-btn:focus-visible .float-icon{
+      transform:translateY(-2px);
+      background:var(--sage);
+      color:#fff;
+    }
+    .toast{
+      position:fixed;left:50%;bottom:24px;z-index:60;
+      transform:translate(-50%,16px);
+      background:var(--sage-deep);color:#F4EEE4;
+      padding:12px 18px;border-radius:999px;
+      font-size:.9rem;box-shadow:0 12px 28px rgba(58,52,44,.22);
+      opacity:0;pointer-events:none;
+      transition:opacity .3s,transform .3s;
+      max-width:min(420px,calc(100% - 32px));
+      text-align:center;
+    }
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .rv.in{opacity:1;transform:none}
+    @media (max-width:880px){
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .services-grid,.steps{grid-template-columns:1fr 1fr}
+      .hero-art{min-height:280px;order:-1}
+      .burger{display:block}
+      .nav{
+        position:fixed;inset:calc(var(--demo) + var(--header)) 0 auto 0;
+        display:none;flex-direction:column;align-items:stretch;
+        gap:0;background:rgba(250,247,241,.98);
+        border-bottom:1px solid var(--line);
+        padding:10px 20px 20px;z-index:29;
+      }
+      .menu-open .nav{display:flex}
+      .nav a,.nav .nav-cta{padding:12px 4px}
+      .nav-cta{margin-top:6px;text-align:center}
+    }
+    @media (max-width:620px){
+      .services-grid,.steps{grid-template-columns:1fr}
+      .demo-bar{font-size:11px;letter-spacing:0;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .hero{padding-bottom:120px}
+      .hero-lead,.hero-actions{padding-right:72px}
+      .float-label{display:none}
+      .float-icon{width:52px;height:52px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .hero-badge,.hero-ring,.sprig-sway,.rv,.service,.btn,.float-icon{animation:none!important;transition:none!important}
+      .rv{opacity:1;transform:none}
+      .service:hover,.btn:hover,.float-btn:hover .float-icon,.float-btn:focus-visible .float-icon{transform:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+  <div class="demo-bar">Predlog sajta · <a href="https://webglowstudio.github.io/Webglowstudioportfolio/">WebGlow Studio</a> · kontakti su izmišljeni</div>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="logo" href="#pocetna">
+        <svg class="logo-mark" viewBox="0 0 80 80" aria-hidden="true">
+          <circle cx="40" cy="40" r="39" fill="#F3EBDD"/>
+          <circle cx="40" cy="40" r="36.8" fill="none" stroke="#C4A574" stroke-width="1.5"/>
+          <circle cx="40" cy="40" r="33.6" fill="none" stroke="#B7C4B0" stroke-width=".7"/>
+          <ellipse cx="40" cy="58.5" rx="19" ry="3.1" fill="#D4C4A8"/>
+          <rect x="21" y="56.2" width="38" height="3.1" rx="1.2" fill="#C8B896"/>
+          <path d="M31 43.5h18a1.2 1.2 0 0 1 1.2 1.2V53H29.8v-8.3A1.2 1.2 0 0 1 31 43.5Z" fill="#EDE6D6" stroke="#8A7A62" stroke-width="1"/>
+          <rect x="33" y="45.4" width="14" height="6.2" rx=".6" fill="#DDE6D4"/>
+          <path d="M27.5 53h25l2.2 3.4H25.3Z" fill="#C4B49A" stroke="#8A7A62" stroke-width=".7" stroke-linejoin="round"/>
+          <path d="M23.6 51.2h6.2l-.7 5.2h-4.8Z" fill="#C4A574"/>
+          <path d="M26.7 51.2c.2-6.4 2.4-12.2 6.8-17.4" fill="none" stroke="#5E735C" stroke-width="1.15" stroke-linecap="round"/>
+          <path d="M28.2 42.2c2.6-1.1 4.8-1 6.2.4-1.8 1.6-4.2 1.8-6.2-.4Z" fill="#6B8F6E"/>
+          <path d="M29.6 37.2c2.8-1.6 5.4-1.4 6.8.5-2.2 2-4.8 2.1-6.8-.5Z" fill="#5E735C"/>
+          <path d="M31.6 32.6c2.4-2 5.2-2.1 6.6-.2-2.6 2.2-5.1 2.2-6.6.2Z" fill="#8AA67E"/>
+          <path d="M27.2 46.6c-2.6-1.4-4.2-1.1-5.2.6 2 1.8 4.2 1.6 5.2-.6Z" fill="#6B8F6E"/>
+        </svg>
+        <span>
+          <span class="logo-kicker">Online psihoterapija</span>
+          <span class="logo-name">Terapeutski kutak</span>
+        </span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Glavna navigacija">
+        <a href="#o-meni">O meni</a>
+        <a href="#usluge">Usluge</a>
+        <a href="#online-susreti">Online susreti</a>
+        <a href="#pitanja">Pitanja</a>
+        <a class="btn nav-cta" href="#zakazivanje">Zakaži susret</a>
+      </nav>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otvori meni">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="sadrzaj">
+    <section class="hero" id="pocetna">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hero-kicker">Marina Popović</p>
+          <h1>Prostor u kom možete da zastanete i da se čujete</h1>
+          <p class="hero-lead">Online psihoterapijski susreti za adolescente i mlade, u ritmu koji vama odgovara. Miran razgovor, jasan okvir i prostor u koji možete da dođete onakvi kakvi jeste.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#zakazivanje">Zakaži susret</a>
+            <a class="btn btn-ghost" href="#online-susreti">Kako izgleda online rad</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-ring"></div>
+          <div class="hero-ring"></div>
+          <svg class="hero-badge" viewBox="0 0 320 320">
+            <circle cx="160" cy="160" r="154" fill="#F3EBDD"/>
+            <circle cx="160" cy="160" r="146" fill="none" stroke="#C4A574" stroke-width="3"/>
+            <circle cx="160" cy="160" r="134" fill="none" stroke="#B7C4B0" stroke-width="1.2"/>
+            <path id="arc-top" d="M70 168 A90 90 0 0 1 250 168" fill="none"/>
+            <text font-family="Jost, system-ui, sans-serif" font-size="13" font-weight="500" letter-spacing="3.2" fill="#5E735C">
+              <textPath href="#arc-top" startOffset="50%" text-anchor="middle">TERAPEUTSKI KUTAK</textPath>
+            </text>
+            <ellipse cx="160" cy="236" rx="78" ry="11" fill="#D4C4A8"/>
+            <rect x="86" y="226" width="148" height="12" rx="4" fill="#C8B896"/>
+            <g class="sprig-sway">
+              <path d="M108 214h28l-3 22h-22Z" fill="#C4A574"/>
+              <path d="M122 214C124 176 136 148 160 118" fill="none" stroke="#5E735C" stroke-width="3.2" stroke-linecap="round"/>
+              <path d="M128 188c12-6 24-6 32 2-10 9-22 10-32-2Z" fill="#6B8F6E"/>
+              <path d="M136 168c14-8 28-7 36 3-12 11-26 11-36-3Z" fill="#5E735C"/>
+              <path d="M146 146c13-11 28-12 36-2-14 12-28 13-36 2Z" fill="#8AA67E"/>
+              <path d="M118 200c-14-8-24-6-30 4 12 10 24 8 30-4Z" fill="#6B8F6E"/>
+              <path d="M150 132c-12-12-14-22-6-30 12 8 14 20 6 30Z" fill="#5E735C"/>
+            </g>
+            <path d="M132 176h76a5 5 0 0 1 5 5v34H127v-34a5 5 0 0 1 5-5Z" fill="#EDE6D6" stroke="#8A7A62" stroke-width="2.2"/>
+            <rect x="140" y="184" width="60" height="24" rx="2" fill="#DDE6D4"/>
+            <path d="M118 215h104l10 14H108Z" fill="#C4B49A" stroke="#8A7A62" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="o-meni">
+      <div class="wrap about-grid">
+        <div class="about-text rv">
+          <p class="sec-kicker">O meni</p>
+          <h2 class="sec-title">Marina Popović</h2>
+          <p>Diplomirani sam psiholog i profesor psihologije. U Terapeutskom kutku radim online sa adolescentima i mladima, u pristupu O.L.I. integrativne, psihodinamske psihoterapije.</p>
+          <p>Trenutno sam O.L.I. terapeut pod supervizijom. To znači da svoj rad redovno razmatram sa akreditovanim supervizorom, kako bi prostor koji delimo bio pažljiv, etički i pouzdan. Supervizija je deo ozbiljne obuke, a vama donosi dodatni sloj stručne pažnje.</p>
+          <p>Ne očekujem da unapred znate šta tačno želite da kažete. Dovoljno je da dođete. Zajedno tražimo tempo i reči koje vam odgovaraju.</p>
+        </div>
+        <aside class="about-card rv">
+          <h3>Kako radim</h3>
+          <p class="about-role">O.L.I. terapeut pod supervizijom</p>
+          <ul>
+            <li>Pažnja je na vama, ne na brzim savetima i gotovim receptima.</li>
+            <li>Rad je potpuno online, iz prostora u kom vam je prijatno.</li>
+            <li>Posebno mi je blizak rad sa adolescentima i mladima, u periodima rasta, prelaza i neizvesnosti.</li>
+            <li>Prvi susret služi da se upoznamo i da vidimo da li nam zajednički rad odgovara.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="usluge">
+      <div class="wrap">
+        <p class="sec-kicker rv">Usluge</p>
+        <h2 class="sec-title rv">Online sesije, po meri vašeg trenutka</h2>
+        <p class="sec-lead rv">Radim sa mladim ljudima koji traže prostor da razumeju sebe, odnose i ono što im je trenutno teško. Trajanje, ritam i teme dogovaramo na početku.</p>
+        <div class="services-grid">
+          <article class="service rv">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="3.1"/>
+                <path d="M6.2 19c.6-3.2 2.8-5 5.8-5s5.2 1.8 5.8 5"/>
+                <path d="M18.2 9.2c1.7.4 2.8 1.6 2.8 3.2 0 1.2-.6 2.2-1.6 2.8"/>
+                <path d="M5.8 9.2C4.1 9.6 3 10.8 3 12.4c0 1.2.6 2.2 1.6 2.8"/>
+              </svg>
+            </div>
+            <h3>Rad sa adolescentima</h3>
+            <p>Podrška u periodu škole, vršnjaka, porodice i prvih ozbiljnijih pitanja o sebi. Kad je potrebno, uključujemo i dogovor sa roditeljima ili starateljima.</p>
+          </article>
+          <article class="service rv">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 16.5V8.2L12 4l7 4.2v8.3L12 21z"/>
+                <path d="M12 12v9"/>
+                <path d="M5 8.2L12 12l7-3.8"/>
+              </svg>
+            </div>
+            <h3>Rad sa mladima</h3>
+            <p>Za mlade odrasle koji prolaze kroz studije, prve poslove, odnose, anksioznost ili osećaj da treba da stignu sve odjednom. Tu smo da to rastavimo, bez žurbe.</p>
+          </article>
+          <article class="service rv">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"/>
+                <path d="M12 5v14"/>
+                <circle cx="12" cy="12" r="9"/>
+              </svg>
+            </div>
+            <h3>Uvodni razgovor</h3>
+            <p>Prvi susret je prilika da se upoznamo, da čujem šta vas dovodi i da zajedno procenimo da li je ovaj prostor pravi za vas. Bez obaveze da odmah nastavimo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="meet" id="online-susreti">
+      <div class="wrap">
+        <p class="sec-kicker rv">Online susreti</p>
+        <h2 class="sec-title rv">Kako izgleda rad na daljinu</h2>
+        <p class="sec-lead rv">Ne treba vam ordinacija. Treba vam miran prostor, stabilna veza i vreme koje ste ostavili za sebe. Video poziv povezujemo preko aplikacije koju dogovorimo: Viber, Zoom, Google Meet ili nešto treće.</p>
+        <div class="steps">
+          <article class="step rv">
+            <span class="step-num">01</span>
+            <h3>Javite se</h3>
+            <p>Pišite u Instagram DM ili ostavite kratku poruku na sajtu. Dovoljno je da kažete da želite razgovor.</p>
+          </article>
+          <article class="step rv">
+            <span class="step-num">02</span>
+            <h3>Dogovorimo termin</h3>
+            <p>Uskladimo vreme i način povezivanja. Dugme Online susret na sajtu vodi pravo na vaš video poziv.</p>
+          </article>
+          <article class="step rv">
+            <span class="step-num">03</span>
+            <h3>Susret</h3>
+            <p>U dogovoreno vreme se čujemo. Vi birate prostor u kom vam je prijatno i u kom možete da pričate slobodno.</p>
+          </article>
+          <article class="step rv">
+            <span class="step-num">04</span>
+            <h3>Ako nastavimo</h3>
+            <p>Ako osetite da vam odgovara, gradimo stalan ritam. Tempo i teme ostaju vaši, a okvir ostaje jasan.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="thought" aria-label="Dnevna misao">
+      <div class="wrap">
+        <div class="thought-card rv">
+          <blockquote>Ne mora sve da se reši odjednom. Dovoljno je da ima gde da se kaže.</blockquote>
+          <p>Iz Terapeutskog kutka</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pitanja">
+      <div class="wrap">
+        <p class="sec-kicker rv">Pitanja</p>
+        <h2 class="sec-title rv">Ono što se često pita pre prvog susreta</h2>
+        <p class="sec-lead rv">Ako nešto ostane nejasno, slobodno pišite. Bolje je pitati nego nagađati.</p>
+        <div class="faq-list">
+          <details class="rv">
+            <summary>Da li je rad zaista online?</summary>
+            <p>Da. Susreti se održavaju putem video poziva. To omogućava da radimo bez obzira gde se nalazite, uz uslov da imate miran prostor i stabilnu internet vezu.</p>
+          </details>
+          <details class="rv">
+            <summary>Sa kim radite?</summary>
+            <p>Sa adolescentima i mladima. Ako niste sigurni da li pripadate toj grupi, javite se i iskreno ćemo proceniti da li je ovaj prostor pravi za vas, ili je bolje da vas uputim dalje.</p>
+          </details>
+          <details class="rv">
+            <summary>Šta znači da ste terapeut pod supervizijom?</summary>
+            <p>Znači da sam u O.L.I. edukaciji i da svoj rad sa klijentima redovno razmatram sa akreditovanim supervizorom. Klijenti ne prisustvuju superviziji, a poverljivost ostaje zaštićena. Supervizija je standard ozbiljne obuke i dodatna briga o kvalitetu rada.</p>
+          </details>
+          <details class="rv">
+            <summary>Kako izgleda prvi susret?</summary>
+            <p>Prvi razgovor služi da se upoznamo. Čujem šta vas dovodi, predstavim način rada i zajedno vidimo da li želimo da nastavimo. Nema obaveze da odmah uđete u stalni rad.</p>
+          </details>
+          <details class="rv">
+            <summary>Da li je razgovor poverljiv?</summary>
+            <p>Da. Sve što podelite ostaje između nas, uz uobičajene etičke izuzetke kada je ugrožena bezbednost. U radu sa adolescentima, kada je to potrebno, uključujemo i dogovor sa roditeljima ili starateljima.</p>
+          </details>
+          <details class="rv">
+            <summary>Kako da zakažem?</summary>
+            <p>Najjednostavnije je da pišete u Instagram DM, preko dugmeta Zakaži u DM, ili da ostavite poruku u formi ispod. Termin i način video poziva dogovaramo nakon toga.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="zakazivanje">
+      <div class="wrap contact-grid">
+        <div class="rv">
+          <p class="sec-kicker">Zakazivanje</p>
+          <h2 class="sec-title">Kad ste spremni, tu sam</h2>
+          <p class="sec-lead">Ostavite kratku poruku ili mi pišite na Instagramu. Javiću se čim stignem da uskladimo termin.</p>
+          <p class="contact-note">Na ovom predlogu sajta kontakti su izmišljeni. Na pravom sajtu ovde stoje vaši pravi podaci, a dugme za online susret povezujemo sa aplikacijom koju koristite.</p>
+          <div class="contact-meta">
+            <div>Telefon: 06x xxx xxxx</div>
+            <div>Imejl: <a href="mailto:kontakt@primer.rs">kontakt@primer.rs</a></div>
+            <div>Instagram: <a href="https://www.instagram.com/terapeutski_kutak/" target="_blank" rel="noopener">@terapeutski_kutak</a></div>
+          </div>
+        </div>
+        <form class="form rv" id="kontakt-forma" action="#" method="post">
+          <div class="form-fields">
+            <label>Ime
+              <input type="text" name="ime" autocomplete="name" required>
+            </label>
+            <label>Imejl
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>Poruka
+              <textarea name="poruka" placeholder="Kratko recite šta vam treba, ili samo da želite da zakažete susret." required></textarea>
+            </label>
+            <button class="btn" type="submit">Pošalji poruku</button>
+          </div>
+          <p class="form-ok" id="form-ok">Hvala. Ovo je predlog sajta, pa poruka nije poslata. Na pravom sajtu stigla bi Marini. Do tada joj možete pisati u Instagram DM.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="float-stack">
+    <a class="float-btn" id="online-float" href="#" aria-label="Online susret, video poziv">
+      <span class="float-label">Online susret</span>
+      <span class="float-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2.6" y="6.2" width="13.2" height="11.6" rx="2.2"/>
+          <path d="M15.8 10.2 21 7.4v9.2l-5.2-2.8z"/>
+        </svg>
+      </span>
+    </a>
+    <a class="float-btn" href="https://www.instagram.com/terapeutski_kutak/" target="_blank" rel="noopener" aria-label="Zakaži u DM na Instagramu">
+      <span class="float-label">Zakaži u DM</span>
+      <span class="float-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+          <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/>
+          <circle cx="17.15" cy="6.85" r="1.15" fill="currentColor"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Terapeutski kutak · Marina Popović · Online psihoterapija</p>
+      <p><a href="https://webglowstudio.github.io/Webglowstudioportfolio/">Izrada sajta: WebGlow Studio</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    const header = document.querySelector(".site-header");
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("site-nav");
+    function closeMenu(){
+      document.body.classList.remove("menu-open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Otvori meni");
+    }
+    function onScroll(){
+      header.classList.toggle("solid", window.scrollY > 8);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, {passive:true});
+    burger.addEventListener("click", function(){
+      const open = !document.body.classList.contains("menu-open");
+      document.body.classList.toggle("menu-open", open);
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "Zatvori meni" : "Otvori meni");
+    });
+    nav.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click", closeMenu);
+    });
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const items = document.querySelectorAll(".rv");
+    if (reduce || !("IntersectionObserver" in window)){
+      items.forEach(function(el){ el.classList.add("in"); });
+    } else {
+      const io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting){
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      }, {threshold: 0.12, rootMargin: "0px 0px -8% 0px"});
+      items.forEach(function(el){ io.observe(el); });
+    }
+
+    const form = document.getElementById("kontakt-forma");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      form.classList.add("sent");
+    });
+
+    const toast = document.getElementById("toast");
+    let toastTimer;
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function(){ toast.classList.remove("show"); }, 4200);
+    }
+    document.getElementById("online-float").addEventListener("click", function(e){
+      e.preventDefault();
+      showToast("Link za online susret povezujemo sa aplikacijom koju koristite: Viber, Zoom, Google Meet ili nešto treće.");
+    });
+  })();
+  </script>
+</body>
+</html>
