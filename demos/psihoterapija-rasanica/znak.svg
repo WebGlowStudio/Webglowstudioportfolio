@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="360" height="360">
+  <circle cx="180" cy="180" r="176" fill="#EFEBE4"/>
+  <circle cx="180" cy="180" r="168" fill="none" stroke="#8D7A62" stroke-width="3.2"/>
+  <circle cx="180" cy="180" r="152" fill="none" stroke="#C9C3B8" stroke-width="1.2"/>
+  <path id="arc" fill="none" d="M28 186 A154 154 0 0 0 332 186"/>
+  <text font-family="Jost, system-ui, sans-serif" font-size="11.5" font-weight="500" letter-spacing="2.6" fill="#6A6863">
+    <textPath href="#arc" startOffset="50%" text-anchor="middle">PSIHOTERAPIJA RAŠANICA</textPath>
+  </text>
+  <!-- tree sits well below the lettering -->
+  <path d="M180 96c22 20 36 40 36 66 0 19-13 32-36 32s-36-13-36-32c0-26 14-46 36-66Z" fill="#6B5A45"/>
+  <path d="M180 108c17 16 28 32 28 52 0 14-10 24-28 24s-28-10-28-24c0-20 11-36 28-52Z" fill="#8D7A62"/>
+  <path d="M180 120c11 11 18 22 18 36 0 10-6 17-18 17s-18-7-18-17c0-14 7-25 18-36Z" fill="#A89478"/>
+  <path d="M170 132c6 6 14 6 20 0M168 146c8 6 16 6 24 0M166 160c10 5 18 5 28 0" fill="none" stroke="#EFEBE4" stroke-width="1.2" stroke-linecap="round" opacity=".55"/>
+  <rect x="172" y="192" width="16" height="70" rx="4" fill="#6B5A45"/>
+  <path d="M180 204l5 6-5 6-5-6Z" fill="#A89478"/>
+  <path d="M180 220l5 6-5 6-5-6Z" fill="#A89478"/>
+  <path d="M180 236l5 6-5 6-5-6Z" fill="#A89478"/>
+  <ellipse cx="180" cy="270" rx="50" ry="7.5" fill="#D6D2CA"/>
+  <g>
+    <ellipse cx="130" cy="268" rx="13" ry="3.2" fill="#C9C3B8"/>
+    <circle cx="130" cy="230" r="8.5" fill="#A89478"/>
+    <path d="M121 240h18l3.6 26h-25.2Z" fill="#8D7A62"/>
+    <rect x="124.5" y="266" width="4.8" height="7.5" rx="1.4" fill="#6B5A45"/>
+    <rect x="131" y="266" width="4.8" height="7.5" rx="1.4" fill="#6B5A45"/>
+    <path d="M126.2 230.4c2.3 1.5 5.3 1.5 7.6 0" fill="none" stroke="#6B5A45" stroke-width="1" stroke-linecap="round"/>
+  </g>
+  <g>
+    <ellipse cx="180" cy="270" rx="14" ry="3.4" fill="#C9C3B8"/>
+    <circle cx="180" cy="232" r="9.5" fill="#C4B49A"/>
+    <path d="M169 243h22l4 28h-30Z" fill="#6B5A45"/>
+    <rect x="173.2" y="271" width="5.2" height="8" rx="1.4" fill="#4C3E30"/>
+    <rect x="181.6" y="271" width="5.2" height="8" rx="1.4" fill="#4C3E30"/>
+    <path d="M175.8 232.4c2.8 1.7 6.2 1.7 8.4 0" fill="none" stroke="#6B5A45" stroke-width="1.1" stroke-linecap="round"/>
+  </g>
+  <g>
+    <ellipse cx="230" cy="268" rx="13" ry="3.2" fill="#C9C3B8"/>
+    <circle cx="230" cy="231" r="8.5" fill="#B9A48A"/>
+    <path d="M221 241h18l3.6 26h-25.2Z" fill="#8D7A62"/>
+    <rect x="224.5" y="267" width="4.8" height="7.5" rx="1.4" fill="#6B5A45"/>
+    <rect x="231" y="267" width="4.8" height="7.5" rx="1.4" fill="#6B5A45"/>
+    <path d="M226.2 231.4c2.3 1.5 5.3 1.5 7.6 0" fill="none" stroke="#6B5A45" stroke-width="1" stroke-linecap="round"/>
+  </g>
+</svg>
