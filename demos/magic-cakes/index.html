@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Magic Cakes Pančevo | Domaće torte i kolači</title>
+  <meta name="description" content="Magic Cakes iz Pančeva pravi domaće torte i kolače koji se pamte. Ručno rađene poslastice, praznična ponuda i dostava uz doplatu. Poručite u DM.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#5C2A73">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Magic Cakes Pančevo | Domaće torte i kolači">
+  <meta name="twitter:description" content="Magic Cakes iz Pančeva pravi domaće torte i kolače koji se pamte. Ručno rađene poslastice, praznična ponuda i dostava uz doplatu. Poručite u DM.">
+  <meta name="twitter:image" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/magic-cakes/og.png">
+  <meta property="og:title" content="Magic Cakes Pančevo | Domaće torte i kolači">
+  <meta property="og:description" content="Magic Cakes iz Pančeva pravi domaće torte i kolače koji se pamte. Ručno rađene poslastice, praznična ponuda i dostava uz doplatu. Poručite u DM.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/magic-cakes/">
+  <meta property="og:image" content="https://webglowstudio.github.io/Webglowstudioportfolio/demos/magic-cakes/og.png">
+  <meta property="og:locale" content="sr_RS">
+  <link rel="canonical" href="https://webglowstudio.github.io/Webglowstudioportfolio/demos/magic-cakes/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" as="image" href="images/hero-torta.webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "@id": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/magic-cakes/#pekara",
+    "name": "Magic Cakes",
+    "alternateName": "Magic Cakes Srbija",
+    "description": "Predlog sajta za Magic Cakes iz Pančeva. Domaće torte i kolači koji se pamte. Ručno rađene poslastice sa čarolijom. Napravio WebGlow Studio. Kontakt podaci na ovoj strani su izmišljeni, a cene su primer.",
+    "url": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/magic-cakes/",
+    "telephone": "06x xxx xxxx",
+    "email": "kontakt@primer.rs",
+    "image": "https://webglowstudio.github.io/Webglowstudioportfolio/demos/magic-cakes/og.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pančevo",
+      "addressCountry": "RS"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Pančevo"
+    },
+    "sameAs": [
+      "https://www.instagram.com/magiccakes21_/"
+    ]
+  }
+  </script>
+  <noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+  <style>
+    :root{
+      --bg:#F5E8F3;
+      --bg-soft:#EBD4ED;
+      --cream:#FFF8F5;
+      --white:#FFFCFA;
+      --ink:#4A2C20;
+      --muted:#7A5E6A;
+      --line:#E0C8E3;
+      --purple:#8E5BB5;
+      --purple-deep:#5C2A73;
+      --purple-ink:#4A2260;
+      --lilac:#F3E4F4;
+      --lilac-row:#F0D9F1;
+      --chocolate:#5C3A2A;
+      --gold:#C9A85A;
+      --gold-soft:#E8D5A3;
+      --header:72px;
+      --demo:36px;
+      --gutter:clamp(20px,4vw,56px);
+      --serif:"Playfair Display",Georgia,serif;
+      --sans:"Jost",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:var(--sans);
+      font-size:17px;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    img,svg{max-width:100%;display:block}
+    a{color:var(--purple-deep)}
+    button,input,select,textarea{font:inherit}
+    h1,h2,h3,.serif,.logo-name{
+      font-family:var(--serif);
+      font-style:normal;
+      font-synthesis:none;
+      font-weight:600;
+    }
+    .skip{
+      position:absolute;left:-999px;top:0;
+      background:var(--purple-deep);color:#fff;padding:8px 16px;z-index:100;
+    }
+    .skip:focus{left:12px;top:12px}
+    .wrap{width:min(1120px,100% - 2*var(--gutter));margin-inline:auto}
+    .demo-bar{
+      position:sticky;top:0;z-index:40;
+      height:var(--demo);
+      display:flex;align-items:center;justify-content:center;gap:.5rem;
+      background:var(--purple-deep);color:#F8EEF8;
+      font-size:13px;font-weight:400;letter-spacing:.02em;text-align:center;padding:0 16px;
+    }
+    .demo-bar a{color:var(--gold-soft);text-decoration:none}
+    .demo-bar a:hover{color:#fff}
+    .site-header{
+      position:sticky;top:var(--demo);z-index:30;
+      height:var(--header);
+      display:flex;align-items:center;
+      background:rgba(245,232,243,.88);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid transparent;
+      transition:border-color .3s,background .3s;
+    }
+    .site-header.solid{border-bottom-color:var(--line);background:rgba(245,232,243,.96)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+    .logo-mark{width:52px;height:52px;flex-shrink:0;border-radius:50%;box-shadow:0 4px 12px rgba(92,42,115,.18)}
+    .logo-kicker{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--purple);font-weight:500}
+    .logo-name{display:block;font-size:1.12rem;letter-spacing:.01em;line-height:1.15;color:var(--purple-ink)}
+    .nav{display:flex;align-items:center;gap:20px}
+    .nav a{text-decoration:none;color:var(--ink);font-size:.95rem;font-weight:400}
+    .nav a:hover{color:var(--purple-deep)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 22px;border-radius:999px;border:0;
+      background:var(--purple-deep);color:#fff;text-decoration:none;
+      font-weight:500;font-size:.95rem;cursor:pointer;
+      transition:background .25s,transform .25s,box-shadow .25s;
+    }
+    .btn:hover{background:var(--purple);transform:translateY(-1px);box-shadow:0 8px 20px rgba(92,42,115,.22)}
+    .btn-ghost{
+      background:transparent;color:var(--purple-deep);
+      border:1px solid var(--line);
+    }
+    .btn-ghost:hover{background:var(--cream);color:var(--purple-deep);box-shadow:none}
+    .nav-cta{padding:10px 18px}
+    .burger{display:none;width:42px;height:42px;border:0;background:transparent;padding:10px;cursor:pointer}
+    .burger span{display:block;height:1.5px;background:var(--purple-deep);margin:6px 0;transition:transform .25s,opacity .25s}
+    .menu-open .burger span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+    .menu-open .burger span:nth-child(2){opacity:0}
+    .menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+    .hero{
+      position:relative;
+      padding:clamp(36px,6vw,72px) 0 clamp(64px,8vw,110px);
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse at 12% 18%,rgba(142,91,181,.16),transparent 46%),
+        radial-gradient(ellipse at 88% 8%,rgba(201,168,90,.12),transparent 42%),
+        radial-gradient(ellipse at 70% 92%,rgba(235,212,237,.7),transparent 50%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      position:relative;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:clamp(28px,5vw,64px);
+      align-items:center;
+    }
+    .hero-kicker{
+      font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--purple);font-weight:500;margin:0 0 14px;
+    }
+    .hero h1{
+      margin:0 0 18px;
+      font-size:clamp(2.05rem,5vw,3.35rem);
+      line-height:1.14;
+      letter-spacing:-.02em;
+      color:var(--purple-ink);
+    }
+    .hero-lead{margin:0 0 28px;max-width:40ch;color:var(--muted);font-size:1.08rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .hero-art{position:relative;display:flex;justify-content:center}
+    .hero-frame{
+      position:relative;
+      width:min(100%,400px);
+      border-radius:28px 28px 72px 28px;
+      overflow:hidden;
+      box-shadow:0 28px 50px rgba(92,42,115,.18);
+      background:var(--cream);
+      animation:floaty 8s ease-in-out infinite;
+    }
+    .hero-frame img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 16%}
+    .hero-heart{
+      position:absolute;left:-14px;top:28px;
+      width:42px;height:42px;color:var(--purple);
+      filter:drop-shadow(0 6px 12px rgba(92,42,115,.2));
+    }
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    section{padding:clamp(64px,8vw,104px) 0}
+    .sec-kicker{
+      font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+      color:var(--purple);font-weight:500;margin:0 0 10px;
+    }
+    .sec-title{margin:0 0 12px;font-size:clamp(1.85rem,3.6vw,2.7rem);line-height:1.15;letter-spacing:-.02em;color:var(--purple-ink)}
+    .sec-lead{margin:0 0 36px;max-width:48ch;color:var(--muted)}
+    .about{background:linear-gradient(180deg,var(--bg),var(--bg-soft))}
+    .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(28px,5vw,56px);align-items:center}
+    .about-text p{margin:0 0 16px;color:var(--muted)}
+    .about-text p:last-of-type{margin-bottom:0}
+    .about-photo{
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 18px 40px rgba(92,42,115,.14);
+      background:var(--cream);
+    }
+    .about-photo img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center 20%}
+    .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+    .fact{
+      background:var(--cream);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px 16px 14px;
+    }
+    .fact strong{display:block;font-family:var(--serif);font-style:normal;font-synthesis:none;font-size:1.15rem;color:var(--purple-ink);font-weight:600;margin-bottom:4px}
+    .fact span{display:block;font-size:.88rem;color:var(--muted);line-height:1.4}
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+    .card{
+      background:var(--cream);
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:0 10px 28px rgba(92,42,115,.08);
+    }
+    .card-photo{aspect-ratio:1;overflow:hidden;background:var(--lilac)}
+    .card-photo img{width:100%;height:100%;object-fit:cover}
+    .card-body{padding:18px 18px 20px}
+    .card h3{margin:0 0 8px;font-size:1.28rem;color:var(--purple-ink)}
+    .card p{margin:0;color:var(--muted);font-size:.95rem}
+    .menu{background:linear-gradient(180deg,var(--bg-soft),var(--bg))}
+    .menu-card{
+      position:relative;
+      background:
+        radial-gradient(ellipse at 12% 8%,rgba(255,255,255,.7),transparent 36%),
+        radial-gradient(ellipse at 90% 16%,rgba(201,168,90,.12),transparent 30%),
+        linear-gradient(180deg,#F8EEF8, #F3E2F4);
+      border-radius:32px;
+      padding:clamp(32px,5vw,56px);
+      border:1px solid rgba(201,168,90,.35);
+      box-shadow:0 20px 50px rgba(92,42,115,.1);
+      overflow:hidden;
+    }
+    .menu-card::before,
+    .menu-card::after{
+      content:"";
+      position:absolute;
+      width:70px;height:70px;
+      background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%238E5BB5' d='M12 21s-6.2-4.35-9.1-8.1C.8 10.2 1.2 6.8 3.8 5.2 6 3.8 8.7 4.5 10 6.4 11.3 4.5 14 3.8 16.2 5.2c2.6 1.6 3 5 1.1 7.7C18.2 16.65 12 21 12 21z' opacity='.35'/></svg>") no-repeat center / contain;
+      pointer-events:none;
+    }
+    .menu-card::before{top:18px;right:28px}
+    .menu-card::after{bottom:22px;left:24px;transform:rotate(-18deg);width:54px;height:54px}
+    .menu-slogan{
+      margin:0 0 8px;
+      text-align:center;
+      color:var(--purple);
+      font-size:1.02rem;
+      font-weight:500;
+    }
+    .menu-card h2{text-align:center;margin:0 0 8px;font-size:clamp(2.2rem,5vw,3.2rem);color:var(--purple-ink)}
+    .menu-note{text-align:center;margin:0 auto 28px;max-width:46ch;color:var(--muted);font-size:.95rem}
+    .price-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .price-list li{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      background:rgba(255,252,250,.72);
+      border-radius:999px;
+      padding:12px 12px 12px 18px;
+      border:1px solid rgba(224,200,227,.8);
+    }
+    .price-left{display:flex;align-items:center;gap:10px;min-width:0;color:var(--purple-ink);font-weight:500}
+    .heart{width:18px;height:18px;flex-shrink:0;color:var(--purple)}
+    .pill{
+      flex-shrink:0;
+      background:var(--purple-deep);
+      color:#fff;
+      border-radius:999px;
+      padding:8px 16px;
+      font-size:.92rem;
+      font-weight:500;
+      letter-spacing:.01em;
+      box-shadow:0 6px 14px rgba(92,42,115,.18);
+    }
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .step{
+      background:var(--cream);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:24px 22px 22px;
+    }
+    .step-num{
+      display:block;
+      font-size:1.6rem;
+      color:var(--gold);
+      margin-bottom:8px;
+      line-height:1;
+    }
+    .step h3{margin:0 0 8px;font-size:1.25rem;color:var(--purple-ink)}
+    .step p{margin:0;color:var(--muted)}
+    .contact{background:linear-gradient(180deg,var(--bg),var(--bg-soft))}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,56px);align-items:start}
+    .contact-note{color:var(--muted);font-size:.95rem}
+    .contact-meta{margin-top:20px;display:grid;gap:8px;color:var(--ink)}
+    .contact-meta a{text-decoration:none;font-weight:500}
+    .contact-meta a:hover{text-decoration:underline}
+    .form{
+      background:var(--cream);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 14px 32px rgba(92,42,115,.08);
+    }
+    .form-fields{display:grid;gap:14px}
+    .form label{display:grid;gap:6px;font-size:.88rem;font-weight:500;color:var(--purple-ink)}
+    .form input,.form textarea{
+      width:100%;border:1px solid var(--line);border-radius:12px;
+      padding:11px 12px;background:var(--white);color:var(--ink);
+    }
+    .form input:focus,.form textarea:focus{outline:2px solid rgba(142,91,181,.35);border-color:var(--purple)}
+    .form textarea{min-height:120px;resize:vertical}
+    .form-ok{display:none;margin:16px 0 0;color:var(--purple-deep)}
+    .form.sent .form-fields{display:none}
+    .form.sent .form-ok{display:block}
+    .site-footer{
+      padding:28px var(--gutter) 140px;
+      border-top:1px solid var(--line);
+      background:var(--bg);
+    }
+    .footer-inner{
+      width:min(1120px,100%);
+      margin-inline:auto;
+      display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
+      color:var(--muted);font-size:.92rem;
+    }
+    .footer-inner a{color:var(--purple-deep);text-decoration:none}
+    .footer-inner a:hover{text-decoration:underline}
+    .float-stack{
+      position:fixed;
+      right:max(16px, env(safe-area-inset-right, 0px));
+      bottom:max(16px, env(safe-area-inset-bottom, 0px));
+      z-index:50;
+    }
+    .float-btn{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+    .float-label{
+      background:var(--purple-deep);color:#F8EEF8;
+      border:1px solid rgba(201,168,90,.45);
+      padding:7px 12px;border-radius:999px;
+      font-size:.78rem;font-weight:500;letter-spacing:.02em;
+      white-space:nowrap;
+      box-shadow:0 10px 24px rgba(92,42,115,.28);
+    }
+    .float-icon{
+      width:56px;height:56px;flex-shrink:0;
+      display:grid;place-items:center;border-radius:50%;
+      background:var(--purple-deep);color:var(--gold-soft);
+      border:1px solid var(--gold);
+      box-shadow:0 12px 28px rgba(92,42,115,.32);
+      transition:transform .25s,background .25s,color .25s;
+    }
+    .float-icon svg{width:24px;height:24px;display:block}
+    .float-btn:hover .float-icon,
+    .float-btn:focus-visible .float-icon{
+      transform:translateY(-2px);
+      background:var(--purple);color:#fff;
+    }
+    .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+    .rv.in{opacity:1;transform:none}
+    @media (max-width:880px){
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .gallery-grid,.steps,.facts{grid-template-columns:1fr 1fr}
+      .hero-art{order:-1}
+      .hero-frame{width:min(100%,300px);margin-inline:auto}
+      .burger{display:block}
+      .nav{
+        position:fixed;inset:calc(var(--demo) + var(--header)) 0 auto 0;
+        display:none;flex-direction:column;align-items:stretch;
+        gap:0;background:rgba(255,248,245,.98);
+        border-bottom:1px solid var(--line);
+        padding:10px 20px 20px;z-index:29;
+      }
+      .menu-open .nav{display:flex}
+      .nav a,.nav .nav-cta{padding:12px 4px}
+      .nav-cta{margin-top:6px;text-align:center}
+    }
+    @media (max-width:620px){
+      .gallery-grid,.steps,.facts{grid-template-columns:1fr}
+      .price-list li{border-radius:20px;align-items:flex-start;flex-direction:column;padding:14px 16px;gap:8px}
+      .pill{align-self:flex-end}
+      .demo-bar{font-size:11px;letter-spacing:0;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      .hero{padding-bottom:120px}
+      .hero-lead,.hero-actions{padding-right:72px}
+      .float-label{display:none}
+      .float-icon{width:52px;height:52px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .hero-frame,.rv,.btn,.float-icon{animation:none!important;transition:none!important}
+      .rv{opacity:1;transform:none}
+      .btn:hover,.float-btn:hover .float-icon,.float-btn:focus-visible .float-icon{transform:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+  <div class="demo-bar">Predlog sajta za Magic Cakes · <a href="https://webglowstudio.github.io/Webglowstudioportfolio/">WebGlow Studio</a></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#sadrzaj">
+        <img class="logo-mark" src="images/logo-256.png" alt="Znak Magic Cakes" width="256" height="256">
+        <span>
+          <span class="logo-kicker">Pančevo</span>
+          <span class="logo-name">Magic Cakes</span>
+        </span>
+      </a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Otvori meni">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="site-nav">
+        <a href="#o-nama">O nama</a>
+        <a href="#ponuda">Ponuda</a>
+        <a href="#cenovnik">Cenovnik</a>
+        <a href="#narucivanje">Poručivanje</a>
+        <a class="btn nav-cta" href="https://www.instagram.com/magiccakes21_/" target="_blank" rel="noopener">Poruči u DM</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="sadrzaj">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="hero-kicker">Poslastice sa čarolijom</p>
+          <h1>Domaće torte i kolači koji se pamte</h1>
+          <p class="hero-lead">Ručno rađeno sa ljubavlju, iz Pančeva. Torte, kolači, popsi i sladoledi za slavlja, praznike i obične dane koji zaslužuju nešto lepo. Dostava je moguća uz doplatu.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://www.instagram.com/magiccakes21_/" target="_blank" rel="noopener">Poruči u DM</a>
+            <a class="btn btn-ghost" href="#cenovnik">Pogledaj cenovnik</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-frame">
+            <img src="images/hero-torta.webp" alt="Torta sa čokoladnim prelivom, ljubičastim i belim ružama na belom postolju" width="328" height="620" fetchpriority="high">
+          </div>
+          <svg class="hero-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M12 21s-6.2-4.35-9.1-8.1C.8 10.2 1.2 6.8 3.8 5.2 6 3.8 8.7 4.5 10 6.4 11.3 4.5 14 3.8 16.2 5.2c2.6 1.6 3 5 1.1 7.7C18.2 16.65 12 21 12 21z"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="o-nama">
+      <div class="wrap about-grid">
+        <div class="about-photo rv">
+          <img src="images/torta-bela.webp" alt="Bela kvadratna torta sa čokoladnim ukrasima i znakom Magic Cakes" width="350" height="354" loading="lazy">
+        </div>
+        <div class="about-text rv">
+          <p class="sec-kicker">O nama</p>
+          <h2 class="sec-title">Magic Cakes, poslastice sa čarolijom</h2>
+          <p>Pravimo domaće torte i kolače koji se pamte. Svaka poslastica ide iz ruke, sa pažnjom prema ukusu, izgledu i trenutku za koji je naručena.</p>
+          <p>Tu su torte po želji, mrsni i posni kolači, popsi i sladoledi od plazme, kao i praznične kutije sa medenjacima i kuglicama. Radimo iz Pančeva, a dostava je moguća uz doplatu.</p>
+          <div class="facts">
+            <div class="fact"><strong>Ručno</strong><span>Svaka torta i kutija slaže se sa ljubavlju</span></div>
+            <div class="fact"><strong>Pančevo</strong><span>Dostava je moguća uz doplatu</span></div>
+            <div class="fact"><strong>Po želji</strong><span>Ukusi, ukrasi i kutije dogovaraju se u poruci</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ponuda">
+      <div class="wrap">
+        <p class="sec-kicker rv">Ponuda</p>
+        <h2 class="sec-title rv">Šta volimo da pravimo</h2>
+        <p class="sec-lead rv">Od rođendanskih torti do praznične kutije. Pogledajte deo onoga što izlazi iz naše kuhinje, a tačan izbor dogovaramo u poruci.</p>
+        <div class="gallery-grid">
+          <article class="card rv">
+            <div class="card-photo">
+              <img src="images/hero-torta.webp" alt="Torta sa čokoladnim prelivom i ljubičastim ružama" width="328" height="620" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Torte</h3>
+              <p>Domaće torte za rođendane, slave i svečanosti, ukrašene baš onako kako zamislite.</p>
+            </div>
+          </article>
+          <article class="card rv">
+            <div class="card-photo">
+              <img src="images/kolaci.webp" alt="Kutija ručno slaganjih mrsnih i posnih kolača" width="356" height="398" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Kolači mrsni i posni</h3>
+              <p>Sitni kolači u kutiji, za sto, poklon ili slavu. Imamo i mrsnu i posnu varijantu.</p>
+            </div>
+          </article>
+          <article class="card rv">
+            <div class="card-photo">
+              <img src="images/popsi.webp" alt="Čokoladni i beli popsi od plazme sa ljubičastim mrvicama i ljubičastom mašnom" width="392" height="408" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Popsi od plazme</h3>
+              <p>Hrskavi popsi u čokoladi ili beloj glazuri, sa mrvicama, spremni za slavlje i za poklon.</p>
+            </div>
+          </article>
+          <article class="card rv">
+            <div class="card-photo">
+              <img src="images/sladoledi.webp" alt="Čokoladni sladoledi od plazme na štapiću, jedan prepolovljen" width="350" height="396" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Sladoledi od plazme</h3>
+              <p>Meki sladoledi od plazme u čokoladi, sa mrvicama, koje je teško ostaviti za kasnije.</p>
+            </div>
+          </article>
+          <article class="card rv">
+            <div class="card-photo">
+              <img src="images/novogodisnji-mix.webp" alt="Kutija novogodišnjeg miksa sa medenjacima i kuglicama u kokosu" width="356" height="362" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Novogodišnji mix</h3>
+              <p>Medenjaci i kuglice u kutiji, za praznični sto ili kao pažnja koju neko pamti.</p>
+            </div>
+          </article>
+          <article class="card rv">
+            <div class="card-photo">
+              <img src="images/praznicna-ponuda.webp" alt="Praznična kutija Magic Cakes sa medenjacima, lizalicom i ukrasnim kuglicama" width="356" height="475" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3>Praznična ponuda</h3>
+              <p>Svečane kutije za Novu godinu, praznike i čestitke, složene da odmah izgledaju kao poklon.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu" id="cenovnik">
+      <div class="wrap">
+        <div class="menu-card rv">
+          <p class="menu-slogan">Pravimo domaće torte i kolače koji se pamte</p>
+          <h2>Cenovnik</h2>
+          <p class="menu-note">Cene na ovoj stranici su primer, zbog predloga sajta. Tačan iznos dogovarate u poruci.</p>
+          <ul class="price-list">
+            <li>
+              <span class="price-left">
+                <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-6.2-4.35-9.1-8.1C.8 10.2 1.2 6.8 3.8 5.2 6 3.8 8.7 4.5 10 6.4 11.3 4.5 14 3.8 16.2 5.2c2.6 1.6 3 5 1.1 7.7C18.2 16.65 12 21 12 21z"/></svg>
+                Torte
+              </span>
+              <span class="pill">od 1.200 RSD / 1 kg</span>
+            </li>
+            <li>
+              <span class="price-left">
+                <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-6.2-4.35-9.1-8.1C.8 10.2 1.2 6.8 3.8 5.2 6 3.8 8.7 4.5 10 6.4 11.3 4.5 14 3.8 16.2 5.2c2.6 1.6 3 5 1.1 7.7C18.2 16.65 12 21 12 21z"/></svg>
+                Kolači mrsni/posni
+              </span>
+              <span class="pill">od 1.350 RSD / 1 kg</span>
+            </li>
+            <li>
+              <span class="price-left">
+                <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-6.2-4.35-9.1-8.1C.8 10.2 1.2 6.8 3.8 5.2 6 3.8 8.7 4.5 10 6.4 11.3 4.5 14 3.8 16.2 5.2c2.6 1.6 3 5 1.1 7.7C18.2 16.65 12 21 12 21z"/></svg>
+                Popsi (plazma)
+              </span>
+              <span class="pill">od 70 RSD / 1 kom</span>
+            </li>
+            <li>
+              <span class="price-left">
+                <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-6.2-4.35-9.1-8.1C.8 10.2 1.2 6.8 3.8 5.2 6 3.8 8.7 4.5 10 6.4 11.3 4.5 14 3.8 16.2 5.2c2.6 1.6 3 5 1.1 7.7C18.2 16.65 12 21 12 21z"/></svg>
+                Sladoledi (plazma)
+              </span>
+              <span class="pill">od 70 RSD / 1 kom</span>
+            </li>
+            <li>
+              <span class="price-left">
+                <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-6.2-4.35-9.1-8.1C.8 10.2 1.2 6.8 3.8 5.2 6 3.8 8.7 4.5 10 6.4 11.3 4.5 14 3.8 16.2 5.2c2.6 1.6 3 5 1.1 7.7C18.2 16.65 12 21 12 21z"/></svg>
+                Novogodišnji mix (medenjaci, kuglice)
+              </span>
+              <span class="pill">od 990 RSD / kutija</span>
+            </li>
+            <li>
+              <span class="price-left">
+                <svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-6.2-4.35-9.1-8.1C.8 10.2 1.2 6.8 3.8 5.2 6 3.8 8.7 4.5 10 6.4 11.3 4.5 14 3.8 16.2 5.2c2.6 1.6 3 5 1.1 7.7C18.2 16.65 12 21 12 21z"/></svg>
+                Praznična ponuda
+              </span>
+              <span class="pill">Cena na upit</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="narucivanje">
+      <div class="wrap">
+        <p class="sec-kicker rv">Poručivanje</p>
+        <h2 class="sec-title rv">Kako da naručite</h2>
+        <p class="sec-lead rv">Najlakše je da nam pišete u Instagram DM. Tu dogovaramo ukus, veličinu, termin i, ako treba, dostavu.</p>
+        <div class="steps">
+          <article class="step rv">
+            <span class="step-num">01</span>
+            <h3>Pišite u DM</h3>
+            <p>Javite se na Instagramu, preko dugmeta Poruči u DM. Recite šta želite i za koji dan.</p>
+          </article>
+          <article class="step rv">
+            <span class="step-num">02</span>
+            <h3>Dogovorimo detalje</h3>
+            <p>Uskladimo ukus, ukras, količinu i tačan iznos. Ako želite dostavu, to takođe dogovaramo unapred.</p>
+          </article>
+          <article class="step rv">
+            <span class="step-num">03</span>
+            <h3>Preuzimanje ili dostava</h3>
+            <p>Poslasticu preuzimate u dogovoreno vreme, a dostava iz Pančeva je moguća uz doplatu.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontakt">
+      <div class="wrap contact-grid">
+        <div class="rv">
+          <p class="sec-kicker">Kontakt</p>
+          <h2 class="sec-title">Tu smo za vašu porudžbinu</h2>
+          <p class="sec-lead">Pišite nam u Instagram DM ili ostavite kratku poruku ovde. Javićemo se čim stignemo da dogovorimo sve detalje.</p>
+          <p class="contact-note">Na ovom predlogu sajta telefon i imejl su izmišljeni. Na pravom sajtu ovde stoje vaši pravi podaci.</p>
+          <div class="contact-meta">
+            <div>Telefon: 06x xxx xxxx</div>
+            <div>Imejl: <a href="mailto:kontakt@primer.rs">kontakt@primer.rs</a></div>
+            <div>Instagram: <a href="https://www.instagram.com/magiccakes21_/" target="_blank" rel="noopener">@magiccakes21_</a></div>
+            <div>Facebook: Magic Cakes Srbija</div>
+            <div>Mesto: Pančevo</div>
+          </div>
+        </div>
+        <form class="form rv" id="kontakt-forma" action="#" method="post">
+          <div class="form-fields">
+            <label>Ime
+              <input type="text" name="ime" autocomplete="name" required>
+            </label>
+            <label>Imejl
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>Poruka
+              <textarea name="poruka" placeholder="Recite šta biste da naručite, ili samo da želite da se javimo." required></textarea>
+            </label>
+            <button class="btn" type="submit">Pošalji poruku</button>
+          </div>
+          <p class="form-ok">Hvala. Ovo je predlog sajta, pa poruka nije poslata. Na pravom sajtu stigla bi Magic Cakes timu. Do tada im možete pisati u Instagram DM.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="float-stack">
+    <a class="float-btn" href="https://www.instagram.com/magiccakes21_/" target="_blank" rel="noopener" aria-label="Poruči u DM na Instagramu">
+      <span class="float-label">Poruči u DM</span>
+      <span class="float-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+          <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/>
+          <circle cx="17.15" cy="6.85" r="1.15" fill="currentColor"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Magic Cakes · Pančevo · Poslastice sa čarolijom</p>
+      <p><a href="https://webglowstudio.github.io/Webglowstudioportfolio/">Izrada sajta: WebGlow Studio</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    const header = document.querySelector(".site-header");
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("site-nav");
+    function closeMenu(){
+      document.body.classList.remove("menu-open");
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Otvori meni");
+    }
+    function onScroll(){
+      header.classList.toggle("solid", window.scrollY > 8);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, {passive:true});
+    burger.addEventListener("click", function(){
+      const open = !document.body.classList.contains("menu-open");
+      document.body.classList.toggle("menu-open", open);
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "Zatvori meni" : "Otvori meni");
+    });
+    nav.querySelectorAll("a").forEach(function(a){
+      a.addEventListener("click", closeMenu);
+    });
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const shot = new URLSearchParams(location.search).has("shot");
+    const items = document.querySelectorAll(".rv");
+    if (reduce || shot || !("IntersectionObserver" in window)){
+      items.forEach(function(el){ el.classList.add("in"); });
+    } else {
+      const io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting){
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      }, {threshold: 0.12, rootMargin: "0px 0px -8% 0px"});
+      items.forEach(function(el){ io.observe(el); });
+    }
+
+    const form = document.getElementById("kontakt-forma");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      form.classList.add("sent");
+    });
+  })();
+  </script>
+</body>
+</html>
